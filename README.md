@@ -30,3 +30,6 @@ than 10x10 pixels, and over 300k images that are ’File not
 found’ placeholders
 
 To access the clean version of LAION-400M, sign up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
+
+## Disclaimer
+You are bound to the usage license of the original dataset. We provide no warranty or guarantee of accuracy or completeness.
