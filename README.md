@@ -21,7 +21,7 @@ The cleaned image dataset should be free from most if not all of the following i
 ### Clean-ImageNet-21K
 In the original ImageNet-21K dataset we find up to 15.9% of the images are problematic. Among those there are 1.2M redundant duplicate and 104K train validation leaks.
 
-To access the clean version of ImageNet-21K, sign up here.
+To access the clean version of ImageNet-21K, sign up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
 
 ### Clean-LAION-400M
 In the original LAION-400M dataset, we find 10.3M missing images (stale URLs) and 1.63M corrupted images. Common corruptions include over 772k images
@@ -29,4 +29,4 @@ having format issues and not loading, 443k images smaller
 than 10x10 pixels, and over 300k images that are ’File not
 found’ placeholders
 
-To access the clean version of LAION-400M, sign up here.
+To access the clean version of LAION-400M, sign up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
