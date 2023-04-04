@@ -12,8 +12,7 @@ We clean the images of duplicates, broken images, wrong labels and release them 
 ## Datasets
 
 ### ImageNet-21K
+To get access, sign up here.
 
 ### LAION-400M
-
-## License
-See [LICENSE.md](LICENSE.md)
+To get access, sign up here.
