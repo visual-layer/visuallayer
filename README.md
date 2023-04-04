@@ -17,15 +17,13 @@
     <br />
     <a href="https://visual-layer.readme.io/" target="_blank" rel="noopener noreferrer"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://visual-layer.readme.io/" target="_blank" rel="noopener noreferrer">Features</a>
-    ·
-    <a href="https://github.com/visual-layer/fastdup/issues" target="_blank" rel="noopener noreferrer">Report Bug</a>
+    <a href="https://github.com/visual-layer/vl-datasets/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
     ·
     <a href="https://medium.com/@amiralush/large-image-datasets-today-are-a-mess-e3ea4c9e8d22" target="_blank" rel="noopener noreferrer">Read Blog</a>
     ·
-    <a href="mailto:info@visual-layer.com?subject=Sign-up%20for%20access" target="_blank" rel="noopener noreferrer">Get in touch</a>
+    <a href="mailto:info@visual-layer.com?subject=Sign-up%20for%20access" target="_blank" rel="noopener noreferrer">Get In Touch</a>
     ·
-    <a href="https://visual-layer.com/" target="_blank" rel="noopener noreferrer">About us</a>
+    <a href="https://visual-layer.com/" target="_blank" rel="noopener noreferrer">About Us</a>
     <br />
     <br /> 
     <a href="https://visualdatabase.slack.com/join/shared_invite/zt-19jaydbjn-lNDEDkgvSI1QwbTXSY6dlA#/shared-invite/email" target="_blank" rel="noopener noreferrer">
@@ -65,8 +63,7 @@ The cleaned image dataset should be free from most if not all of the following i
 In the [original ImageNet-21K](https://www.image-net.org/) dataset we find up to 15.9% of the images are problematic. Among those there are 1.2M redundant duplicate and 104K train validation leaks.
 
 We provide a subset of the original dataset by removing the aforementioned issues.
-
-To access the clean version of ImageNet-21K, sign up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
+To access the clean version of ImageNet-21K, sign-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
 
 ### Clean-LAION-400M
 In the [original LAION-400M dataset](https://laion.ai/blog/laion-400-open-dataset/), we find 10.3M missing images (stale URLs) and 1.63M corrupted images. Common corruptions include over 772k images
@@ -75,8 +72,7 @@ than 10x10 pixels, and over 300k images that are ’File not
 found’ placeholders
 
 We provide a subset of the original dataset by removing the aforementioned issues.
-
-To access the clean version of LAION-400M, sign up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
+To access the clean version of LAION-400M, sign-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
 
 ## Disclaimer
 You are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
