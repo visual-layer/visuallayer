@@ -1,13 +1,20 @@
 # VL-Datasets
 
 ## What?
-This repo stores clean version of publicly available dataset such as ImageNet and LAION.
+This repo shares clean version of publicly available computer vision datasets.
 
 ## Why?
 Even with the success of generative models, data quality remains an issue that's mainly overlooked.
+Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
 
 ## How?
-We clean the images of duplicates, broken images, wrong labels and release them to the public.
+In this repo we share clean version of various computer vision datasets. We hope this effort will also help the community train better models and mitigate various model biases.
+
+The cleaned image dataset should be free from most if not all of the following issues:
+
++ Duplicates.
++ Broken images.
++ Low information images (dark/bright/blurry images).
 
 ## Datasets
 
