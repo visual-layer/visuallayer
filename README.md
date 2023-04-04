@@ -5,8 +5,8 @@
 <div align="center">
   <a href="https://www.visual-layer.com" target="_blank" rel="noopener noreferrer">
     <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./imgs/logo.png" width=250>
-    <source media="(prefers-color-scheme: light)" srcset="./imgs/logo.png" width=250>
+    <source media="(prefers-color-scheme: dark)" srcset="./imgs/logo.png" width=400>
+    <source media="(prefers-color-scheme: light)" srcset="./imgs/logo.png" width=400>
     <img alt="Fastdup logo." src="./gallery/logo.png">
     </picture>
   </a>
