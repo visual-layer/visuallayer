@@ -79,4 +79,4 @@ We provide a subset of the original dataset by removing the aforementioned issue
 To access the clean version of LAION-400M, sign up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
 
 ## Disclaimer
-You are bound to the usage license of the original dataset. We provide no warranty or guarantee of accuracy or completeness.
+You are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
