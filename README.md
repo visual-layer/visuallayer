@@ -14,6 +14,9 @@
 <h3 align="center">Open, Clean Datasets for Computer Vision</h3>
 
   <p align="center">
+  <br />
+    🔥 We use
+    <a href="https://github.com/visual-layer/fastdup">fastdup</a> - a free tool to clean all datasets shared in this repo.
     <br />
     <a href="https://visual-layer.readme.io/" target="_blank" rel="noopener noreferrer"><strong>Explore the docs »</strong></a>
     <br />
@@ -49,7 +52,11 @@ Even with the success of generative models, data quality remains an issue that's
 Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
 
 ## How?
-In this repo we share clean version of various computer vision datasets. We hope this effort will also help the community train better models and mitigate various model biases.
+In this repo we share clean version of various computer vision datasets.
+
+The datasets are cleaned using a free tool we released - [fastdup](https://github.com/visual-layer/fastdup).
+
+We hope this effort will also help the community train better models and mitigate various model biases.
 
 The cleaned image dataset should be free from most if not all of the following issues:
 
