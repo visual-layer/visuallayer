@@ -91,7 +91,7 @@ buildings/0.jpg
 buildings/4.jpg
 ```
 
-> **Warning**: Proceed with caution the following operations may be irrersible. Backup your data before proceeding.
+> **Warning**: Proceed with caution. The following operations may be irrersible. Backup your data before proceeding.
 
 Move problematic images to a destination folder:
 
