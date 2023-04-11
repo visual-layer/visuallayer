@@ -81,5 +81,27 @@ found’ placeholders
 We provide a subset of the original dataset by removing the aforementioned issues.
 To access the clean version of LAION-400M, sign-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
 
+### Scripts
+We provid convenience functions to help you move or delete problematic files read from a `.csv` file.
+
+A sample content of the `.csv` file is as follows:
+```
+filename
+buildings/0.jpg
+buildings/4.jpg
+```
+
+Move problematic images to a destination folder:
+
+```python
+python scripts/move-images.py --file_paths_csv  problem_images.csv --images_dir sample_images --dest_folder_name problematic_images
+```
+
+Delete problematic images:
+```python
+python scripts/delete-images.py --file_paths_csv problem_images.csv --images_dir sample_images/
+```
+
+
 ## Disclaimer
 You are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
