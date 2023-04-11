@@ -69,8 +69,9 @@ The cleaned image dataset should be free from most if not all of the following i
 ### Clean-ImageNet-21K
 In the [original ImageNet-21K](https://www.image-net.org/) dataset we find up to 15.9% of the images are problematic. Among those there are 1.2M redundant duplicate and 104K train validation leaks.
 
-We provide a subset of the original dataset by removing the aforementioned issues.
-To access the clean version of ImageNet-21K, sign-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
+To use the Clean-ImageNet-21K dataset, you must download the original ImageNet-21K dataset here and run the `analyze.py` script to obtain the list of problematic images. We recommend runnning the script on a machine with a minimum of 64 CPU cores and 128GB of RAM. 
+
+Alternatively you can get the list of problematic images by signing-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
 
 ### Clean-LAION-400M
 In the [original LAION-400M dataset](https://laion.ai/blog/laion-400-open-dataset/), we find 10.3M missing images (stale URLs) and 1.63M corrupted images. Common corruptions include over 772k images
@@ -78,8 +79,9 @@ having format issues and not loading, 443k images smaller
 than 10x10 pixels, and over 300k images that are ’File not
 found’ placeholders
 
-We provide a subset of the original dataset by removing the aforementioned issues.
-To access the clean version of LAION-400M, sign-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
+To use the Clean-LAION-400M dataset, you must download the original LAION-400M dataset and run the `analyze.py` script to obtain the list of problematic images. We recommend runnning the script on a machine with a minimum of 64 CPU cores and 128GB of RAM. 
+
+Alternatively you can get the list of problematic images by signing-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
 
 ## Scripts
 We provide convenience functions to help you move or delete problematic files. The files are specified in a `.csv` file.
