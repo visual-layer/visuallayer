@@ -82,7 +82,7 @@ We provide a subset of the original dataset by removing the aforementioned issue
 To access the clean version of LAION-400M, sign-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
 
 ## Scripts
-We provide convenience functions to help you move or delete problematic files read from a `.csv` file.
+We provide convenience functions to help you move or delete problematic files. The files are specified in a `.csv` file.
 
 A sample content of the `.csv` file is as follows:
 ```
@@ -90,6 +90,8 @@ filename
 buildings/0.jpg
 buildings/4.jpg
 ```
+
+> **Warning**: Proceed with caution the following operations may be irrersible. Backup your data before proceeding.
 
 Move problematic images to a destination folder:
 
