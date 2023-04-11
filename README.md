@@ -81,8 +81,8 @@ found’ placeholders
 We provide a subset of the original dataset by removing the aforementioned issues.
 To access the clean version of LAION-400M, sign-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
 
-### Scripts
-We provid convenience functions to help you move or delete problematic files read from a `.csv` file.
+## Scripts
+We provide convenience functions to help you move or delete problematic files read from a `.csv` file.
 
 A sample content of the `.csv` file is as follows:
 ```
