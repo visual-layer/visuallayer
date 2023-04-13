@@ -1,9 +1,9 @@
-name: Example Workflow
+name: My Workflow
 on: [push]
 
 jobs:
   badges:
-    name: Example Badge Job
+    name: Create Colab Badge Job
     runs-on: ubuntu-latest
     steps:
       - name: Checkout first
