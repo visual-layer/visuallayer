@@ -15,5 +15,6 @@ jobs:
         uses: trsvchn/colab-badge-action@v4
         with:
           check: "all"
+          target_branch: master
           target_repository: user/user-repo
           update: true
