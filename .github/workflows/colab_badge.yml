@@ -16,7 +16,6 @@ jobs:
         with:
           check: 'all'
           update: true
-          target_branch: master
           target_repository: visual-layer/vl-datasets
 
       - name: Commit & push changes
