@@ -1,0 +1,19 @@
+name: Example Workflow
+on: [push]
+
+jobs:
+  badges:
+    name: Example Badge Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout first
+        id: checkout
+        uses: actions/checkout@v2
+
+      - name: Add/Update badges
+        id: badges
+        uses: trsvchn/colab-badge-action@v4
+        with:
+          check: "all"
+          target_repository: user/user-repo
+          update: true
