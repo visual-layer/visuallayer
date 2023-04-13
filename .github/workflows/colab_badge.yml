@@ -1,20 +1,25 @@
-name: My Workflow
+name: Colab workflow
 on: [push]
 
 jobs:
-  badges:
-    name: Create Colab Badge Job
+  build:
+    name: Add Colab links
     runs-on: ubuntu-latest
     steps:
       - name: Checkout first
         id: checkout
         uses: actions/checkout@v2
 
-      - name: Add/Update badges
+      - name: Add/update badges
         id: badges
         uses: trsvchn/colab-badge-action@v4
         with:
-          check: "all"
-          target_branch: master
-          target_repository: user/user-repo
+          check: 'all'
           update: true
+          target_branch: master
+          target_repository: visual-layer/vl-datasets
+
+      - name: Commit & push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Add/update Colab badges
