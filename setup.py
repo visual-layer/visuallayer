@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='vl-datasets',
+    name='vl_datasets',
     version='0.0.1',
     url='https://github.com/visual-layer/vl-datasets',
     author='Visual Layer',
