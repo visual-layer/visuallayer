@@ -69,7 +69,22 @@ The cleaned image dataset should be free from most if not all of the following i
 
 ## Datasets
 
-### Clean-ImageNet-21K
+Here are some of the datasets we are currently working on. 
+
++ Laion 1B
++ Imagenet-21k
++ Imagenet-1k
++ KITTI
++ DeepFashion
++ Food-101
++ Places365-standard
++ CelebA-HQ
++ ADE20K
++ Coco
+
+We plan to release the cleaned version on the dataset in this repo.
+
+<!-- ### Clean-ImageNet-21K
 In the [original ImageNet-21K](https://www.image-net.org/) dataset we find up to 15.9% of the images are problematic. Among those there are 1.2M redundant duplicate and 104K train validation leaks.
 
 To use the Clean-ImageNet-21K dataset, you must download the original ImageNet-21K dataset here and run the `analyze.py` script to obtain the list of problematic images. We recommend runnning the script on a machine with a minimum of 64 CPU cores and 128GB of RAM. 
@@ -84,7 +99,7 @@ found’ placeholders
 
 To use the Clean-LAION-400M dataset, you must download the original LAION-400M dataset and run the `analyze.py` script to obtain the list of problematic images. We recommend runnning the script on a machine with a minimum of 64 CPU cores and 128GB of RAM. 
 
-Alternatively you can get the list of problematic images by signing-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
+Alternatively you can get the list of problematic images by signing-up [here](https://forms.gle/khZpAGUQJeqgRwwo7). -->
 
 ## Scripts
 We provide convenience functions to help you move or delete problematic files. The files are specified in a `.csv` file.
