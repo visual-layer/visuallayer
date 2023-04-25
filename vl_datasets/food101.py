@@ -13,7 +13,7 @@ class CleanFood101(Food101):
         split: str = "train",
         transform: Optional[Callable] = None,
         target_transform: Optional[Callable] = None,
-        download: bool = False,
+        download: bool = True,
         exclude_csv: Optional[str] = None
     ) -> None:
         super().__init__(root, transform=transform, target_transform=target_transform, download=download)
