@@ -17,9 +17,9 @@ jobs:
 
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.12.3
-        # env:
-        #   CIBW_SOME_OPTION: value
-        #    ...
+        env:
+          CIBW_SKIP: cp3{6,7,8,9}-*
+
         # with:
         #   package-dir: .
         #   output-dir: wheelhouse
