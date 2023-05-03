@@ -27,10 +27,11 @@ jobs:
 
       - name: Build wheels
         run: |
-          python setup.py bdist_wheel --dist-dir dist/
-          
-          # Include the OS name in the filename of the wheel
-          mv dist/*.whl dist/vl-datasets-${{ matrix.os }}.whl
+          python setup.py bdist_wheel --dist-dir dist/ --plat-name manylinux2014_x86_64
+          # Get the package name from setup.py
+          PACKAGE_NAME=$(python setup.py --name)
+          # Include the OS name and package name in the filename of the wheel
+          mv dist/*.whl dist/${PACKAGE_NAME}-${{ matrix.os }}.whl
 
       - name: Upload to TestPyPI
         env:
