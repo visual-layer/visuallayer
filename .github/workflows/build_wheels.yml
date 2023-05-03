@@ -27,10 +27,7 @@ jobs:
 
       - name: Build package
         run: |
-          python setup.py bdist_wheel --python-tag=py37
-          python setup.py bdist_wheel --python-tag=py38
-          python setup.py bdist_wheel --python-tag=py39
-          python setup.py bdist_wheel --python-tag=py310
+          python setup.py bdist_wheel --python-tag=py${{ matrix.python-version.split('.').join('') }}
 
       - name: Save package artifacts
         uses: actions/upload-artifact@v2
