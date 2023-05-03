@@ -34,5 +34,5 @@ jobs:
       - name: Upload to GitHub Packages
         uses: actions/upload-artifact@v2
         with:
-          name: my_package_dist
+          name: build-${{ matrix.version }}
           path: dist/*
