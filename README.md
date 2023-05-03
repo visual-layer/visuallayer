@@ -5,7 +5,7 @@
 <div align="center">
 
 <a href="https://www.visual-layer.com">
-  <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/vl-datasets/master/imgs/logo.png?token=GHSAT0AAAAAAB6MSNG7IH5I2EKJJMJIIAF2ZCSWG6Q" alt="Logo" width="400">
+  <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="400">
 </a>
 
 <h3 align="center">Open, Clean Datasets for Computer Vision</h3>
