@@ -2,9 +2,6 @@ name: Build
 
 on: [push]
 
-env:
-  ARTIFACT: artifact.bin
-
 jobs:
   build:
     strategy:
