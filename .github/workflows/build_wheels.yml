@@ -7,6 +7,10 @@ env:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        version: ['3.9','3.10']
+        
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,7 +18,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9' # Change this to the version of Python you're using
+          python-version: ${{ matrix.version }}
+          #python-version: '3.9' # Change this to the version of Python you're using
           architecture: 'x64' # Change this to the architecture of your system
 
       - name: Install dependencies
