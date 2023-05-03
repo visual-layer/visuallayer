@@ -27,7 +27,7 @@ jobs:
 
       - name: Build package
         run: |
-          python setup.py bdist_wheel --dist-dir=dist --python-tag=py${{ matrix.python-version | replace(".", "") }}
+          python setup.py bdist_wheel --dist-dir=dist --python-tag=py${{ matrix.python-version.split('.').join('') }}
 
       - name: Save package artifacts
         uses: actions/upload-artifact@v2
