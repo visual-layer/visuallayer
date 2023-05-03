@@ -33,7 +33,5 @@ setup(
         "torch",
         "torchvision",
         "pandas"
-    ],
-    # Add the python tag to the wheel filename
-    options={"bdist_wheel": {"universal": True, "python-tag": f"cp{sys.version_info.major}{sys.version_info.minor}"}},
+    ]
 )
