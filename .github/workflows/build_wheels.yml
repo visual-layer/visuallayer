@@ -6,8 +6,11 @@ on:
       - master
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10']
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -15,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: ${{ matrix.python-version }}
 
       - name: Install dependencies
         run: |
@@ -24,10 +27,21 @@ jobs:
 
       - name: Build package
         run: |
-          python setup.py sdist bdist_wheel --universal
-          
+          python setup.py sdist
+          python setup.py bdist_wheel --universal --python-tag cp${{ matrix.python-version | replace(".", "") }}
+
       - name: Save package artifacts
         uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download package artifacts
+        uses: actions/download-artifact@v2
         with:
           name: dist
           path: dist/
