@@ -27,8 +27,7 @@ jobs:
 
       - name: Build package
         run: |
-          python setup.py bdist_wheel
-          mv dist/vl_datasets-*.whl dist/vl_datasets-${{ matrix.python-version }}-${{ matrix.python-version }}-manylinux_2_31_x86_64.whl
+          python setup.py bdist_wheel --dist-dir=dist --python-tag=py${{ matrix.python-version | replace(".", "") }}
 
       - name: Save package artifacts
         uses: actions/upload-artifact@v2
