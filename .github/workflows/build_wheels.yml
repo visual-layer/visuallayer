@@ -28,7 +28,7 @@ jobs:
       - name: Build package
         run: |
           echo "Python version: ${{ matrix.python-version }}"
-          echo "Python major version: ${{ str(matrix.python-version)[0] }}"
+          echo "Python major version: ${{ matrix.python-version[0] }}"
           echo "Python minor version: ${{ matrix.python-version[2:] }}"
           python setup.py bdist_wheel --python-tag=py${{ matrix.python-version[0:1] }}${{ matrix.python-version[2:] }}
 
