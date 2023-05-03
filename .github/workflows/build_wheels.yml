@@ -33,3 +33,10 @@ jobs:
         with:
           name: build-${{ matrix.version }}-${{ matrix.os }}
           path: dist/*
+          
+      - name: Upload to TestPyPI
+        env:
+          TWINE_USERNAME: 'visual-layer' # ${{ secrets.TEST_PYPI_USERNAME }}
+          TWINE_PASSWORD: 'TQD.$kU#WtsNh3@' # ${{ secrets.TEST_PYPI_PASSWORD }}
+        run: |
+          twine upload --repository-url https://test.pypi.org/legacy/ dist/*
