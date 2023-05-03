@@ -28,6 +28,9 @@ jobs:
       - name: Build wheels
         run: |
           python setup.py bdist_wheel --dist-dir dist/
+          
+          # Include the OS name in the filename of the wheel
+          mv dist/*.whl dist/my_package-${{ matrix.os }}.whl
 
       - name: Upload to TestPyPI
         env:
