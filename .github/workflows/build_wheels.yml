@@ -7,37 +7,27 @@ env:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }} 
-    strategy:
-      matrix:
-        os:
-          - windows-latest
-          - ubuntu-latest
-          - macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
-      - shell: bash
-        run: |
-          echo "Run your build command here"
-          echo "This is a fake ${{ matrix.os }} build artifact" >$ARTIFACT
-
-      - uses: actions/upload-artifact@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          name: build-${{ matrix.os }}-${{ github.sha }}
-          path: ${{ env.ARTIFACT }}
+          python-version: '3.9' # Change this to the version of Python you're using
+          architecture: 'x64' # Change this to the architecture of your system
 
-  publish:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/download-artifact@v2
-        with:
-          path: artifacts
-
-      - shell: bash
-        working-directory: artifacts
+      - name: Install dependencies
         run: |
-          for i in $( ls ); do
-            cat $i/$ARTIFACT
-          done
+          python -m pip install --upgrade pip
+          pip install setuptools wheel
+
+      - name: Build Python Wheel
+        run: |
+          python setup.py sdist bdist_wheel
+
+      - name: Upload to GitHub Packages
+        uses: actions/upload-artifact@v2
+        with:
+          name: my_package_dist
+          path: dist/*
