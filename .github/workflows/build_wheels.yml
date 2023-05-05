@@ -47,7 +47,7 @@ jobs:
           python_tag="${implementation}${python_version//./}"
           
           # get platform tag
-          platform_tag=$(python -c "from distutils.util import get_platform; print(get_platform().replace('-', '_').replace('.', '_'))")
+          platform_tag="manylinux_$(python -c 'import platform; print(platform.architecture()[0])')"
           
           # construct new filename
           new_filename="${distribution}-${version}-${python_tag}-${platform_tag}.whl"
