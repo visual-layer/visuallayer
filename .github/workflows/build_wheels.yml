@@ -26,7 +26,29 @@ jobs:
 
       - name: Build package
         run: |
-          python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }}
+          #python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }}
+          
+          python setup.py sdist bdist_wheel
+          
+          # get distribution and version from setup.py
+          distribution=$(python setup.py --name)
+          version=$(python setup.py --version)
+          
+          # get python version and implementation
+          python_version=$(python -c "import platform; print(platform.python_version())")
+          implementation=$(python -c "import platform; print(platform.python_implementation())")
+          
+          # construct python tag
+          python_tag="${implementation}${python_version//./}"
+          
+          # get platform tag
+          platform_tag=$(python -c "import platform; print(platform.system().lower() + '-' + platform.machine())")
+          
+          # construct new filename
+          new_filename="${distribution}-${version}-${python_tag}-${platform_tag}.whl"
+          
+          # rename the .whl file to the new filename
+          mv dist/*.whl dist/$new_filename
 
       - name: Save package artifacts
         uses: actions/upload-artifact@v2
