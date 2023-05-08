@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name='vl_datasets',
-    version='0.0.1',
+    version='0.0.2',
     url='https://github.com/visual-layer/vl-datasets',
     author='Visual Layer',
     author_email='info@visual-layer.com',
