@@ -68,16 +68,21 @@ The cleaned image dataset should be free from most if not all of the following i
 
 Here are some of the datasets we are currently working on. 
 
-+ Laion 1B
-+ Imagenet-21k
-+ Imagenet-1k
-+ KITTI
-+ DeepFashion
-+ Food-101
-+ Places365-standard
-+ CelebA-HQ
-+ ADE20K
-+ Coco
+| Dataset | Issues |
+| -------- | -------- |
+| Food-101    | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| Oxford Pets    | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| Imagenette   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| Laion 1B   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| Imagenet-21k   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| Imagenet-1k   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| KITTI   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| DeepFashion   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| Places365-standard   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| CelebA-HQ   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| ADE20K   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+| COCO   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
+
 
 We plan to release the cleaned version on the dataset in this repo.
 
@@ -98,7 +103,7 @@ To use the Clean-LAION-400M dataset, you must download the original LAION-400M d
 
 Alternatively you can get the list of problematic images by signing-up [here](https://forms.gle/khZpAGUQJeqgRwwo7). -->
 
-## Scripts
+<!-- ## Scripts
 We provide convenience functions to help you move or delete problematic files. The files are specified in a `.csv` file.
 
 A sample content of the `.csv` file is as follows:
@@ -119,7 +124,7 @@ python scripts/move-images.py --file_paths_csv  problem_images.csv --images_dir 
 Delete problematic images:
 ```python
 python scripts/delete-images.py --file_paths_csv problem_images.csv --images_dir sample_images/
-```
+``` -->
 
 
 ## Disclaimer
