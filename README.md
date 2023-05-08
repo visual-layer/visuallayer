@@ -1,5 +1,4 @@
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -84,15 +83,42 @@ Here are some of the datasets we are currently working on.
 | ADE20K   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
 | COCO   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
 
+## Setting Up
+
+### Prerequisites 
+
+Supported `Python` versions:
 
 
-## Getting Started
+![Supported Python: Ubuntu](https://img.shields.io/badge/Python-3.9%20%7C%203.10-blue?style=for-the-badge)
 
-Install `vl_datasets` package from PyPI.
+
+Supported operating systems:
+
+![Supported OS: Ubuntu](https://img.shields.io/badge/Supported%20OS-Ubuntu-orange.svg?style=for-the-badge)
+
+
+
+
+
+Supported Python version: 
+
+Supported Operating System: Ubuntu
+
+### Installation
+
+**Option 1** - Install `vl_datasets` package from PyPI.
 
 ```shell
 pip install vl-datasets
 ```
+
+**Option 2** - Install the bleeding edge version on GitHub
+```
+pip install git+https://github.com/visual-layer/vl-datasets.git@master --upgrade
+```
+
+## Getting Started
 
 Import the clean version of dataset.
 
