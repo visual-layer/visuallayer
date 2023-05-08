@@ -4,8 +4,6 @@ from pathlib import Path
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
-exec(open("vl_datasets/version.py").read())
-
 setup(
     name='vl_datasets',
     version='0.0.3',
