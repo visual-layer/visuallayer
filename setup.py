@@ -8,7 +8,7 @@ exec(open("vl_datasets/version.py").read())
 
 setup(
     name='vl_datasets',
-    version=__version__,
+    version='0.0.3',
     url='https://github.com/visual-layer/vl-datasets',
     author='Visual Layer',
     author_email='info@visual-layer.com',
