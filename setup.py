@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-from vl_datasets.__init__ import __version__
+from vl_datasets import __version__
 
 from pathlib import Path
 this_directory = Path(__file__).parent
