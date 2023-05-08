@@ -98,13 +98,6 @@ Supported operating systems:
 ![Supported OS: Ubuntu](https://img.shields.io/badge/Supported%20OS-Ubuntu-orange.svg?style=for-the-badge)
 
 
-
-
-
-Supported Python version: 
-
-Supported Operating System: Ubuntu
-
 ### Installation
 
 **Option 1** - Install `vl_datasets` package from PyPI.
