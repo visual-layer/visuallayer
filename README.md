@@ -85,7 +85,9 @@ Here are some of the datasets we are currently working on.
 | COCO   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
 
 
-We plan to release the cleaned version on the dataset in this repo.
+
+## Examples
+
 
 <!-- ### Clean-ImageNet-21K
 In the [original ImageNet-21K](https://www.image-net.org/) dataset we find up to 15.9% of the images are problematic. Among those there are 1.2M redundant duplicate and 104K train validation leaks.
