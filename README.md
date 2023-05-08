@@ -86,7 +86,32 @@ Here are some of the datasets we are currently working on.
 
 
 
-## Examples
+## Getting Started
+
+Install `vl_datasets` package from PyPI.
+
+```shell
+pip install vl-datasets
+```
+
+Import the clean version of dataset.
+
+```python
+from vl_datasets import CleanFood101
+```
+
+Load the dataset into a PyTorch `DataLoader`.
+
+```python
+train_dataset = CleanFood101('./', split='train', exclude_csv='food_101_vl-datasets_analysis.csv', transform=train_transform)
+valid_dataset = CleanFood101('./', split='test', exclude_csv='food_101_vl-datasets_analysis.csv', transform=valid_transform)
+```
+
+Now you can use the dataset in a PyTorch training loop. Refer to our sample training notebooks for details.
+
+Sample training notebooks:
++ [PyTorch](./notebooks/train-clean-pytorch.ipynb)
++ [fast.ai](./notebooks/train-fastai.ipynb)
 
 
 <!-- ### Clean-ImageNet-21K
