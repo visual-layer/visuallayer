@@ -2,7 +2,7 @@ from torchvision.datasets import ImageFolder
 import pandas as pd
 from pathlib import Path
 
-class FilteredDataset(ImageFolder):
+class CleanImageFolder(ImageFolder):
     """
     A modified version of torchvision.datasets.ImageFolder that filters out samples whose filenames
     are listed in a given CSV file.
