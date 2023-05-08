@@ -1,13 +1,13 @@
 name: Build
 
-# on:
-#   release:
-#     types: [created]
-    
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [created]
+    
+# on:
+#   push:
+#     branches:
+#       - master
 
 jobs:
   build:
