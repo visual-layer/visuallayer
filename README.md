@@ -62,6 +62,7 @@ The cleaned image dataset should be free from most if not all of the following i
 
 + Duplicates.
 + Broken images.
++ Outliers.
 + Low information images (dark/bright/blurry images).
 
 ## Datasets
