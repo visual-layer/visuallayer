@@ -181,7 +181,7 @@ Now you can use the dataset in a PyTorch training loop. Refer to our sample trai
         <ul>
             <li> <b>Dataset:</b> <code>CleanFood101</code></li>
             <li> <b>Framework:</b> PyTorch.</li>
-            <li> <b>Description:</b> Train a simple PyTorch model with the CleanFood101 dataset.</li>
+            <li> <b>Description:</b> Load a dataset and train a PyTorch model.</li>
         </ul>
       </td>
       <td align="center" width="80">
