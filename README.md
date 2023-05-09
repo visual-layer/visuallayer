@@ -66,8 +66,6 @@ The cleaned image dataset should be free from most if not all of the following i
 
 ## Datasets
 
-Here are some of the datasets we are currently working on. 
-
 | Dataset | Issues |
 | -------- | -------- |
 | [Food-101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/)    | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
