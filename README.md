@@ -163,7 +163,11 @@ Now you can use the dataset in a PyTorch training loop. Refer to our sample trai
       </a>
       </td>    
       <td rowspan="3">
-        <b>PyTorch:</b> In this example, train a simple PyTorch model with the CleanFood101 dataset.
+        <ul>
+            <li> <b>Dataset:</b> <code>CleanFood101</code></li>
+            <li> <b>Framework:</b> PyTorch.</li>
+            <li> <b>Description:</b> Train a simple PyTorch model with the CleanFood101 dataset.</li>
+        </ul>
       </td>
       <td align="center" width="80">
           <a href="https://nbviewer.org/github/visual-layer/vl-datasets/blob/main/notebooks/train-pytorch.ipynb">
@@ -195,7 +199,11 @@ Now you can use the dataset in a PyTorch training loop. Refer to our sample trai
       </a>
       </td>    
       <td rowspan="3">
-        <b>fastai:</b> In this tutorial learn how to train a model using fastai and timm with the CleanFood101 dataset.
+        <ul>
+            <li> <b>Dataset:</b> <code>CleanPets</code></li>
+            <li> <b>Framework:</b> fast.ai.</li>
+            <li> <b>Description:</b> Train a simple TIMM model using fastai.</li>
+        </ul>
       </td>
       <td align="center" width="80">
           <a href="https://nbviewer.org/github/visual-layer/vl-datasets/blob/main/notebooks/train-fastai.ipynb">
