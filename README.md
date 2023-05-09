@@ -193,5 +193,7 @@ Now you can use the dataset in a PyTorch training loop. Refer to our sample trai
   
 </table>
 
-## Disclaimer
-You are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
+## License
+`vl-datasets` is licensed under the Apache 2.0 License. See [LICENSE](./LICENSE).
+
+However, you are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
