@@ -1,4 +1,33 @@
 
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+
+[![PyPi][pypi-shield]][pypi-url]
+[![PyPi][pypiversion-shield]][pypi-url]
+[![PyPi][downloads-shield]][downloads-url]
+[![License][license-shield]][license-url]
+<!-- [![Contributors][contributors-shield]][contributors-url] -->
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[pypi-shield]: https://img.shields.io/badge/Python-3.7%20|%203.8%20|%203.9%20|%203.10-blue?style=for-the-badge
+[pypi-url]: https://pypi.org/project/vl-datasets/
+[pypiversion-shield]: https://img.shields.io/pypi/v/vl-datasets?style=for-the-badge
+[downloads-shield]: https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=downloads&query=%24.total_downloads&url=https%3A%2F%2Fapi.pepy.tech%2Fapi%2Fprojects%2Fvl-datasets&color=lightblue
+[downloads-url]: https://pypi.org/project/vl-datasets/
+<!-- [contributors-shield]: https://img.shields.io/github/contributors/visual-layer/fastdup?style=for-the-badge -->
+<!-- [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors -->
+[license-shield]: https://img.shields.io/badge/License-Apache%202.0-purple.svg?style=for-the-badge
+[license-url]: https://github.com/visual-layer/vl-datasets/blob/main/LICENSE
+
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -103,7 +132,7 @@ pip install vl-datasets
 
 **Option 2** - Install the bleeding edge version on GitHub
 ```
-pip install git+https://github.com/visual-layer/vl-datasets.git@master --upgrade
+pip install git+https://github.com/visual-layer/vl-datasets.git@main --upgrade
 ```
 
 ## Usage
@@ -124,7 +153,7 @@ valid_dataset = CleanFood101('./', split='test', exclude_csv='food_101_vl-datase
 
 Now you can use the dataset in a PyTorch training loop. Refer to our sample training notebooks for details.
 
-## Example
+## Learn from Examples
 
 <table>
   <tr>
