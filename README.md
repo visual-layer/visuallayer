@@ -94,9 +94,12 @@ Training models will erroneours data impacts model accuracy, incurs costs in tim
 ## Datasets
 We're a startup and we'd like to offer free access to the datasets as much as we can afford to. But in doing so, we'd also need your support.
 
-We can provide free access (no strings attached) to some of the `.csv`, and for the remaining ones, we ask that you sign up with us (also for free) to be our beta testers. 
+We're offering select `.csv` files completely free with no strings attached. 
+For access to our complete dataset and exclusive beta features, all we ask is that you sign up to be a beta tester – it's completely free and your feedback will help shape the future of our platform. 
 
-Here is a table of widely used computer vision datasets and the issues we found.
+Join us in unlocking the full potential of our data and revolutionizing the industry!
+
+Here is a table of widely used computer vision datasets, issues we found and a link to access the `.csv` file.
 
 
 | Dataset                                                                 | Issues (WIP)                                                                                                                                                                                 | CSV            |
