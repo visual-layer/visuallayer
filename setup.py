@@ -1,8 +1,10 @@
 from setuptools import setup, find_packages
 
-from pathlib import Path
-this_directory = Path(__file__).parent
-long_description = (this_directory / "README.md").read_text()
+with open('README.md', 'r') as fh:
+    long_description = fh.read()
+
+with open('requirements.txt', 'r') as fh:
+    requirements = fh.read().splitlines()
 
 setup(
     name='vl_datasets',
@@ -10,7 +12,7 @@ setup(
     url='https://github.com/visual-layer/vl-datasets',
     author='Visual Layer',
     author_email='info@visual-layer.com',
-    description='Clean datasets for computer vision.',
+    description='Open, Clean Datasets for Computer Vision.',
     long_description_content_type="text/markdown",
     long_description=long_description,
     license = "Apache-2.0",
@@ -28,9 +30,5 @@ setup(
     ],
     packages=find_packages(),
     python_requires=">=3.7",
-    install_requires=[
-        "torch",
-        "torchvision",
-        "pandas"
-    ]
+    install_requires=requirements
 )
