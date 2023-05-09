@@ -99,7 +99,7 @@ By providing public access to `vl-datasets` we hope it helps advance the field o
 We're a startup and we'd like to offer free access to the datasets as much as we can afford to. But in doing so, we'd also need your support.
 
 We're offering select `.csv` files completely free with no strings attached. 
-For access to our complete dataset and exclusive beta features, all we ask is that you sign up to be a beta tester – it's completely free and your feedback will help shape the future of our platform. 
+For access to our complete dataset and exclusive beta features, all we ask is that you [sign up]((https://forms.gle/8jxPkyzeKj82kPed8)) to be a beta tester – it's completely free and your feedback will help shape the future of our platform. 
 
 Join us in unlocking the full potential of our data and revolutionizing the industry!
 
