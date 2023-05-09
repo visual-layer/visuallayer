@@ -81,7 +81,8 @@
 + Outliers.
 + Dark/Bright/Blurry images.
 
-In for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
+For each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
+You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
 
 ## Why?
 
