@@ -253,3 +253,22 @@ With the dataset loaded you can train a model using PyTorch training loop.
 `vl-datasets` is licensed under the Apache 2.0 License. See [LICENSE](./LICENSE).
 
 However, you are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
+
+## Getting Help
+Get help from the Visual Layer team or community members via the following channels -
++ [Slack](https://visualdatabase.slack.com/join/shared_invite/zt-19jaydbjn-lNDEDkgvSI1QwbTXSY6dlA#/shared-invite/email).
++ GitHub [issues](https://github.com/visual-layer/vl-datasets/issues).
++ Discussion [forum](https://visual-layer.readme.io/discuss).
+
+## About Visual-Layer
+
+<div align="center">
+<a href="https://www.visual-layer.com">
+  <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="250">
+</a>
+</div>
+
+
+Visual Layer is founded by the authors of [XGBoost](https://github.com/apache/tvm), [Apache TVM](https://github.com/apache/tvm) & [Turi Create](https://github.com/apple/turicreate) - [Danny Bickson](https://www.linkedin.com/in/dr-danny-bickson-835b32), [Carlos Guestrin](https://www.linkedin.com/in/carlos-guestrin-5352a869) and [Amir Alush](https://www.linkedin.com/in/amiralush).
+
+Learn more about Visual Layer [here](https://visual-layer.com).
