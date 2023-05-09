@@ -157,9 +157,9 @@ To start using `vl-datasets`, you can import the clean version of the dataset wi
 from vl_datasets import CleanFood101
 ```
 
-This should import the clean version of the Food101 dataset.
+This should import the clean version of the `Food101` dataset.
 
-Next, you can load the dataset as a PyTorch `DataLoader`.
+Next, you can load the dataset as a PyTorch `Dataset`.
 
 ```python
 train_dataset = CleanFood101('./', split='train', exclude_csv='food_101_vl-datasets_analysis.csv', transform=train_transform)
