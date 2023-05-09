@@ -166,7 +166,11 @@ train_dataset = CleanFood101('./', split='train', exclude_csv='food_101_vl-datas
 valid_dataset = CleanFood101('./', split='test', exclude_csv='food_101_vl-datasets_analysis.csv', transform=valid_transform)
 ```
 
-Now you can use the dataset in a PyTorch training loop. Refer to our sample training notebooks for details.
+The `exclude_csv` argument specifies a list of files in a `.csv` to exclude from the dataset.
+
+> **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
+
+With the dataset loaded you can train a model using PyTorch training loop.
 
 ## Learn from Examples
 
