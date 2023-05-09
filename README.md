@@ -43,28 +43,25 @@
   </p>
 </div>
 
-## What?
-This repo shares clean version of publicly available computer vision datasets.
+## Description
 
-## Why?
-Even with the success of generative models, data quality remains an issue that's mainly overlooked.
-Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
-
-## How?
-In this repo we share clean version of various computer vision datasets.
-
-The datasets are cleaned using a free tool we released - [fastdup](https://github.com/visual-layer/fastdup).
-
-We hope this effort will also help the community train better models and mitigate various model biases.
-
-The cleaned image dataset should be free from most if not all of the following issues:
+`vl-datasets` is a collection of clean computer vision datasets, carefully analyzed and processed to avoid common image dataset issues such as:
 
 + Duplicates.
 + Broken images.
 + Outliers.
 + Dark/Bright/Blurry images.
 
+## Why?
+
+Computer vision is an exciting and rapidly advancing field, with new techniques and models emerging all the time. 
+However, to develop and evaluate these models, it's essential to have reliable and standardized datasets to work with.
+
+Even with the success of generative models, data quality remains an issue that's mainly overlooked.
+Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
+
 ## Datasets
+Here is a table of widely used computer vision datasets and the issues we found.
 
 | Dataset | Issues |
 | -------- | -------- |
@@ -81,7 +78,7 @@ The cleaned image dataset should be free from most if not all of the following i
 | [ADE20K](https://groups.csail.mit.edu/vision/datasets/ADE20K/)   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
 | [COCO](https://cocodataset.org/#home)   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
 
-## Setting Up
+<!-- ## Setting Up
 
 ### Prerequisites 
 
@@ -93,10 +90,10 @@ Supported `Python` versions:
 
 Supported operating systems:
 
-![Supported OS: Ubuntu](https://img.shields.io/badge/Supported%20OS-Ubuntu-orange.svg?style=for-the-badge)
+![Supported OS: Ubuntu](https://img.shields.io/badge/Supported%20OS-Ubuntu-orange.svg?style=for-the-badge) -->
 
 
-### Installation
+## Installation
 
 **Option 1** - Install `vl_datasets` package from PyPI.
 
@@ -109,15 +106,16 @@ pip install vl-datasets
 pip install git+https://github.com/visual-layer/vl-datasets.git@master --upgrade
 ```
 
-## Getting Started
-
-Import the clean version of dataset.
+## Usage
+To start using `vl-datasets`, you can import the clean version of the dataset with:
 
 ```python
 from vl_datasets import CleanFood101
 ```
 
-Load the dataset into a PyTorch `DataLoader`.
+This should import the clean version of the Food101 dataset.
+
+Next, you can load the dataset as a PyTorch `DataLoader`.
 
 ```python
 train_dataset = CleanFood101('./', split='train', exclude_csv='food_101_vl-datasets_analysis.csv', transform=train_transform)
@@ -126,51 +124,74 @@ valid_dataset = CleanFood101('./', split='test', exclude_csv='food_101_vl-datase
 
 Now you can use the dataset in a PyTorch training loop. Refer to our sample training notebooks for details.
 
-Sample training notebooks:
-+ [PyTorch](./notebooks/train-clean-pytorch.ipynb)
-+ [fast.ai](./notebooks/train-fastai.ipynb)
+## Example
 
+<table>
+  <tr>
+      <td rowspan="3" width="160">
+      <a href="https://visual-layer.readme.io/docs/getting-started">
+              <img src="./imgs/food.jpg" width="256">
+      </a>
+      </td>    
+      <td rowspan="3">
+        <b>PyTorch:</b> In this example, train a simple PyTorch model with the CleanFood101 dataset.
+      </td>
+      <td align="center" width="80">
+          <a href="https://nbviewer.org/github/visual-layer/vl-datasets/blob/main/notebooks/train-pytorch.ipynb">
+              <img src="./imgs/nbviewer_logo.svg" height="34">
+          </a>
+      </td>
+  </tr>
+  <tr>
+      <td align="center">
+          <a href="https://github.com/visual-layer/vl-datasets/blob/main/notebooks/train-pytorch.ipynb">
+              <img src="./imgs/github_logo.png" height="32">
+          </a>
+      </td>
+  </tr>
+  <tr>
+      <td align="center">
+          <a href="https://colab.research.google.com/github/visual-layer/vl-datasets/blob/main/notebooks/train-pytorch.ipynb">
+              <img src="./imgs/colab_logo.png" height="28">
+          </a>
+      </td>
+  </tr>
 
-<!-- ### Clean-ImageNet-21K
-In the [original ImageNet-21K](https://www.image-net.org/) dataset we find up to 15.9% of the images are problematic. Among those there are 1.2M redundant duplicate and 104K train validation leaks.
+  <!-- ------------------------------------------------------------------- -->
 
-To use the Clean-ImageNet-21K dataset, you must download the original ImageNet-21K dataset here and run the `analyze.py` script to obtain the list of problematic images. We recommend runnning the script on a machine with a minimum of 64 CPU cores and 128GB of RAM. 
+  <tr>
+      <td rowspan="3" width="160">
+      <a href="https://visual-layer.readme.io/docs/objects-and-bounding-boxes">
+              <img src="./imgs/pet.jpg" width="256">
+      </a>
+      </td>    
+      <td rowspan="3">
+        <b>fastai:</b> In this tutorial learn how to train a model using fastai and timm with the CleanFood101 dataset.
+      </td>
+      <td align="center" width="80">
+          <a href="https://nbviewer.org/github/visual-layer/vl-datasets/blob/main/notebooks/train-fastai.ipynb">
+              <img src="./imgs/nbviewer_logo.svg" height="34">
+          </a>
+      </td>
+  </tr>
+  <tr>
+      <td align="center">
+          <a href="https://github.com/visual-layer/vl-datasets/blob/main/notebooks/train-fastai.ipynb">
+              <img src="./imgs/github_logo.png" height="32">
+          </a>
+      </td>
+  </tr>
+  <tr>
+      <td align="center">
+          <a href="https://colab.research.google.com/github/visual-layer/vl-datasets/blob/main/notebooks/train-fastai.ipynb">
+              <img src="./imgs/colab_logo.png" height="28">
+          </a>
+      </td>
+  </tr>
 
-Alternatively you can get the list of problematic images by signing-up [here](https://forms.gle/khZpAGUQJeqgRwwo7).
-
-### Clean-LAION-400M
-In the [original LAION-400M dataset](https://laion.ai/blog/laion-400-open-dataset/), we find 10.3M missing images (stale URLs) and 1.63M corrupted images. Common corruptions include over 772k images
-having format issues and not loading, 443k images smaller
-than 10x10 pixels, and over 300k images that are ’File not
-found’ placeholders
-
-To use the Clean-LAION-400M dataset, you must download the original LAION-400M dataset and run the `analyze.py` script to obtain the list of problematic images. We recommend runnning the script on a machine with a minimum of 64 CPU cores and 128GB of RAM. 
-
-Alternatively you can get the list of problematic images by signing-up [here](https://forms.gle/khZpAGUQJeqgRwwo7). -->
-
-<!-- ## Scripts
-We provide convenience functions to help you move or delete problematic files. The files are specified in a `.csv` file.
-
-A sample content of the `.csv` file is as follows:
-```
-filename
-buildings/0.jpg
-buildings/4.jpg
-```
-
-> **Warning**: Proceed with caution. The following operations may be irrersible. Backup your data before proceeding.
-
-Move problematic images to a destination folder:
-
-```python
-python scripts/move-images.py --file_paths_csv  problem_images.csv --images_dir sample_images --dest_folder_name problematic_images
-```
-
-Delete problematic images:
-```python
-python scripts/delete-images.py --file_paths_csv problem_images.csv --images_dir sample_images/
-``` -->
-
+  <!-- ------------------------------------------------------------------- -->
+  
+</table>
 
 ## Disclaimer
 You are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
