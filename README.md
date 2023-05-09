@@ -92,7 +92,8 @@ Training models will erroneours data impacts model accuracy, incurs costs in tim
 ## Datasets
 Here is a table of widely used computer vision datasets and the issues we found.
 
-| Dataset | Issues |
+
+| Dataset | Issues (WIP) |
 | -------- | -------- |
 | [Food-101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/)    | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
 | [Oxford-IIIT Pet](https://www.robots.ox.ac.uk/~vgg/data/pets/)    | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> |
