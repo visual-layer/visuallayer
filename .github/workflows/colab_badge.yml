@@ -15,6 +15,7 @@ jobs:
         uses: trsvchn/colab-badge-action@v4
         with:
           check: 'all'
+          target_branch: main
           update: true
           target_repository: visual-layer/vl-datasets
 
