@@ -86,11 +86,14 @@ You can use the listed images in the `.csv` to improve the model by re-labeling 
 
 ## Why?
 
-Computer vision is an exciting and rapidly advancing field, with new techniques and models emerging all the time. 
+Computer vision is an exciting and rapidly advancing field, with new techniques and models emerging now and then. 
 However, to develop and evaluate these models, it's essential to have reliable and standardized datasets to work with.
 
-Even with the success of generative models, data quality remains an issue that's mainly overlooked.
+Even with the recent success of generative models, data quality remains an issue that's [mainly overlooked](https://medium.com/@amiralush/large-image-datasets-today-are-a-mess-e3ea4c9e8d22).
 Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
+
+We believe that access to clean and high-quality computer vision datasets leads to accurate, non-biased, and efficient model.
+By providing public access to `vl-datasets` we hope it helps advance the field of computer vision.
 
 ## Datasets & Access
 We're a startup and we'd like to offer free access to the datasets as much as we can afford to. But in doing so, we'd also need your support.
