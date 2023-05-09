@@ -91,7 +91,7 @@ However, to develop and evaluate these models, it's essential to have reliable a
 Even with the success of generative models, data quality remains an issue that's mainly overlooked.
 Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
 
-## Datasets
+## Datasets & Access
 We're a startup and we'd like to offer free access to the datasets as much as we can afford to. But in doing so, we'd also need your support.
 
 We're offering select `.csv` files completely free with no strings attached. 
