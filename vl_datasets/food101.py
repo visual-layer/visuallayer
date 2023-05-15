@@ -7,6 +7,27 @@ import json
 import pandas as pd
 import requests
 
+import torchvision.transforms as transforms
+
+train_transform = transforms.Compose(
+    [
+        transforms.RandomResizedCrop(224),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ]
+)
+
+valid_transform = transforms.Compose(
+    [
+        transforms.Resize(256),
+        transforms.CenterCrop(224),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ]
+)
+
+
 class CleanFood101(Food101):
     def __init__(
         self,
@@ -33,6 +54,14 @@ class CleanFood101(Food101):
 
         self.classes = sorted(metadata.keys())
         self.class_to_idx = dict(zip(self.classes, range(len(self.classes))))
+
+        # Default tranform
+        if transform is None:
+            if split == 'train':
+                self.transform = train_transform
+
+            elif split == 'test':
+                self.transform = valid_transform
 
         # If user specifies a csv file use it
         if exclude_csv:
