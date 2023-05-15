@@ -108,7 +108,7 @@ Here is a table of widely used computer vision datasets, issues we found and a l
 
 | Dataset                                                                 | Issues (WIP)                                                                                                                                                                                 | CSV            |
 |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
-| [Food-101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/) | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Download [here](./notebooks/csv_files/food_101_vl-datasets_analysis.csv). |
+| [Food-101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/) | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Download [here](https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw). |
 | [Oxford-IIIT Pet](https://www.robots.ox.ac.uk/~vgg/data/pets/)          | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Download here. |
 | [Imagenette](https://github.com/fastai/imagenette)                      | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Download here. |
 | [LAION-1B](https://laion.ai/blog/laion-5b/)                             | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
@@ -162,11 +162,10 @@ This should import the clean version of the `Food101` dataset.
 Next, you can load the dataset as a PyTorch `Dataset`.
 
 ```python
-train_dataset = CleanFood101('./', split='train', exclude_csv='food_101_vl-datasets_analysis.csv', transform=train_transform)
-valid_dataset = CleanFood101('./', split='test', exclude_csv='food_101_vl-datasets_analysis.csv', transform=valid_transform)
+train_dataset = CleanFood101('./', split='train')
+valid_dataset = CleanFood101('./', split='test')
 ```
 
-The `exclude_csv` argument specifies a list of files in a `.csv` to exclude from the dataset.
 
 > **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
 
@@ -221,7 +220,7 @@ With the dataset loaded you can train a model using PyTorch training loop.
         <ul>
             <li> <b>Dataset:</b> <code>CleanPets</code></li>
             <li> <b>Framework:</b> fast.ai.</li>
-            <li> <b>Description:</b> Train a simple TIMM model using fastai.</li>
+            <li> <b>Description:</b> Finetune a pretrained DINOv2 model using fastai.</li>
         </ul>
       </td>
       <td align="center" width="80">
