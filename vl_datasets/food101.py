@@ -5,6 +5,7 @@ from typing import Any, Callable, Optional, Tuple, TypeVar, Iterable
 from pathlib import Path
 import json
 import pandas as pd
+import requests
 
 class CleanFood101(Food101):
     def __init__(
@@ -33,14 +34,33 @@ class CleanFood101(Food101):
         self.classes = sorted(metadata.keys())
         self.class_to_idx = dict(zip(self.classes, range(len(self.classes))))
 
+        # If user specifies a csv file use it
         if exclude_csv:
+            print(f"Using provided CSV file: {exclude_csv}")
             self.exclude_df = pd.read_csv(exclude_csv, header=0)
             self.exclude_set = set(self.exclude_df["filename"].tolist())
+        
+        # Otherwise, download the csv file
+        elif exclude_csv is None:
+            print("Downloading CSV file")
+            url = "https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw" 
+
+            try:
+                response = requests.get(url, stream=True)
+                with open("food-101.csv", "wb") as f:
+                    for chunk in response.iter_content(chunk_size=1024):
+                        f.write(chunk)
+
+                self.exclude_df = pd.read_csv("food-101.csv", header=0)
+                self.exclude_set = set(self.exclude_df["filename"].tolist())
+            except Exception as e:
+                print("Error parsing CSV file")
+                print(e)
 
         self.excluded_files = []
         for class_label, im_rel_paths in metadata.items():
             for im_rel_path in im_rel_paths:
-                if exclude_csv is not None and f"{im_rel_path}.jpg" in self.exclude_set:
+                if f"{im_rel_path}.jpg" in self.exclude_set:
                     # print(f"Excluding {im_rel_path}.jpg")
                     self.excluded_files.append(f"{im_rel_path}.jpg")
                     continue
