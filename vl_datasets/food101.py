@@ -1,7 +1,7 @@
 # Code adapted from https://github.com/pytorch/vision/blob/main/torchvision/datasets/utils.py
 
 from torchvision.datasets import Food101
-from typing import Any, Callable, Optional, Tuple, TypeVar, Iterable
+from typing import Any, Callable, Optional, TypeVar, Iterable
 from pathlib import Path
 import json
 import pandas as pd
