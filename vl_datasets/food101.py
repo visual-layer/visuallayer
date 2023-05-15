@@ -44,15 +44,17 @@ class CleanFood101(Food101):
         elif exclude_csv is None:
             print("Downloading CSV file")
             url = "https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw" 
+            filename = "food-101.csv"
 
             try:
                 response = requests.get(url, stream=True)
-                with open("food-101.csv", "wb") as f:
+                with open(filename, "wb") as f:
                     for chunk in response.iter_content(chunk_size=1024):
                         f.write(chunk)
 
-                self.exclude_df = pd.read_csv("food-101.csv", header=0)
+                self.exclude_df = pd.read_csv(filename, header=0)
                 self.exclude_set = set(self.exclude_df["filename"].tolist())
+
             except Exception as e:
                 print("Error parsing CSV file")
                 print(e)
