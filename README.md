@@ -233,7 +233,7 @@ With the dataset loaded you can train a model using PyTorch training loop.
         <ul>
             <li> <b>Dataset:</b> <code>CleanOxfordIIITPet</code></li>
             <li> <b>Framework:</b> fast.ai.</li>
-            <li> <b>Description:</b> Finetune a pretrained DINOv2 model using fastai.</li>
+            <li> <b>Description:</b> Finetune a pretrained TIMM model using fastai.</li>
         </ul>
       </td>
       <td align="center" width="80">
