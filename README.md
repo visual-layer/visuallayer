@@ -87,6 +87,13 @@ We analyze widely used computer vision datasets for issues such as:
 
 ![image](./imgs/issues.png)
 
+vl-datasets provides a convenient way to access these datasets in Python.
+
+Alternativey, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
+
+You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
+
+
 ## Why?
 
 Computer vision is an exciting and rapidly advancing field, with new techniques and models emerging now and then. 
@@ -100,9 +107,6 @@ By providing public access to `vl-datasets` we hope it helps advance the field o
 
 ## Datasets & Access
 We're a startup and we'd like to offer free access to the datasets as much as we can afford to. But in doing so, we'd also need your support.
-
-For each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
-You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
 
 We're offering select `.csv` files completely free with no strings attached. 
 For access to our complete dataset and exclusive beta features, all we ask is that you [sign up]((https://forms.gle/8jxPkyzeKj82kPed8)) to be a beta tester – it's completely free and your feedback will help shape the future of our platform. 
