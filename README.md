@@ -76,11 +76,7 @@
 
 `vl-datasets` is a package that provides access to clean computer vision datasets with only 2 lines of code.
 
-<iframe
-  src="https://carbon.now.sh/embed?bg=rgba%28171%2C+184%2C+195%2C+1%29&t=dracula-pro&wt=none&l=python&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=from%2520vl_datasets%2520import%2520CleanFood101%250Atrain_dataset%2520%253D%2520CleanFood101%28%27.%252F%27%252C%2520split%253D%27train%27%29%250A%250A%250A"
-  style="width: 548px; height: 264px; border:0; transform: scale(1); overflow:hidden;"
-  sandbox="allow-scripts allow-same-origin">
-</iframe>
+![image](./imgs/usage.png)
 
 
 We analyzed widely used computer vision datasets for issues such as: 
