@@ -74,20 +74,18 @@
 
 ## Description
 
-`vl-datasets` is a package that provides access to clean computer vision datasets with only 2 lines of code.
+`vl-datasets` is a Python package that provides access to clean computer vision datasets with only 2 lines of code.
 
 ![image](./imgs/usage.png)
 
-
-We analyzed widely used computer vision datasets for issues such as: 
+We analyze widely used computer vision datasets for issues such as: 
 
 + Duplicates.
 + Broken images.
 + Outliers.
 + Dark/Bright/Blurry images.
 
-For each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
-You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
+![image](./imgs/issues.png)
 
 ## Why?
 
@@ -103,10 +101,11 @@ By providing public access to `vl-datasets` we hope it helps advance the field o
 ## Datasets & Access
 We're a startup and we'd like to offer free access to the datasets as much as we can afford to. But in doing so, we'd also need your support.
 
+For each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
+You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
+
 We're offering select `.csv` files completely free with no strings attached. 
 For access to our complete dataset and exclusive beta features, all we ask is that you [sign up]((https://forms.gle/8jxPkyzeKj82kPed8)) to be a beta tester – it's completely free and your feedback will help shape the future of our platform. 
-
-Join us in unlocking the full potential of our data and revolutionizing the industry!
 
 Here is a table of widely used computer vision datasets, issues we found and a link to access the `.csv` file.
 
@@ -155,7 +154,21 @@ pip install vl-datasets
 pip install git+https://github.com/visual-layer/vl-datasets.git@main --upgrade
 ```
 
+## Usage
+To start using `vl-datasets`, you can import the clean version of the dataset with:
 
+```python
+from vl_datasets import CleanFood101
+```
+
+This should import the clean version of the `Food101` dataset.
+
+Next, you can load the dataset as a PyTorch `Dataset`.
+
+```python
+train_dataset = CleanFood101('./', split='train')
+valid_dataset = CleanFood101('./', split='test')
+```
 
 
 > **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
