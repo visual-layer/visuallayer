@@ -184,6 +184,7 @@ If you have a custom `.csv` file you can optionally pass in the file:
 ```python
 train_dataset = CleanFood101('./', split='train', exclude_csv='my-file.csv')
 ```
+The filenames listed in the `.csv` will be excluded in the dataset.
 
 Next, you can load the train and validation datasets in a PyTorch training loop.
 
