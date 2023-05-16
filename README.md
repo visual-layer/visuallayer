@@ -140,13 +140,13 @@ Learn more on how we clean the datasets using our profilling tool [here](https:/
 
 ## Installation
 
-**Option 1** - Install `vl_datasets` package from PyPI.
+**Option 1** - Install `vl_datasets` package from PyPI:
 
 ```shell
 pip install vl-datasets
 ```
 
-**Option 2** - Install the bleeding edge version on GitHub
+**Option 2** - Install the bleeding edge version on GitHub:
 ```
 pip install git+https://github.com/visual-layer/vl-datasets.git@main --upgrade
 ```
