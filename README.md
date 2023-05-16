@@ -92,7 +92,7 @@ All the datasets are analyzed for issues such as:
 
 ![image](./imgs/issues.png)
 
-`vl-datasets` provides a convenient way to access these datasets in Python.
+`vl-datasets` provides a convenient way to access these cleaned datasets in Python.
 
 Alternatively, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
 
