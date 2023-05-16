@@ -36,7 +36,7 @@
   <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="400">
 </a>
 
-<h3 align="center">Open, Clean Datasets for Computer Vision</h3>
+<h3 align="center">Open, Clean, Curated Datasets for Computer Vision</h3>
 
   <p align="center">
   <br />
