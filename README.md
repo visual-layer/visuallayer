@@ -36,7 +36,7 @@
   <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="400">
 </a>
 
-<h3 align="center">Open, Clean Datasets for Computer Vision</h3>
+<h3 align="center">Open, Clean, Curated Datasets for Computer Vision</h3>
 
   <p align="center">
   <br />
@@ -74,15 +74,30 @@
 
 ## Description
 
-`vl-datasets` is a collection of clean computer vision datasets, carefully analyzed and processed to avoid common image dataset issues such as:
+`vl-datasets` is a Python package that provides access to clean computer vision datasets with only 2 lines of code.
+
+For example, to get access to the clean version of the [Food-101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/) dataset simply run:
+
+![image](./imgs/usage.png)
+
+We support some of the most widely used computer vision datasets.
+[Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a new dataset.
+
+All the datasets are analyzed for issues such as: 
 
 + Duplicates.
 + Broken images.
 + Outliers.
 + Dark/Bright/Blurry images.
 
-For each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
+![image](./imgs/issues.png)
+
+`vl-datasets` provides a convenient way to access these cleaned datasets in Python.
+
+Alternatively, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
+
 You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
+
 
 ## Why?
 
@@ -99,9 +114,7 @@ By providing public access to `vl-datasets` we hope it helps advance the field o
 We're a startup and we'd like to offer free access to the datasets as much as we can afford to. But in doing so, we'd also need your support.
 
 We're offering select `.csv` files completely free with no strings attached. 
-For access to our complete dataset and exclusive beta features, all we ask is that you [sign up]((https://forms.gle/8jxPkyzeKj82kPed8)) to be a beta tester – it's completely free and your feedback will help shape the future of our platform. 
-
-Join us in unlocking the full potential of our data and revolutionizing the industry!
+For access to our complete dataset and exclusive beta features, all we ask is that you [sign up](https://forms.gle/8jxPkyzeKj82kPed8) to be a beta tester – it's completely free and your feedback will help shape the future of our platform. 
 
 Here is a table of widely used computer vision datasets, issues we found and a link to access the `.csv` file.
 
@@ -109,49 +122,37 @@ Here is a table of widely used computer vision datasets, issues we found and a l
 | Dataset                                                                 | Issues (WIP)                                                                                                                                                                                 | CSV            |
 |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
 | [Food-101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/) | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Download [here](https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw). |
-| [Oxford-IIIT Pet](https://www.robots.ox.ac.uk/~vgg/data/pets/)          | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Download here. |
+| [Oxford-IIIT Pet](https://www.robots.ox.ac.uk/~vgg/data/pets/)          | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Download [here](https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL). |
 | [Imagenette](https://github.com/fastai/imagenette)                      | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Download here. |
-| [LAION-1B](https://laion.ai/blog/laion-5b/)                             | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
-| [Imagenet-21k](https://www.image-net.org/)                              | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
-| [Imagenet-1k](https://www.image-net.org/)                               | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
-| [KITTI](https://www.cvlibs.net/datasets/kitti/)                         | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
-| [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html)    | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
-| [Places365](https://github.com/CSAILVision/places365)                   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
-| [CelebA-HQ](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)           | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
-| [ADE20K](https://groups.csail.mit.edu/vision/datasets/ADE20K/)          | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
-| [COCO](https://cocodataset.org/#home)                                   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
+| [LAION-1B](https://laion.ai/blog/laion-5b/)                             | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
+| [Imagenet-21k](https://www.image-net.org/)                              | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
+| [Imagenet-1k](https://www.image-net.org/)                               | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
+| [KITTI](https://www.cvlibs.net/datasets/kitti/)                         | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
+| [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html)    | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
+| [Places365](https://github.com/CSAILVision/places365)                   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
+| [CelebA-HQ](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)           | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
+| [ADE20K](https://groups.csail.mit.edu/vision/datasets/ADE20K/)          | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
+| [COCO](https://cocodataset.org/#home)                                   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
 
 
-<!-- ## Setting Up
-
-### Prerequisites 
-
-Supported `Python` versions:
-
-
-![Supported Python: Ubuntu](https://img.shields.io/badge/Python-3.9%20%7C%203.10-blue?style=for-the-badge)
-
-
-Supported operating systems:
-
-![Supported OS: Ubuntu](https://img.shields.io/badge/Supported%20OS-Ubuntu-orange.svg?style=for-the-badge) -->
+Learn more on how we clean the datasets using our profilling tool [here](https://visual-layer.link).
 
 
 ## Installation
 
-**Option 1** - Install `vl_datasets` package from PyPI.
+**Option 1** - Install `vl_datasets` package from PyPI:
 
 ```shell
 pip install vl-datasets
 ```
 
-**Option 2** - Install the bleeding edge version on GitHub
+**Option 2** - Install the bleeding edge version on GitHub:
 ```
 pip install git+https://github.com/visual-layer/vl-datasets.git@main --upgrade
 ```
 
 ## Usage
-To start using `vl-datasets`, you can import the clean version of the dataset with:
+To start using `vl-datasets`, import the clean version of the dataset with:
 
 ```python
 from vl_datasets import CleanFood101
@@ -165,6 +166,17 @@ Next, you can load the dataset as a PyTorch `Dataset`.
 train_dataset = CleanFood101('./', split='train')
 valid_dataset = CleanFood101('./', split='test')
 ```
+
+If you have a custom `.csv` file you can optionally pass in the file:
+
+```python
+train_dataset = CleanFood101('./', split='train', exclude_csv='my-file.csv')
+```
+The filenames listed in the `.csv` will be excluded in the dataset.
+
+Next, you can load the train and validation datasets in a PyTorch training loop.
+
+See the [Learn from Examples](#learn-from-examples) section to learn more.
 
 
 > **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
@@ -220,7 +232,7 @@ With the dataset loaded you can train a model using PyTorch training loop.
         <ul>
             <li> <b>Dataset:</b> <code>CleanOxfordIIITPet</code></li>
             <li> <b>Framework:</b> fast.ai.</li>
-            <li> <b>Description:</b> Finetune a pretrained DINOv2 model using fastai.</li>
+            <li> <b>Description:</b> Finetune a pretrained TIMM model using fastai.</li>
         </ul>
       </td>
       <td align="center" width="80">
