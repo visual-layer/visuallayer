@@ -76,9 +76,14 @@
 
 `vl-datasets` is a Python package that provides access to clean computer vision datasets with only 2 lines of code.
 
+For example, to get access to the clean version of the [Food-101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/) dataset simply run:
+
 ![image](./imgs/usage.png)
 
-We analyze widely used computer vision datasets for issues such as: 
+We support some of the most widely used computer vision datasets.
+[Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a new dataset.
+
+All the datasets are analyzed for issues such as: 
 
 + Duplicates.
 + Broken images.
