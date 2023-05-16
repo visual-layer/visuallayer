@@ -164,7 +164,7 @@ pip install git+https://github.com/visual-layer/vl-datasets.git@main --upgrade
 ```
 
 ## Usage
-To start using `vl-datasets`, you can import the clean version of the dataset with:
+To start using `vl-datasets`, import the clean version of the dataset with:
 
 ```python
 from vl_datasets import CleanFood101
@@ -178,6 +178,10 @@ Next, you can load the dataset as a PyTorch `Dataset`.
 train_dataset = CleanFood101('./', split='train')
 valid_dataset = CleanFood101('./', split='test')
 ```
+
+Next, you can load the train and validation datasets in a PyTorch training loop.
+
+See the [Learn from Examples](#learn-from-examples) section to learn more.
 
 
 > **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
