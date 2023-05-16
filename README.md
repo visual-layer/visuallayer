@@ -179,6 +179,12 @@ train_dataset = CleanFood101('./', split='train')
 valid_dataset = CleanFood101('./', split='test')
 ```
 
+If you have a custom `.csv` file you can optionally pass in the file:
+
+```python
+train_dataset = CleanFood101('./', split='train', exclude_csv='my-file.csv')
+```
+
 Next, you can load the train and validation datasets in a PyTorch training loop.
 
 See the [Learn from Examples](#learn-from-examples) section to learn more.
