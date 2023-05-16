@@ -87,9 +87,9 @@ We analyze widely used computer vision datasets for issues such as:
 
 ![image](./imgs/issues.png)
 
-vl-datasets provides a convenient way to access these datasets in Python.
+`vl-datasets` provides a convenient way to access these datasets in Python.
 
-Alternativey, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
+Alternatively, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
 
 You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
 
