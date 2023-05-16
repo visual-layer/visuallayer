@@ -135,19 +135,7 @@ Here is a table of widely used computer vision datasets, issues we found and a l
 | [COCO](https://cocodataset.org/#home)                                   | <ul><li>Duplicates - 0.24% (12,345)</li><li>Outliers - 0.85% (456)</li><li>Broken - 0.85% (456)</li><li>Blur - 0.85% (456)</li><li>Dark - 0.85% (456)</li><li>Bright - 0.85% (456)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).  |
 
 
-<!-- ## Setting Up
-
-### Prerequisites 
-
-Supported `Python` versions:
-
-
-![Supported Python: Ubuntu](https://img.shields.io/badge/Python-3.9%20%7C%203.10-blue?style=for-the-badge)
-
-
-Supported operating systems:
-
-![Supported OS: Ubuntu](https://img.shields.io/badge/Supported%20OS-Ubuntu-orange.svg?style=for-the-badge) -->
+Learn more on how we clean the datasets using our profilling tool [here](https://visual-layer.link).
 
 
 ## Installation
