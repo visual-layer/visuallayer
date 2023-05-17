@@ -8,7 +8,7 @@ with open('requirements.txt', 'r') as fh:
 
 setup(
     name='vl_datasets',
-    version='0.0.6',
+    version='0.0.7',
     url='https://github.com/visual-layer/vl-datasets',
     author='Visual Layer',
     author_email='info@visual-layer.com',
