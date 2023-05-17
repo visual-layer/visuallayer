@@ -37,7 +37,7 @@ class CleanOxfordIIITPet(OxfordIIITPet):
         transform: Optional[Callable] = None,
         target_transform: Optional[Callable] = None,
         exclude_csv: Optional[str] = None,
-        download: bool = False,
+        download: bool = True,
     ):
         self._split = verify_str_arg(split, "split", ("trainval", "test"))
         if isinstance(target_types, str):
@@ -52,6 +52,7 @@ class CleanOxfordIIITPet(OxfordIIITPet):
             transforms=transforms,
             transform=transform,
             target_transform=target_transform,
+            download=download
         )
 
         self._base_folder = pathlib.Path(self.root) / "oxford-iiit-pet"
@@ -106,7 +107,7 @@ class CleanOxfordIIITPet(OxfordIIITPet):
 
         # A copy of self.exclude_set but without file extension
         exclude_set_filenames = {
-            filename.split(".")[0] for filename in self.exclude_set
+            filename.split("/")[-1].split(".")[0] for filename in self.exclude_set
         }
 
         with open(self._anns_folder / f"{self._split}.txt") as file:
