@@ -1,5 +1,5 @@
-#Sentry collects crash reports and performance numbers
-#It is possible to turn off data collection using an environment variable named "SENTRY_OPT_OUT"
+# Sentry collects crash reports and performance numbers
+# It is possible to turn off data collection using an environment variable named "SENTRY_OPT_OUT"
 import sentry_sdk
 from sentry_sdk import capture_exception
 
