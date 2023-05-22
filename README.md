@@ -31,11 +31,15 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-
 <a href="https://www.visual-layer.com">
   <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="400">
 </a>
-<h3 align="center">VL-Datasets</h3>
+<style>
+    .larger-font {
+      font-size: 24px; /* Adjust the font size as needed */
+    }
+  </style>
+<h3 align="center" class="larger-font">VL-Datasets</h3>
 <h3 align="center">Open, Clean, Curated Datasets for Computer Vision</h3>
 
   <p align="center">
