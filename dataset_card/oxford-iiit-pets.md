@@ -5,10 +5,10 @@
 
 + Paper - https://www.robots.ox.ac.uk/~vgg/publications/2012/parkhi12a/parkhi12a.pdf
 
-+ Total images in dataset - 7349.
 
 + License - [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
++ Total images in dataset - 7349.
 
 ## Summary
 
