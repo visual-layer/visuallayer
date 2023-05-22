@@ -32,7 +32,7 @@
 <br />
 <div align="center">
 <a href="https://www.visual-layer.com">
-  <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="400">
+  <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="350">
 </a>
 <h3 align="center">VL-Datasets</h3>
 <h4 align="center">Open, Clean, Curated Datasets for Computer Vision</h4>
