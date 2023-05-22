@@ -31,12 +31,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-
 <a href="https://www.visual-layer.com">
-  <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="400">
+  <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="350">
 </a>
 <h3 align="center">VL-Datasets</h3>
-<h3 align="center">Open, Clean, Curated Datasets for Computer Vision</h3>
+<h4 align="center">Open, Clean, Curated Datasets for Computer Vision</h4>
 
   <p align="center">
   <br />
@@ -276,6 +275,20 @@ With the dataset loaded you can train a model using PyTorch training loop.
 `vl-datasets` is licensed under the Apache 2.0 License. See [LICENSE](./LICENSE).
 
 However, you are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
+
+## Usage Tracking
+This repository incorporates usage tracking using [Sentry.io](https://sentry.io/) to monitor and collect valuable information about the usage of the application.
+
+Usage tracking allows us to gain insights into how the application is being used in real-world scenarios. It provides us with valuable information that helps in understanding user behavior, identifying potential issues, and making informed decisions to improve the application.
+
+We DO NOT collect folder names, user names, image names, image content and other personaly identifiable information.
+
+What data is tracked?
++ **Errors and Exceptions**: Sentry captures errors and exceptions that occur in the application, providing detailed stack traces and relevant information to help diagnose and fix issues.
++ **Performance Metrics**: Sentry collects performance metrics, such as response times, latency, and resource usage, enabling us to monitor and optimize the application's performance.
+
+Read more on Sentry's official [webpage](https://sentry.io/welcome/).
+
 
 ## Getting Help
 Get help from the Visual Layer team or community members via the following channels -

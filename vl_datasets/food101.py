@@ -6,8 +6,9 @@ from pathlib import Path
 import json
 import pandas as pd
 import requests
-
 import torchvision.transforms as transforms
+from vl_datasets.sentry import v1_sentry_handler, vl_capture_log_debug_state
+
 
 train_transform = transforms.Compose(
     [
@@ -29,6 +30,7 @@ valid_transform = transforms.Compose(
 
 
 class CleanFood101(Food101):
+    @v1_sentry_handler
     def __init__(
         self,
         root: str,
@@ -38,6 +40,7 @@ class CleanFood101(Food101):
         download: bool = True,
         exclude_csv: Optional[str] = None
     ) -> None:
+        vl_capture_log_debug_state(locals())
         super().__init__(root, transform=transform, target_transform=target_transform, download=download)
         self._split = verify_str_arg(split, "split", ("train", "test"))
         self._base_folder = Path(self.root) / "food-101"
