@@ -85,6 +85,7 @@ We support some of the most widely used computer vision datasets.
 All the datasets are analyzed for issues such as: 
 
 + Duplicates.
++ Near Duplicates.
 + Broken images.
 + Outliers.
 + Dark/Bright/Blurry images.
@@ -121,8 +122,8 @@ Here is a table of widely used computer vision datasets, issues we found and a l
 
 | Dataset                                                                 | Issues                                                                                                                                                                                 | CSV                                                                                                | Usage                |
 |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|----------------------|
-| [Food-101](./dataset_card/food101.md) | <ul><li>Duplicates - 0.233 % (235)</li><li>Outliers - 0.076 % (77)</li><li>Blur - Blur - 0.183 % (185)</li><li>Dark - 0.043 % (43)</li><li><b>Total</b> - 0.535 % (540)</li></ul> | Download [here](https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw). | `from vl_datasets import CleanFood101`       |
-| [Oxford-IIIT Pet](./dataset_card/oxford-iiit-pets.md)          | <ul><li>Duplicates - 1.021% (75)</li><li>Outliers - 0.095% (7)</li><li>Dark - 0.054% (4)</li><li><b>Total</b> - 1.170 % (86)</li></ul>         | Download [here](https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL). | `from vl_datasets import CleanOxfordIIITPet` |
+| [Food-101](./dataset_card/food101.md) | <ul><li>Duplicates - 0.233 % (235)</li><li>Outliers - 0.076 % (77)</li><li>Blur - Blur - 0.183 % (185)</li><li>Dark - 0.043 % (43)</li><li><b>Total</b> - 0.535 % (540)</li></ul> | Download [here](https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw). | `from vl_datasets import VLFood101`       |
+| [Oxford-IIIT Pet](./dataset_card/oxford-iiit-pets.md)          | <ul><li>Duplicates - 1.021% (75)</li><li>Outliers - 0.095% (7)</li><li>Dark - 0.054% (4)</li><li><b>Total</b> - 1.170 % (86)</li></ul>         | Download [here](https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL). | `from vl_datasets import VLOxfordIIITPet` |
 | [LAION-1B](https://laion.ai/blog/laion-5b/)                             | <ul><li>Duplicates - WIP % (WIP)</li><li>Outliers - WIP % (WIP)</li><li>Broken - WIP % (WIP)</li><li>Blur - WIP % (WIP)</li><li>Dark - WIP % (WIP)</li><li>Bright - WIP % (WIP)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
 | [ImageNet-21K](https://www.image-net.org/)                              | <ul><li>Duplicates - 11.853 % (1,559,120)</li><li>Outliers - 0.085 % (11,119)</li><li>Blur - 0.292 % (38,458)</li><li>Dark - 0.179 % (23,574)</li><li>Bright - 0.431 % (56,754)</li><li>Mislabels - 3.064 % (402,963)</li><li><b>Total</b> - 15.904 % (2,091,988)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
 | [ImageNet-1K](https://www.image-net.org/)                               | <ul><li>Duplicates - 0.520 % (6,660)</li><li>Outliers - 0.090 % (1,150)</li><li>Blur - 0.200 % (2,554)</li><li>Dark - 0.244 % (2,997)</li><li>Bright - 0.058 % (746)</li><li>Mislabels - 0.119 % (1,518)</li><li><b>Total</b> - 1.221 % (15,625)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
@@ -155,7 +156,7 @@ pip install git+https://github.com/visual-layer/vl-datasets.git@main --upgrade
 To start using `vl-datasets`, import the clean version of the dataset with:
 
 ```python
-from vl_datasets import CleanFood101
+from vl_datasets import VLFood101
 ```
 
 This should import the clean version of the `Food101` dataset.
@@ -163,14 +164,14 @@ This should import the clean version of the `Food101` dataset.
 Next, you can load the dataset as a PyTorch `Dataset`.
 
 ```python
-train_dataset = CleanFood101('./', split='train')
-valid_dataset = CleanFood101('./', split='test')
+train_dataset = VLFood101('./', split='train')
+valid_dataset = VLFood101('./', split='test')
 ```
 
 If you have a custom `.csv` file you can optionally pass in the file:
 
 ```python
-train_dataset = CleanFood101('./', split='train', exclude_csv='my-file.csv')
+train_dataset = VLFood101('./', split='train', exclude_csv='my-file.csv')
 ```
 The filenames listed in the `.csv` will be excluded in the dataset.
 
@@ -194,7 +195,7 @@ With the dataset loaded you can train a model using PyTorch training loop.
 		</td>
 		<td rowspan="4">
 			<ul>
-				<li><b>Dataset:</b> <code>CleanFood101</code></li>
+				<li><b>Dataset:</b> <code>VLFood101</code></li>
 				<li><b>Framework:</b> PyTorch.</li>
 				<li><b>Description:</b> Load a dataset and train a PyTorch model.</li>
 			</ul>
@@ -235,7 +236,7 @@ With the dataset loaded you can train a model using PyTorch training loop.
 		</td>
 		<td rowspan="4">
 			<ul>
-				<li><b>Dataset:</b> <code>CleanOxfordIIITPet</code></li>
+				<li><b>Dataset:</b> <code>VLOxfordIIITPet</code></li>
 				<li><b>Framework:</b> fast.ai.</li>
 				<li><b>Description:</b> Finetune a pretrained TIMM model using fastai.</li>
 			</ul>
