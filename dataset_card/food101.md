@@ -4,7 +4,9 @@
 
 + Paper - https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/bossard_eccv14_food-101.pdf
 
-+ Repository - None.
++ Repository - Unknown.
+
++ License - Unknown.
 
 ## Summary
 
