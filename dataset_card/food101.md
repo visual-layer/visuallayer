@@ -17,12 +17,13 @@ A challenging data set of 101 food categories is introduced, consisting of 101,0
 ## Issues Found
 Here are some of the issues found.
 
-+ Duplicates - WIP % (WIP)
-+ Outliers - WIP % (WIP)
-+ Broken - WIP % (WIP)
-+ Blur - WIP % (WIP)
-+ Dark - WIP % (WIP)
-+ Bright - WIP % (WIP)
++ Duplicates - 0.233 % (235)
++ Outliers - 0.076 % (77)
++ Broken - 0.000 % (0)
++ Blur - 0.183 % (185)
++ Dark - 0.043 % (43)
++ Bright - 0.000 % (0)
 
+Total problematic images - 0.535% (540 out of 101,000)
 
 Visualize the issues here.

@@ -25,5 +25,6 @@ Here are some of the issues found.
 + Dark - 0.054% (4)
 + Bright - 0.000% (0)
 
+Total problematic images - 1.17% (86 out of 7349)
 
 Visualize the issues here.
