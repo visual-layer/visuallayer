@@ -1,12 +1,14 @@
 # Dataset Card - Oxford IIIT Pets
+![datasetimage](https://www.robots.ox.ac.uk/~vgg/data/pets/pet_annotations.jpg)
 
 + Home page - https://www.robots.ox.ac.uk/~vgg/data/pets/
 
 + Paper - https://www.robots.ox.ac.uk/~vgg/publications/2012/parkhi12a/parkhi12a.pdf
 
-+ Repository - Unknown.
++ Total images in dataset - 7349.
 
 + License - [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+
 
 ## Summary
 

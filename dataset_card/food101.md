@@ -1,10 +1,11 @@
 # Dataset Card - Food101
+![datasetimage](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/img/food-101.jpg)
 
 + Home page - https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/
 
 + Paper - https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/bossard_eccv14_food-101.pdf
 
-+ Repository - Unknown.
++ Total images in dataset - 101,000.
 
 + License - Unknown.
 
