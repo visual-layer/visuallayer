@@ -1,7 +1,7 @@
-__version__ = '0.0.7'
+__version__ = '0.0.8'
 from .image_folder import CleanImageFolder
-from .food101 import CleanFood101
-from .oxford_pet import CleanOxfordIIITPet
+from .vl_food101 import VLFood101
+from .vl_oxford_iiit_pet import VLOxfordIIITPet
 from .sentry import init_sentry
 
 init_sentry()
