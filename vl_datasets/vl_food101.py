@@ -29,7 +29,7 @@ valid_transform = transforms.Compose(
 )
 
 
-class CleanFood101(Food101):
+class VLFood101(Food101):
     @v1_sentry_handler
     def __init__(
         self,
@@ -75,7 +75,7 @@ class CleanFood101(Food101):
         # Otherwise, download the csv file
         elif exclude_csv is None:
             print("Downloading CSV file")
-            url = "https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw" 
+            url = "https://drive.google.com/uc?export=download&id=1QaaNJif3qWC_AsOEugnnBASySZO0cLjW" 
             filename = "food-101.csv"
 
             try:
@@ -91,11 +91,16 @@ class CleanFood101(Food101):
                 print("Error parsing CSV file")
                 print(e)
 
+        # A copy of self.exclude_set but without file extension
+        exclude_set_filenames = {
+            filename.split("/")[-2] + "/" + filename.split("/")[-1].split(".")[0] for filename in self.exclude_set
+        }
+
         self.excluded_files = []
         for class_label, im_rel_paths in metadata.items():
             for im_rel_path in im_rel_paths:
-                if f"{im_rel_path}.jpg" in self.exclude_set:
-                    # print(f"Excluding {im_rel_path}.jpg")
+                if f"{im_rel_path}" in exclude_set_filenames:
+                    print(f"Excluding {im_rel_path}.jpg")
                     self.excluded_files.append(f"{im_rel_path}.jpg")
                     continue
                 self._labels += [self.class_to_idx[class_label]]
