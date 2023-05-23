@@ -1,4 +1,4 @@
-name: Build
+name: Build and Publish on PyPI
 
 on:
   release:
@@ -6,9 +6,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest, macos-latest]
         python-version: ['3.9', '3.10']
     steps:
       - name: Checkout code
@@ -26,7 +27,7 @@ jobs:
 
       - name: Build package
         run: |
-          python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }}
+          python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }} --plat-name=${{ matrix.os }}
       
 
       - name: Save package artifacts
