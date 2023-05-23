@@ -28,4 +28,4 @@ Here are some of the issues found.
 Total problematic images - 1.17% (86 out of 7349)
 
 Visualize the issues here.\
-![pets](./pets.gif)
+<video src='./pets.mp4' width=600/>
