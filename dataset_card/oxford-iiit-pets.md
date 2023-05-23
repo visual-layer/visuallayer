@@ -27,5 +27,5 @@ Here are some of the issues found.
 
 Total problematic images - 1.17% (86 out of 7349)
 
-Visualize the issues here.\
+### Duplicates
 ![duplicate](./duplicates.png)
