@@ -26,4 +26,15 @@ Here are some of the issues found.
 
 Total problematic images - 0.535% (540 out of 101,000)
 
-Visualize the issues here.
+### Duplicates
+![duplicate](./duplicates.png)
+
+### Outliers
+![outliers](./outliers.png)
+
+### Blur
+![dark](./blur.png)
+
+### Dark
+![dark](./dark.png)
+
