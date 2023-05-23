@@ -1,4 +1,4 @@
-# Dataset Card - <>
+# Dataset Card - ImageNet-21K
 
 + Home page - 
 

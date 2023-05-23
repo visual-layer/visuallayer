@@ -1,30 +1,35 @@
-# Dataset Card - <>
+# Dataset Card - Common Object in Context (COCO)
 
-+ Home page - 
+![image](https://cocodataset.org/images/coco-examples.jpg)
 
-+ Paper - 
++ Home page - https://cocodataset.org/#home
 
++ Paper - https://arxiv.org/abs/1405.0312
 
-+ License - 
++ License - [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)
 
-+ Total images in dataset - 
++ Total images in dataset - 328,000.
 
 ## Summary
-
+The COCO dataset is a large-scale object detection, segmentation, and captioning dataset. It is widely used in computer vision research and has been used to train and evaluate many state-of-the-art object detection and segmentation models.
+The COCO dataset contains over 330,000 images, each annotated with 80 object categories and 5 captions describing the scene. The dataset has two main parts: the images and their annotations.
 
 ## Issues Found
 Here are some of the issues found.
 
-+ Duplicates - 
-+ Outliers - 
-+ Dark - 
-
-Total problematic images - % ( out of )
++ Duplicates - 0.123 % (201)
++ Outliers - 0.087 % (143)
++ Blur - 0.029 % (47)
++ Dark - 0.106 % (174)
++ Bright - 0.013 % (21)
++ **Total** - 0.358 % (586 out of 328,000)
 
 ### 1. Duplicates
 
-
 ### 2. Outliers
 
+### 3. Blur
 
-### 3. Dark
+### 4. Dark
+
+### 5. Bright
