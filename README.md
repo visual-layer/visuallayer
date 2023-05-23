@@ -122,10 +122,47 @@ For access to our complete dataset and exclusive beta features, all we ask is th
 
 Here is a table of widely used computer vision datasets, issues we found and a link to access the `.csv` file.
 
+<table>
+  <tr>
+    <th>Dataset</th>
+    <th>Issues</th>
+    <th>CSV</th>
+    <th>Import Statement</th>
+  </tr>
+  <tr>
+    <td><a href="./dataset_card/food101.md">Food-101</a></td>
+    <td>
+      <ul>
+        <li>Duplicates - 0.233 % (235)</li>
+        <li>Outliers - 0.076 % (77)</li>
+        <li>Blur - Blur - 0.183 % (185)</li>
+        <li>Dark - 0.043 % (43)</li>
+        <li><b>Total</b> - 0.535 % (540)</li>
+      </ul>
+      <div align="right"><a href="./dataset_card/food101.md"><strong>More »</strong></a></div>
+    </td>
+    <td><a href="https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw">Download here</a></td>
+    <td><code>from vl_datasets import VLFood101</code></td>
+  </tr>
+  <tr>
+    <td><a href="./dataset_card/oxford-iiit-pets.md">Oxford-IIIT Pet</a></td>
+    <td>
+      <ul>
+        <li>Duplicates - 1.021% (75)</li>
+        <li>Outliers - 0.095% (7)</li>
+        <li>Dark - 0.054% (4)</li>
+        <li><b>Total</b> - 1.170 % (86)</li>
+      </ul>
+      <div align="right"><a href="./dataset_card/oxford-iiit-pets.md"><strong>More »</strong></a></div>
+    </td>
+    <td><a href="https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL">Download here</a></td>
+    <td><code>from vl_datasets import VLOxfordIIITPet</code></td>
+  </tr>
 
-| Dataset                                                                 | Issues                                                                                                                                                                                 | CSV                                                                                                | Usage                |
+
+| Dataset                                                                 | Issues                                                                                                                                                                                 | CSV                                                                                                | Import Statement                |
 |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|----------------------|
-| [Food-101](./dataset_card/food101.md) | <ul><li>Duplicates - 0.233 % (235)</li><li>Outliers - 0.076 % (77)</li><li>Blur - Blur - 0.183 % (185)</li><li>Dark - 0.043 % (43)</li><li><b>Total</b> - 0.535 % (540)</li></ul><div align="right"><a href="./dataset_card/food101.md"><strong>More »</strong></a></div>| Download [here](https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw). | ```from vl_datasets import VLFood101```       |
+| [Food-101](./dataset_card/food101.md) | <ul><li>Duplicates - 0.233 % (235)</li><li>Outliers - 0.076 % (77)</li><li>Blur - Blur - 0.183 % (185)</li><li>Dark - 0.043 % (43)</li><li><b>Total</b> - 0.535 % (540)</li></ul><div align="right"><a href="./dataset_card/food101.md"><strong>More »</strong></a></div>| Download [here](https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw). | `from vl_datasets import VLFood101`       |
 | [Oxford-IIIT Pet](./dataset_card/oxford-iiit-pets.md)          | <ul><li>Duplicates - 1.021% (75)</li><li>Outliers - 0.095% (7)</li><li>Dark - 0.054% (4)</li><li><b>Total</b> - 1.170 % (86)</li></ul><div align="right"><a href="./dataset_card/oxford-iiit-pets.md"><strong>More »</strong></a></div>         | Download [here](https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL). | `from vl_datasets import VLOxfordIIITPet` |
 | [LAION-1B](https://laion.ai/blog/laion-5b/)                             | <ul><li>Duplicates - WIP % (WIP)</li><li>Outliers - WIP % (WIP)</li><li>Broken - WIP % (WIP)</li><li>Blur - WIP % (WIP)</li><li>Dark - WIP % (WIP)</li><li>Bright - WIP % (WIP)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
 | [ImageNet-21K](https://www.image-net.org/)                              | <ul><li>Duplicates - 11.853 % (1,559,120)</li><li>Outliers - 0.085 % (11,119)</li><li>Blur - 0.292 % (38,458)</li><li>Dark - 0.179 % (23,574)</li><li>Bright - 0.431 % (56,754)</li><li>Mislabels - 3.064 % (402,963)</li><li><b>Total</b> - 15.904 % (2,091,988)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
