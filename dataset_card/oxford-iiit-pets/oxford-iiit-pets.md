@@ -24,11 +24,11 @@ Here are some of the issues found.
 
 Total problematic images - 1.17% (86 out of 7349)
 
-### Duplicates
+### 1. Duplicates
 ![duplicate](./duplicates.png)
 
-### Outliers
+### 2. Outliers
 ![outliers](./outliers.png)
 
-### Dark
+### 3. Dark
 ![dark](./dark.png)
