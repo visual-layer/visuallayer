@@ -1,9 +1,8 @@
 name: Build and Publish on PyPI
 
-on: [push]
-# on:
-#   release:
-#     types: [created]
+on:
+  release:
+    types: [created]
 
 jobs:
   build:
