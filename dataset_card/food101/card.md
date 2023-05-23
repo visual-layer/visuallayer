@@ -19,11 +19,20 @@ Here are some of the issues found.
 
 + Duplicates - 0.233 % (235)
 + Outliers - 0.076 % (77)
-+ Broken - 0.000 % (0)
 + Blur - 0.183 % (185)
 + Dark - 0.043 % (43)
-+ Bright - 0.000 % (0)
 
 Total problematic images - 0.535% (540 out of 101,000)
 
-Visualize the issues here.
+### 1. Duplicates
+![duplicate](./duplicates.png)
+
+### 2. Outliers
+![outliers](./outliers.png)
+
+### 3. Blur
+![dark](./blur.png)
+
+### 4. Dark
+![dark](./dark.png)
+
