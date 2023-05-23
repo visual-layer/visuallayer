@@ -10,10 +10,10 @@
 + Total images in dataset - 14,197,122.
 
 ## Summary
-
+ImageNet-21K is a massive dataset of images and their corresponding labels. It was created by combining the original ImageNet dataset with the JFT-300M dataset. ImageNet-21K contains over 21,000 classes and over 14 million images. It is a valuable resource for training and evaluating deep learning models for computer vision tasks.
 
 ## Issues Found
-Here are some of the issues found..
+Here are some of the issues found.
 
 + Duplicates - 11.853 % (1,559,120)
 + Outliers - 0.085 % (11,119)
