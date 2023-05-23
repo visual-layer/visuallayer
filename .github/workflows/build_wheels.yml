@@ -28,7 +28,7 @@ jobs:
 
       - name: Build package
         run: |
-          python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }}
+          python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }} --plat-name=${{ matrix.os }}
       
 
       - name: Save package artifacts
