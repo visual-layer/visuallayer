@@ -29,7 +29,19 @@ jobs:
         run: |
           python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }} --plat-name=${{ matrix.os }}
       
-
+      - name: Rename wheel files
+        run: |
+          for file in dist/*.whl; do
+            filename=$(basename "$file")
+            project_name=$(echo "$filename" | cut -d'-' -f1)
+            version=$(echo "$filename" | cut -d'-' -f2)
+            python_tag=$(echo "$filename" | cut -d'-' -f3)
+            abi=$(echo "$filename" | cut -d'-' -f4)
+            platform=$(echo "$filename" | cut -d'-' -f5)
+            new_filename="$project_name-$version-$python_tag-$abi-$platform.whl"
+            mv "$file" "dist/$new_filename"
+          done
+      
       - name: Save package artifacts
         uses: actions/upload-artifact@v2
         with:
