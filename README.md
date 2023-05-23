@@ -156,7 +156,7 @@ Here is a table of widely used computer vision datasets, issues we found and a l
       <div align="right"><a href="./dataset_card/oxford-iiit-pets.md"><strong>More »</strong></a></div>
     </td>
     <td><a href="https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL">Download here</a></td>
-    <td valign="top">
+    <td>
 
 ```python
 from vl_datasets import VLFood101
