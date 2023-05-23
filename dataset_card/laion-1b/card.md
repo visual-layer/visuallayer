@@ -1,13 +1,12 @@
-# Dataset Card - <>
+# Dataset Card - LAION-1B
 
-+ Home page - 
++ Home page - https://laion.ai/
 
-+ Paper - 
++ Paper - https://arxiv.org/abs/2210.08402
 
++ License - [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
-+ License - 
-
-+ Total images in dataset - 
++ Total images in dataset - 1,000,000,000
 
 ## Summary
 
