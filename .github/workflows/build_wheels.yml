@@ -1,8 +1,9 @@
 name: Build and Publish on PyPI
 
-on:
-  release:
-    types: [created]
+on: [push]
+# on:
+#   release:
+#     types: [created]
 
 jobs:
   build:
@@ -37,7 +38,8 @@ jobs:
             version=$(echo "$filename" | cut -d'-' -f2)
             python_tag=$(echo "$filename" | cut -d'-' -f3)
             abi=$(echo "$filename" | cut -d'-' -f4)
-            platform=$(echo "$filename" | cut -d'-' -f5)
+            platform=$(python -c "import distutils.util; print(distutils.util.get_platform())")
+
             new_filename="$project_name-$version-$python_tag-$abi-$platform.whl"
             mv "$file" "dist/$new_filename"
           done
