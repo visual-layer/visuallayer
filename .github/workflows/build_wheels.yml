@@ -37,11 +37,23 @@ jobs:
         with:
           name: wheel-${{ matrix.os }}
           path: dist/*.whl
-      
+
+  publish:
+    needs: build_wheels
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        artifact_name:
+          - wheel-ubuntu-latest
+          - wheel-macos-latest
+          - wheel-windows-latest
+
+    steps:
       - name: Download package artifacts
         uses: actions/download-artifact@v3
         with:
-          name: wheel-${{ matrix.os }}
+          name: ${{ matrix.artifact_name }}
           path: dist/
 
       - name: Publish distribution 📦 to PyPI
@@ -49,7 +61,7 @@ jobs:
         uses: pypa/gh-action-pypi-publish@v1.8.6
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
-  
+        
 # on:
 #   release:
 #     types: [created]
@@ -85,18 +97,18 @@ jobs:
 #           name: dist
 #           path: dist/
 
-#   publish:
-#     needs: build
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Download package artifacts
-#         uses: actions/download-artifact@v2
-#         with:
-#           name: dist
-#           path: dist/
+  # publish:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Download package artifacts
+  #       uses: actions/download-artifact@v2
+  #       with:
+  #         name: dist
+  #         path: dist/
 
-#       - name: Publish distribution 📦 to PyPI
-#         if: startsWith(github.ref, 'refs/tags')
-#         uses: pypa/gh-action-pypi-publish@v1.8.6
-#         with:
-#           password: ${{ secrets.PYPI_API_TOKEN }}
+  #     - name: Publish distribution 📦 to PyPI
+  #       if: startsWith(github.ref, 'refs/tags')
+  #       uses: pypa/gh-action-pypi-publish@v1.8.6
+  #       with:
+  #         password: ${{ secrets.PYPI_API_TOKEN }}
