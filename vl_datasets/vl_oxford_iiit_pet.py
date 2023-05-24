@@ -1,13 +1,12 @@
+# Code adapted from https://github.com/pytorch/vision/blob/main/torchvision/datasets/
+
 from torchvision.datasets import OxfordIIITPet
-import pathlib
 from typing import Callable, Optional, Union, Sequence
-from .utils import verify_str_arg
 from torchvision.datasets.vision import StandardTransform
 import pandas as pd
 import requests
 import torchvision.transforms as transforms
 from vl_datasets.sentry import v1_sentry_handler, vl_capture_log_debug_state
-
 
 
 train_transform = transforms.Compose(
@@ -27,6 +26,7 @@ valid_transform = transforms.Compose(
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
     ]
 )
+
 
 class VLOxfordIIITPet(OxfordIIITPet):
     @v1_sentry_handler
@@ -48,7 +48,7 @@ class VLOxfordIIITPet(OxfordIIITPet):
             transforms=transforms,
             transform=transform,
             target_transform=target_transform,
-            download=download
+            download=download,
         )
 
         # Default tranform
@@ -88,6 +88,7 @@ class VLOxfordIIITPet(OxfordIIITPet):
 
         image_ids = []
         self._labels = []
+        self.excluded_files = []
 
         # A copy of self.exclude_set but without file extension
         # oxford-iiit-pet/images/Abyssinian_177.jpg -> Abyssinian_177
@@ -102,6 +103,7 @@ class VLOxfordIIITPet(OxfordIIITPet):
                 # if filename found in exclude set continue
                 if image_id in exclude_set_filenames:
                     print(f"Excluded {image_id} from the {split} set")
+                    self.excluded_files.append(f"{image_id}")
                     continue
 
                 image_ids.append(image_id)
