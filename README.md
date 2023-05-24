@@ -27,7 +27,7 @@
 <!-- [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors -->
 [license-shield]: https://img.shields.io/badge/License-Apache%202.0-purple.svg?style=for-the-badge
 [license-url]: https://github.com/visual-layer/vl-datasets/blob/main/LICENSE
-[testedon-shield]: https://img.shields.io/badge/Tested%20on-Ubuntu%20%7C%20MacOS%20Intel-green?style=for-the-badge
+[testedon-shield]: https://img.shields.io/badge/Tested%20on-Ubuntu--22.04%20%7C%20MacOS--10.16%20Intel%20%7C%20Windows%2010-green?style=for-the-badge
 
 
 <!-- PROJECT LOGO -->
