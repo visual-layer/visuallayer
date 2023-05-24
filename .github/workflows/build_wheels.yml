@@ -35,6 +35,29 @@ jobs:
         with:
           name: wheel-${{ matrix.os }}
           path: dist/*.whl
+  
+  combine_artifacts:
+    name: Combine artifacts
+    runs-on: ubuntu-latest
+    needs: build_wheels
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Create artifact directory
+        run: mkdir combined-artifacts
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: wheel-*
+          path: combined-artifacts
+
+      - name: Upload combined artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: combined-wheel-artifacts
+          path: combined-artifacts
 
 
 # on:
