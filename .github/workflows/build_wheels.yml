@@ -1,6 +1,8 @@
 name: Build and Publish to PyPI
 
-on: [push]
+on:
+  release:
+    types: [created]
 
 jobs:
   build_wheels:
