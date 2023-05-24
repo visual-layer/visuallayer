@@ -291,6 +291,13 @@ What data is tracked?
 + **Errors and Exceptions**: Sentry captures errors and exceptions that occur in the application, providing detailed stack traces and relevant information to help diagnose and fix issues.
 + **Performance Metrics**: Sentry collects performance metrics, such as response times, latency, and resource usage, enabling us to monitor and optimize the application's performance.
 
+To opt out, define an environment variable named `SENTRY_OPT_OUT`. 
+
+On Linux run the following:
+```bash
+export SENTRY_OPT_OUT=True
+```
+
 Read more on Sentry's official [webpage](https://sentry.io/welcome/).
 
 

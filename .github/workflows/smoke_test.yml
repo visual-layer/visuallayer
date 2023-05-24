@@ -24,5 +24,6 @@ jobs:
         
         - name: Test imports
           run: |
+            export SENTRY_OPT_OUT=True
             python .github/workflows/test_imports.py
       
