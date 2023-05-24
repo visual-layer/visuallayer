@@ -1,4 +1,4 @@
-name: Build and Publish on PyPI
+name: Build and Publish to PyPI
 
 on:
   release:
@@ -6,10 +6,9 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
         python-version: ['3.9', '3.10']
     steps:
       - name: Checkout code
@@ -27,22 +26,9 @@ jobs:
 
       - name: Build package
         run: |
-          python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }} --plat-name=${{ matrix.os }}
+          python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }}
       
-      - name: Rename wheel files
-        run: |
-          for file in dist/*.whl; do
-            filename=$(basename "$file")
-            project_name=$(echo "$filename" | cut -d'-' -f1)
-            version=$(echo "$filename" | cut -d'-' -f2)
-            python_tag=$(echo "$filename" | cut -d'-' -f3)
-            abi=$(echo "$filename" | cut -d'-' -f4)
-            platform=$(python -c "import distutils.util; print(distutils.util.get_platform())")
 
-            new_filename="$project_name-$version-$python_tag-$abi-$platform.whl"
-            mv "$file" "dist/$new_filename"
-          done
-      
       - name: Save package artifacts
         uses: actions/upload-artifact@v2
         with:
