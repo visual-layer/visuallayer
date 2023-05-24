@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build_wheels:
-    name: Build wheels on Ubuntu
+    name: Build wheels
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -33,7 +33,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: wheel
+          name: wheel-${{ matrix.os }}
           path: dist/*.whl
 
 
