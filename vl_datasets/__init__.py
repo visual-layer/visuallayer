@@ -1,4 +1,4 @@
-__version__ = ''0.0.10''
+__version__ = '0.0.10'
 from .sentry import init_sentry
 init_sentry()
 
