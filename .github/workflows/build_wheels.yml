@@ -5,55 +5,44 @@ on:
     types: [created]
 
 jobs:
-  build_wheels:
-    name: Build Wheels and Publish
-    runs-on: ${{ matrix.os }}
-
+  build:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
-    
+        python-version: ['3.9', '3.10']
     steps:
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.9
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install wheel
-
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Build wheel
-        run: python setup.py bdist_wheel
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
 
-      - name: Upload artifact
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install wheel setuptools twine
+
+      - name: Build package
+        run: |
+          python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }}
+      
+
+      - name: Save package artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: wheel-${{ matrix.os }}
-          path: dist/*.whl
+          name: dist
+          path: dist/
 
   publish:
-    needs: build_wheels
+    needs: build
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        artifact_name:
-          - wheel-ubuntu-latest
-          - wheel-macos-latest
-          - wheel-windows-latest
-
     steps:
       - name: Download package artifacts
         uses: actions/download-artifact@v3
         with:
-          name: ${{ matrix.artifact_name }}
+          name: dist
           path: dist/
 
       - name: Publish distribution 📦 to PyPI
@@ -61,54 +50,63 @@ jobs:
         uses: pypa/gh-action-pypi-publish@v1.8.6
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
-        
-# on:
-#   release:
-#     types: [created]
+
+
 
 # jobs:
-#   build:
-#     runs-on: ubuntu-latest
+#   build_wheels:
+#     name: Build Wheels and Publish
+#     runs-on: ${{ matrix.os }}
+
 #     strategy:
 #       matrix:
-#         python-version: ['3.9', '3.10']
+#         os:
+#           - ubuntu-latest
+#           - macos-latest
+#           - windows-latest
+    
 #     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-
 #       - name: Set up Python
-#         uses: actions/setup-python@v2
+#         uses: actions/setup-python@v3
 #         with:
-#           python-version: ${{ matrix.python-version }}
-
+#           python-version: 3.9
 #       - name: Install dependencies
 #         run: |
 #           python -m pip install --upgrade pip
-#           pip install wheel setuptools twine
+#           pip install wheel
 
-#       - name: Build package
-#         run: |
-#           python setup.py bdist_wheel --python-tag=py${{ matrix.python-version }}
-      
+#       - name: Checkout code
+#         uses: actions/checkout@v3
 
-#       - name: Save package artifacts
-#         uses: actions/upload-artifact@v2
+#       - name: Build wheel
+#         run: python setup.py bdist_wheel
+
+#       - name: Upload artifact
+#         uses: actions/upload-artifact@v3
 #         with:
-#           name: dist
+#           name: wheel-${{ matrix.os }}
+#           path: dist/*.whl
+
+#   publish:
+#     needs: build_wheels
+#     runs-on: ubuntu-latest
+
+#     strategy:
+#       matrix:
+#         artifact_name:
+#           - wheel-ubuntu-latest
+#           - wheel-macos-latest
+#           - wheel-windows-latest
+
+#     steps:
+#       - name: Download package artifacts
+#         uses: actions/download-artifact@v3
+#         with:
+#           name: ${{ matrix.artifact_name }}
 #           path: dist/
 
-  # publish:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Download package artifacts
-  #       uses: actions/download-artifact@v2
-  #       with:
-  #         name: dist
-  #         path: dist/
-
-  #     - name: Publish distribution 📦 to PyPI
-  #       if: startsWith(github.ref, 'refs/tags')
-  #       uses: pypa/gh-action-pypi-publish@v1.8.6
-  #       with:
-  #         password: ${{ secrets.PYPI_API_TOKEN }}
+#       - name: Publish distribution 📦 to PyPI
+#         if: startsWith(github.ref, 'refs/tags')
+#         uses: pypa/gh-action-pypi-publish@v1.8.6
+#         with:
+#           password: ${{ secrets.PYPI_API_TOKEN }}
