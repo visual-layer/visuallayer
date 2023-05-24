@@ -12,8 +12,9 @@
 [![PyPi][pypiversion-shield]][pypi-url]
 [![PyPi][downloads-shield]][downloads-url]
 [![License][license-shield]][license-url]
-<!-- [![Contributors][contributors-shield]][contributors-url] -->
 [![TestedOn][testedon-shield]][pypi-url]
+<!-- [![Contributors][contributors-shield]][contributors-url] -->
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
