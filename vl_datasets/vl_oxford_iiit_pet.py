@@ -1,13 +1,12 @@
+# Code adapted from https://github.com/pytorch/vision/blob/main/torchvision/datasets/
+
 from torchvision.datasets import OxfordIIITPet
-import pathlib
 from typing import Callable, Optional, Union, Sequence
-from .utils import verify_str_arg
 from torchvision.datasets.vision import StandardTransform
 import pandas as pd
 import requests
 import torchvision.transforms as transforms
 from vl_datasets.sentry import v1_sentry_handler, vl_capture_log_debug_state
-
 
 
 train_transform = transforms.Compose(
@@ -28,6 +27,7 @@ valid_transform = transforms.Compose(
     ]
 )
 
+
 class VLOxfordIIITPet(OxfordIIITPet):
     @v1_sentry_handler
     def __init__(
@@ -42,40 +42,21 @@ class VLOxfordIIITPet(OxfordIIITPet):
         download: bool = True,
     ):
         vl_capture_log_debug_state(locals())
-        self._split = verify_str_arg(split, "split", ("trainval", "test"))
-        if isinstance(target_types, str):
-            target_types = [target_types]
-        self._target_types = [
-            verify_str_arg(target_type, "target_types", self._VALID_TARGET_TYPES)
-            for target_type in target_types
-        ]
 
         super().__init__(
-            root,
+            root=root,
             transforms=transforms,
             transform=transform,
             target_transform=target_transform,
-            download=download
+            download=download,
         )
 
-        self._base_folder = pathlib.Path(self.root) / "oxford-iiit-pet"
-        self._images_folder = self._base_folder / "images"
-        self._anns_folder = self._base_folder / "annotations"
-        self._segs_folder = self._anns_folder / "trimaps"
-
-        if download:
-            self._download()
-
-        if not self._check_exists():
-            raise RuntimeError(
-                "Dataset not found. You can use download=True to download it"
-            )
-
-        # # Default tranform
+        # Default tranform
         if transform is None:
             if split == "trainval":
                 print("Apply default transform")
                 self.transform = train_transform
+                print(self.transform)
 
             elif split == "test":
                 self.transform = valid_transform
@@ -107,8 +88,10 @@ class VLOxfordIIITPet(OxfordIIITPet):
 
         image_ids = []
         self._labels = []
+        self.excluded_files = []
 
         # A copy of self.exclude_set but without file extension
+        # oxford-iiit-pet/images/Abyssinian_177.jpg -> Abyssinian_177
         exclude_set_filenames = {
             filename.split("/")[-1].split(".")[0] for filename in self.exclude_set
         }
@@ -120,6 +103,7 @@ class VLOxfordIIITPet(OxfordIIITPet):
                 # if filename found in exclude set continue
                 if image_id in exclude_set_filenames:
                     print(f"Excluded {image_id} from the {split} set")
+                    self.excluded_files.append(f"{image_id}")
                     continue
 
                 image_ids.append(image_id)
