@@ -3,7 +3,7 @@ name: Smoke Tests
 on: [push]
 
 jobs:
-    build:
+    test_imports:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout code
@@ -21,7 +21,5 @@ jobs:
         
         - name: Test imports
           run: |
-            python
-            import vl_datasets
-            print("Success!")
+            python .test_imports.py
       
