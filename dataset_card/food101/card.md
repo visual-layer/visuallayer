@@ -24,6 +24,8 @@ Here are some of the issues found.
 
 Total problematic images - 0.535% (540 out of 101,000)
 
+![issues](food.gif)
+
 ### 1. Duplicates
 ![duplicate](./duplicates.png)
 
