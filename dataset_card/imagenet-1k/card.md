@@ -26,7 +26,7 @@ Here are some of the issues found.
 + **Total** - 1.221 % (15,625 of 1,431,167)
 
 ### 1. Duplicates
-
+![duplicates](./duplicates.png)
 
 ### 2. Outliers
 
