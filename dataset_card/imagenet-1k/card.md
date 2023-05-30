@@ -33,7 +33,7 @@ leakage	869	1.738	all
 + Bright - 0.058 % (770)
 + Mislabels - 0.111 % (1,480)
 + Data Leakage - 1.738 % (869)
-+ **Total** - 1.221 % (15,625 of 1,431,167)
++ **Total** - 2.986 % (17,492 of 1,431,167)
 
 ### 1. Duplicates
 ![duplicates](./duplicates.png)
