@@ -70,7 +70,7 @@ class VLOxfordIIITPet(OxfordIIITPet):
 
         elif exclude_csv is None:
             print("Downloading CSV file")
-            url = "https://drive.google.com/uc?export=download&id=1CZEYQF5BMAPajf67zYMn-IaaC2gMJj_H"
+            url = "https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL"
             filename = "oxford-pets.csv"
 
             try:
