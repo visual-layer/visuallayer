@@ -15,14 +15,15 @@ A challenging data set of 101 food categories is introduced, consisting of 101,0
 
 
 ## Issues Found
-Here are some of the issues found.
-
-+ Duplicates - 0.233 % (235)
-+ Outliers - 0.076 % (77)
-+ Blur - 0.183 % (185)
-+ Dark - 0.043 % (43)
-
-Total problematic images - 0.535% (540 out of 101,000)
+Here are some of the issues found:
+<ol>
+<li>Duplicates - 0.23% (235)</li>
+<li>Outliers - 0.08% (77)</li>
+<li>Blur - Blur - 0.18% (185)</li>
+<li>Dark - 0.04% (43)</li>
+<li>Leakage - 0.35% (87)</li>
+<li><b>Total</b> - 0.88% (627)</li>
+</ol>
 
 ![issues](food.gif)
 
