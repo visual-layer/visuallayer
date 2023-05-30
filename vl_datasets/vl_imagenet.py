@@ -11,7 +11,7 @@ class VLImageNet(ImageNet):
                  **kwargs: Any) -> None:
         
 
-        super().__init__(root=root, split=split **kwargs)
+        super().__init__(root=root, split=split, **kwargs)
         
         self.exclude_df, self.exclude_set = parse_exclude_csv(exclude_csv)
 
