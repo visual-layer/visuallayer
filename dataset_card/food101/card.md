@@ -15,15 +15,44 @@ A challenging data set of 101 food categories is introduced, consisting of 101,0
 
 
 ## Issues Found
-Here are some of the issues found:
-<ol>
-<li>Duplicates - 0.23% (235)</li>
-<li>Outliers - 0.08% (77)</li>
-<li>Blur - Blur - 0.18% (185)</li>
-<li>Dark - 0.04% (43)</li>
-<li>Leakage - 0.35% (87)</li>
-<li><b>Total</b> - 0.88% (627)</li>
-</ol>
+Here are some of the issues found in each dataset split.
+
+Overall
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 235       | 0.233       |
+| **Blur**      | 185       | 0.183       |
+| **Outlier**   | 77        | 0.076       |
+| **Dark**      | 43        | 0.043       |
+| **Leakage**   | 87        | 0.345       |
+| **TOTAL**     | 627       | 0.88        |
+
+
+Train Split
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 180       | 0.178       |
+| **Blur**      | 145       | 0.144       |
+| **Outlier**   | 72        | 0.071       |
+| **Dark**      | 43        | 0.043       |
+| **TOTAL**     | 440       | 0.436       |
+
+
+Test Split
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 55        | 0.054       |
+| **Blur**      | 40        | 0.04        |
+| **Outlier**   | 5         | 0.005       |
+| **Leakage**   | 87        | 0.345       |
+| **Duplicate** | 55        | 0.054       |
+| **Total**     | 242       | 0.498       |
+
+
+
 
 ![issues](food.gif)
 
