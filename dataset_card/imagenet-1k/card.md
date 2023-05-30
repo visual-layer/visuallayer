@@ -17,15 +17,6 @@ This dataset provides access to the most commonly used subset of ImageNet, with 
 ## Issues Found
 Here are some of the issues found.
 
-Duplicate			all
-dark			all
-blur			all
-Mislabeled			all
-Outlier			all
-bright			all
-leakage	869	1.738	all
-
-
 + Duplicates - 0.565 % (7,522)
 + Outliers - 0.090 % (1,199)
 + Blur - 0.186 % (2,478)
@@ -52,3 +43,5 @@ leakage	869	1.738	all
 
 ### 6. Mislabels
 ![mislabels](./mislabels.png)
+
+### 7. Leakage
