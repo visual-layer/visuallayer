@@ -29,12 +29,16 @@ Here are some of the issues found.
 ![duplicates](./duplicates.png)
 
 ### 2. Outliers
-
+![outliers](./outliers.png)
 
 ### 3. Blur
+![blur](./blur.png)
 
 ### 4. Dark
+![dark](./dark.png)
 
 ### 5. Bright
+![brigth](./bright.png)
 
 ### 6. Mislabels
+![mislabels](./mislabels.png)
