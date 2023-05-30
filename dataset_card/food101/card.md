@@ -17,7 +17,7 @@ A challenging data set of 101 food categories is introduced, consisting of 101,0
 ## Issues Found
 Here are some of the issues found in each dataset split.
 
-Overall
+Overall:
 
 | **Reason**    | **Count** | **Percent** |
 |---------------|-----------|-------------|
@@ -29,7 +29,7 @@ Overall
 | **TOTAL**     | 627       | 0.88        |
 
 
-Train Split
+Train Split:
 
 | **Reason**    | **Count** | **Percent** |
 |---------------|-----------|-------------|
@@ -40,7 +40,7 @@ Train Split
 | **TOTAL**     | 440       | 0.436       |
 
 
-Test Split
+Test Split:
 
 | **Reason**    | **Count** | **Percent** |
 |---------------|-----------|-------------|
