@@ -2,3 +2,4 @@ torch
 torchvision
 pandas
 sentry-sdk
+scipy
