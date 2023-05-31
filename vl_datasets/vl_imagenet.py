@@ -1,7 +1,7 @@
 # Code adapted from https://github.com/pytorch/vision/blob/main/torchvision/datasets/
 
 from torchvision.datasets import ImageNet
-from typing import Callable, Optional, Union, Sequence, Any, Tuple
+from typing import Optional, Any, Tuple
 import pandas as pd
 
 class VLImageNet(ImageNet):
@@ -16,11 +16,18 @@ class VLImageNet(ImageNet):
         self.exclude_df, self.exclude_set = parse_exclude_csv(exclude_csv)
 
         # Filter file lists based on VL CSV files
-        # TODO: use more efficient method. This takes too long. Sets subtraction maybe?
-        image_keep_list = [i for i, (filename, class_num) in enumerate(self.samples) if not filename.endswith(tuple(self.exclude_set))]
+        # Extract filenames from samples
+        filenames = {sample[0].split("/")[-1] for sample in self.samples}
 
-        self.samples = [self.samples[i] for i in image_keep_list]
-        self.targets = [self.targets[i] for i in image_keep_list]
+        # Remove filenames found in exclude_set
+        filtered_filenames = filenames - self.exclude_set
+
+        # Create the filtered_list by filtering tuples_list based on the filtered_filenames
+        filtered_samples = [(filename, label) for filename, label in self.samples if filename.split("/")[-1] in filtered_filenames]
+        filtered_targets = [s[1] for s in filtered_samples]
+
+        self.samples = filtered_samples
+        self.targets = filtered_targets
         
 
 def parse_exclude_csv(exclude_csv_arg: str) -> Tuple[pd.DataFrame, set]:
