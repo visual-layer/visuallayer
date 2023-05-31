@@ -1,5 +1,5 @@
 # Dataset Card - DeepFashion
-![image](https://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/intro.jpg)
+<img src="https://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/intro.jpg" height="200" />
 
 + Home page - http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html
 

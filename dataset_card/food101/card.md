@@ -1,5 +1,6 @@
 # Dataset Card - Food101
-![datasetimage](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/img/food-101.jpg)
+<img src="https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/img/food-101.jpg" height="200" />
+
 
 + Home page - https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/
 

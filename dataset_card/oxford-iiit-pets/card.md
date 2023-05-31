@@ -1,5 +1,5 @@
 # Dataset Card - Oxford IIIT Pets
-![datasetimage](https://www.robots.ox.ac.uk/~vgg/data/pets/pet_annotations.jpg)
+<img src="https://www.robots.ox.ac.uk/~vgg/data/pets/pet_annotations.jpg" height="200" />
 
 + Home page - https://www.robots.ox.ac.uk/~vgg/data/pets/
 

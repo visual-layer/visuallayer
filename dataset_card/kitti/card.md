@@ -1,5 +1,5 @@
 # Dataset Card - KITTI Vision Benchmark Suite
-![image](https://www.cvlibs.net/datasets/kitti-360/images/banner_text.png)
+<img src="https://www.cvlibs.net/datasets/kitti-360/images/banner_text.png" height="200" />
 
 + Home page - https://www.cvlibs.net/datasets/kitti/
 

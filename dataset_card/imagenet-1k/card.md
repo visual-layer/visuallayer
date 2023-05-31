@@ -1,5 +1,5 @@
 # Dataset Card - ImageNet-1K
-![image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F58%2F0a%2F99%2F580a99345134d954ed2cfe8ea7ccf55a.jpg&f=1&nofb=1&ipt=1a4e152e0b8a36e2da4e0f1a0e020d6857761391be9aec95ac7f5c502966dc01&ipo=images)
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F58%2F0a%2F99%2F580a99345134d954ed2cfe8ea7ccf55a.jpg&f=1&nofb=1&ipt=1a4e152e0b8a36e2da4e0f1a0e020d6857761391be9aec95ac7f5c502966dc01&ipo=images" height="200" />
 
 + Home page - https://www.image-net.org/
 

@@ -1,6 +1,5 @@
 # Dataset Card - Common Object in Context (COCO)
-
-![image](https://cocodataset.org/images/coco-examples.jpg)
+<img src="https://cocodataset.org/images/coco-examples.jpg" height="200" />
 
 + Home page - https://cocodataset.org/#home
 
