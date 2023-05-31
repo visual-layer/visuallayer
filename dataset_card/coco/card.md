@@ -15,7 +15,7 @@ The COCO dataset is a large-scale object detection, segmentation, and captioning
 The COCO dataset contains over 330,000 images, each annotated with 80 object categories and 5 captions describing the scene. The dataset has two main parts: the images and their annotations.
 
 ## Issues Found
-Here are some of the issues found.
+Here are some of the issues found in each dataset split.
 
 + Duplicates - 0.123 % (201)
 + Outliers - 0.087 % (143)

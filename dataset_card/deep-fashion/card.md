@@ -13,7 +13,7 @@
 DeepFashion is a large-scale clothes database with comprehensive annotations. It contains over 800,000 images, which are richly annotated with massive attributes, clothing landmarks, and correspondence of images taken under different scenarios including store, street snapshot, and consumer.
 
 ## Issues Found
-Here are some of the issues found.
+Here are some of the issues found in each dataset split.
 
 + Duplicates - 5.114 % (14,772)
 + Outliers - 0.037 % (107)

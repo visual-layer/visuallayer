@@ -13,7 +13,8 @@
 
 
 ## Issues Found
-Here are some of the issues found.
+## Issues Found
+Here are some of the issues found in each dataset split.
 
 + Duplicates - 
 + Outliers - 
