@@ -284,7 +284,7 @@ With the dataset loaded you can train a model using PyTorch training loop.
 			<ul>
 				<li><b>Dataset:</b> <code>VLImageNet</code></li>
 				<li><b>Framework:</b> PyTorch.</li>
-				<li><b>Description:</b> Load a dataset and train a PyTorch model.</li>
+				<li><b>Description:</b> Load cleaned ImageNet dataset and train a PyTorch model.</li>
 			</ul>
 		</td>
 		<td align="center" width="80">
