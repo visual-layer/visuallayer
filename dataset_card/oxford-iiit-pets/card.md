@@ -1,5 +1,5 @@
 # Dataset Card - Oxford IIIT Pets
-![datasetimage](https://www.robots.ox.ac.uk/~vgg/data/pets/pet_annotations.jpg)
+<img src="https://www.robots.ox.ac.uk/~vgg/data/pets/pet_annotations.jpg" height="200" />
 
 + Home page - https://www.robots.ox.ac.uk/~vgg/data/pets/
 
@@ -17,11 +17,12 @@ The Oxford-IIIT pet dataset comprises 37 categories of pet images, with approxim
 ## Issues Found
 Here are some of the issues found.
 
-+ Duplicates - 1.021% (75)
-+ Outliers - 0.095% (7)
-+ Dark - 0.054% (4)
-
-Total problematic images - 1.17% (86 out of 7349)
+<ol>
+<li>Duplicates - 0.59% (43)</li>
+<li>Outliers - 0.1% (7)</li>
+<li>Dark - 0.05% (4)</li>
+<li><b>Total</b> - 0.73% (54)</li>
+</ol>
 
 ### 1. Duplicates
 ![duplicate](./duplicates.png)

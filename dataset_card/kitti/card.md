@@ -1,5 +1,5 @@
 # Dataset Card - KITTI Vision Benchmark Suite
-![image](https://www.cvlibs.net/datasets/kitti-360/images/banner_text.png)
+<img src="https://www.cvlibs.net/datasets/kitti-360/images/banner_text.png" height="200" />
 
 + Home page - https://www.cvlibs.net/datasets/kitti/
 
@@ -13,11 +13,32 @@
 KITTI is a large-scale dataset for autonomous driving research. It contains a suite of vision tasks, including stereo, optical flow, visual odometry, and object detection. The training set has 7,480 images, while the testing set has 7,517 images annotated with 3D bounding boxes.
 
 ## Issues Found
-Here are some of the issues found.
+Here are some of the issues found in each dataset split.
 
-+ Duplicates - 15.294 % (2,294)
-+ Outliers - 0.107 % (16)
-+ **Total** - 15.401 % (2,310 out of 12,919)
+Overall:
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 2294      | 15.294      |
+| **Outlier**   | 2         | 0.013       |
+| **Leakage**   | 452       | 6.012       |
+| **TOTAL**     | 2748      | 21.319      |
+
+Train Split:
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 1160      | 7.734       |
+| **TOTAL**     | 1160      | 7.734       |
+
+Test Split:
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 1134      | 7.561       |
+| **Outlier**   | 2         | 0.013       |
+| **Leakage**   | 452       | 6.012       |
+| **TOTAL**     | 1588      | 13.586      |
+
 
 ### 1. Duplicates
 

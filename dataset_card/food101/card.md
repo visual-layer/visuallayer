@@ -1,5 +1,6 @@
 # Dataset Card - Food101
-![datasetimage](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/img/food-101.jpg)
+<img src="https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/img/food-101.jpg" height="200" />
+
 
 + Home page - https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/
 
@@ -15,14 +16,44 @@ A challenging data set of 101 food categories is introduced, consisting of 101,0
 
 
 ## Issues Found
-Here are some of the issues found.
+Here are some of the issues found in each dataset split.
 
-+ Duplicates - 0.233 % (235)
-+ Outliers - 0.076 % (77)
-+ Blur - 0.183 % (185)
-+ Dark - 0.043 % (43)
+Overall:
 
-Total problematic images - 0.535% (540 out of 101,000)
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 235       | 0.233       |
+| **Blur**      | 185       | 0.183       |
+| **Outlier**   | 77        | 0.076       |
+| **Dark**      | 43        | 0.043       |
+| **Leakage**   | 87        | 0.345       |
+| **TOTAL**     | 627       | 0.88        |
+
+
+Train Split:
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 180       | 0.178       |
+| **Blur**      | 145       | 0.144       |
+| **Outlier**   | 72        | 0.071       |
+| **Dark**      | 43        | 0.043       |
+| **TOTAL**     | 440       | 0.436       |
+
+
+Test Split:
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 55        | 0.054       |
+| **Blur**      | 40        | 0.04        |
+| **Outlier**   | 5         | 0.005       |
+| **Leakage**   | 87        | 0.345       |
+| **Duplicate** | 55        | 0.054       |
+| **Total**     | 242       | 0.498       |
+
+
+
 
 ![issues](food.gif)
 
@@ -38,3 +69,5 @@ Total problematic images - 0.535% (540 out of 101,000)
 ### 4. Dark
 ![dark](./dark.png)
 
+### 5. Leakage
+![leakage](./leakage.png)

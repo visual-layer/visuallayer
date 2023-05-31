@@ -127,15 +127,15 @@ Here is a table of widely used computer vision datasets, issues we found and a l
 
 | Dataset                                                                 | Issues                                                                                                                                                                                 | CSV                                                                                                | Import Statement                |
 |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|----------------------|
-| [Food-101](./dataset_card/food101/card.md) | <ul><li>Duplicates - 0.233 % (235)</li><li>Outliers - 0.076 % (77)</li><li>Blur - Blur - 0.183 % (185)</li><li>Dark - 0.043 % (43)</li><li><b>Total</b> - 0.535 % (540)</li></ul><div align="right"><a href="./dataset_card/food101/card.md"><strong>More »</strong></a></div>| Download [here](https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw). | `from vl_datasets import VLFood101`       |
-| [Oxford-IIIT Pet](./dataset_card/oxford-iiit-pets/card.md)          | <ul><li>Duplicates - 1.021% (75)</li><li>Outliers - 0.095% (7)</li><li>Dark - 0.054% (4)</li><li><b>Total</b> - 1.170 % (86)</li></ul><div align="right"><a href="./dataset_card/oxford-iiit-pets/card.md"><strong>More »</strong></a></div>         | Download [here](https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL). | `from vl_datasets import VLOxfordIIITPet` |
+| [Food-101](./dataset_card/food101/card.md) | <ul><li>Duplicates - 0.23% (235)</li><li>Outliers - 0.08% (77)</li><li>Blur - Blur - 0.18% (185)</li><li>Dark - 0.04% (43)</li><li>Leakage - 0.35% (87)</li><b>Total</b> - 0.88% (627)</ul><div align="right"><a href="./dataset_card/food101/card.md"><strong>More »</strong></a></div>| Download [here](https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw). | `from vl_datasets import VLFood101`       |
+| [Oxford-IIIT Pet](./dataset_card/oxford-iiit-pets/card.md)          | <ul><li>Duplicates - 0.59% (43)</li><li>Outliers - 0.1% (7)</li><li>Dark - 0.05% (4)</li><b>Total</b> - 0.73% (54)</ul><div align="right"><a href="./dataset_card/oxford-iiit-pets/card.md"><strong>More »</strong></a></div>         | Download [here](https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL). | `from vl_datasets import VLOxfordIIITPet` |
 | [LAION-1B](./dataset_card/laion-1b/card.md)                            | <ul><li>Duplicates - WIP % (WIP)</li><li>Outliers - WIP % (WIP)</li><li>Broken - WIP % (WIP)</li><li>Blur - WIP % (WIP)</li><li>Dark - WIP % (WIP)</li><li>Bright - WIP % (WIP)</li></ul><div align="right"><a href="./dataset_card/laion-1b/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
-| [ImageNet-21K](./dataset_card/imagenet-1k/card.md)                              | <ul><li>Duplicates - 11.853 % (1,559,120)</li><li>Outliers - 0.085 % (11,119)</li><li>Blur - 0.292 % (38,458)</li><li>Dark - 0.179 % (23,574)</li><li>Bright - 0.431 % (56,754)</li><li>Mislabels - 3.064 % (402,963)</li><li><b>Total</b> - 15.904 % (2,091,988)</li></ul><div align="right"><a href="./dataset_card/imagenet-1k/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
-| [ImageNet-1K](./dataset_card/imagenet-21k/card.md)                                | <ul><li>Duplicates - 0.520 % (6,660)</li><li>Outliers - 0.090 % (1,150)</li><li>Blur - 0.200 % (2,554)</li><li>Dark - 0.244 % (2,997)</li><li>Bright - 0.058 % (746)</li><li>Mislabels - 0.119 % (1,518)</li><li><b>Total</b> - 1.221 % (15,625)</li></ul><div align="right"><a href="./dataset_card/imagenet-21k/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
-| [KITTI](./dataset_card/kitti/card.md)                          | <ul><li>Duplicates - 15.294 % (2294)</li><li>Outliers - 0.107 % (16)</li><li><b>Total</b> - 15.401 % (2310)</li></ul><div align="right"><a href="./dataset_card/kitti/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
-| [DeepFashion](./dataset_card/deep-fashion/card.md)     | <ul><li>Duplicates - 5.114 % (14,772)</li><li>Outliers - 0.037 % (107)</li><b>Total</b> - 5.151 % (14,879)</li></ul><div align="right"><a href="./dataset_card/deep-fashion/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
-| [CelebA-HQ](./dataset_card/celeb-a-hq/card.md)           | <ul><li>Duplicates - 1.673 % (3,389)</li><li>Outliers - 0.077 % (157)</li><li>Blur - 0.512 % (1,037)</li><li>Dark - 0.009 % (18)</li><li>Mislabels - 0.006 % (13)</li><li><b>Total</b> - 2.277 % (4,614)</li></ul><div align="right"><a href="./dataset_card/celeb-a-hq/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
-| [COCO](./dataset_card/coco/card.md)                                   | <ul><li>Duplicates - 0.123 % (201)</li><li>Outliers - 0.087 % (143)</li><li>Blur - 0.029 % (47)</li><li>Dark - 0.106 % (174)</li><li>Bright - 0.013 % (21)</li><li><b>Total</b> - 0.358 % (586)</li></ul><div align="right"><a href="./dataset_card/coco/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
+| [ImageNet-21K](./dataset_card/imagenet-21k/card.md)                              | <ul><li>Duplicates - 11.853 % (1,559,120)</li><li>Outliers - 0.085 % (11,119)</li><li>Blur - 0.292 % (38,458)</li><li>Dark - 0.179 % (23,574)</li><li>Bright - 0.431 % (56,754)</li><li>Mislabels - 3.064 % (402,963)</li><b>Total</b> - 15.904 % (2,091,988)</ul><div align="right"><a href="./dataset_card/imagenet-21k/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | `from vl_datasets import VLImageNet`                  |
+| [ImageNet-1K](./dataset_card/imagenet-1k/card.md)                                | <ul><li>Duplicates - 0.57% (7,522)</li><li>Outliers - 0.09% (1,199)</li><li>Blur - 0.19% (2,478)</li><li>Dark - 0.24% (3,174)</li><li>Bright - 0.06 % (770)</li><li>Mislabels - 0.11% (1,480)</li><li>Leakage - 1.74% (869)</li><b>Total</b> - 2.99% (17,492)</ul><div align="right"><a href="./dataset_card/imagenet-1k/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | `from vl_datasets import VLImageNet`                  |
+| [KITTI](./dataset_card/kitti/card.md)                          | <ul><li>Duplicates - 15.29% (2,294)</li><li>Outliers - 0.01% (2)</li><li>Leakage - 6.01% (452)</li><b>Total</b> - 21.32% (2,748)</li></ul><div align="right"><a href="./dataset_card/kitti/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | `from vl_datasets import VLKitti`                  |
+| [DeepFashion](./dataset_card/deep-fashion/card.md)     | <ul><li>Duplicates - 5.11% (14,773)</li><li>Outliers - 0.04% (108)</li><li>Leakage - 19.86% (7,943)</li><b>Total</b> - 25.00% (22,824)</li></ul><div align="right"><a href="./dataset_card/deep-fashion/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
+| [CelebA-HQ](./dataset_card/celeb-a-hq/card.md)           | <ul><li>Duplicates - 1.67% (3,389)</li><li>Outliers - 0.07% (157)</li><li>Blur - 0.51% (1,037)</li><li>Dark - 0.01% (18)</li><li>Mislabels - 0.01% (13)</li><li>Leakage - 0.47% (188)</li><b>Total</b> - 2.75% (4,802)</ul><div align="right"><a href="./dataset_card/celeb-a-hq/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
+| [COCO](./dataset_card/coco/card.md)                                   | <ul><li>Duplicates - 0.12% (201)</li><li>Outliers - 0.09% (143)</li><li>Blur - 0.03% (47)</li><li>Dark - 0.17% (174)</li><li>Bright - 0.01% (21)</li><li>Leakage - 0.04% (20)</li><b>Total</b> - 0.40% (606)</ul><div align="right"><a href="./dataset_card/coco/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | `from vl_datasets import VLCocoDetection`                  |
 <!-- | [ADE20K](https://groups.csail.mit.edu/vision/datasets/ADE20K/)          | <ul><li>Duplicates - WIP % (WIP)</li><li>Outliers - WIP % (WIP)</li><li>Broken - WIP % (WIP)</li><li>Blur - WIP % (WIP)</li><li>Dark - WIP % (WIP)</li><li>Bright - WIP % (WIP)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
 | [Places365](https://github.com/CSAILVision/places365)                   | <ul><li>Duplicates - WIP % (WIP)</li><li>Outliers - WIP % (WIP)</li><li>Broken - WIP % (WIP)</li><li>Blur - WIP % (WIP)</li><li>Dark - WIP % (WIP)</li><li>Bright - WIP % (WIP)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
  -->
@@ -274,6 +274,47 @@ With the dataset loaded you can train a model using PyTorch training loop.
 		</td>
 	</tr>
 	<!-- ------------------------------------------------------------------- -->
+	<tr>
+		<td rowspan="4" width="160">
+			<a href="https://visual-layer.readme.io/docs/getting-started">
+				<img src="./imgs/imagenet.jpg" width="256" />
+			</a>
+		</td>
+		<td rowspan="4">
+			<ul>
+				<li><b>Dataset:</b> <code>VLImageNet</code></li>
+				<li><b>Framework:</b> PyTorch.</li>
+				<li><b>Description:</b> Load cleaned ImageNet dataset and train a PyTorch model.</li>
+			</ul>
+		</td>
+		<td align="center" width="80">
+			<a href="https://nbviewer.org/github/visual-layer/vl-datasets/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
+				<img src="./imgs/nbviewer_logo.svg" height="34" />
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<a href="https://github.com/visual-layer/vl-datasets/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
+				<img src="./imgs/github_logo.png" height="32" />
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td align="center">
+			<a href="https://colab.research.google.com/github/visual-layer/vl-datasets/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
+				<img src="./imgs/colab_logo.png" height="28" />
+			</a>
+		</td>
+	</tr>
+    <tr>
+		<td align="center">
+			<a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/vl-datasets/blob/main/notebooks/train-pytorch.ipynb">
+				<img src="./imgs/kaggle_logo.png" height="28" />
+			</a>
+		</td>
+	</tr>
+	
 </table>
 
 

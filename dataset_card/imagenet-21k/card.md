@@ -1,5 +1,5 @@
 # Dataset Card - ImageNet-21K
-![image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fsyncedreview.com%2Fwp-content%2Fuploads%2F2019%2F02%2FImageNet-Title-Pic.jpg%3Fresize%3D750%252C300%26ssl%3D1&f=1&nofb=1&ipt=8108be3d9eec15cc3e677d7353eb9c80c7dcf5f0cfee46e7a546807924730de5&ipo=images)
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fsyncedreview.com%2Fwp-content%2Fuploads%2F2019%2F02%2FImageNet-Title-Pic.jpg%3Fresize%3D750%252C300%26ssl%3D1&f=1&nofb=1&ipt=8108be3d9eec15cc3e677d7353eb9c80c7dcf5f0cfee46e7a546807924730de5&ipo=images" height="200" />
 
 + Home page - https://github.com/Alibaba-MIIL/ImageNet21K
 
