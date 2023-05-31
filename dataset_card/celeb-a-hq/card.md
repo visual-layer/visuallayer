@@ -1,5 +1,6 @@
 # Dataset Card - CelebA-HQ
-![image](https://pythonawesome.com/content/images/2018/07/celebA-HQ.jpg)
+<img src="https://pythonawesome.com/content/images/2018/07/celebA-HQ.jpg" height="300" />
+
 
 + Home page - https://github.com/tkarras/progressive_growing_of_gans
 
