@@ -16,12 +16,48 @@ The COCO dataset contains over 330,000 images, each annotated with 80 object cat
 ## Issues Found
 Here are some of the issues found in each dataset split.
 
-+ Duplicates - 0.123 % (201)
-+ Outliers - 0.087 % (143)
-+ Blur - 0.029 % (47)
-+ Dark - 0.106 % (174)
-+ Bright - 0.013 % (21)
-+ **Total** - 0.358 % (586 out of 328,000)
+Overall:
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 201       | 0.123       |
+| **Dark**      | 174       | 0.106       |
+| **Outlier**   | 143       | 0.087       |
+| **Blur**      | 47        | 0.029       |
+| **Bright**    | 21        | 0.013       |
+| **Leakage**   | 20        | 0.044       |
+| **TOTAL**     | 606       | 0.402       |
+
+Train Split:
+| **Reason**  | **Count** | **Percent** |
+|-------------|-----------|-------------|
+| **Dark**    | 125       | 0.076       |
+| **Outlier** | 93        | 0.057       |
+| **Blur**    | 33        | 0.02        |
+| **Bright**  | 16        | 0.01        |
+| **TOTAL**   | 407       | 0.248       |
+
+Validation Split:
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 11        | 0.007       |
+| **Outlier**   | 7         | 0.004       |
+| **Dark**      | 4         | 0.002       |
+| **Blur**      | 2         | 0.001       |
+| **Bright**    | 1         | 0.001       |
+| **Leakage**   | 7         | 0.14        |
+| **TOTAL**     | 32        | 0.155       |
+
+Test Split:
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 50        | 0.03        |
+| **Dark**      | 45        | 0.027       |
+| **Outlier**   | 43        | 0.026       |
+| **Blur**      | 12        | 0.007       |
+| **Bright**    | 4         | 0.002       |
+| **Leakage**   | 13        | 0.032       |
+| **TOTAL**     | 167       | 0.124       |
+
 
 ### 1. Duplicates
 
