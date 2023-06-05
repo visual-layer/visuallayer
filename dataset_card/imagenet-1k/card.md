@@ -38,8 +38,7 @@ Train Split:
 | **Mislabeled** | 1480      | 0.111       |
 | **Outlier**    | 1159      | 0.087       |
 | **Bright**     | 746       | 0.056       |
-| **Duplicate**  | 7108      | 0.534       |
-| **TOTAL**      | 23014     | 1.728       |
+| **TOTAL**      | 15906     | 1.194       |
 
 
 Validation Split:
@@ -51,8 +50,7 @@ Validation Split:
 | **Outlier**   | 40        | 0.003       |
 | **Bright**    | 24        | 0.002       |
 | **Leakage**   | 869       | 1.738       |
-| **Duplicate** | 414       | 0.031       |
-| **TOTAL**     | 2000      | 1.823       |
+| **TOTAL**     | 1586      | 1.792       |
 
 
 
