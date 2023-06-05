@@ -28,11 +28,11 @@ valid_transform = transforms.Compose(
 )
 
 
-class VLOxfordIIITPet(OxfordIIITPet):
+class CleanTorchvisionOxfordIIITPet(OxfordIIITPet):
     @v1_sentry_handler
     def __init__(
         self,
-        root: str,
+        root: str = './',
         split: str = "trainval",
         target_types: Union[Sequence[str], str] = "category",
         transforms: Optional[Callable] = None,
