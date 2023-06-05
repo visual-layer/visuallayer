@@ -5,12 +5,8 @@ def load(dataset_name):
     if dataset_name == 'Oxford IIIT Pets':
         return VLOxfordIIITPet()
     
-def list_dataset():
+def list_datasets():
     datasets = [VLOxfordIIITPet()]
-
-    names = []
-    for dataset in datasets:
-        names.append(dataset.name)
-
+    names = [dataset.name for dataset in datasets]
     print("Listing all datasets in zoo.")
-    print(names)
+    return names

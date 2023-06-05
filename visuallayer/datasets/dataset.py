@@ -3,7 +3,21 @@ from abc import ABC, abstractmethod
 class Dataset(ABC):
     @property
     @abstractmethod
-    def info():
+    def name(self):
+        pass
+
+    @property
+    @abstractmethod
+    def description(self):
+        pass
+
+    @property
+    @abstractmethod
+    def info(self):
+        pass
+
+    @abstractmethod
+    def report(self):
         pass
 
     @abstractmethod
