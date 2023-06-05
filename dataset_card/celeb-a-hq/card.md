@@ -24,7 +24,7 @@ Overall:
 | **Outlier**    | 157       | 0.077       |
 | **Dark**       | 2         | 0.001       |
 | **Mislabeled** | 13        | 0.006       |
-| **Leakage**    | 188       | 0.472       |
+| **Leakage**    | 188       |             |
 | **TOTAL**      | 4598      | 2.269       |
 
 Train Split:

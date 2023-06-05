@@ -24,7 +24,7 @@ Overall:
 | **Outlier**   | 143       | 0.087       |
 | **Blur**      | 47        | 0.029       |
 | **Bright**    | 21        | 0.013       |
-| **Leakage**   | 20        | 0.044       |
+| **Leakage**   | 20        |             |
 | **TOTAL**     | 586       | 0.358       |
 
 Train Split:
