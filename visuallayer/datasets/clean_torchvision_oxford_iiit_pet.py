@@ -8,7 +8,6 @@ import requests
 import torchvision.transforms as transforms
 from visuallayer.sentry import v1_sentry_handler, vl_capture_log_debug_state
 
-
 train_transform = transforms.Compose(
     [
         transforms.RandomResizedCrop(224),
