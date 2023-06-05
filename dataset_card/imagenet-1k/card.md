@@ -27,7 +27,7 @@ Overall:
 | **Outlier**    | 1199      | 0.09        |
 | **Bright**     | 770       | 0.058       |
 | **Leakage**    | 869       | 1.738       |
-| **TOTAL**      | 17492     | 2.986       |
+| **TOTAL**      | 16623     | 1.248       |
 
 Train Split:
 | **Reason**     | **Count** | **Percent** |
@@ -50,7 +50,7 @@ Validation Split:
 | **Outlier**   | 40        | 0.003       |
 | **Bright**    | 24        | 0.002       |
 | **Leakage**   | 869       | 1.738       |
-| **TOTAL**     | 1586      | 1.792       |
+| **TOTAL**     | 717       | 0.054       |
 
 
 

@@ -22,7 +22,7 @@ Overall:
 | **Duplicate** | 2294      | 15.294      |
 | **Outlier**   | 2         | 0.013       |
 | **Leakage**   | 452       | 6.012       |
-| **TOTAL**     | 2748      | 21.319      |
+| **TOTAL**     | 2296      | 15.307      |
 
 Train Split:
 | **Reason**    | **Count** | **Percent** |
@@ -37,7 +37,7 @@ Test Split:
 | **Duplicate** | 1134      | 7.561       |
 | **Outlier**   | 2         | 0.013       |
 | **Leakage**   | 452       | 6.012       |
-| **TOTAL**     | 1588      | 13.586      |
+| **TOTAL**     | 1136      | 7.574       |
 
 
 ### 1. Duplicates
