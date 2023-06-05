@@ -6,7 +6,7 @@ Used for filtering original dataset using the VL-Datasets analysis CSV
 from typing import Any, Callable, List, Optional, Tuple
 import torchvision
 import pandas as pd
-from vl_datasets.sentry import v1_sentry_handler
+from visuallayer.sentry import v1_sentry_handler
 
 
 KITTI_CSV_PATH = "https://drive.google.com/u/0/uc?id=1P6YWOLwGQQ2777v6KA3qvhicznFXsaoQ&export=download"

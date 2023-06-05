@@ -7,7 +7,7 @@ with open('requirements.txt', 'r') as fh:
     requirements = fh.read().splitlines()
 
 setup(
-    name='vl_datasets',
+    name='visuallayer',
     version='0.0.11',
     url='https://github.com/visual-layer/vl-datasets',
     author='Visual Layer',

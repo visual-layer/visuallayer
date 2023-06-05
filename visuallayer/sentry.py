@@ -12,7 +12,7 @@ import uuid
 import hashlib
 from functools import wraps
 
-from vl_datasets import __version__
+from visuallayer import __version__
 
 
 #get a random token based on the machine uuid

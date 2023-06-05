@@ -6,7 +6,7 @@ from torchvision.datasets.vision import StandardTransform
 import pandas as pd
 import requests
 import torchvision.transforms as transforms
-from vl_datasets.sentry import v1_sentry_handler, vl_capture_log_debug_state
+from visuallayer.sentry import v1_sentry_handler, vl_capture_log_debug_state
 
 
 train_transform = transforms.Compose(
