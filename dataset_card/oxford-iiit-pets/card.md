@@ -15,14 +15,45 @@ The Oxford-IIIT pet dataset comprises 37 categories of pet images, with approxim
 
 
 ## Issues Found
-Here are some of the issues found.
+Here are some of the issues found in each dataset split.
 
-<ol>
-<li>Duplicates - 0.59% (43)</li>
-<li>Outliers - 0.1% (7)</li>
-<li>Dark - 0.05% (4)</li>
-<li><b>Total</b> - 0.73% (54)</li>
-</ol>
+Overall:
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 75        | 1.016       |
+| **Outlier**   | 7         | 0.095       |
+| **Dark**      | 4         | 0.054       |
+| **Leakage**   | 23        |             |
+| **TOTAL**     | 109       | 1.165       |
+
+
+Train Split:
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 14        | 0.19        |
+| **Outlier**   | 4         | 0.054       |
+| **Dark**      | 3         | 0.041       |
+| **TOTAL**     | 21        | 0.285       |
+
+
+Test Split:
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 29        | 0.393       |
+| **Outlier**   | 3         | 0.041       |
+| **Dark**      | 1         | 0.014       |
+| **Leakage**   | 23        | 0.627       |
+| **Total**     | 33        | 0.448       |
+
+Unannotated:
+
+| **Reason**    | **Count** | **Percent** |
+|---------------|-----------|-------------|
+| **Duplicate** | 32        | 0.433       |
+| **Total**     | 32        | 0.433       |
 
 ### 1. Duplicates
 ![duplicate](./duplicates.png)
