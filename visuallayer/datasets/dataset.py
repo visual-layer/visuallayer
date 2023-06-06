@@ -40,4 +40,7 @@ class Dataset(ABC):
     def export(self, output_format):
         pass
 
+    @abstractmethod
+    def export_issues(self, filename):
+        pass
     
