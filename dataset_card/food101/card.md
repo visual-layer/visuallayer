@@ -26,8 +26,8 @@ Overall:
 | **Blur**      | 185       | 0.183       |
 | **Outlier**   | 77        | 0.076       |
 | **Dark**      | 43        | 0.043       |
-| **Leakage**   | 87        |             |
-| **TOTAL**     | 540       | 0.535       |
+| **Leakage**   | 87        | 0.086       |
+| **TOTAL**     | 627       | 0.621       |
 
 
 Train Split:
@@ -38,7 +38,8 @@ Train Split:
 | **Blur**      | 145       | 0.144       |
 | **Outlier**   | 72        | 0.071       |
 | **Dark**      | 43        | 0.043       |
-| **TOTAL**     | 440       | 0.436       |
+| **Leakage**   | 87        | 0.086       |
+| **TOTAL**     | 527       | 0.522       |
 
 
 Test Split:
@@ -48,7 +49,6 @@ Test Split:
 | **Duplicate** | 55        | 0.054       |
 | **Blur**      | 40        | 0.04        |
 | **Outlier**   | 5         | 0.005       |
-| **Leakage**   | 87        | 0.345       |
 | **Total**     | 100       | 0.099       |
 
 
