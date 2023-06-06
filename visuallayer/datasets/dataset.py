@@ -4,7 +4,7 @@ class Dataset(ABC):
 
     @property
     @abstractmethod
-    def csv(self):
+    def filelist_csv_url(self):
         pass
 
     @property
