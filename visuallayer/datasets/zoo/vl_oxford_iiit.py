@@ -17,30 +17,6 @@ class VLOxfordIIITPet(Dataset):
     variant: str = "vl"
 
     @property
-    def report(self) -> None:
-        df: pd.DataFrame = pd.read_csv(self.issue_count_csv_url)
-        all_issues_df: pd.DataFrame = (
-            df.loc[df["split"] == "all"]
-            .drop("split", axis=1)
-            .reset_index(drop=True)
-        )
-
-        print(f"Visual Layer Profiler issues in this dataset:\n")
-
-        # print issues to user
-        for _, row in all_issues_df.iterrows():
-            reason: str = row["reason"]
-            count: int = row["count"]
-            pct: float = row["pct"]
-
-            output: str = f"--> {count:,} {reason.upper()}(S) ({pct:.2f}%)"
-            print(output)
-
-        print(
-            "\nThese images are removed in the `vl` variant of the dataset. To load the original version of the dataset, use variant=`original`. Explore the full data and the issues head to http://visual-layer.com/datasets/dataset/1234-5678-abcd"
-        )
-
-    @property
     def num_images_with_issues(self) -> int:
         df: pd.DataFrame = pd.read_csv(self.filelist_csv_url)
         return len(df["filename"].unique())
@@ -69,6 +45,30 @@ class VLOxfordIIITPet(Dataset):
         print("Metadata:")
         for metadata in dataset_metadata:
             print(f"--> {metadata[0]} - {metadata[1]}")
+    
+    @property
+    def report(self) -> None:
+        df: pd.DataFrame = pd.read_csv(self.issue_count_csv_url)
+        all_issues_df: pd.DataFrame = (
+            df.loc[df["split"] == "all"]
+            .drop("split", axis=1)
+            .reset_index(drop=True)
+        )
+
+        print(f"Visual Layer Profiler issues in this dataset:\n")
+
+        # print issues to user
+        for _, row in all_issues_df.iterrows():
+            reason: str = row["reason"]
+            count: int = row["count"]
+            pct: float = row["pct"]
+
+            output: str = f"--> {count:,} {reason.upper()}(S) ({pct:.2f}%)"
+            print(output)
+
+        print(
+            "\nThese images are removed in the `vl` variant of the dataset. To load the original version of the dataset, use variant=`original`. Explore the full data and the issues head to http://visual-layer.com/datasets/dataset/1234-5678-abcd"
+        )
                   
     def export(self, output_format: str, variant: str = "vl", root: str = "./", split: str = "train") -> Union[CleanTorchvisionOxfordIIITPet, OxfordIIITPet]:
         if output_format == "pytorch" and variant == "vl":

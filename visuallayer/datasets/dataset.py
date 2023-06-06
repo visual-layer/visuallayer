@@ -9,12 +9,7 @@ class Dataset(ABC):
 
     @property
     @abstractmethod
-    def num_images(self):
-        pass
-
-    @property
-    @abstractmethod
-    def num_images_with_issues(self):
+    def issue_count_csv_url(self):
         pass
 
     @property
@@ -24,7 +19,27 @@ class Dataset(ABC):
 
     @property
     @abstractmethod
+    def homepage_url(self):
+        pass
+
+    @property
+    @abstractmethod
+    def license(self):
+        pass
+
+    @property
+    @abstractmethod
     def description(self):
+        pass
+
+    @property
+    @abstractmethod
+    def num_images(self):
+        pass
+
+    @property
+    @abstractmethod
+    def num_images_with_issues(self):
         pass
 
     @property
