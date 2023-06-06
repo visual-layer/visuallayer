@@ -6,7 +6,6 @@ def load(dataset_name):
     else:
         print(f"Could not find dataset. Did you mean {get_dataset_names()}?")
 
-    
 def list_datasets():
     names = get_dataset_names()
     print("Listing all datasets in zoo.")

@@ -2,6 +2,7 @@ from ..clean_torchvision_oxford_iiit_pet import CleanTorchvisionOxfordIIITPet
 from ..dataset import Dataset
 from dataclasses import dataclass
 import pandas as pd
+from torchvision.datasets import OxfordIIITPet
 
 
 @dataclass
@@ -15,6 +16,12 @@ class VLOxfordIIITPet(Dataset):
     )
     description: str = "A modified version of the original Oxford IIIT Pets Dataset removing dataset issues."
     num_images: int = 7349
+    variant: str = "vl"
+
+    # If the class is instantiated with the original flag, change the name property.
+    # def __post_init__(self):
+    #     if self.variant == "original":
+    #         self.name = "oxford-iiit-pets"
 
     @property
     def report(self):
@@ -26,9 +33,7 @@ class VLOxfordIIITPet(Dataset):
             .reset_index(drop=True)
         )
 
-        print(
-            f"Visual Layer Profiler found and REMOVED the following issues in {self.name}:\n"
-        )
+        print(f"Visual Layer Profiler issues in this dataset:\n")
 
         # print issues to user
         for _, row in all_issues_df.iterrows():
@@ -40,7 +45,7 @@ class VLOxfordIIITPet(Dataset):
             print(output)
 
         print(
-            "\nTo explore the full data and the issues head to http://visual-layer.com/datasets/dataset/1234-5678-abcd"
+            "\nThese images are removed in the `vl` variant of the dataset. To load the original version of the dataset, use variant=`original`. Explore the full data and the issues head to http://visual-layer.com/datasets/dataset/1234-5678-abcd"
         )
 
     @property
@@ -60,16 +65,30 @@ class VLOxfordIIITPet(Dataset):
             ("Number of Images with Issues", self.num_images_with_issues),
         ]
 
+        if self.variant == "original":
+            dataset_metadata = [
+                ("Name", "oxford-iiit-pets"),
+                ("Description", "The original pets dataset by Oxford IIIT."),
+                ("License", self.license),
+                ("Homepage URL", self.homepage_url),
+                ("Number of Images", self.num_images),
+            ]
+
         print("Metadata:")
         for metadata in dataset_metadata:
             print(f"--> {metadata[0]} - {metadata[1]}")
 
-    def export(self, output_format, root="./", split="train"):
-        if output_format == "pytorch":
-            print(f"Exporting dataset into {output_format}")
+    def export(self, output_format, variant="vl", root="./", split="train"):
+        if output_format == "pytorch" and variant == "vl":
+            print(f"Exporting {variant.upper()} dataset into {output_format} dataset.")
             return CleanTorchvisionOxfordIIITPet(root=root, split=split)
+        elif variant == "original":
+            print(f"Exporting {variant.upper()} dataset into {output_format} dataset.")
+            return OxfordIIITPet(root=root, split=split, download=True)
         else:
-            print("Unknown output format.")
+            raise ValueError(
+                f"Unknown output format: {output_format} or variant {variant}"
+            )
 
     def export_issues(self, filename):
         df = pd.read_csv(self.issue_count_csv_url)
