@@ -18,11 +18,6 @@ class VLOxfordIIITPet(Dataset):
     num_images: int = 7349
     variant: str = "vl"
 
-    # If the class is instantiated with the original flag, change the name property.
-    # def __post_init__(self):
-    #     if self.variant == "original":
-    #         self.name = "oxford-iiit-pets"
-
     @property
     def report(self):
         df = pd.read_csv(self.issue_count_csv_url)
