@@ -9,6 +9,10 @@ class VLOxfordIIITPet(Dataset):
     filelist_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv"
     issue_count_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_count.csv"
     name: str = "vl-oxford-iiit-pets"
+    homepage_url: str = "https://www.robots.ox.ac.uk/~vgg/data/pets/"
+    license: str = (
+        "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
+    )
     description: str = "A modified version of the original Oxford IIIT Pets Dataset removing dataset issues."
     num_images: int = 7349
 
@@ -23,7 +27,7 @@ class VLOxfordIIITPet(Dataset):
         )
 
         print(
-            f"Visual Layer Profiler found and removed the following issues from the original dataset and removed them in {self.name}\n"
+            f"Visual Layer Profiler found and REMOVED the following issues in {self.name}:\n"
         )
 
         # print issues to user
@@ -32,7 +36,7 @@ class VLOxfordIIITPet(Dataset):
             count = row["count"]
             pct = row["pct"]
 
-            output = f"{count:,} {reason} ({pct:.1f}%)"
+            output = f"--> {count:,} {reason.upper()}(S) ({pct:.2f}%)"
             print(output)
 
         print(
@@ -46,9 +50,19 @@ class VLOxfordIIITPet(Dataset):
 
     @property
     def info(self):
-        print(
-            f"Name:{self.name} \nDescription: {self.description} \nImages: {self.num_images} \nImages with Issues: {self.num_images_with_issues} ({self.num_images_with_issues/self.num_images*100:.2f}%)"
-        )
+        # Get all attributes and methods of the class
+        dataset_metadata = [
+            ("Name", self.name),
+            ("Description", self.description),
+            ("License", self.license),
+            ("Homepage URL", self.homepage_url),
+            ("Number of Images", self.num_images),
+            ("Number of Images with Issues", self.num_images_with_issues),
+        ]
+
+        print("Metadata:")
+        for metadata in dataset_metadata:
+            print(f"--> {metadata[0]} - {metadata[1]}")
 
     def export(self, output_format, root="./", split="train"):
         if output_format == "pytorch":
@@ -58,5 +72,5 @@ class VLOxfordIIITPet(Dataset):
             print("Unknown output format.")
 
     def export_issues(self, filename):
-        df = pd.read_csv(self.filelist_csv_url)
-        df.to_csv(filename)
+        df = pd.read_csv(self.issue_count_csv_url)
+        df.to_csv(filename, index=False)
