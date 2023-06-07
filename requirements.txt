@@ -3,3 +3,4 @@ torchvision
 pandas
 sentry-sdk
 scipy
+itables
