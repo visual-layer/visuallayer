@@ -499,6 +499,17 @@ To view the issues summary.
 my_pets.report
 ```
 
+```shell
+| Reason    | Count | Pct   |
+|-----------|-------|-------|
+| Duplicate | 75    | 1.016 |
+| Outlier   | 7     | 0.095 |
+| Dark      | 4     | 0.054 |
+| Leakage   | 23    | 0.627 |
+| Total     | 109   | 1.792 |
+
+```
+
 To explore and visualize the issues, run:
 
 ```python
