@@ -515,7 +515,7 @@ To explore and visualize the issues, run:
 ```python
 my_pets.explore()
 ```
-
+![explore](./imgs/explore.gif)
 
 ### Exporting
 Export the dataset into PyTorch `Dataset` object with 
