@@ -5,7 +5,7 @@ import pandas as pd
 from torchvision.datasets import OxfordIIITPet
 from typing import Union, List, Tuple
 
-@dataclass
+@dataclass(frozen=True)
 class VLOxfordIIITPet(Dataset):
     filelist_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv"
     issue_count_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_count.csv"
@@ -14,7 +14,6 @@ class VLOxfordIIITPet(Dataset):
     license: str = "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
     description: str = "A modified version of the original Oxford IIIT Pets Dataset removing dataset issues."
     num_images: int = 7349
-    variant: str = "vl"
 
     @property
     def num_images_with_issues(self) -> int:
@@ -32,15 +31,6 @@ class VLOxfordIIITPet(Dataset):
             ("Number of Images", self.num_images),
             ("Number of Images with Issues", self.num_images_with_issues),
         ]
-
-        if self.variant == "original":
-            dataset_metadata = [
-                ("Name", "oxford-iiit-pets"),
-                ("Description", "The original pets dataset by Oxford IIIT."),
-                ("License", self.license),
-                ("Homepage URL", self.homepage_url),
-                ("Number of Images", self.num_images),
-            ]
 
         print("Metadata:")
         for metadata in dataset_metadata:
@@ -85,3 +75,8 @@ class VLOxfordIIITPet(Dataset):
     def export_issues(self, filename: str) -> None:
         df: pd.DataFrame = pd.read_csv(self.issue_count_csv_url)
         df.to_csv(filename, index=False)
+
+@dataclass(frozen=True)
+class VLOriginalOxfordIIITPet(VLOxfordIIITPet):
+    name: str = "oxford-iiit-pets"
+    description: str = "The original pets dataset by Oxford IIIT."
