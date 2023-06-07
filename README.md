@@ -19,10 +19,10 @@
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [pypi-shield]: https://img.shields.io/badge/Python-3.7%20--%203.11-blue?style=for-the-badge
-[pypi-url]: https://pypi.org/project/vl-datasets/
-[pypiversion-shield]: https://img.shields.io/pypi/v/vl-datasets?style=for-the-badge
-[downloads-shield]: https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=downloads&query=%24.total_downloads&url=https%3A%2F%2Fapi.pepy.tech%2Fapi%2Fprojects%2Fvl-datasets&color=lightblue
-[downloads-url]: https://pypi.org/project/vl-datasets/
+[pypi-url]: https://pypi.org/project/visuallayer/
+[pypiversion-shield]: https://img.shields.io/pypi/v/visuallayer?style=for-the-badge
+[downloads-shield]: https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=downloads&query=%24.total_downloads&url=https%3A%2F%2Fapi.pepy.tech%2Fapi%2Fprojects%2Fvisuallayer&color=lightblue
+[downloads-url]: https://pypi.org/project/visuallayer/
 <!-- [contributors-shield]: https://img.shields.io/github/contributors/visual-layer/fastdup?style=for-the-badge -->
 <!-- [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors -->
 [license-shield]: https://img.shields.io/badge/License-Apache%202.0-purple.svg?style=for-the-badge
@@ -36,7 +36,6 @@
 <a href="https://www.visual-layer.com">
   <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="350">
 </a>
-<h3 align="center">VL-Datasets</h3>
 <h4 align="center">Open, Clean, Curated Datasets for Computer Vision</h4>
 
   <p align="center">
