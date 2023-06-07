@@ -74,16 +74,13 @@
 
 ## Description
 
-`visuallayer` is a Python package that provides access to clean computer vision datasets with only 2 lines of code.
+`visuallayer` is a Python package that provides access to clean computer vision datasets with only 3 lines of code.
 
-For example, to get access to the clean version of the [Food-101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/) dataset simply run:
+For example, to get access to the clean version of the [Oxford IIIT Pets Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
 
 ![image](./imgs/usage.png)
 
-We support some of the most widely used computer vision datasets.
-[Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a new dataset.
-
-All the datasets are analyzed for issues such as: 
+The datasets loaded are free from for issues such as: 
 
 + Duplicates.
 + Near Duplicates.
@@ -95,8 +92,8 @@ All the datasets are analyzed for issues such as:
 
 ![image](./imgs/issues.png)
 
-
-
+We support some of the most widely used computer vision datasets.
+[Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a new dataset.
 
 ## Why?
 
@@ -124,28 +121,324 @@ For access to our complete dataset and exclusive beta features, all we ask is th
 
 Here is a table of widely used computer vision datasets, issues we found and a link to access the `.csv` file.
 
-| Dataset                                                                 | Issues                                                                                                                                                                                 | CSV                                                                                                | Import Statement                |
-|-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|----------------------|
-| [Food-101](./dataset_card/food101/card.md) | <ul><li>Duplicates - 0.23% (235)</li><li>Outliers - 0.08% (77)</li><li>Blur - 0.18% (185)</li><li>Dark - 0.04% (43)</li><li>Leakage - 0.086% (87)</li><b>Total</b> - 0.62% (627)</ul><div align="right"><a href="./dataset_card/food101/card.md"><strong>More »</strong></a></div>| Download [here](https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw). | `from vl_datasets import VLFood101`       |
-| [Oxford-IIIT Pet](./dataset_card/oxford-iiit-pets/card.md)          | <ul><li>Duplicates - 1.016% (75)</li><li>Outliers - 0.1% (7)</li><li>Dark - 0.05% (4)</li><li>Leakage - 0.31% (23)</li><b>Total</b> - 1.48% (132)</ul><div align="right"><a href="./dataset_card/oxford-iiit-pets/card.md"><strong>More »</strong></a></div>         | Download [here](https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL). | `from vl_datasets import VLOxfordIIITPet` |
-| [LAION-1B](./dataset_card/laion-1b/card.md)                            | <ul><li>Duplicates - WIP % (WIP)</li><li>Outliers - WIP % (WIP)</li><li>Broken - WIP % (WIP)</li><li>Blur - WIP % (WIP)</li><li>Dark - WIP % (WIP)</li><li>Bright - WIP % (WIP)</li></ul><div align="right"><a href="./dataset_card/laion-1b/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
-| [ImageNet-21K](./dataset_card/imagenet-21k/card.md)                              | <ul><li>Duplicates - 10.53% (1,385,074)</li><li>Outliers - 0.085 % (11,119)</li><li>Blur - 0.292 % (38,463)</li><li>Dark - 0.179 % (23,575)</li><li>Bright - 0.431 % (56,754)</li><li>Mislabels - 3.064 % (402,963)</li><b>Total</b> - 14.581% (1,917,948)</ul><div align="right"><a href="./dataset_card/imagenet-21k/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | `from vl_datasets import VLImageNet`                  |
-| [ImageNet-1K](./dataset_card/imagenet-1k/card.md)                                | <ul><li>Duplicates - 0.57% (7,522)</li><li>Outliers - 0.09% (1,199)</li><li>Blur - 0.19% (2,478)</li><li>Dark - 0.24% (3,174)</li><li>Bright - 0.06 % (770)</li><li>Mislabels - 0.11% (1,480)</li><li>Leakage - 0.065% (869)</li><b>Total</b> - 1.313% (17,492)</ul><div align="right"><a href="./dataset_card/imagenet-1k/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | `from vl_datasets import VLImageNet`                  |
-| [KITTI](./dataset_card/kitti/card.md)                          | <ul><li>Duplicates - 15.29% (2,294)</li><li>Outliers - 0.01% (2)</li><li>Leakage - 3.01% (452)</li><b>Total</b> - 18.32% (2,748)</li></ul><div align="right"><a href="./dataset_card/kitti/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | `from vl_datasets import VLKitti`                  |
-| [DeepFashion](./dataset_card/deep-fashion/card.md)     | <ul><li>Duplicates - 5.11% (14,773)</li><li>Outliers - 0.04% (108)</li><li>Leakage - 2.75% (7,943)</li><b>Total</b> - 7.89% (22,824)</li></ul><div align="right"><a href="./dataset_card/deep-fashion/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
-| [CelebA-HQ](./dataset_card/celeb-a-hq/card.md)           | <ul><li>Duplicates - 1.67% (3,389)</li><li>Outliers - 0.08% (157)</li><li>Blur - 0.51% (1,037)</li><li>Dark - 0.001% (2)</li><li>Mislabels - 0.01% (13)</li><li>Leakage - 0.09% (188)</li><b>Total</b> - 2.362% (4,786)</ul><div align="right"><a href="./dataset_card/celeb-a-hq/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
-| [COCO](./dataset_card/coco/card.md)                                   | <ul><li>Duplicates - 0.12% (201)</li><li>Outliers - 0.09% (143)</li><li>Blur - 0.03% (47)</li><li>Dark - 0.17% (174)</li><li>Bright - 0.01% (21)</li><li>Leakage - 0.012 (20)</li><b>Total</b> - 0.37% (606)</ul><div align="right"><a href="./dataset_card/coco/card.md"><strong>More »</strong></a></div> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | `from vl_datasets import VLCocoDetection`                  |
-<!-- | [ADE20K](https://groups.csail.mit.edu/vision/datasets/ADE20K/)          | <ul><li>Duplicates - WIP % (WIP)</li><li>Outliers - WIP % (WIP)</li><li>Broken - WIP % (WIP)</li><li>Blur - WIP % (WIP)</li><li>Dark - WIP % (WIP)</li><li>Bright - WIP % (WIP)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
-| [Places365](https://github.com/CSAILVision/places365)                   | <ul><li>Duplicates - WIP % (WIP)</li><li>Outliers - WIP % (WIP)</li><li>Broken - WIP % (WIP)</li><li>Blur - WIP % (WIP)</li><li>Dark - WIP % (WIP)</li><li>Bright - WIP % (WIP)</li></ul> | Request access [here](https://forms.gle/8jxPkyzeKj82kPed8).                                        | WIP                  |
- -->
+<table>
+   <tr>
+      <th>Dataset</th>
+      <th>Issues</th>
+      <th>CSV</th>
+      <th>Import Statement</th>
+   </tr>
+   <tr>
+      <td><a href="./dataset_card/imagenet-21k/card.md">ImageNet-21K</a></td>
+      <td>
+         <table>
+            <tr>
+               <td>Duplicates</td>
+               <td>10.53% (1,385,074)</td>
+            </tr>
+            <tr>
+               <td>Outliers</td>
+               <td>0.085% (11,119)</td>
+            </tr>
+            <tr>
+               <td>Blur</td>
+               <td>0.292% (38,463)</td>
+            </tr>
+            <tr>
+               <td>Dark</td>
+               <td>0.179% (23,575)</td>
+            </tr>
+            <tr>
+               <td>Bright</td>
+               <td>0.431% (56,754)</td>
+            </tr>
+            <tr>
+               <td>Mislabels</td>
+               <td>3.064% (402,963)</td>
+            </tr>
+            <tr>
+               <td><strong>Total</strong></td>
+               <td>14.581% (1,917,948)</td>
+            </tr>
+         </table>
+         <div align="right">
+            <a href="./dataset_card/imagenet-21k/card.md"><strong>More »</strong></a>
+         </div>
+      </td>
+      <td>
+         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+      </td>
+      <td><code>from visuallayer.datasets.zoo import VLImageNet</code></td>
+   </tr>
+   <tr>
+      <td><a href="./dataset_card/imagenet-1k/card.md">ImageNet-1K</a></td>
+      <td>
+         <table>
+            <tr>
+               <td>Duplicates</td>
+               <td>0.57% (7,522)</td>
+            </tr>
+            <tr>
+               <td>Outliers</td>
+               <td>0.09% (1,199)</td>
+            </tr>
+            <tr>
+               <td>Blur</td>
+               <td>0.19% (2,478)</td>
+            </tr>
+            <tr>
+               <td>Dark</td>
+               <td>0.24% (3,174)</td>
+            </tr>
+            <tr>
+               <td>Bright</td>
+               <td>0.06% (770)</td>
+            </tr>
+            <tr>
+               <td>Mislabels</td>
+               <td>0.11% (1,480)</td>
+            </tr>
+            <tr>
+               <td>Leakage</td>
+               <td>0.065% (869)</td>
+            </tr>
+            <tr>
+               <td><strong>Total</strong></td>
+               <td>1.313% (17,492)</td>
+            </tr>
+         </table>
+         <div align="right">
+            <a href="./dataset_card/imagenet-1k/card.md"><strong>More »</strong></a>
+         </div>
+      </td>
+      <td>
+         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+      </td>
+      <td><code>from visuallayer.datasets.zoo import VLImageNet</code></td>
+   </tr>
+   <tr>
+      <td><a href="./dataset_card/food101/card.md">Food-101</a></td>
+      <td>
+         <table>
+            <tr>
+               <td>Duplicates</td>
+               <td>0.23% (235)</td>
+            </tr>
+            <tr>
+               <td>Outliers</td>
+               <td>0.08% (77)</td>
+            </tr>
+            <tr>
+               <td>Blur</td>
+               <td>0.18% (185)</td>
+            </tr>
+            <tr>
+               <td>Dark</td>
+               <td>0.04% (43)</td>
+            </tr>
+            <tr>
+               <td>Leakage</td>
+               <td>0.086% (87)</td>
+            </tr>
+            <tr>
+               <td><strong>Total</strong></td>
+               <td>0.62% (627)</td>
+            </tr>
+         </table>
+         <div align="right">
+            <a href="./dataset_card/food101/card.md"><strong>More »</strong></a>
+         </div>
+      </td>
+      <td>
+         <a href="https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw">Download here</a>
+      </td>
+      <td><code>from visuallayer.datasets.zoo import VLFood101</code></td>
+   </tr>
+   <tr>
+      <td><a href="./dataset_card/oxford-iiit-pets/card.md">Oxford-IIIT Pet</a></td>
+      <td>
+         <table>
+            <tr>
+               <td>Duplicates</td>
+               <td>1.016% (75)</td>
+            </tr>
+            <tr>
+               <td>Outliers</td>
+               <td>0.1% (7)</td>
+            </tr>
+            <tr>
+               <td>Dark</td>
+               <td>0.05% (4)</td>
+            </tr>
+            <tr>
+               <td>Leakage</td>
+               <td>0.31% (23)</td>
+            </tr>
+            <tr>
+               <td><strong>Total</strong></td>
+               <td>1.48% (132)</td>
+            </tr>
+         </table>
+         <div align="right">
+            <a href="./dataset_card/oxford-iiit-pets/card.md"><strong>More »</strong></a>
+         </div>
+      </td>
+      <td>
+         <a href="https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL">Download here</a>
+      </td>
+      <td><code>from visuallayer.datasets.zoo import VLOxfordIIITPet</code></td>
+   </tr>
+   <tr>
+      <td><a href="./dataset_card/laion-1b/card.md">LAION-1B</a></td>
+      <td>
+         <table>
+            <tr>
+               <td>Duplicates</td>
+               <td>WIP % (WIP)</td>
+            </tr>
+            <tr>
+               <td>Outliers</td>
+               <td>WIP % (WIP)</td>
+            </tr>
+            <tr>
+               <td>Broken</td>
+               <td>WIP % (WIP)</td>
+            </tr>
+            <tr>
+               <td>Blur</td>
+               <td>WIP % (WIP)</td>
+            </tr>
+            <tr>
+               <td>Dark</td>
+               <td>WIP % (WIP)</td>
+            </tr>
+            <tr>
+               <td>Bright</td>
+               <td>WIP % (WIP)</td>
+            </tr>
+         </table>
+         <div align="right">
+            <a href="./dataset_card/laion-1b/card.md"><strong>More »</strong></a>
+         </div>
+      </td>
+      <td>
+         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+      </td>
+      <td>WIP</td>
+   </tr>
+   <tr>
+      <td><a href="./dataset_card/kitti/card.md">KITTI</a></td>
+      <td>
+         <table>
+            <tr>
+               <td>Duplicates</td>
+               <td>15.29% (2,294)</td>
+            </tr>
+            <tr>
+               <td>Outliers</td>
+               <td>0.01% (2)</td>
+            </tr>
+            <tr>
+               <td>Leakage</td>
+               <td>3.01% (452)</td>
+            </tr>
+            <tr>
+               <td><strong>Total</strong></td>
+               <td>18.32% (2,748)</td>
+            </tr>
+         </table>
+         <div align="right">
+            <a href="./dataset_card/kitti/card.md"><strong>More »</strong></a>
+         </div>
+      </td>
+      <td>
+         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+      </td>
+      <td><code>from visuallayer.datasets.zoo import VLKitti</code></td>
+   </tr>
+   <tr>
+      <td><a href="./dataset_card/deep-fashion/card.md">DeepFashion</a></td>
+      <td>
+         <table>
+            <tr>
+               <td>Duplicates</td>
+               <td>5.11% (14,773)</td>
+            </tr>
+            <tr>
+               <td>Outliers</td>
+               <td>0.04% (108)</td>
+            </tr>
+            <tr>
+               <td>Leakage</td>
+               <td>2.75% (7,943)</td>
+            </tr>
+            <tr>
+               <td><strong>Total</strong></td>
+               <td>7.89% (22,824)</td>
+            </tr>
+         </table>
+         <div align="right">
+            <a href="./dataset_card/deep-fashion/card.md"><strong>More »</strong></a>
+         </div>
+      </td>
+      <td>
+         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+      </td>
+      <td>WIP</td>
+   </tr>
+   <tr>
+      <td><a href="./dataset_card/celeb-a-hq/card.md">CelebA-HQ</a></td>
+      <td>
+         <table>
+            <tr>
+               <td>Duplicates</td>
+               <td>1.67% (3,389)</td>
+            </tr>
+            <tr>
+               <td>Outliers</td>
+               <td>0.08% (157)</td>
+            </tr>
+            <tr>
+               <td>Blur</td>
+               <td>0.51% (1,037)</td>
+            </tr>
+            <tr>
+               <td>Dark</td>
+               <td>0.001% (2)</td>
+            </tr>
+            <tr>
+               <td>Mislabels</td>
+               <td>0.01% (13)</td>
+            </tr>
+            <tr>
+               <td>Leakage</td>
+               <td>0.09% (188)</td>
+            </tr>
+            <tr>
+               <td><strong>Total</strong></td>
+               <td>2.362% (4,786)</td>
+            </tr>
+         </table>
+         <div align="right">
+            <a href="./dataset_card/celeb-a-hq/card.md"><strong>More »</strong></a>
+         </div>
+      </td>
+      <td>
+         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+      </td>
+      <td>WIP</td>
+   </tr>
+</table>
 
 
 Learn more on how we clean the datasets using our profilling tool [here](https://visual-layer.link).
 
+> **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
+
 
 ## Installation
 
-**Option 1** - Install `vl_datasets` package from [PyPI](https://pypi.org/project/visuallayer/):
+**Option 1** - Install `visuallayer` package from [PyPI](https://pypi.org/project/visuallayer/):
 
 ```shell
 pip install visuallayer
@@ -157,36 +450,91 @@ pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 ```
 
 ## Usage
-To start using `visuallayer`, import the clean version of the dataset with:
+
+### Loading
+To list all datasets supported by `visuallayer` run
 
 ```python
-from vl_datasets import VLFood101
+import visuallayer as vl
+vl.datasets.zoo.list_datasets()
 ```
 
-This should import the clean version of the `Food101` dataset.
+To load a dataset from the zoo:
+```python
+vl.datasets.zoo.load('vl-oxford-iiit-pets')
+```
 
-Next, you can load the dataset as a PyTorch `Dataset`.
+This loads the **clean version** of the Oxford IIIT Pets dataset where all of the problematic images are excluded from the dataset.
+
+To load the original Oxford IIIT Pets dataset, specify the "original" argument:
 
 ```python
-train_dataset = VLFood101('./', split='train')
-valid_dataset = VLFood101('./', split='test')
+original_pets_dataset = vl.datasets.zoo.load('vl-oxford-iiit-pets', "original")
 ```
 
-If you have a custom `.csv` file you can optionally pass in the file:
+This loads the original dataset with no modifications.
+
+### Inspecting
+You can view the information about the dataset by calling 
 
 ```python
-train_dataset = VLFood101('./', split='train', exclude_csv='my-file.csv')
+my_pets.info
 ```
-The filenames listed in the `.csv` will be excluded in the dataset.
 
-Next, you can load the train and validation datasets in a PyTorch training loop.
+which outputs the metadata of the dataset:
 
-See the [Learn from Examples](#learn-from-examples) section to learn more.
+```shell
+Metadata:
+--> Name - vl-oxford-iiit-pets
+--> Description - A modified version of the original Oxford IIIT Pets Dataset removing dataset issues.
+--> License - Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+--> Homepage URL - https://www.robots.ox.ac.uk/~vgg/data/pets/
+--> Number of Images - 7349
+--> Number of Images with Issues - 109
+```
+
+To view the issues summary.
+
+```python
+my_pets.report
+```
+
+```shell
+| Reason    | Count | Pct   |
+|-----------|-------|-------|
+| Duplicate | 75    | 1.016 |
+| Outlier   | 7     | 0.095 |
+| Dark      | 4     | 0.054 |
+| Leakage   | 23    | 0.627 |
+| Total     | 109   | 1.792 |
+
+```
+
+To explore and visualize the issues, run:
+
+```python
+my_pets.explore()
+```
+![explore](./imgs/explore.gif)
+
+### Exporting
+Export the dataset into PyTorch `Dataset` object with 
+
+```python
+test_dataset = my_pets.export(output_format="pytorch", split="test")
+```
+
+Now you can load the train and validation datasets in a PyTorch training loop. See the [Learn from Examples](#learn-from-examples) section to learn more.
+
+Similarly you can also export the image and label into a `DataFrame`:
+
+```python
+test_dataframe = my_pets.export(output_format="csv", split="test")
+```
 
 
-> **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
 
-With the dataset loaded you can train a model using PyTorch training loop.
+
 
 ## Learn from Examples
 
@@ -323,6 +671,10 @@ With the dataset loaded you can train a model using PyTorch training loop.
 However, you are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
 
 ## Usage Tracking
+
+<details>
+<summary>Disclaimer</summary>
+
 This repository incorporates usage tracking using [Sentry.io](https://sentry.io/) to monitor and collect valuable information about the usage of the application.
 
 Usage tracking allows us to gain insights into how the application is being used in real-world scenarios. It provides us with valuable information that helps in understanding user behavior, identifying potential issues, and making informed decisions to improve the application.
@@ -341,6 +693,7 @@ export SENTRY_OPT_OUT=True
 ```
 
 Read more on Sentry's official [webpage](https://sentry.io/welcome/).
+</details>
 
 
 ## Getting Help
