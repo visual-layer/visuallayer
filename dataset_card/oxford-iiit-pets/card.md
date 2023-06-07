@@ -24,8 +24,8 @@ Overall:
 | **Duplicate** | 75        | 1.016       |
 | **Outlier**   | 7         | 0.095       |
 | **Dark**      | 4         | 0.054       |
-| **Leakage**   | 23        |             |
-| **TOTAL**     | 109       | 1.165       |
+| **Leakage**   | 23        | 0.311       |
+| **TOTAL**     | 132       | 1.476       |
 
 
 Train Split:
@@ -35,7 +35,8 @@ Train Split:
 | **Duplicate** | 14        | 0.19        |
 | **Outlier**   | 4         | 0.054       |
 | **Dark**      | 3         | 0.041       |
-| **TOTAL**     | 21        | 0.285       |
+| **Leakage**   | 23        | 0.311       |
+| **TOTAL**     | 44        | 0.596       |
 
 
 Test Split:
@@ -45,7 +46,6 @@ Test Split:
 | **Duplicate** | 29        | 0.393       |
 | **Outlier**   | 3         | 0.041       |
 | **Dark**      | 1         | 0.014       |
-| **Leakage**   | 23        | 0.627       |
 | **Total**     | 33        | 0.448       |
 
 Unannotated:

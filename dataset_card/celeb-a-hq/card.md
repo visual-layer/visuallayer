@@ -24,8 +24,8 @@ Overall:
 | **Outlier**    | 157       | 0.077       |
 | **Dark**       | 2         | 0.001       |
 | **Mislabeled** | 13        | 0.006       |
-| **Leakage**    | 188       |             |
-| **TOTAL**      | 4598      | 2.269       |
+| **Leakage**    | 188       | 0.093       |
+| **TOTAL**      | 4786      | 2.362       |
 
 Train Split:
 | **Reason**     | **Count** | **Percent** |
@@ -35,7 +35,8 @@ Train Split:
 | **Outlier**    | 132       | 0.065       |
 | **Dark**       | 2         | 0.001       |
 | **Mislabeled** | 10        | 0.005       |
-| **TOTAL**      | 3611      | 1.782       |
+| **Leakage**    | 180       | 0.089       |
+| **TOTAL**      | 3791      | 1.871       |
 
 
 Validation Split:
@@ -45,8 +46,8 @@ Validation Split:
 | **Blur**       | 96        | 0.047       |
 | **Outlier**    | 18        | 0.009       |
 | **Mislabeled** | 2         | 0.001       |
-| **Leakage**    | 83        | 0.418       |
-| **TOTAL**      | 506       | 0.249       |
+| **Leakage**    | 8         | 0.004       |
+| **TOTAL**      | 514       | 0.253       |
 
 Test Split:
 | **Reason**     | **Count** | **Percent** |
@@ -55,7 +56,6 @@ Test Split:
 | **Blur**       | 92        | 0.045       |
 | **Outlier**    | 7         | 0.003       |
 | **Mislabeled** | 1         | 0           |
-| **Leakage**    | 105       | 0.526       |
 | **TOTAL**      | 481       | 0.236       |
 
 
