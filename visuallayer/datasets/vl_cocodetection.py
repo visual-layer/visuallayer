@@ -7,7 +7,7 @@ import torchvision
 import pandas as pd
 from typing import Any, Callable, List, Optional, Tuple
 
-from vl_datasets.sentry import v1_sentry_handler
+from visuallayer.sentry import v1_sentry_handler
 from vl_parse_exclude_csv import parse_exclude_csv
 
 COCO_CSV_URL = "https://drive.google.com/u/0/uc?id=1D8Or_bOLQEPAxrTwHrrKTzYO3GaHeH7H&export=download"
