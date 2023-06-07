@@ -21,6 +21,10 @@ class VLOxfordIIITPet(Dataset):
     description: str = "A modified version of the original Oxford IIIT Pets Dataset removing dataset issues."
     num_images: int = 7349
 
+    # Hack: Download the dataset in the current dir
+    def __post_init__(self):
+        OxfordIIITPet(root="./", download=True)
+
     @property
     def num_images_with_issues(self) -> int:
         df = pd.read_csv(self.filelist_csv_url)
@@ -111,11 +115,22 @@ class VLOxfordIIITPet(Dataset):
         df.to_csv(filename, index=False)
 
     def explore(self):
+        import base64
+
         def to_img_tag(path):
             if isinstance(path, str):
-                return '<img src="' + path + '" width="150" >'
+                with open(path, 'rb') as f:
+                    image_data = f.read()
+                    base64_image = base64.b64encode(image_data).decode('utf-8')
+                return '<img src="data:image/png;base64,' + base64_image + '" width="150" >'
             else:
                 return path  # Return the original value if it's not a string
+
+        # def to_img_tag(path):
+        #     if isinstance(path, str):
+        #         return '<img src="' + path + '" width="150" >'
+        #     else:
+        #         return path  # Return the original value if it's not a string
 
         df = pd.read_csv(self.filelist_csv_url)
         df["filename_preview"] = df["filename"]

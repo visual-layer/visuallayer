@@ -18,6 +18,6 @@ def list_datasets():
 
 
 def get_dataset_names():
-    datasets = [VLOxfordIIITPet()]
+    datasets = [VLOxfordIIITPet]
     datasets_names = [dataset.name for dataset in datasets]
     return datasets_names
