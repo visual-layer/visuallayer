@@ -433,6 +433,8 @@ Here is a table of widely used computer vision datasets, issues we found and a l
 
 Learn more on how we clean the datasets using our profilling tool [here](https://visual-layer.link).
 
+> **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
+
 
 ## Installation
 
@@ -448,36 +450,80 @@ pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 ```
 
 ## Usage
-To start using `visuallayer`, import the clean version of the dataset with:
+
+### Loading
+To list all datasets supported by `visuallayer` run
 
 ```python
-from vl_datasets import VLFood101
+import visuallayer as vl
+vl.datasets.zoo.list_datasets()
 ```
 
-This should import the clean version of the `Food101` dataset.
+To load a dataset from the zoo:
+```python
+vl.datasets.zoo.load('vl-oxford-iiit-pets')
+```
 
-Next, you can load the dataset as a PyTorch `Dataset`.
+This loads the **clean version** of the Oxford IIIT Pets dataset where all of the problematic images are excluded from the dataset.
+
+To load the original Oxford IIIT Pets dataset, specify the "original" argument:
 
 ```python
-train_dataset = VLFood101('./', split='train')
-valid_dataset = VLFood101('./', split='test')
+original_pets_dataset = vl.datasets.zoo.load('vl-oxford-iiit-pets', "original")
 ```
 
-If you have a custom `.csv` file you can optionally pass in the file:
+This loads the original dataset with no modifications.
+
+### Inspecting
+You can view the information about the dataset by calling 
 
 ```python
-train_dataset = VLFood101('./', split='train', exclude_csv='my-file.csv')
+my_pets.info
 ```
-The filenames listed in the `.csv` will be excluded in the dataset.
 
-Next, you can load the train and validation datasets in a PyTorch training loop.
+which outputs the metadata of the dataset:
 
-See the [Learn from Examples](#learn-from-examples) section to learn more.
+```shell
+Metadata:
+--> Name - vl-oxford-iiit-pets
+--> Description - A modified version of the original Oxford IIIT Pets Dataset removing dataset issues.
+--> License - Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+--> Homepage URL - https://www.robots.ox.ac.uk/~vgg/data/pets/
+--> Number of Images - 7349
+--> Number of Images with Issues - 109
+```
+
+To view the issues summary.
+
+```python
+my_pets.report
+```
+
+To explore and visualize the issues, run:
+
+```python
+my_pets.explore()
+```
 
 
-> **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
+### Exporting
+Export the dataset into PyTorch `Dataset` object with 
 
-With the dataset loaded you can train a model using PyTorch training loop.
+```python
+test_dataset = my_pets.export(output_format="pytorch", split="test")
+```
+
+Now you can load the train and validation datasets in a PyTorch training loop. See the [Learn from Examples](#learn-from-examples) section to learn more.
+
+Similarly you can also export the image and label into a `DataFrame`:
+
+```python
+test_dataframe = my_pets.export(output_format="csv", split="test")
+```
+
+
+
+
 
 ## Learn from Examples
 
@@ -614,6 +660,10 @@ With the dataset loaded you can train a model using PyTorch training loop.
 However, you are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
 
 ## Usage Tracking
+
+<details>
+<summary>Disclaimer</summary>
+
 This repository incorporates usage tracking using [Sentry.io](https://sentry.io/) to monitor and collect valuable information about the usage of the application.
 
 Usage tracking allows us to gain insights into how the application is being used in real-world scenarios. It provides us with valuable information that helps in understanding user behavior, identifying potential issues, and making informed decisions to improve the application.
@@ -632,6 +682,7 @@ export SENTRY_OPT_OUT=True
 ```
 
 Read more on Sentry's official [webpage](https://sentry.io/welcome/).
+</details>
 
 
 ## Getting Help
