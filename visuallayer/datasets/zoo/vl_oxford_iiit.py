@@ -4,6 +4,8 @@ from dataclasses import dataclass
 import pandas as pd
 from torchvision.datasets import OxfordIIITPet
 from typing import Union, List, Tuple
+from itables import init_notebook_mode
+init_notebook_mode(all_interactive=True)
 
 @dataclass(frozen=True)
 class VLOxfordIIITPet(Dataset):
@@ -17,7 +19,7 @@ class VLOxfordIIITPet(Dataset):
 
     @property
     def num_images_with_issues(self) -> int:
-        df: pd.DataFrame = pd.read_csv(self.filelist_csv_url)
+        df = pd.read_csv(self.filelist_csv_url)
         return len(df["filename"].unique())
 
     @property
@@ -38,7 +40,7 @@ class VLOxfordIIITPet(Dataset):
     
     @property
     def report(self) -> None:
-        df: pd.DataFrame = pd.read_csv(self.issue_count_csv_url)
+        df = pd.read_csv(self.issue_count_csv_url)
         all_issues_df: pd.DataFrame = (
             df.loc[df["split"] == "all"]
             .drop("split", axis=1)
@@ -73,8 +75,26 @@ class VLOxfordIIITPet(Dataset):
             )
 
     def export_issues(self, filename: str) -> None:
-        df: pd.DataFrame = pd.read_csv(self.issue_count_csv_url)
+        df = pd.read_csv(self.issue_count_csv_url)
         df.to_csv(filename, index=False)
+
+    def explore(self):
+        def to_img_tag(path):
+            if isinstance(path, str):
+                return '<img src="' + path + '" width="150" >'
+            else:
+                return path  # Return the original value if it's not a string
+    
+        df = pd.read_csv(self.filelist_csv_url)
+        df['filename_preview']=df['filename']
+        df['prototype_preview']=df['prototype']
+        df = df.loc[:, ['filename', 'filename_preview', 'reason', 'value','prototype', 'prototype_preview']]
+        df['filename_preview'] = df['filename'].apply(to_img_tag)
+        df['prototype_preview'] = df['prototype'].apply(to_img_tag)
+
+        return df
+
+
 
 @dataclass(frozen=True)
 class VLOriginalOxfordIIITPet(VLOxfordIIITPet):
