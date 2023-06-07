@@ -121,6 +121,54 @@ For access to our complete dataset and exclusive beta features, all we ask is th
 
 Here is a table of widely used computer vision datasets, issues we found and a link to access the `.csv` file.
 
+<table>
+  <tr>
+    <th>Dataset</th>
+    <th>Issues</th>
+    <th>CSV</th>
+    <th>Import Statement</th>
+  </tr>
+  <tr>
+    <td><a href="./dataset_card/food101/card.md">Food-101</a></td>
+    <td>
+      <table>
+        <tr>
+          <td>Duplicates</td>
+          <td>0.23% (235)</td>
+        </tr>
+        <tr>
+          <td>Outliers</td>
+          <td>0.08% (77)</td>
+        </tr>
+        <tr>
+          <td>Blur</td>
+          <td>0.18% (185)</td>
+        </tr>
+        <tr>
+          <td>Dark</td>
+          <td>0.04% (43)</td>
+        </tr>
+        <tr>
+          <td>Leakage</td>
+          <td>0.086% (87)</td>
+        </tr>
+        <tr>
+          <td><strong>Total</strong></td>
+          <td>0.62% (627)</td>
+        </tr>
+      </table>
+      <div align="right">
+        <a href="./dataset_card/food101/card.md"><strong>More »</strong></a>
+      </div>
+    </td>
+    <td>
+      <a href="https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw">Download here</a>
+    </td>
+    <td><code>from vl_datasets import VLFood101</code></td>
+  </tr>
+</table>
+
+
 | Dataset                                                                 | Issues                                                                                                                                                                                 | CSV                                                                                                | Import Statement                |
 |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|----------------------|
 | [Food-101](./dataset_card/food101/card.md) | <ul><li>Duplicates - 0.23% (235)</li><li>Outliers - 0.08% (77)</li><li>Blur - 0.18% (185)</li><li>Dark - 0.04% (43)</li><li>Leakage - 0.086% (87)</li><b>Total</b> - 0.62% (627)</ul><div align="right"><a href="./dataset_card/food101/card.md"><strong>More »</strong></a></div>| Download [here](https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw). | `from vl_datasets import VLFood101`       |
