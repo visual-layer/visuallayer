@@ -26,7 +26,7 @@
 <!-- [contributors-shield]: https://img.shields.io/github/contributors/visual-layer/fastdup?style=for-the-badge -->
 <!-- [contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors -->
 [license-shield]: https://img.shields.io/badge/License-Apache%202.0-purple.svg?style=for-the-badge
-[license-url]: https://github.com/visual-layer/vl-datasets/blob/main/LICENSE
+[license-url]: https://github.com/visual-layer/visuallayer/blob/main/LICENSE
 [testedon-shield]: https://img.shields.io/badge/Tested%20on-Ubuntu--22.04%20%7C%20MacOS--10.16%20Intel%20%7C%20Windows%2010-brightgreen?style=for-the-badge
 
 
@@ -45,7 +45,7 @@
     <br />
     <a href="https://visual-layer.readme.io/" target="_blank" rel="noopener noreferrer"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/visual-layer/vl-datasets/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
+    <a href="https://github.com/visual-layer/visuallayer/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
     ·
     <a href="https://medium.com/@visual-layer/" target="_blank" rel="noopener noreferrer">Read Blog</a>
     ·
@@ -74,7 +74,7 @@
 
 ## Description
 
-`vl-datasets` is a Python package that provides access to clean computer vision datasets with only 2 lines of code.
+`visuallayer` is a Python package that provides access to clean computer vision datasets with only 2 lines of code.
 
 For example, to get access to the clean version of the [Food-101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/) dataset simply run:
 
@@ -107,11 +107,11 @@ Even with the recent success of generative models, data quality remains an issue
 Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
 
 We believe that access to clean and high-quality computer vision datasets leads to accurate, non-biased, and efficient model.
-By providing public access to `vl-datasets` we hope it helps advance the field of computer vision.
+By providing public access to `visuallayer` we hope it helps advance the field of computer vision.
 
 ## Datasets & Access
 
-`vl-datasets` provides a convenient way to access the cleaned version of the datasets in Python.
+`visuallayer` provides a convenient way to access the cleaned version of the datasets in Python.
 
 Alternatively, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
 
@@ -145,19 +145,19 @@ Learn more on how we clean the datasets using our profilling tool [here](https:/
 
 ## Installation
 
-**Option 1** - Install `vl_datasets` package from [PyPI](https://pypi.org/project/vl-datasets/):
+**Option 1** - Install `vl_datasets` package from [PyPI](https://pypi.org/project/visuallayer/):
 
 ```shell
-pip install vl-datasets
+pip install visuallayer
 ```
 
 **Option 2** - Install the bleeding edge version on GitHub:
 ```
-pip install git+https://github.com/visual-layer/vl-datasets.git@main --upgrade
+pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 ```
 
 ## Usage
-To start using `vl-datasets`, import the clean version of the dataset with:
+To start using `visuallayer`, import the clean version of the dataset with:
 
 ```python
 from vl_datasets import VLFood101
@@ -205,28 +205,28 @@ With the dataset loaded you can train a model using PyTorch training loop.
 			</ul>
 		</td>
 		<td align="center" width="80">
-			<a href="https://nbviewer.org/github/visual-layer/vl-datasets/blob/main/notebooks/train-pytorch.ipynb">
+			<a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
 				<img src="./imgs/nbviewer_logo.svg" height="34" />
 			</a>
 		</td>
 	</tr>
 	<tr>
 		<td align="center">
-			<a href="https://github.com/visual-layer/vl-datasets/blob/main/notebooks/train-pytorch.ipynb">
+			<a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
 				<img src="./imgs/github_logo.png" height="32" />
 			</a>
 		</td>
 	</tr>
 	<tr>
 		<td align="center">
-			<a href="https://colab.research.google.com/github/visual-layer/vl-datasets/blob/main/notebooks/train-pytorch.ipynb">
+			<a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
 				<img src="./imgs/colab_logo.png" height="28" />
 			</a>
 		</td>
 	</tr>
     <tr>
 		<td align="center">
-			<a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/vl-datasets/blob/main/notebooks/train-pytorch.ipynb">
+			<a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
 				<img src="./imgs/kaggle_logo.png" height="28" />
 			</a>
 		</td>
@@ -246,28 +246,28 @@ With the dataset loaded you can train a model using PyTorch training loop.
 			</ul>
 		</td>
 		<td align="center" width="80">
-			<a href="https://nbviewer.org/github/visual-layer/vl-datasets/blob/main/notebooks/train-fastai.ipynb">
+			<a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
 				<img src="./imgs/nbviewer_logo.svg" height="34" />
 			</a>
 		</td>
 	</tr>
 	<tr>
 		<td align="center">
-			<a href="https://github.com/visual-layer/vl-datasets/blob/main/notebooks/train-fastai.ipynb">
+			<a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
 				<img src="./imgs/github_logo.png" height="32" />
 			</a>
 		</td>
 	</tr>
 	<tr>
 		<td align="center">
-			<a href="https://colab.research.google.com/github/visual-layer/vl-datasets/blob/main/notebooks/train-fastai.ipynb">
+			<a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
 				<img src="./imgs/colab_logo.png" height="28" />
 			</a>
 		</td>
 	</tr>
     <tr>
 		<td align="center">
-			<a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/vl-datasets/blob/main/notebooks/train-fastai.ipynb">
+			<a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
 				<img src="./imgs/kaggle_logo.png" height="28" />
 			</a>
 		</td>
@@ -287,28 +287,28 @@ With the dataset loaded you can train a model using PyTorch training loop.
 			</ul>
 		</td>
 		<td align="center" width="80">
-			<a href="https://nbviewer.org/github/visual-layer/vl-datasets/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
+			<a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
 				<img src="./imgs/nbviewer_logo.svg" height="34" />
 			</a>
 		</td>
 	</tr>
 	<tr>
 		<td align="center">
-			<a href="https://github.com/visual-layer/vl-datasets/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
+			<a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
 				<img src="./imgs/github_logo.png" height="32" />
 			</a>
 		</td>
 	</tr>
 	<tr>
 		<td align="center">
-			<a href="https://colab.research.google.com/github/visual-layer/vl-datasets/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
+			<a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
 				<img src="./imgs/colab_logo.png" height="28" />
 			</a>
 		</td>
 	</tr>
     <tr>
 		<td align="center">
-			<a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/vl-datasets/blob/main/notebooks/train-pytorch.ipynb">
+			<a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
 				<img src="./imgs/kaggle_logo.png" height="28" />
 			</a>
 		</td>
@@ -318,7 +318,7 @@ With the dataset loaded you can train a model using PyTorch training loop.
 
 
 ## License
-`vl-datasets` is licensed under the Apache 2.0 License. See [LICENSE](./LICENSE).
+`visuallayer` is licensed under the Apache 2.0 License. See [LICENSE](./LICENSE).
 
 However, you are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
 
@@ -346,7 +346,7 @@ Read more on Sentry's official [webpage](https://sentry.io/welcome/).
 ## Getting Help
 Get help from the Visual Layer team or community members via the following channels -
 + [Slack](https://visualdatabase.slack.com/join/shared_invite/zt-19jaydbjn-lNDEDkgvSI1QwbTXSY6dlA#/shared-invite/email).
-+ GitHub [issues](https://github.com/visual-layer/vl-datasets/issues).
++ GitHub [issues](https://github.com/visual-layer/visuallayer/issues).
 + Discussion [forum](https://visual-layer.readme.io/discuss).
 
 ## About Visual-Layer
