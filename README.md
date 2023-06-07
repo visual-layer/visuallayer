@@ -166,6 +166,270 @@ Here is a table of widely used computer vision datasets, issues we found and a l
     </td>
     <td><code>from vl_datasets import VLFood101</code></td>
   </tr>
+  <tr>
+  <td><a href="./dataset_card/oxford-iiit-pets/card.md">Oxford-IIIT Pet</a></td>
+  <td>
+    <table>
+      <tr>
+        <td>Duplicates</td>
+        <td>1.016% (75)</td>
+      </tr>
+      <tr>
+        <td>Outliers</td>
+        <td>0.1% (7)</td>
+      </tr>
+      <tr>
+        <td>Dark</td>
+        <td>0.05% (4)</td>
+      </tr>
+      <tr>
+        <td>Leakage</td>
+        <td>0.31% (23)</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td>1.48% (132)</td>
+      </tr>
+    </table>
+    <div align="right">
+      <a href="./dataset_card/oxford-iiit-pets/card.md"><strong>More »</strong></a>
+    </div>
+  </td>
+  <td>
+    <a href="https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL">Download here</a>
+  </td>
+  <td><code>from vl_datasets import VLOxfordIIITPet</code></td>
+</tr>
+<tr>
+  <td><a href="./dataset_card/laion-1b/card.md">LAION-1B</a></td>
+  <td>
+    <table>
+      <tr>
+        <td>Duplicates</td>
+        <td>WIP % (WIP)</td>
+      </tr>
+      <tr>
+        <td>Outliers</td>
+        <td>WIP % (WIP)</td>
+      </tr>
+      <tr>
+        <td>Broken</td>
+        <td>WIP % (WIP)</td>
+      </tr>
+      <tr>
+        <td>Blur</td>
+        <td>WIP % (WIP)</td>
+      </tr>
+      <tr>
+        <td>Dark</td>
+        <td>WIP % (WIP)</td>
+      </tr>
+      <tr>
+        <td>Bright</td>
+        <td>WIP % (WIP)</td>
+      </tr>
+    </table>
+    <div align="right">
+      <a href="./dataset_card/laion-1b/card.md"><strong>More »</strong></a>
+    </div>
+  </td>
+  <td>
+    <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+  </td>
+  <td>WIP</td>
+</tr>
+<tr>
+  <td><a href="./dataset_card/imagenet-21k/card.md">ImageNet-21K</a></td>
+  <td>
+    <table>
+      <tr>
+        <td>Duplicates</td>
+        <td>10.53% (1,385,074)</td>
+      </tr>
+      <tr>
+        <td>Outliers</td>
+        <td>0.085% (11,119)</td>
+      </tr>
+      <tr>
+        <td>Blur</td>
+        <td>0.292% (38,463)</td>
+      </tr>
+      <tr>
+        <td>Dark</td>
+        <td>0.179% (23,575)</td>
+      </tr>
+      <tr>
+        <td>Bright</td>
+        <td>0.431% (56,754)</td>
+      </tr>
+      <tr>
+        <td>Mislabels</td>
+        <td>3.064% (402,963)</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td>14.581% (1,917,948)</td>
+      </tr>
+    </table>
+    <div align="right">
+      <a href="./dataset_card/imagenet-21k/card.md"><strong>More »</strong></a>
+    </div>
+  </td>
+  <td>
+    <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+  </td>
+  <td><code>from vl_datasets import VLImageNet</code></td>
+</tr>
+<tr>
+  <td><a href="./dataset_card/imagenet-1k/card.md">ImageNet-1K</a></td>
+  <td>
+    <table>
+      <tr>
+        <td>Duplicates</td>
+        <td>0.57% (7,522)</td>
+      </tr>
+      <tr>
+        <td>Outliers</td>
+        <td>0.09% (1,199)</td>
+      </tr>
+      <tr>
+        <td>Blur</td>
+        <td>0.19% (2,478)</td>
+      </tr>
+      <tr>
+        <td>Dark</td>
+        <td>0.24% (3,174)</td>
+      </tr>
+      <tr>
+        <td>Bright</td>
+        <td>0.06% (770)</td>
+      </tr>
+      <tr>
+        <td>Mislabels</td>
+        <td>0.11% (1,480)</td>
+      </tr>
+      <tr>
+        <td>Leakage</td>
+        <td>0.065% (869)</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td>1.313% (17,492)</td>
+      </tr>
+    </table>
+    <div align="right">
+      <a href="./dataset_card/imagenet-1k/card.md"><strong>More »</strong></a>
+    </div>
+  </td>
+  <td>
+    <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+  </td>
+  <td><code>from vl_datasets import VLImageNet</code></td>
+</tr>
+<tr>
+  <td><a href="./dataset_card/kitti/card.md">KITTI</a></td>
+  <td>
+    <table>
+      <tr>
+        <td>Duplicates</td>
+        <td>15.29% (2,294)</td>
+      </tr>
+      <tr>
+        <td>Outliers</td>
+        <td>0.01% (2)</td>
+      </tr>
+      <tr>
+        <td>Leakage</td>
+        <td>3.01% (452)</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td>18.32% (2,748)</td>
+      </tr>
+    </table>
+    <div align="right">
+      <a href="./dataset_card/kitti/card.md"><strong>More »</strong></a>
+    </div>
+  </td>
+  <td>
+    <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+  </td>
+  <td><code>from vl_datasets import VLKitti</code></td>
+</tr>
+<tr>
+  <td><a href="./dataset_card/deep-fashion/card.md">DeepFashion</a></td>
+  <td>
+    <table>
+      <tr>
+        <td>Duplicates</td>
+        <td>5.11% (14,773)</td>
+      </tr>
+      <tr>
+        <td>Outliers</td>
+        <td>0.04% (108)</td>
+      </tr>
+      <tr>
+        <td>Leakage</td>
+        <td>2.75% (7,943)</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td>7.89% (22,824)</td>
+      </tr>
+    </table>
+    <div align="right">
+      <a href="./dataset_card/deep-fashion/card.md"><strong>More »</strong></a>
+    </div>
+  </td>
+  <td>
+    <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+  </td>
+  <td>WIP</td>
+</tr>
+<tr>
+  <td><a href="./dataset_card/celeb-a-hq/card.md">CelebA-HQ</a></td>
+  <td>
+    <table>
+      <tr>
+        <td>Duplicates</td>
+        <td>1.67% (3,389)</td>
+      </tr>
+      <tr>
+        <td>Outliers</td>
+        <td>0.08% (157)</td>
+      </tr>
+      <tr>
+        <td>Blur</td>
+        <td>0.51% (1,037)</td>
+      </tr>
+      <tr>
+        <td>Dark</td>
+        <td>0.001% (2)</td>
+      </tr>
+      <tr>
+        <td>Mislabels</td>
+        <td>0.01% (13)</td>
+      </tr>
+      <tr>
+        <td>Leakage</td>
+        <td>0.09% (188)</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td>2.362% (4,786)</td>
+      </tr>
+    </table>
+    <div align="right">
+      <a href="./dataset_card/celeb-a-hq/card.md"><strong>More »</strong></a>
+    </div>
+  </td>
+  <td>
+    <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
+  </td>
+  <td>WIP</td>
+</tr>
+
+
 </table>
 
 
