@@ -5,7 +5,9 @@ import pandas as pd
 from torchvision.datasets import OxfordIIITPet
 from typing import Union, List, Tuple
 from itables import init_notebook_mode
+
 init_notebook_mode(all_interactive=True)
+
 
 @dataclass(frozen=True)
 class VLOxfordIIITPet(Dataset):
@@ -13,7 +15,9 @@ class VLOxfordIIITPet(Dataset):
     issue_count_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_count.csv"
     name: str = "vl-oxford-iiit-pets"
     homepage_url: str = "https://www.robots.ox.ac.uk/~vgg/data/pets/"
-    license: str = "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
+    license: str = (
+        "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
+    )
     description: str = "A modified version of the original Oxford IIIT Pets Dataset removing dataset issues."
     num_images: int = 7349
 
@@ -37,14 +41,12 @@ class VLOxfordIIITPet(Dataset):
         print("Metadata:")
         for metadata in dataset_metadata:
             print(f"--> {metadata[0]} - {metadata[1]}")
-    
+
     @property
     def report(self) -> None:
         df = pd.read_csv(self.issue_count_csv_url)
         all_issues_df: pd.DataFrame = (
-            df.loc[df["split"] == "all"]
-            .drop("split", axis=1)
-            .reset_index(drop=True)
+            df.loc[df["split"] == "all"].drop("split", axis=1).reset_index(drop=True)
         )
 
         print(f"Visual Layer Profiler issues in this dataset:\n")
@@ -61,14 +63,44 @@ class VLOxfordIIITPet(Dataset):
         print(
             "\nThese images are removed in the `vl` variant of the dataset. To load the original version of the dataset, use variant=`original`. Explore the full data and the issues head to http://visual-layer.com/datasets/dataset/1234-5678-abcd"
         )
-                  
-    def export(self, output_format: str, variant: str = "vl", root: str = "./", split: str = "train") -> Union[CleanTorchvisionOxfordIIITPet, OxfordIIITPet]:
-        if output_format == "pytorch" and variant == "vl":
-            print(f"Exporting {variant.upper()} dataset into {output_format} dataset.")
-            return CleanTorchvisionOxfordIIITPet(root=root, split=split)
-        elif output_format=="pytorch" and variant == "original":
-            print(f"Exporting {variant.upper()} dataset into {output_format} dataset.")
-            return OxfordIIITPet(root=root, split=split, download=True)
+
+    def export(
+        self,
+        output_format: str,
+        variant: str = "vl",
+        root: str = "./",
+        split: str = "train",
+    ):
+        if output_format == "pytorch":
+            if variant == "vl":
+                print(
+                    f"Exporting {variant.upper()} dataset into {output_format} dataset."
+                )
+                return CleanTorchvisionOxfordIIITPet(root=root, split=split)
+            elif variant == "original":
+                print(
+                    f"Exporting {variant.upper()} dataset into {output_format} dataset."
+                )
+                return OxfordIIITPet(root=root, split=split, download=True)
+        
+        elif output_format == "csv":
+            if variant == "vl":
+                print(
+                    f"Exporting {variant.upper()} dataset into {output_format} dataset."
+                )
+                dataset = CleanTorchvisionOxfordIIITPet(root=root, split=split)
+                samples = {"Image": dataset._images, "Label": dataset._labels}
+                df = pd.DataFrame(samples)
+                return df
+            elif variant == "original":
+                print(
+                    f"Exporting {variant.upper()} dataset into {output_format} dataset."
+                )
+                dataset = OxfordIIITPet(root=root, split=split, download=True)
+                samples = {"Image": dataset._images, "Label": dataset._labels}
+                df = pd.DataFrame(samples)
+                return df
+
         else:
             raise ValueError(
                 f"Unknown output format: {output_format} or variant {variant}."
@@ -84,16 +116,25 @@ class VLOxfordIIITPet(Dataset):
                 return '<img src="' + path + '" width="150" >'
             else:
                 return path  # Return the original value if it's not a string
-    
+
         df = pd.read_csv(self.filelist_csv_url)
-        df['filename_preview']=df['filename']
-        df['prototype_preview']=df['prototype']
-        df = df.loc[:, ['filename', 'filename_preview', 'reason', 'value','prototype', 'prototype_preview']]
-        df['filename_preview'] = df['filename'].apply(to_img_tag)
-        df['prototype_preview'] = df['prototype'].apply(to_img_tag)
+        df["filename_preview"] = df["filename"]
+        df["prototype_preview"] = df["prototype"]
+        df = df.loc[
+            :,
+            [
+                "filename",
+                "filename_preview",
+                "reason",
+                "value",
+                "prototype",
+                "prototype_preview",
+            ],
+        ]
+        df["filename_preview"] = df["filename"].apply(to_img_tag)
+        df["prototype_preview"] = df["prototype"].apply(to_img_tag)
 
         return df
-
 
 
 @dataclass(frozen=True)
