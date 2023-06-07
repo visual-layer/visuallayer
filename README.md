@@ -164,7 +164,7 @@ Here is a table of widely used computer vision datasets, issues we found and a l
     <td>
       <a href="https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw">Download here</a>
     </td>
-    <td><code>from vl_datasets import VLFood101</code></td>
+    <td><code>from visuallayer.datasets.zoo import VLFood101</code></td>
   </tr>
   <tr>
   <td><a href="./dataset_card/oxford-iiit-pets/card.md">Oxford-IIIT Pet</a></td>
@@ -198,7 +198,7 @@ Here is a table of widely used computer vision datasets, issues we found and a l
   <td>
     <a href="https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL">Download here</a>
   </td>
-  <td><code>from vl_datasets import VLOxfordIIITPet</code></td>
+  <td><code>from visuallayer.datasets.zoo import VLOxfordIIITPet</code></td>
 </tr>
 <tr>
   <td><a href="./dataset_card/laion-1b/card.md">LAION-1B</a></td>
@@ -278,7 +278,7 @@ Here is a table of widely used computer vision datasets, issues we found and a l
   <td>
     <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
   </td>
-  <td><code>from vl_datasets import VLImageNet</code></td>
+  <td><code>from visuallayer.datasets.zoo import VLImageNet</code></td>
 </tr>
 <tr>
   <td><a href="./dataset_card/imagenet-1k/card.md">ImageNet-1K</a></td>
@@ -324,7 +324,7 @@ Here is a table of widely used computer vision datasets, issues we found and a l
   <td>
     <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
   </td>
-  <td><code>from vl_datasets import VLImageNet</code></td>
+  <td><code>from visuallayer.datasets.zoo import VLImageNet</code></td>
 </tr>
 <tr>
   <td><a href="./dataset_card/kitti/card.md">KITTI</a></td>
@@ -354,7 +354,7 @@ Here is a table of widely used computer vision datasets, issues we found and a l
   <td>
     <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
   </td>
-  <td><code>from vl_datasets import VLKitti</code></td>
+  <td><code>from visuallayer.datasets.zoo import VLKitti</code></td>
 </tr>
 <tr>
   <td><a href="./dataset_card/deep-fashion/card.md">DeepFashion</a></td>
@@ -438,7 +438,7 @@ Learn more on how we clean the datasets using our profilling tool [here](https:/
 
 ## Installation
 
-**Option 1** - Install `vl_datasets` package from [PyPI](https://pypi.org/project/visuallayer/):
+**Option 1** - Install `visuallayer` package from [PyPI](https://pypi.org/project/visuallayer/):
 
 ```shell
 pip install visuallayer
