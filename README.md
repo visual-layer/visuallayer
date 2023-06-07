@@ -74,16 +74,13 @@
 
 ## Description
 
-`visuallayer` is a Python package that provides access to clean computer vision datasets with only 2 lines of code.
+`visuallayer` is a Python package that provides access to clean computer vision datasets with only 3 lines of code.
 
-For example, to get access to the clean version of the [Food-101](https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/) dataset simply run:
+For example, to get access to the clean version of the [Oxford IIIT Pets Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
 
 ![image](./imgs/usage.png)
 
-We support some of the most widely used computer vision datasets.
-[Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a new dataset.
-
-All the datasets are analyzed for issues such as: 
+The datasets loaded are free from for issues such as: 
 
 + Duplicates.
 + Near Duplicates.
@@ -95,8 +92,8 @@ All the datasets are analyzed for issues such as:
 
 ![image](./imgs/issues.png)
 
-
-
+We support some of the most widely used computer vision datasets.
+[Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a new dataset.
 
 ## Why?
 
