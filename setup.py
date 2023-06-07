@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 with open('README.md', 'r') as fh:
-    long_description = fh.read()
+    long_description = "Coming soon."#fh.read()
 
 with open('requirements.txt', 'r') as fh:
     requirements = fh.read().splitlines()
 
 setup(
     name='visuallayer',
-    version='0.0.1',
+    version='0.0.2',
     url='https://github.com/visual-layer/vl-datasets',
     author='Visual Layer',
     author_email='info@visual-layer.com',
