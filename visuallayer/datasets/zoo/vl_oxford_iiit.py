@@ -47,26 +47,35 @@ class VLOxfordIIITPet(Dataset):
             print(f"--> {metadata[0]} - {metadata[1]}")
 
     @property
-    def report(self) -> None:
+    def report(self) -> pd.DataFrame:
         df = pd.read_csv(self.issue_count_csv_url)
-        all_issues_df: pd.DataFrame = (
-            df.loc[df["split"] == "all"].drop("split", axis=1).reset_index(drop=True)
-        )
+        df = df.loc[df["split"] == "all"].drop("split", axis=1).reset_index(drop=True)
+        
+        # Calculate the total sum per column
+        total_count = df['count'].sum()
+        total_pct = df['pct'].sum()
 
-        print(f"Visual Layer Profiler issues in this dataset:\n")
+        # Create a DataFrame for the new row and concatenate it with the old DataFrame
+        new_row = pd.DataFrame({'reason': ['Total'], 'count': [total_count], 'pct': [total_pct]})
+        df = pd.concat([df, new_row], ignore_index=True)
+
+        return df
+
+
+        # print(f"Visual Layer Profiler issues in this dataset:\n")
 
         # print issues to user
-        for _, row in all_issues_df.iterrows():
-            reason: str = row["reason"]
-            count: int = row["count"]
-            pct: float = row["pct"]
+        # for _, row in all_issues_df.iterrows():
+        #     reason: str = row["reason"]
+        #     count: int = row["count"]
+        #     pct: float = row["pct"]
 
-            output: str = f"--> {count:,} {reason.upper()}(S) ({pct:.2f}%)"
-            print(output)
+        #     output: str = f"--> {count:,} {reason.upper()}(S) ({pct:.2f}%)"
+        #     print(output)
 
-        print(
-            "\nThese images are removed in the `vl` variant of the dataset. To load the original version of the dataset, use variant=`original`. Explore the full data and the issues head to http://visual-layer.com/datasets/dataset/1234-5678-abcd"
-        )
+        # print(
+        #     "\nThese images are removed in the `vl` variant of the dataset. To load the original version of the dataset, use variant=`original`. Explore the full data and the issues head to http://visual-layer.com/datasets/dataset/1234-5678-abcd"
+        # )
 
     def export(
         self,
@@ -114,7 +123,7 @@ class VLOxfordIIITPet(Dataset):
         df = pd.read_csv(self.issue_count_csv_url)
         df.to_csv(filename, index=False)
 
-    def explore(self):
+    def explore(self) -> pd.DataFrame:
         import base64
 
         def to_img_tag(path):
@@ -126,11 +135,6 @@ class VLOxfordIIITPet(Dataset):
             else:
                 return path  # Return the original value if it's not a string
 
-        # def to_img_tag(path):
-        #     if isinstance(path, str):
-        #         return '<img src="' + path + '" width="150" >'
-        #     else:
-        #         return path  # Return the original value if it's not a string
 
         df = pd.read_csv(self.filelist_csv_url)
         df["filename_preview"] = df["filename"]
