@@ -106,7 +106,7 @@ Training models will erroneours data impacts model accuracy, incurs costs in tim
 We believe that access to clean and high-quality computer vision datasets leads to accurate, non-biased, and efficient model.
 By providing public access to `visuallayer` we hope it helps advance the field of computer vision.
 
-## Datasets & Access
+## Datasets
 
 `visuallayer` provides a convenient way to access the cleaned version of the datasets in Python.
 
@@ -131,7 +131,7 @@ Here is a table of widely used computer vision datasets, issues we found and a l
 | Food-101        | 101,000      | 0.62%     | (627)         | 0.23%          | (235)              | 0.08%        | (77)             | 0.18%    | (185)        | 0.04%    | (43)         | -           | -              | -             | -                 |
 | Oxford-IIIT Pet | 7,349        | 1.48%     | (132)         | 1.016%         | (75)               | 0.1%         | (7)              | -        | -            | 0.05%    | (4)          | -           | -              | -             | -                 | 0.31%       | (23)            |
 
-
+ ## Access
 
 
 
