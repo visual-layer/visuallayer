@@ -14,7 +14,7 @@ class VLOxfordIIITPet(Dataset):
     num_images: int = 7349
     filelist_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv"
     issue_count_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_count.csv"
-    
+    exclude_csv: str = None
 
     # Hack: Download the dataset in the current dir
     def __post_init__(self):
@@ -68,7 +68,7 @@ class VLOxfordIIITPet(Dataset):
                 print(
                     f"Exporting {variant.upper()} dataset into {output_format} dataset."
                 )
-                return CleanTorchvisionOxfordIIITPet(root=root, split=split)
+                return CleanTorchvisionOxfordIIITPet(root=root, split=split, exclude_csv=self.exclude_csv)
             elif variant == "original":
                 print(
                     f"Exporting {variant.upper()} dataset into {output_format} dataset."
@@ -80,7 +80,7 @@ class VLOxfordIIITPet(Dataset):
                 print(
                     f"Exporting {variant.upper()} dataset into {output_format} dataset."
                 )
-                dataset = CleanTorchvisionOxfordIIITPet(root=root, split=split)
+                dataset = CleanTorchvisionOxfordIIITPet(root=root, split=split, exclude_csv=self.exclude_csv)
                 samples = {"Image": dataset._images, "Label": dataset._labels}
                 df = pd.DataFrame(samples)
                 return df
