@@ -4,22 +4,17 @@ from dataclasses import dataclass
 import pandas as pd
 from torchvision.datasets import OxfordIIITPet
 from typing import Union, List, Tuple
-from itables import init_notebook_mode
-
-init_notebook_mode(all_interactive=True)
-
 
 @dataclass(frozen=True)
 class VLOxfordIIITPet(Dataset):
-    filelist_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv"
-    issue_count_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_count.csv"
     name: str = "vl-oxford-iiit-pets"
     homepage_url: str = "https://www.robots.ox.ac.uk/~vgg/data/pets/"
-    license: str = (
-        "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
-    )
+    license: str = "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
     description: str = "A modified version of the original Oxford IIIT Pets Dataset removing dataset issues."
     num_images: int = 7349
+    filelist_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv"
+    issue_count_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_count.csv"
+    
 
     # Hack: Download the dataset in the current dir
     def __post_init__(self):
@@ -60,22 +55,6 @@ class VLOxfordIIITPet(Dataset):
         df = pd.concat([df, new_row], ignore_index=True)
 
         return df
-
-
-        # print(f"Visual Layer Profiler issues in this dataset:\n")
-
-        # print issues to user
-        # for _, row in all_issues_df.iterrows():
-        #     reason: str = row["reason"]
-        #     count: int = row["count"]
-        #     pct: float = row["pct"]
-
-        #     output: str = f"--> {count:,} {reason.upper()}(S) ({pct:.2f}%)"
-        #     print(output)
-
-        # print(
-        #     "\nThese images are removed in the `vl` variant of the dataset. To load the original version of the dataset, use variant=`original`. Explore the full data and the issues head to http://visual-layer.com/datasets/dataset/1234-5678-abcd"
-        # )
 
     def export(
         self,
@@ -125,6 +104,8 @@ class VLOxfordIIITPet(Dataset):
 
     def explore(self) -> pd.DataFrame:
         import base64
+        from itables import init_notebook_mode
+        init_notebook_mode(all_interactive=True)
 
         def to_img_tag(path):
             if isinstance(path, str):
