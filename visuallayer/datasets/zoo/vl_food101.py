@@ -61,3 +61,8 @@ class VLFood101(Dataset):
             raise ValueError(
                 f"Unknown output format: {output_format} or variant {variant}."
             )
+
+@dataclass(frozen=True)
+class VLOriginalFood101(VLFood101):
+    name: str = "food101"
+    description: str = "The original food101 dataset."

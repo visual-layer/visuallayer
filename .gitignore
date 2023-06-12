@@ -1,5 +1,6 @@
-# Folders in notebook dir
+# Folders and data in notebooks dir
 notebooks/*/
+notebooks/*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
