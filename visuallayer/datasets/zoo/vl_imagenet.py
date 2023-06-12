@@ -1,30 +1,24 @@
-from ..clean_torchvision_food101 import CleanTorchvisionFood101
-from ..dataset import Dataset
 from dataclasses import dataclass
+from ..dataset import Dataset
+from ..clean_torchvision_imagenet import CleanTorchvisionImageNet
+from torchvision.datasets import ImageNet
 import pandas as pd
-from torchvision.datasets import Food101
-from typing import Union, List, Tuple
 
 @dataclass(frozen=True)
-class VLFood101(Dataset):
-    name: str = "vl-food101"
-    homepage_url: str = "https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/"
+class VLImageNet1k(Dataset):
+    root:str
+    name: str = "vl-imagenet-1k"
+    homepage_url: str = "https://www.image-net.org/"
     license: str = "Unknown"
-    description: str = "A modified version of the original Food101 Dataset removing dataset issues."
-    num_images: int = 101000
-    filelist_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/food101_images_issue_file_list.csv"
-    issue_count_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/food101_images_issue_count.csv"
-    exclude_csv: str = None
+    description: str = "A modified version of the original ImageNet-1k dataset removing dataset issues."
+    num_images: int = 1431167
+    filelist_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-1K_images_issue_file_list.csv"
+    issue_count_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-1K_images_issue_count.csv"
 
-    # Hack: Download the dataset in the current dir
-    def __post_init__(self):
-        Food101(root="./", download=True)
-    
     def export(
         self,
         output_format: str,
         variation: str = "vl",
-        root: str = "./",
         split: str = "train",
     ):
         if output_format == "pytorch":
@@ -32,19 +26,19 @@ class VLFood101(Dataset):
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                return CleanTorchvisionFood101(root=root, split=split, exclude_csv=self.exclude_csv)
+                return CleanTorchvisionImageNet(root=self.root, split=split, exclude_csv=self.filelist_csv_url)
             elif variation == "original":
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                return Food101(root=root, split=split, download=True)
+                return ImageNet(root=self.root, split=split)
         
         elif output_format == "csv":
             if variation == "vl":
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                dataset = CleanTorchvisionFood101(root=root, split=split, exclude_csv=self.exclude_csv)
+                dataset = CleanTorchvisionImageNet(root=self.root, split=split, exclude_csv=self.filelist_csv_url)
                 samples = {"Image": dataset._images, "Label": dataset._labels}
                 df = pd.DataFrame(samples)
                 return df
@@ -52,7 +46,7 @@ class VLFood101(Dataset):
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                dataset = Food101(root=root, split=split, download=True)
+                dataset = ImageNet(root=self.root, split=split)
                 samples = {"Image": dataset._images, "Label": dataset._labels}
                 df = pd.DataFrame(samples)
                 return df
@@ -62,7 +56,12 @@ class VLFood101(Dataset):
                 f"Unknown output format: {output_format} or variation {variation}."
             )
 
+    # TODO
+    def explore(self):
+        raise NotImplementedError
+
+
 @dataclass(frozen=True)
-class VLOriginalFood101(VLFood101):
-    name: str = "food101"
-    description: str = "The original food101 dataset."
+class VLOriginalImageNet1k(VLImageNet1k):
+    name: str = "imagenet-1k"
+    description: str = "The original imagenet-1k dataset."

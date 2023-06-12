@@ -23,34 +23,34 @@ class VLOxfordIIITPet(Dataset):
     def export(
         self,
         output_format: str,
-        variant: str = "vl",
+        variation: str = "vl",
         root: str = "./",
         split: str = "train",
     ):
         if output_format == "pytorch":
-            if variant == "vl":
+            if variation == "vl":
                 print(
-                    f"Exporting {variant.upper()} dataset into {output_format} dataset."
+                    f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
                 return CleanTorchvisionOxfordIIITPet(root=root, split=split, exclude_csv=self.exclude_csv)
-            elif variant == "original":
+            elif variation == "original":
                 print(
-                    f"Exporting {variant.upper()} dataset into {output_format} dataset."
+                    f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
                 return OxfordIIITPet(root=root, split=split, download=True)
         
         elif output_format == "csv":
-            if variant == "vl":
+            if variation == "vl":
                 print(
-                    f"Exporting {variant.upper()} dataset into {output_format} dataset."
+                    f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
                 dataset = CleanTorchvisionOxfordIIITPet(root=root, split=split, exclude_csv=self.exclude_csv)
                 samples = {"Image": dataset._images, "Label": dataset._labels}
                 df = pd.DataFrame(samples)
                 return df
-            elif variant == "original":
+            elif variation == "original":
                 print(
-                    f"Exporting {variant.upper()} dataset into {output_format} dataset."
+                    f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
                 dataset = OxfordIIITPet(root=root, split=split, download=True)
                 samples = {"Image": dataset._images, "Label": dataset._labels}
@@ -59,7 +59,7 @@ class VLOxfordIIITPet(Dataset):
 
         else:
             raise ValueError(
-                f"Unknown output format: {output_format} or variant {variant}."
+                f"Unknown output format: {output_format} or variation {variation}."
             )
 
 @dataclass(frozen=True)

@@ -1,17 +1,37 @@
 # Code adapted from https://github.com/pytorch/vision/blob/main/torchvision/datasets/
 
 from torchvision.datasets import ImageNet
-from typing import Optional, Any, Tuple
+from typing import Optional, Any, Tuple, Callable
 import pandas as pd
+import torchvision.transforms as transforms
 
-class VLImageNet(ImageNet):
+train_transform = transforms.Compose(
+    [
+        transforms.RandomResizedCrop(224),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ]
+)
+
+valid_transform = transforms.Compose(
+    [
+        transforms.Resize(256),
+        transforms.CenterCrop(224),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ]
+)
+
+class CleanTorchvisionImageNet(ImageNet):
     def __init__(self, root: str, 
                  split: str = "train", 
                  exclude_csv: Optional[str] = None, 
+                 transform: Optional[Callable] = None,
                  **kwargs: Any) -> None:
         
 
-        super().__init__(root=root, split=split, **kwargs)
+        super().__init__(root=root, split=split, transform=transform, **kwargs)
         
         self.exclude_df, self.exclude_set = parse_exclude_csv(exclude_csv)
 
@@ -28,6 +48,14 @@ class VLImageNet(ImageNet):
 
         self.samples = filtered_samples
         self.targets = filtered_targets
+
+        # Default tranform
+        if transform is None:
+            if split == "train":
+                self.transform = train_transform
+
+            else:
+                self.transform = valid_transform
         
 
 def parse_exclude_csv(exclude_csv_arg: str) -> Tuple[pd.DataFrame, set]:
