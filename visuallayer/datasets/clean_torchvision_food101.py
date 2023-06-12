@@ -28,7 +28,7 @@ valid_transform = transforms.Compose(
 )
 
 
-class VLFood101(Food101):
+class CleanTorchvisionFood101(Food101):
     @v1_sentry_handler
     def __init__(
         self,
