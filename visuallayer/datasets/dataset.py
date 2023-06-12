@@ -1,61 +1,82 @@
-from abc import ABC, abstractmethod
+import pandas as pd
+from typing import Union, List, Tuple
 
-class Dataset(ABC):
+
+class Dataset:
+    @property
+    def num_images_with_issues(self) -> int:
+        df = pd.read_csv(self.filelist_csv_url)
+        return len(df["filename"].unique())
 
     @property
-    @abstractmethod
-    def filelist_csv_url(self):
-        pass
+    def info(self) -> None:
+        # Get all attributes and methods of the class
+        dataset_metadata: List[Tuple[str, Union[str, int]]] = [
+            ("Name", self.name),
+            ("Description", self.description),
+            ("License", self.license),
+            ("Homepage URL", self.homepage_url),
+            ("Number of Images", self.num_images),
+            ("Number of Images with Issues", self.num_images_with_issues),
+        ]
+
+        print("Metadata:")
+        for metadata in dataset_metadata:
+            print(f"--> {metadata[0]} - {metadata[1]}")
 
     @property
-    @abstractmethod
-    def issue_count_csv_url(self):
-        pass
+    def report(self) -> pd.DataFrame:
+        df = pd.read_csv(self.issue_count_csv_url)
+        df = df.loc[df["split"] == "all"].drop("split", axis=1).reset_index(drop=True)
+        
+        # Calculate the total sum per column
+        total_count = df['count'].sum()
+        total_pct = df['pct'].sum()
 
-    @property
-    @abstractmethod
-    def name(self):
-        pass
+        # Create a DataFrame for the new row and concatenate it with the old DataFrame
+        new_row = pd.DataFrame({'reason': ['Total'], 'count': [total_count], 'pct': [total_pct]})
+        df = pd.concat([df, new_row], ignore_index=True)
 
-    @property
-    @abstractmethod
-    def homepage_url(self):
-        pass
+        return df
+    
+    def explore(self) -> pd.DataFrame:
+        import base64
+        from itables import init_notebook_mode
+        init_notebook_mode(all_interactive=True)
 
-    @property
-    @abstractmethod
-    def license(self):
-        pass
+        def to_img_tag(path):
+            if isinstance(path, str):
+                with open(path, 'rb') as f:
+                    image_data = f.read()
+                    base64_image = base64.b64encode(image_data).decode('utf-8')
+                return '<img src="data:image/png;base64,' + base64_image + '" width="150" >'
+            else:
+                return path  # Return the original value if it's not a string
 
-    @property
-    @abstractmethod
-    def description(self):
-        pass
 
-    @property
-    @abstractmethod
-    def num_images(self):
-        pass
+        df = pd.read_csv(self.filelist_csv_url)
+        df["filename_preview"] = df["filename"]
+        df["prototype_preview"] = df["prototype"]
+        df = df.loc[
+            :,
+            [
+                "filename",
+                "filename_preview",
+                "reason",
+                "value",
+                "prototype",
+                "prototype_preview",
+            ],
+        ]
+        df["filename_preview"] = df["filename"].apply(to_img_tag)
+        df["prototype_preview"] = df["prototype"].apply(to_img_tag)
 
-    @property
-    @abstractmethod
-    def num_images_with_issues(self):
-        pass
+        return df
 
-    @property
-    @abstractmethod
-    def info(self):
-        pass
-
-    @abstractmethod
-    def report(self):
-        pass
-
-    @abstractmethod
     def export(self, output_format):
         pass
 
-    @abstractmethod
-    def export_issues(self, filename):
-        pass
+    def export_issues(self, filename: str) -> None:
+        df = pd.read_csv(self.issue_count_csv_url)
+        df.to_csv(filename, index=False)
     

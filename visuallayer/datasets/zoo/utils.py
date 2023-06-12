@@ -1,23 +1,31 @@
 from .vl_oxford_iiit import VLOxfordIIITPet, VLOriginalOxfordIIITPet
+from .vl_food101 import VLFood101, VLOriginalFood101
+
+dataset = {
+    ("vl-oxford-iiit-pets", "vl"): VLOxfordIIITPet,
+    ("vl-oxford-iiit-pets", "original"): VLOriginalOxfordIIITPet,
+    ("vl-food101", "vl"): VLFood101,
+    ("vl-food101", "original"): VLOriginalFood101,
+}
 
 
-def load(dataset_name, variant="vl"):
-    if dataset_name == "vl-oxford-iiit-pets":
-        if variant == "original":
-            return VLOriginalOxfordIIITPet()
-        else:
-            return VLOxfordIIITPet()
-    else:
-        raise ValueError(f"Could not find dataset. Did you mean {get_dataset_names()}?")
+def load(dataset_name: str, variation: str = "vl"):
+    loaded_dataset = dataset.get((dataset_name, variation), CombinationError)
+    return loaded_dataset()
 
 
 def list_datasets():
-    names = get_dataset_names()
+    names = _get_dataset_names()
     print("Listing all datasets in zoo.")
-    return names
+    return list(names)
+
+def _get_dataset_names():
+    dataset_names = [key[0] for key in dataset.keys()]
+    return set(dataset_names)
 
 
-def get_dataset_names():
-    datasets = [VLOxfordIIITPet]
-    datasets_names = [dataset.name for dataset in datasets]
-    return datasets_names
+class CombinationError:
+    def __init__(self):
+        raise NotImplementedError(
+            "This dataset and variation combination is not implemented."
+        )
