@@ -36,4 +36,10 @@ jobs:
             echo "Sentry opt out: "
             echo $SENTRY_OPT_OUT
             python .github/workflows/test_imports.py
+        
+        - name: Test pets
+          run: |
+            echo "Sentry opt out: "
+            echo $SENTRY_OPT_OUT
+            python .github/workflows/test_pets.py
       

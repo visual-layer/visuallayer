@@ -73,9 +73,6 @@ class Dataset:
 
         return df
 
-    def export(self, output_format):
-        pass
-
     def export_issues(self, filename: str) -> None:
         df = pd.read_csv(self.issue_count_csv_url)
         df.to_csv(filename, index=False)
