@@ -6,7 +6,7 @@ import pandas as pd
 
 @dataclass(frozen=True)
 class VLImageNet1k(Dataset):
-    root:str
+    root: str = "./"
     name: str = "vl-imagenet-1k"
     homepage_url: str = "https://www.image-net.org/"
     license: str = "Unknown"
@@ -56,7 +56,7 @@ class VLImageNet1k(Dataset):
                 f"Unknown output format: {output_format} or variation {variation}."
             )
 
-    # TODO
+    # TODO - fix me. Does not work because directory from csv file is different from what is expected locally in ImageFolder form. Also check self.root
     def explore(self):
         raise NotImplementedError
 
@@ -65,3 +65,20 @@ class VLImageNet1k(Dataset):
 class VLOriginalImageNet1k(VLImageNet1k):
     name: str = "imagenet-1k"
     description: str = "The original imagenet-1k dataset."
+
+
+@dataclass(frozen=True)
+class VLImageNet21k(VLImageNet1k):
+    root: str = "./"
+    name: str = "vl-imagenet-21k"
+    homepage_url: str = "https://github.com/Alibaba-MIIL/ImageNet21K"
+    license: str = "Unknown"
+    description: str = "A modified version of the original ImageNet-21k dataset removing dataset issues."
+    num_images: int = 13153500
+    filelist_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-21K_images_issue_file_list.csv"
+    issue_count_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-21K_images_issue_count.csv"
+
+@dataclass(frozen=True)
+class VLOriginalImageNet21k(VLImageNet21k):
+    name: str = "imagenet-21k"
+    description: str = "The original imagenet-21k dataset."

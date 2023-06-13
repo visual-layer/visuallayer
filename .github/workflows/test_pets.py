@@ -18,6 +18,10 @@ print("Exporting to pytorch")
 train_dataset = my_pets.export(output_format="pytorch", split="train")
 test_dataset = my_pets.export(output_format="pytorch", split="test")
 
+print("Exporting to csv")
+train_dataset = my_pets.export(output_format="csv", split="train")
+test_dataset = my_pets.export(output_format="csv", split="test")
+
 print("Exporting issues")
 my_pets.export_issues("./issues-pets.csv")
 

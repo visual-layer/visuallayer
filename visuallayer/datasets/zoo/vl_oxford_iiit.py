@@ -7,6 +7,7 @@ from typing import Union, List, Tuple
 
 @dataclass(frozen=True)
 class VLOxfordIIITPet(Dataset):
+    root: str = './'
     name: str = "vl-oxford-iiit-pets"
     homepage_url: str = "https://www.robots.ox.ac.uk/~vgg/data/pets/"
     license: str = "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"
@@ -18,13 +19,12 @@ class VLOxfordIIITPet(Dataset):
 
     # Hack: Download the dataset in the current dir
     def __post_init__(self):
-        OxfordIIITPet(root="./", download=True)
+        OxfordIIITPet(root=self.root, download=True)
 
     def export(
         self,
         output_format: str,
         variation: str = "vl",
-        root: str = "./",
         split: str = "train",
     ):
         if output_format == "pytorch":
@@ -32,19 +32,19 @@ class VLOxfordIIITPet(Dataset):
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                return CleanTorchvisionOxfordIIITPet(root=root, split=split, exclude_csv=self.exclude_csv)
+                return CleanTorchvisionOxfordIIITPet(root=self.root, split=split, exclude_csv=self.exclude_csv)
             elif variation == "original":
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                return OxfordIIITPet(root=root, split=split, download=True)
+                return OxfordIIITPet(root=self.root, split=split, download=True)
         
         elif output_format == "csv":
             if variation == "vl":
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                dataset = CleanTorchvisionOxfordIIITPet(root=root, split=split, exclude_csv=self.exclude_csv)
+                dataset = CleanTorchvisionOxfordIIITPet(root=self.root, split=split, exclude_csv=self.exclude_csv)
                 samples = {"Image": dataset._images, "Label": dataset._labels}
                 df = pd.DataFrame(samples)
                 return df
@@ -52,7 +52,7 @@ class VLOxfordIIITPet(Dataset):
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                dataset = OxfordIIITPet(root=root, split=split, download=True)
+                dataset = OxfordIIITPet(root=self.root, split=split, download=True)
                 samples = {"Image": dataset._images, "Label": dataset._labels}
                 df = pd.DataFrame(samples)
                 return df
