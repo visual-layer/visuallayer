@@ -13,7 +13,7 @@ KITTI_CSV_PATH = "https://drive.google.com/u/0/uc?id=1P6YWOLwGQQ2777v6KA3qvhiczn
 KITTI_CSV_FILENAME = "Kitti_objects_issue_file_list.csv"
 
 
-class VLKitti(torchvision.datasets.Kitti):
+class CleanTorchvisionKitti(torchvision.datasets.Kitti):
     """
     A class inheriting the torchvision Kitti dataset and applying the findings of
     a VL Cleanup.
@@ -90,6 +90,6 @@ def parse_exclude_csv(exclude_csv_arg: str,
 
 
 if __name__ == '__main__':
-    dataset = VLKitti('/home/ubuntu/data/vl_data/kitti/', train=True, download=True)  #, exclude_csv=KITTI_CSV_FILENAME)
+    dataset = CleanTorchvisionKitti('/home/ubuntu/data/vl_data/kitti/', train=True, download=True)  #, exclude_csv=KITTI_CSV_FILENAME)
     a = dataset[3]
     pass
