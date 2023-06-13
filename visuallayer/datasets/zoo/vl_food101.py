@@ -17,9 +17,9 @@ class VLFood101(Dataset):
     issue_count_csv_url: str = "https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/food101_images_issue_count.csv"
     exclude_csv: str = None
 
-    # Hack: Download the dataset in the current dir
+    # Hack: Download the dataset in root dir
     def __post_init__(self):
-        Food101(root="./", download=True)
+        Food101(root=self.root, download=True)
     
     def export(
         self,
