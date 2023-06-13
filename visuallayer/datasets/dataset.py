@@ -78,6 +78,8 @@ class Dataset:
         Returns:
             pd.DataFrame: The report DataFrame.
         """
+
+        print("Showing a table of issues found in the original dataset.")
         df = self._get_csv(self.issue_count_csv_url)
         df = df.loc[df["split"] == "all"].drop("split", axis=1).reset_index(drop=True)
         
@@ -91,7 +93,7 @@ class Dataset:
 
         return df
     
-    def explore(self) -> pd.DataFrame:
+    def explore(self, num_images=50) -> pd.DataFrame:
         """
         Creates a DataFrame that can be used to visually explore the dataset. This DataFrame contains several columns 
         related to the images and their issues, including previews of the images.
@@ -99,6 +101,10 @@ class Dataset:
         Returns:
             pd.DataFrame: The exploration DataFrame.
         """
+
+        # TODO: Explory by issue type and value
+
+        print("For a more extensive visual exploration of the dataset visit https://app.visual-layer.com/")
 
         # Interactive table in jupyter notebook
         import base64
@@ -116,6 +122,7 @@ class Dataset:
 
 
         df = self._get_csv(self.filelist_csv_url)
+        df = df[:num_images]
         df["filename_preview"] = df["filename"]
         df["prototype_preview"] = df["prototype"]
         df = df.loc[

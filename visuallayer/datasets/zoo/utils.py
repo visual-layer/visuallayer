@@ -21,7 +21,9 @@ def load(dataset_name: str):
 def list_datasets():
     names = _get_dataset_names()
     print("Listing all datasets in the zoo.")
-    return list(sorted(names))
+    sorted_names = list(sorted(names))
+    reversed_list = sorted_names[::-1]
+    return reversed_list 
 
 def _get_dataset_names():
     dataset_names = [key for key in dataset.keys()]
