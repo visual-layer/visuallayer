@@ -1,6 +1,8 @@
 import pandas as pd
 from typing import Union, List, Tuple
 from dataclasses import dataclass
+from functools import lru_cache
+
 
 @dataclass(frozen=True)
 class Dataset:
@@ -13,14 +15,47 @@ class Dataset:
     filelist_csv_url: str 
     issue_count_csv_url: str
 
+    @staticmethod
+    @lru_cache(maxsize=None)
+    def _get_csv(url: str) -> pd.DataFrame:
+        """
+        Downloads a CSV file from a given URL and returns it as a pandas DataFrame. The results are cached, so 
+        calling the method multiple times with the same URL will not cause additional network requests.
+
+        Args:
+            url (str): The URL of the CSV file.
+
+        Returns:
+            pd.DataFrame: The data from the CSV file as a pandas DataFrame.
+        """
+        return pd.read_csv(url)
+
     @property
     def num_images_with_issues(self) -> int:
-        df = pd.read_csv(self.filelist_csv_url)
+        """
+        Computes the number of images with issues in the dataset. The number is calculated as the number of unique 
+        entries in the "filename" column of the DataFrame obtained from the `filelist_csv_url`.
+
+        Returns:
+            int: The number of images with issues.
+        """
+        df = self._get_csv(self.filelist_csv_url)
         return len(df["filename"].unique())
 
     @property
     def info(self) -> None:
-        # Get all attributes and methods of the class
+        """
+        Prints the metadata information for the dataset.
+
+        The following information is printed:
+        - Name
+        - Description
+        - License
+        - Homepage URL
+        - Number of Images
+        - Number of Images with Issues
+        """
+
         dataset_metadata: List[Tuple[str, Union[str, int]]] = [
             ("Name", self.name),
             ("Description", self.description),
@@ -36,7 +71,14 @@ class Dataset:
 
     @property
     def report(self) -> pd.DataFrame:
-        df = pd.read_csv(self.issue_count_csv_url)
+        """
+        Creates a summary report for the dataset. The report is a DataFrame that contains the reason, count, and 
+        percentage of issues for each type of issue in the dataset.
+
+        Returns:
+            pd.DataFrame: The report DataFrame.
+        """
+        df = self._get_csv(self.issue_count_csv_url)
         df = df.loc[df["split"] == "all"].drop("split", axis=1).reset_index(drop=True)
         
         # Calculate the total sum per column
@@ -50,6 +92,15 @@ class Dataset:
         return df
     
     def explore(self) -> pd.DataFrame:
+        """
+        Creates a DataFrame that can be used to visually explore the dataset. This DataFrame contains several columns 
+        related to the images and their issues, including previews of the images.
+
+        Returns:
+            pd.DataFrame: The exploration DataFrame.
+        """
+
+        # Interactive table in jupyter notebook
         import base64
         from itables import init_notebook_mode
         init_notebook_mode(all_interactive=True)
@@ -64,7 +115,7 @@ class Dataset:
                 return path  # Return the original value if it's not a string
 
 
-        df = pd.read_csv(self.filelist_csv_url)
+        df = self._get_csv(self.filelist_csv_url)
         df["filename_preview"] = df["filename"]
         df["prototype_preview"] = df["prototype"]
         df = df.loc[
@@ -84,6 +135,12 @@ class Dataset:
         return df
 
     def export_issues(self, filename: str) -> None:
-        df = pd.read_csv(self.issue_count_csv_url)
+        """
+        Exports the issue count data to a CSV file.
+
+        Args:
+            filename (str): The path where the CSV file will be saved.
+        """
+        df = self._get_csv(self.issue_count_csv_url)
         df.to_csv(filename, index=False)
     
