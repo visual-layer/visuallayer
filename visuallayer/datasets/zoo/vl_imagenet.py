@@ -56,7 +56,7 @@ class VLImageNet1k(Dataset):
                 f"Unknown output format: {output_format} or variation {variation}."
             )
 
-    # TODO
+    # TODO - fix me. Does not work because directory from csv file is different from what is expected locally in ImageFolder form. Also check self.root
     def explore(self):
         raise NotImplementedError
 
