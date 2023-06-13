@@ -7,6 +7,7 @@ from typing import Union, List, Tuple
 
 @dataclass(frozen=True)
 class VLFood101(Dataset):
+    root: str = './'
     name: str = "vl-food101"
     homepage_url: str = "https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/"
     license: str = "Unknown"
@@ -24,7 +25,6 @@ class VLFood101(Dataset):
         self,
         output_format: str,
         variation: str = "vl",
-        root: str = "./",
         split: str = "train",
     ):
         if output_format == "pytorch":
@@ -32,19 +32,19 @@ class VLFood101(Dataset):
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                return CleanTorchvisionFood101(root=root, split=split, exclude_csv=self.exclude_csv)
+                return CleanTorchvisionFood101(root=self.root, split=split, exclude_csv=self.exclude_csv)
             elif variation == "original":
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                return Food101(root=root, split=split, download=True)
+                return Food101(root=self.root, split=split, download=True)
         
         elif output_format == "csv":
             if variation == "vl":
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                dataset = CleanTorchvisionFood101(root=root, split=split, exclude_csv=self.exclude_csv)
+                dataset = CleanTorchvisionFood101(root=self.root, split=split, exclude_csv=self.exclude_csv)
                 samples = {"Image": dataset._images, "Label": dataset._labels}
                 df = pd.DataFrame(samples)
                 return df
@@ -52,7 +52,7 @@ class VLFood101(Dataset):
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                dataset = Food101(root=root, split=split, download=True)
+                dataset = Food101(root=self.root, split=split, download=True)
                 samples = {"Image": dataset._images, "Label": dataset._labels}
                 df = pd.DataFrame(samples)
                 return df

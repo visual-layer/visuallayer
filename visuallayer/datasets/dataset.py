@@ -1,8 +1,18 @@
 import pandas as pd
 from typing import Union, List, Tuple
+from dataclasses import dataclass
 
-
+@dataclass(frozen=True)
 class Dataset:
+    root: str
+    name: str
+    homepage_url: str 
+    license: str 
+    description: str 
+    num_images: int 
+    filelist_csv_url: str 
+    issue_count_csv_url: str
+
     @property
     def num_images_with_issues(self) -> int:
         df = pd.read_csv(self.filelist_csv_url)

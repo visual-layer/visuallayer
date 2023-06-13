@@ -6,7 +6,7 @@ import pandas as pd
 
 @dataclass(frozen=True)
 class VLImageNet1k(Dataset):
-    root:str
+    root: str = "./"
     name: str = "vl-imagenet-1k"
     homepage_url: str = "https://www.image-net.org/"
     license: str = "Unknown"
