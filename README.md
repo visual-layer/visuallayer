@@ -517,10 +517,10 @@ vl.datasets.zoo.load('vl-oxford-iiit-pets')
 
 This loads the **clean version** of the Oxford IIIT Pets dataset where all of the problematic images are excluded from the dataset.
 
-To load the original Oxford IIIT Pets dataset, specify the "original" argument:
+To load the original Oxford IIIT Pets dataset, simply drop the `vl-` prefix.
 
 ```python
-original_pets_dataset = vl.datasets.zoo.load('vl-oxford-iiit-pets', "original")
+original_pets_dataset = vl.datasets.zoo.load('oxford-iiit-pets')
 ```
 
 This loads the original dataset with no modifications.
