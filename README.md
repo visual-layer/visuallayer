@@ -97,7 +97,7 @@ When we say "sanitized", we mean that the datasets loaded by `visuallayer` are f
 ## Datasets Zoo
 
 We support some of the most widely used computer vision datasets in our datasets zoo.
-Here are some of the datasets we currently support and the issues found using our cloud platform.
+Here are some of the datasets we currently support and the issues found using our [cloud platform](https://visual-layer.link/) (Sign up for free.).
 
 | Dataset Name    | Total Images  | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
 |-----------------|---------------|------------------|----------------------|----------------|--------------------|--------------|------------------|----------|--------------|----------|--------------|------------|----------------|---------------|-------------------|-------------|-----------------|
@@ -113,7 +113,6 @@ Here are some of the datasets we currently support and the issues found using ou
 | Oxford-IIIT Pet | 7,349         | 1.48%            | 132                  | 1.01%          | 75                 | 0.10%        | 7                | -        | -            | 0.05%    | 4            | -          | -              | -             | -                 | 0.31%       | 23              |
 
 
-
 We will continue to support more datasets. Here are a few currently in our roadmap:
 + EuroSAT
 + Flickr30k
@@ -122,7 +121,6 @@ We will continue to support more datasets. Here are a few currently in our roadm
 + Cityscapes
 
 [Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a specific dataset.
-
 
 
 
