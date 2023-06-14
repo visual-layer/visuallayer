@@ -136,23 +136,23 @@ Here are some of the datasets we currently support and the issues found using ou
       </tr>
     <tr>
         <th>ImageNet-21K</th>
-        <td>13,153,500</td>
-        <td>14.58%</td>
-        <td>1,917,948</td>
-        <td>10.53%</td>
-        <td>1,385,074</td>
-        <td>0.09%</td>
-        <td>11,119</td>
-        <td>0.29%</td>
-        <td>38,463</td>
-        <td>0.18%</td>
-        <td>23,575</td>
-        <td>0.43%</td>
-        <td>56,754</td>
-        <td>3.06%</td>
-        <td>402,963</td>
-        <td>-</td>
-        <td>-</td>
+         <td style="text-align: right;"><strong>13,153,500</strong></td>
+         <td style="text-align: right;"><strong>14.58%</strong></td>
+         <td style="text-align: right;"><strong>1,917,948</strong></td>
+         <td style="text-align: right;"><strong>10.53%</strong></td>
+         <td style="text-align: right;"><strong>1,385,074</strong></td>
+         <td style="text-align: right;"><strong>0.09%</strong></td>
+         <td style="text-align: right;"><strong>11,119</strong></td>
+         <td style="text-align: right;"><strong>0.29%</strong></td>
+         <td style="text-align: right;"><strong>38,463</strong></td>
+         <td style="text-align: right;"><strong>0.18%</strong></td>
+         <td style="text-align: right;"><strong>23,575</strong></td>
+         <td style="text-align: right;"><strong>0.43%</strong></td>
+         <td style="text-align: right;"><strong>56,754</strong></td>
+         <td style="text-align: right;"><strong>3.06%</strong></td>
+         <td style="text-align: right;"><strong>402,963</strong></td>
+         <td style="text-align: right;"><strong>-</strong></td>
+         <td style="text-align: right;"><strong>-</strong></td>
     </tr>
     <tr>
         <th>ImageNet-1K</th>
