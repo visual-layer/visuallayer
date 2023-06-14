@@ -156,23 +156,23 @@ Here are some of the datasets we currently support and the issues found using ou
     </tr>
     <tr>
         <th>ImageNet-1K</th>
-        <td>1,431,167</td>
-        <td>1.31%</td>
-        <td>17,492</td>
-        <td>0.57%</td>
-        <td>7,522</td>
-        <td>0.09%</td>
-        <td>1,199</td>
-        <td>0.19%</td>
-        <td>2,478</td>
-        <td>0.24%</td>
-        <td>3,174</td>
-        <td>0.06%</td>
-        <td>770</td>
-        <td>0.11%</td>
-        <td>1,480</td>
-        <td>0.07%</td>
-        <td>869</td>
+        <td><div align="right">1,431,167</td>
+        <td><div align="right">1.31%</td>
+        <td><div align="right">17,492</td>
+        <td><div align="right">0.57%</td>
+        <td><div align="right">7,522</td>
+        <td><div align="right">0.09%</td>
+        <td><div align="right">1,199</td>
+        <td><div align="right">0.19%</td>
+        <td><div align="right">2,478</td>
+        <td><div align="right">0.24%</td>
+        <td><div align="right">3,174</td>
+        <td><div align="right">0.06%</td>
+        <td><div align="right">770</td>
+        <td><div align="right">0.11%</td>
+        <td><div align="right">1,480</td>
+        <td><div align="right">0.07%</td>
+        <td><div align="right">869</td>
     </tr>
     <tr>
         <th>LAION-1B</th>
