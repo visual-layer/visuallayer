@@ -503,14 +503,14 @@ pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 ## Usage
 
 ### Loading
-To list all datasets supported by `visuallayer` run
+To list all datasets supported by `visuallayer` from the datasets zoo, run:
 
 ```python
 import visuallayer as vl
 vl.datasets.zoo.list_datasets()
 ```
 
-which outputs:
+which currently outputs:
 
 ```shell
 ['vl-oxford-iiit-pets',
@@ -523,14 +523,15 @@ which outputs:
  'food101']
 ```
 
-To load a dataset from the zoo:
+To load the dataset:
+
 ```python
 vl.datasets.zoo.load('vl-oxford-iiit-pets')
 ```
 
-This loads the **clean version** of the Oxford IIIT Pets dataset where all of the problematic images are excluded from the dataset.
+This loads the sanitized version of the Oxford IIIT Pets dataset where all of the problematic images are excluded from the dataset.
 
-To load the original Oxford IIIT Pets dataset, simply drop the `vl-` prefix.
+To load the original Oxford IIIT Pets dataset, simply drop the `vl-` prefix:
 
 ```python
 original_pets_dataset = vl.datasets.zoo.load('oxford-iiit-pets')
