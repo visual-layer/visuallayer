@@ -81,7 +81,7 @@ For example, to get access to the clean version of the [ImageNet-1k](https://www
 
 ![image](./imgs/usage.png)
 
-## Dataset
+
 When we say "sanitized", we mean that the datasets loaded by `visuallayer` are free from common issues such as:
 
 + Duplicates.
@@ -94,7 +94,9 @@ When we say "sanitized", we mean that the datasets loaded by `visuallayer` are f
 
 ![image](./imgs/issues.png)
 
-We support some of the most widely used computer vision datasets.
+## Datasets Zoo
+
+We support some of the most widely used computer vision datasets in our datasets zoo.
 Here are some of the datasets we currently support and the issues found using our cloud platform.
 
 | Dataset Name    | Total Images  | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
