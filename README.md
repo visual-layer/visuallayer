@@ -40,10 +40,7 @@
 
   <p align="center">
   <br />
-    🔥 We use
-    <a href="https://github.com/visual-layer/fastdup">fastdup</a> - a free tool to clean all datasets shared in this repo.
-    <br />
-    <a href="https://visual-layer.readme.io/" target="_blank" rel="noopener noreferrer"><strong>Explore the docs »</strong></a>
+    <a href="https://docs.visual-layer.com/docs/introduction-sdk" target="_blank" rel="noopener noreferrer"><strong>Explore the docs »</strong></a>
     <br />
     <a href="https://github.com/visual-layer/visuallayer/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
     ·
@@ -74,13 +71,18 @@
 
 ## Description
 
-`visuallayer` is a Python package that provides access to clean computer vision datasets with only 3 lines of code.
+The `visuallayer` SDK is a pure Python and open-source package that offers access and extensibility to the cloud version of the [Visual Layer platform](https://app.visual-layer.com/) from your code. 
 
-For example, to get access to the clean version of the [Oxford IIIT Pets Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
+While the cloud version offers a high-level overview and visualization of your data, the SDK affords you the flexibility to integrate into your favorite machine learning frameworks and environments (e.g. Jupyter Notebook) using Python.
+
+Using `visuallayer` you can access sanitized computer vision datasets with only 3 lines of code.
+
+For example, to get access to the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
 
 ![image](./imgs/usage.png)
 
-The datasets loaded are free from for issues such as: 
+
+When we say "sanitized", we mean that the datasets loaded by `visuallayer` are free from common issues such as:
 
 + Duplicates.
 + Near Duplicates.
@@ -92,10 +94,263 @@ The datasets loaded are free from for issues such as:
 
 ![image](./imgs/issues.png)
 
-We support some of the most widely used computer vision datasets.
-[Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a new dataset.
+The sanitized version of a dataset is prefixed with `vl-` to differentiate it from the original dataset.
 
-## Why?
+## Datasets Zoo
+
+We support some of the most widely used computer vision datasets in our datasets zoo.
+Here are some of the datasets we currently support and the issues found using our [cloud platform](https://app.visual-layer.com/) (Sign up for free.).
+
+<!-- | Dataset Name    | Total Images  | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
+|-----------------|---------------|------------------|----------------------|----------------|--------------------|--------------|------------------|----------|--------------|----------|--------------|------------|----------------|---------------|-------------------|-------------|-----------------|
+| ImageNet-21K    | 13,153,500    | 14.58%           | 1,917,948            | 10.53%         | 1,385,074          | 0.09%        | 11,119           | 0.29%    | 38,463       | 0.18%    | 23,575       | 0.43%      | 56,754         | 3.06%         | 402,963           | -           | -               |
+| ImageNet-1K     | 1,431,167     | 1.31%            | 17,492               | 0.57%          | 7,522              | 0.09%        | 1,199            | 0.19%    | 2,478        | 0.24%    | 3,174        | 0.06%      | 770            | 0.11%         | 1,480             | 0.07%       | 869             |
+| LAION-1B        | 2,000,000,000 | 10.40%           | 104,942,474          | 8.89%          | 89,349,899         | 0.63%        | 6,350,368        | 0.77%    | 7,763,266    | 0.02%    | 242,333      | 0.12%      | 1,236,608      | -             | -                 | -           | -               |
+| KITTI           | 12,919        | 18.32%           | 2,748                | 15.29%         | 2,294              | 0.01%        | 2                | -        | -            | -        | -            | -          | -              | -             | -                 | 3.01%       | 452             |
+| COCO            | 330,000       | 0.31%            | 508                  | 0.12%          | 201                | 0.09%        | 143              | 0.03%    | 47           | 0.05%    | 76           | 0.01%      | 21             | -             | -                 | 0.01%       | 20              |
+| DeepFashion     | 800,000       | 7.89%            | 22,824               | 5.11%          | 14,773             | 0.04%        | 108              | -        | -            | -        | -            | -          | -              | -             | -                 | 2.75%       | 7,943           |
+| CelebA-HQ       | 30,000        | 2.36%            | 4,786                | 1.67%          | 3,389              | 0.08%        | 157              | 0.51%    | 1,037        | 0.00%    | 2            | 0.01%      | 13             | -             | -                 | 0.09%       | 188             |
+| Places365       | 1,800,000     | 2.09%            | 37,644               | 1.53%          | 27,520             | 0.40%        | 7,168            | -        | -            | 0.16%    | 2,956        | -          | -              | -             | -                 | -           | -               |
+| Food-101        | 101,000       | 0.62%            | 627                  | 0.23%          | 235                | 0.08%        | 77               | 0.18%    | 185          | 0.04%    | 43           | -          | -              | -             | -                 | -           | -               |
+| Oxford-IIIT Pet | 7,349         | 1.48%            | 132                  | 1.01%          | 75                 | 0.10%        | 7                | -        | -            | 0.05%    | 4            | -          | -              | -             | -                 | 0.31%       | 23              |
+ -->
+
+<table>
+    <tr>
+      <th><strong>Dataset Name</strong></th>
+      <td><strong>Total Images</strong></td>
+      <td><strong>Total Issues (%)</strong></td>
+      <td><strong>Total Issues (Count)</strong></td>
+      <td><strong>Duplicates (%)</strong></td>
+      <td><strong>Duplicates (Count)</strong></td>
+      <td><strong>Outliers (%)</strong></td>
+      <td><strong>Outliers (Count)</strong></td>
+      <td><strong>Blur (%)</strong></td>
+      <td><strong>Blur (Count)</strong></td>
+      <td><strong>Dark (%)</strong></td>
+      <td><strong>Dark (Count)</strong></td>
+      <td><strong>Bright (%)</strong></td>
+      <td><strong>Bright (Count)</strong></td>
+      <td><strong>Mislabels (%)</strong></td>
+      <td><strong>Mislabels (Count)</strong></td>
+      <td><strong>Leakage (%)</strong></td>
+      <td><strong>Leakage (Count)</strong></td>
+      </tr>
+    <tr>
+        <th>ImageNet-21K</th>
+         <td><div align="right">13,153,500</div></td>
+         <td><div align="right">14.58%</div></td>
+         <td><div align="right">1,917,948</div></td>
+         <td><div align="right">10.53%</div></td>
+         <td><div align="right">1,385,074</div></td>
+         <td><div align="right">0.09%</div></td>
+         <td><div align="right">11,119</div></td>
+         <td><div align="right">0.29%</div></td>
+         <td><div align="right">38,463</div></td>
+         <td><div align="right">0.18%</div></td>
+         <td><div align="right">23,575</div></td>
+         <td><div align="right">0.43%</div></td>
+         <td><div align="right">56,754</div></td>
+         <td><div align="right">3.06%</div></td>
+         <td><div align="right">402,963</div></td>
+         <td><div align="right">-</div></td>
+         <td><div align="right">-</div></td>
+    </tr>
+    <tr>
+        <th>ImageNet-1K</th>
+        <td><div align="right">1,431,167</td>
+        <td><div align="right">1.31%</td>
+        <td><div align="right">17,492</td>
+        <td><div align="right">0.57%</td>
+        <td><div align="right">7,522</td>
+        <td><div align="right">0.09%</td>
+        <td><div align="right">1,199</td>
+        <td><div align="right">0.19%</td>
+        <td><div align="right">2,478</td>
+        <td><div align="right">0.24%</td>
+        <td><div align="right">3,174</td>
+        <td><div align="right">0.06%</td>
+        <td><div align="right">770</td>
+        <td><div align="right">0.11%</td>
+        <td><div align="right">1,480</td>
+        <td><div align="right">0.07%</td>
+        <td><div align="right">869</td>
+    </tr>
+    <tr>
+        <th>LAION-2B</th>
+        <td><div align="right">2,000,000,000</td>
+        <td><div align="right">10.40%</td>
+        <td><div align="right">104,942,474</td>
+        <td><div align="right">8.89%</td>
+        <td><div align="right">89,349,899</td>
+        <td><div align="right">0.63%</td>
+        <td><div align="right">6,350,368</td>
+        <td><div align="right">0.77%</td>
+        <td><div align="right">7,763,266</td>
+        <td><div align="right">0.02%</td>
+        <td><div align="right">242,333</td>
+        <td><div align="right">0.12%</td>
+        <td><div align="right">1,236,608</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+    </tr>
+    <tr>
+        <th>KITTI</th>
+        <td><div align="right">12,919</td>
+        <td><div align="right">18.32%</td>
+        <td><div align="right">2,748</td>
+        <td><div align="right">15.29%</td>
+        <td><div align="right">2,294</td>
+        <td><div align="right">0.01%</td>
+        <td><div align="right">2</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">3.01%</td>
+        <td><div align="right">452</td>
+    </tr>
+    <tr>
+        <th>COCO</th>
+        <td><div align="right">330,000</td>
+        <td><div align="right">0.31%</td>
+        <td><div align="right">508</td>
+        <td><div align="right">0.12%</td>
+        <td><div align="right">201</td>
+        <td><div align="right">0.09%</td>
+        <td><div align="right">143</td>
+        <td><div align="right">0.03%</td>
+        <td><div align="right">47</td>
+        <td><div align="right">0.05%</td>
+        <td><div align="right">76</td>
+        <td><div align="right">0.01%</td>
+        <td><div align="right">21</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">0.01%</td>
+        <td><div align="right">20</td>
+    </tr>
+    <tr>
+        <th>DeepFashion</th>
+        <td><div align="right">800,000</td>
+        <td><div align="right">7.89%</td>
+        <td><div align="right">22,824</td>
+        <td><div align="right">5.11%</td>
+        <td><div align="right">14,773</td>
+        <td><div align="right">0.04%</td>
+        <td><div align="right">108</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">2.75%</td>
+        <td><div align="right">7,943</td>
+    </tr>
+    <tr>
+        <th>CelebA-HQ</th>
+        <td><div align="right">30,000</td>
+        <td><div align="right">2.36%</td>
+        <td><div align="right">4,786</td>
+        <td><div align="right">1.67%</td>
+        <td><div align="right">3,389</td>
+        <td><div align="right">0.08%</td>
+        <td><div align="right">157</td>
+        <td><div align="right">0.51%</td>
+        <td><div align="right">1,037</td>
+        <td><div align="right">0.00%</td>
+        <td><div align="right">2</td>
+        <td><div align="right">0.01%</td>
+        <td><div align="right">13</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">0.09%</td>
+        <td><div align="right">188</td>
+    </tr>
+    <tr>
+        <th>Places365</th>
+        <td><div align="right">1,800,000</td>
+        <td><div align="right">2.09%</td>
+        <td><div align="right">37,644</td>
+        <td><div align="right">1.53%</td>
+        <td><div align="right">27,520</td>
+        <td><div align="right">0.40%</td>
+        <td><div align="right">7,168</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">0.16%</td>
+        <td><div align="right">2,956</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+    </tr>
+    <tr>
+        <th>Food-101</th>
+        <td><div align="right">101,000</td>
+        <td><div align="right">0.62%</td>
+        <td><div align="right">627</td>
+        <td><div align="right">0.23%</td>
+        <td><div align="right">235</td>
+        <td><div align="right">0.08%</td>
+        <td><div align="right">77</td>
+        <td><div align="right">0.18%</td>
+        <td><div align="right">185</td>
+        <td><div align="right">0.04%</td>
+        <td><div align="right">43</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+    </tr>
+    <tr>
+        <th>Oxford-IIIT Pet</th>
+        <td><div align="right">7,349</td>
+        <td><div align="right">1.48%</td>
+        <td><div align="right">132</td>
+        <td><div align="right">1.01%</td>
+        <td><div align="right">75</td>
+        <td><div align="right">0.10%</td>
+        <td><div align="right">7</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">0.05%</td>
+        <td><div align="right">4</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">-</td>
+        <td><div align="right">0.31%</td>
+        <td><div align="right">23</td>
+    </tr>
+</table>
+
+
+We will continue to support more datasets. Here are a few currently in our roadmap:
++ EuroSAT
++ Flickr30k
++ INaturalist
++ SVHN
++ Cityscapes
+
+[Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a specific dataset.
+
+
+
+<!-- ## Why?
 
 Computer vision is an exciting and rapidly advancing field, with new techniques and models emerging now and then. 
 However, to develop and evaluate these models, it's essential to have reliable and standardized datasets to work with.
@@ -104,350 +359,48 @@ Even with the recent success of generative models, data quality remains an issue
 Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
 
 We believe that access to clean and high-quality computer vision datasets leads to accurate, non-biased, and efficient model.
-By providing public access to `visuallayer` we hope it helps advance the field of computer vision.
+By providing public access to `visuallayer` we hope it helps advance the field of computer vision. -->
 
-## Datasets
 
-`visuallayer` provides a convenient way to access the cleaned version of the datasets in Python.
-
+## Access
+The `visuallayer` SDK provides a convenient way to access the sanitized version of the datasets in Python.
 Alternatively, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
 
 You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
 
-We're a startup and we'd like to offer free access to the datasets as much as we can afford to. But in doing so, we'd also need your support.
+Here is a table of datasets, link to download the `.csv` file and how to access it via `visuallayer` datasets zoo.
 
-We're offering select `.csv` files completely free with no strings attached. 
-For access to our complete dataset and exclusive beta features, all we ask is that you [sign up](https://forms.gle/8jxPkyzeKj82kPed8) to be a beta tester – it's completely free and your feedback will help shape the future of our platform. 
-
-Here is a table of widely used computer vision datasets, issues we found and a link to access the `.csv` file.
-
-| Dataset Name    | Total Images | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
-| --------------- | ------------ | --------- | ------------- | -------------- | ------------------ | ------------ | ---------------- | -------- | ------------ | -------- | ------------ | ----------- | -------------- | ------------- | ----------------- | ----------- | --------------- |
-| ImageNet-21K    | 13,153,500   | 14.581%   | 1,917,948     | 10.53%         | 1,385,074          | 0.085%       | 11,119           | 0.292%   | 38,463       | 0.179%   | 23,575       | 0.431%      | 56,754         | 3.064%        | 402,963           | -           | -               |
-| ImageNet-1K     | 1,431,167    | 1.313%    | (17,492)      | 0.57%          | (7,522)            | 0.09%        | (1,199)          | 0.19%    | (2,478)      | 0.24%    | (3,174)      | 0.06%       | (770)          | 0.11%         | (1,480)           | 0.065%      | (869)           |
-| KITTI           | 12,919       | 18.32%    | (2,748)       | 15.29%         | (2,294)            | 0.01%        | (2)              | -        | -            | -        | -            | -           | -              | -             | -                 | 3.01%       | (452)           |
-| DeepFashion     | 800,000      | 7.89%     | (22,824)      | 5.11%          | (14,773)           | 0.04%        | (108)            | -        | -            | -        | -            | -           | -              | -             | -                 | 2.75%       | (7,943)         |
-| CelebA-HQ       | 30,000       | 2.362%    | (4,786)       | 1.67%          | (3,389)            | 0.08%        | (157)            | 0.51%    | (1,037)      | 0.001%   | (2)          | 0.01%       | (13)           | -             | -                 | 0.09%       | (188)           |
-| Food-101        | 101,000      | 0.62%     | (627)         | 0.23%          | (235)              | 0.08%        | (77)             | 0.18%    | (185)        | 0.04%    | (43)         | -           | -              | -             | -                 |
-| Oxford-IIIT Pet | 7,349        | 1.48%     | (132)         | 1.016%         | (75)               | 0.1%         | (7)              | -        | -            | 0.05%    | (4)          | -           | -              | -             | -                 | 0.31%       | (23)            |
-
- ## Access
+| Dataset Name    | Issues CSV                                       | Load with SDK                                 |
+|-----------------|--------------------------------------------------|-----------------------------------------------|
+| ImageNet-21K    | [![download][download-shield]][imagenet-21k-url] | `vl.datasets.zoo.load('vl-imagenet-21k')`     |
+| ImageNet-1K     | [![download][download-shield]][imagenet-1k-url]  | `vl.datasets.zoo.load('vl-imagenet-1k')`      |
+| LAION-1B        | [![download][download-shield]][laion-1b-url]     | -                                             |
+| KITTI           | [![download][download-shield]][kitti-url]        | `vl.datasets.zoo.load('vl-kitti')`            |
+| COCO            | [![download][download-shield]][coco-url]         | WIP                                           |
+| DeepFashion     | [![download][download-shield]][deepfashion-url]  | WIP                                           |
+| CelebA-HQ       | [![download][download-shield]][celeba-hq-url]    | WIP                                           |
+| Places365       | [![download][download-shield]][places365-url]    | WIP                                           |
+| Food-101        | [![download][download-shield]][food101-url]      | `vl.datasets.zoo.load('vl-food101')`          |
+| Oxford-IIIT Pet | [![download][download-shield]][oxford-pets-url]  | `vl.datasets.zoo.load('vl-oxford-iiit-pets')` |
 
 
-
-<table>
-   <tr>
-      <th>Dataset</th>
-      <th>Issues</th>
-      <th>CSV</th>
-      <th>Import Statement</th>
-   </tr>
-   <tr>
-      <td><a href="./dataset_card/imagenet-21k/card.md">ImageNet-21K</a></td>
-      <td>
-         <table>
-            <tr>
-               <td>Duplicates</td>
-               <td>10.53% (1,385,074)</td>
-            </tr>
-            <tr>
-               <td>Outliers</td>
-               <td>0.085% (11,119)</td>
-            </tr>
-            <tr>
-               <td>Blur</td>
-               <td>0.292% (38,463)</td>
-            </tr>
-            <tr>
-               <td>Dark</td>
-               <td>0.179% (23,575)</td>
-            </tr>
-            <tr>
-               <td>Bright</td>
-               <td>0.431% (56,754)</td>
-            </tr>
-            <tr>
-               <td>Mislabels</td>
-               <td>3.064% (402,963)</td>
-            </tr>
-            <tr>
-               <td><strong>Total</strong></td>
-               <td>14.581% (1,917,948)</td>
-            </tr>
-         </table>
-         <div align="right">
-            <a href="./dataset_card/imagenet-21k/card.md"><strong>More »</strong></a>
-         </div>
-      </td>
-      <td>
-         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
-      </td>
-      <td><code>from visuallayer.datasets.zoo import VLImageNet</code></td>
-   </tr>
-   <tr>
-      <td><a href="./dataset_card/imagenet-1k/card.md">ImageNet-1K</a></td>
-      <td>
-         <table>
-            <tr>
-               <td>Duplicates</td>
-               <td>0.57% (7,522)</td>
-            </tr>
-            <tr>
-               <td>Outliers</td>
-               <td>0.09% (1,199)</td>
-            </tr>
-            <tr>
-               <td>Blur</td>
-               <td>0.19% (2,478)</td>
-            </tr>
-            <tr>
-               <td>Dark</td>
-               <td>0.24% (3,174)</td>
-            </tr>
-            <tr>
-               <td>Bright</td>
-               <td>0.06% (770)</td>
-            </tr>
-            <tr>
-               <td>Mislabels</td>
-               <td>0.11% (1,480)</td>
-            </tr>
-            <tr>
-               <td>Leakage</td>
-               <td>0.065% (869)</td>
-            </tr>
-            <tr>
-               <td><strong>Total</strong></td>
-               <td>1.313% (17,492)</td>
-            </tr>
-         </table>
-         <div align="right">
-            <a href="./dataset_card/imagenet-1k/card.md"><strong>More »</strong></a>
-         </div>
-      </td>
-      <td>
-         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
-      </td>
-      <td><code>from visuallayer.datasets.zoo import VLImageNet</code></td>
-   </tr>
-   <tr>
-      <td><a href="./dataset_card/food101/card.md">Food-101</a></td>
-      <td>
-         <table>
-            <tr>
-               <td>Duplicates</td>
-               <td>0.23% (235)</td>
-            </tr>
-            <tr>
-               <td>Outliers</td>
-               <td>0.08% (77)</td>
-            </tr>
-            <tr>
-               <td>Blur</td>
-               <td>0.18% (185)</td>
-            </tr>
-            <tr>
-               <td>Dark</td>
-               <td>0.04% (43)</td>
-            </tr>
-            <tr>
-               <td>Leakage</td>
-               <td>0.086% (87)</td>
-            </tr>
-            <tr>
-               <td><strong>Total</strong></td>
-               <td>0.62% (627)</td>
-            </tr>
-         </table>
-         <div align="right">
-            <a href="./dataset_card/food101/card.md"><strong>More »</strong></a>
-         </div>
-      </td>
-      <td>
-         <a href="https://drive.google.com/uc?export=download&id=1ZG5GvU342l4YmSeYo6v6LeKbMM5fwjjw">Download here</a>
-      </td>
-      <td><code>from visuallayer.datasets.zoo import VLFood101</code></td>
-   </tr>
-   <tr>
-      <td><a href="./dataset_card/oxford-iiit-pets/card.md">Oxford-IIIT Pet</a></td>
-      <td>
-         <table>
-            <tr>
-               <td>Duplicates</td>
-               <td>1.016% (75)</td>
-            </tr>
-            <tr>
-               <td>Outliers</td>
-               <td>0.1% (7)</td>
-            </tr>
-            <tr>
-               <td>Dark</td>
-               <td>0.05% (4)</td>
-            </tr>
-            <tr>
-               <td>Leakage</td>
-               <td>0.31% (23)</td>
-            </tr>
-            <tr>
-               <td><strong>Total</strong></td>
-               <td>1.48% (132)</td>
-            </tr>
-         </table>
-         <div align="right">
-            <a href="./dataset_card/oxford-iiit-pets/card.md"><strong>More »</strong></a>
-         </div>
-      </td>
-      <td>
-         <a href="https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL">Download here</a>
-      </td>
-      <td><code>from visuallayer.datasets.zoo import VLOxfordIIITPet</code></td>
-   </tr>
-   <tr>
-      <td><a href="./dataset_card/laion-1b/card.md">LAION-1B</a></td>
-      <td>
-         <table>
-            <tr>
-               <td>Duplicates</td>
-               <td>WIP % (WIP)</td>
-            </tr>
-            <tr>
-               <td>Outliers</td>
-               <td>WIP % (WIP)</td>
-            </tr>
-            <tr>
-               <td>Broken</td>
-               <td>WIP % (WIP)</td>
-            </tr>
-            <tr>
-               <td>Blur</td>
-               <td>WIP % (WIP)</td>
-            </tr>
-            <tr>
-               <td>Dark</td>
-               <td>WIP % (WIP)</td>
-            </tr>
-            <tr>
-               <td>Bright</td>
-               <td>WIP % (WIP)</td>
-            </tr>
-         </table>
-         <div align="right">
-            <a href="./dataset_card/laion-1b/card.md"><strong>More »</strong></a>
-         </div>
-      </td>
-      <td>
-         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
-      </td>
-      <td>WIP</td>
-   </tr>
-   <tr>
-      <td><a href="./dataset_card/kitti/card.md">KITTI</a></td>
-      <td>
-         <table>
-            <tr>
-               <td>Duplicates</td>
-               <td>15.29% (2,294)</td>
-            </tr>
-            <tr>
-               <td>Outliers</td>
-               <td>0.01% (2)</td>
-            </tr>
-            <tr>
-               <td>Leakage</td>
-               <td>3.01% (452)</td>
-            </tr>
-            <tr>
-               <td><strong>Total</strong></td>
-               <td>18.32% (2,748)</td>
-            </tr>
-         </table>
-         <div align="right">
-            <a href="./dataset_card/kitti/card.md"><strong>More »</strong></a>
-         </div>
-      </td>
-      <td>
-         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
-      </td>
-      <td><code>from visuallayer.datasets.zoo import VLKitti</code></td>
-   </tr>
-   <tr>
-      <td><a href="./dataset_card/deep-fashion/card.md">DeepFashion</a></td>
-      <td>
-         <table>
-            <tr>
-               <td>Duplicates</td>
-               <td>5.11% (14,773)</td>
-            </tr>
-            <tr>
-               <td>Outliers</td>
-               <td>0.04% (108)</td>
-            </tr>
-            <tr>
-               <td>Leakage</td>
-               <td>2.75% (7,943)</td>
-            </tr>
-            <tr>
-               <td><strong>Total</strong></td>
-               <td>7.89% (22,824)</td>
-            </tr>
-         </table>
-         <div align="right">
-            <a href="./dataset_card/deep-fashion/card.md"><strong>More »</strong></a>
-         </div>
-      </td>
-      <td>
-         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
-      </td>
-      <td>WIP</td>
-   </tr>
-   <tr>
-      <td><a href="./dataset_card/celeb-a-hq/card.md">CelebA-HQ</a></td>
-      <td>
-         <table>
-            <tr>
-               <td>Duplicates</td>
-               <td>1.67% (3,389)</td>
-            </tr>
-            <tr>
-               <td>Outliers</td>
-               <td>0.08% (157)</td>
-            </tr>
-            <tr>
-               <td>Blur</td>
-               <td>0.51% (1,037)</td>
-            </tr>
-            <tr>
-               <td>Dark</td>
-               <td>0.001% (2)</td>
-            </tr>
-            <tr>
-               <td>Mislabels</td>
-               <td>0.01% (13)</td>
-            </tr>
-            <tr>
-               <td>Leakage</td>
-               <td>0.09% (188)</td>
-            </tr>
-            <tr>
-               <td><strong>Total</strong></td>
-               <td>2.362% (4,786)</td>
-            </tr>
-         </table>
-         <div align="right">
-            <a href="./dataset_card/celeb-a-hq/card.md"><strong>More »</strong></a>
-         </div>
-      </td>
-      <td>
-         <a href="https://forms.gle/8jxPkyzeKj82kPed8">Request access here</a>
-      </td>
-      <td>WIP</td>
-   </tr>
-</table>
+[download-shield]: https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge
+[imagenet-21k-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-21K_images_issue_file_list.csv
+[imagenet-1k-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-1K_images_issue_file_list.csv
+[laion-1b-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Laion1B_issues.parquet
+[kitti-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Kitti_images_issue_file_list.csv
+[coco-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Coco_images_issue_file_list.csv
+[deepfashion-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/DeepFashion_images_issue_file_list.csv
+[celeba-hq-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/CelebA_images_issue_file_list.csv
+[places365-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Places365_images_issue_file_list.csv
+[food101-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/food101_images_issue_file_list.csv
+[oxford-pets-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv
 
 
-Learn more on how we clean the datasets using our profilling tool [here](https://visual-layer.link).
 
-> **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
+Sign up to access our cloud platform [here](https://app.visual-layer.com).
+
+<!-- > **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo.  -->
 
 
 ## Installation
@@ -466,24 +419,38 @@ pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 ## Usage
 
 ### Loading
-To list all datasets supported by `visuallayer` run
+To list all datasets supported by `visuallayer` from the datasets zoo, run:
 
 ```python
 import visuallayer as vl
 vl.datasets.zoo.list_datasets()
 ```
 
-To load a dataset from the zoo:
+which currently outputs:
+
+```shell
+['vl-oxford-iiit-pets',
+ 'vl-imagenet-21k',
+ 'vl-imagenet-1k',
+ 'vl-food101',
+ 'oxford-iiit-pets',
+ 'imagenet-21k',
+ 'imagenet-1k',
+ 'food101']
+```
+
+To load the dataset:
+
 ```python
 vl.datasets.zoo.load('vl-oxford-iiit-pets')
 ```
 
-This loads the **clean version** of the Oxford IIIT Pets dataset where all of the problematic images are excluded from the dataset.
+This loads the sanitized version of the Oxford IIIT Pets dataset where all of the problematic images are excluded from the dataset.
 
-To load the original Oxford IIIT Pets dataset, specify the "original" argument:
+To load the original Oxford IIIT Pets dataset, simply drop the `vl-` prefix:
 
 ```python
-original_pets_dataset = vl.datasets.zoo.load('vl-oxford-iiit-pets', "original")
+original_pets_dataset = vl.datasets.zoo.load('oxford-iiit-pets')
 ```
 
 This loads the original dataset with no modifications.
@@ -684,10 +651,7 @@ test_dataframe = my_pets.export(output_format="csv", split="test")
 
 However, you are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
 
-## Usage Tracking
-
-<details>
-<summary>Disclaimer</summary>
+## Telemetry
 
 This repository incorporates usage tracking using [Sentry.io](https://sentry.io/) to monitor and collect valuable information about the usage of the application.
 
@@ -707,14 +671,16 @@ export SENTRY_OPT_OUT=True
 ```
 
 Read more on Sentry's official [webpage](https://sentry.io/welcome/).
-</details>
 
+## Visual Layer Cloud Platform
+TODO
 
 ## Getting Help
 Get help from the Visual Layer team or community members via the following channels -
 + [Slack](https://visualdatabase.slack.com/join/shared_invite/zt-19jaydbjn-lNDEDkgvSI1QwbTXSY6dlA#/shared-invite/email).
 + GitHub [issues](https://github.com/visual-layer/visuallayer/issues).
 + Discussion [forum](https://visual-layer.readme.io/discuss).
+
 
 ## About Visual-Layer
 
