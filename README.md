@@ -735,10 +735,7 @@ test_dataframe = my_pets.export(output_format="csv", split="test")
 
 However, you are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
 
-## Usage Tracking
-
-<details>
-<summary>Disclaimer</summary>
+## Telemetry
 
 This repository incorporates usage tracking using [Sentry.io](https://sentry.io/) to monitor and collect valuable information about the usage of the application.
 
@@ -758,7 +755,6 @@ export SENTRY_OPT_OUT=True
 ```
 
 Read more on Sentry's official [webpage](https://sentry.io/welcome/).
-</details>
 
 
 ## Getting Help
