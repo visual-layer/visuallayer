@@ -100,12 +100,13 @@ Here are some of the datasets we currently support and the issues found using ou
 | Dataset Name    | Total Images | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
 | --------------- | ------------ | --------- | ------------- | -------------- | ------------------ | ------------ | ---------------- | -------- | ------------ | -------- | ------------ | ----------- | -------------- | ------------- | ----------------- | ----------- | --------------- |
 | ImageNet-21K    | 13,153,500   | 14.581%   | 1,917,948     | 10.53%         | 1,385,074          | 0.085%       | 11,119           | 0.292%   | 38,463       | 0.179%   | 23,575       | 0.431%      | 56,754         | 3.064%        | 402,963           | -           | -               |
-| ImageNet-1K     | 1,431,167    | 1.313%    | (17,492)      | 0.57%          | (7,522)            | 0.09%        | (1,199)          | 0.19%    | (2,478)      | 0.24%    | (3,174)      | 0.06%       | (770)          | 0.11%         | (1,480)           | 0.065%      | (869)           |
-| KITTI           | 12,919       | 18.32%    | (2,748)       | 15.29%         | (2,294)            | 0.01%        | (2)              | -        | -            | -        | -            | -           | -              | -             | -                 | 3.01%       | (452)           |
-| DeepFashion     | 800,000      | 7.89%     | (22,824)      | 5.11%          | (14,773)           | 0.04%        | (108)            | -        | -            | -        | -            | -           | -              | -             | -                 | 2.75%       | (7,943)         |
-| CelebA-HQ       | 30,000       | 2.362%    | (4,786)       | 1.67%          | (3,389)            | 0.08%        | (157)            | 0.51%    | (1,037)      | 0.001%   | (2)          | 0.01%       | (13)           | -             | -                 | 0.09%       | (188)           |
-| Food-101        | 101,000      | 0.62%     | (627)         | 0.23%          | (235)              | 0.08%        | (77)             | 0.18%    | (185)        | 0.04%    | (43)         | -           | -              | -             | -                 |
-| Oxford-IIIT Pet | 7,349        | 1.48%     | (132)         | 1.016%         | (75)               | 0.1%         | (7)              | -        | -            | 0.05%    | (4)          | -           | -              | -             | -                 | 0.31%       | (23)            |
+| ImageNet-1K     | 1,431,167    | 1.313%    | 17,492      | 0.57%          | 7,522            | 0.09%        | 1,199          | 0.19%    | 2,478      | 0.24%    | 3,174      | 0.06%       | 770          | 0.11%         | 1,480           | 0.065%      | 869           |
+| KITTI           | 12,919       | 18.32%    | 2,748       | 15.29%         | 2,294            | 0.01%        | 2              | -        | -            | -        | -            | -           | -              | -             | -                 | 3.01%       | 452           |
+| COCO            | 330,000      | 0.31%     | 508           | 0.12%         | 201                | 0.09%       | 143               | 0.03%   | 47           | 0.05%   | 76           | 0.01%      | 21              | -             | -                 | 0.01%      | 20              |
+| DeepFashion     | 800,000      | 7.89%     | 22,824      | 5.11%          | 14,773           | 0.04%        | 108            | -        | -            | -        | -            | -           | -              | -             | -                 | 2.75%       | 7,943         |
+| CelebA-HQ       | 30,000       | 2.362%    | 4,786       | 1.67%          | 3,389            | 0.08%        | 157            | 0.51%    | 1,037      | 0.001%   | 2          | 0.01%       | 13           | -             | -                 | 0.09%       | 188           |
+| Food-101        | 101,000      | 0.62%     | 627         | 0.23%          | 235              | 0.08%        | 77             | 0.18%    | 185        | 0.04%    | 43         | -           | -              | -             | -                 |
+| Oxford-IIIT Pet | 7,349        | 1.48%     | 132         | 1.016%         | 75               | 0.1%         | 7              | -        | -            | 0.05%    | 4          | -           | -              | -             | -                 | 0.31%       | 23            |
 
 
 We will continue to support more datasets. Here are a few currently in our roadmap:
@@ -140,7 +141,7 @@ We will continue to support more datasets. Here are a few currently in our roadm
 
 
 
-## Why?
+<!-- ## Why?
 
 Computer vision is an exciting and rapidly advancing field, with new techniques and models emerging now and then. 
 However, to develop and evaluate these models, it's essential to have reliable and standardized datasets to work with.
@@ -149,12 +150,11 @@ Even with the recent success of generative models, data quality remains an issue
 Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
 
 We believe that access to clean and high-quality computer vision datasets leads to accurate, non-biased, and efficient model.
-By providing public access to `visuallayer` we hope it helps advance the field of computer vision.
+By providing public access to `visuallayer` we hope it helps advance the field of computer vision. -->
 
-## Datasets
 
-`visuallayer` provides a convenient way to access the cleaned version of the datasets in Python.
-
+## Access
+The `visuallayer` SDK provides a convenient way to access the sanitized version of the datasets in Python.
 Alternatively, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
 
 You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
@@ -167,7 +167,6 @@ For access to our complete dataset and exclusive beta features, all we ask is th
 Here is a table of widely used computer vision datasets, issues we found and a link to access the `.csv` file.
 
 
- ## Access
 
 
 
