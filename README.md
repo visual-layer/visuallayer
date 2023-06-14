@@ -71,7 +71,7 @@
 
 ## Description
 
-The `visuallayer` SDK is a pure Python and open-source package that offers access and extensibility to the cloud version of the [Visual Layer platform](https://visual-layer.link/) from your code. 
+The `visuallayer` SDK is a pure Python and open-source package that offers access and extensibility to the cloud version of the [Visual Layer platform](https://app.visual-layer.com/) from your code. 
 
 While the cloud version offers a high-level overview and visualization of your data, the SDK affords you the flexibility to integrate into your favorite machine learning frameworks and environments (e.g. Jupyter Notebook) using Python.
 
@@ -97,7 +97,7 @@ When we say "sanitized", we mean that the datasets loaded by `visuallayer` are f
 ## Datasets Zoo
 
 We support some of the most widely used computer vision datasets in our datasets zoo.
-Here are some of the datasets we currently support and the issues found using our [cloud platform](https://visual-layer.link/) (Sign up for free.).
+Here are some of the datasets we currently support and the issues found using our [cloud platform](https://app.visual-layer.com/) (Sign up for free.).
 
 <!-- | Dataset Name    | Total Images  | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
 |-----------------|---------------|------------------|----------------------|----------------|--------------------|--------------|------------------|----------|--------------|----------|--------------|------------|----------------|---------------|-------------------|-------------|-----------------|
@@ -396,7 +396,7 @@ Here is a table of datasets, link to download the `.csv` file and how to access 
 
 
 
-Sign up to access our cloud platform [here](https://visual-layer.link).
+Sign up to access our cloud platform [here](https://app.visual-layer.com).
 
 <!-- > **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo.  -->
 
