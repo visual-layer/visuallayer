@@ -113,7 +113,8 @@ Here are some of the datasets we currently support and the issues found using ou
 | Oxford-IIIT Pet | 7,349         | 1.48%            | 132                  | 1.01%          | 75                 | 0.10%        | 7                | -        | -            | 0.05%    | 4            | -          | -              | -             | -                 | 0.31%       | 23              |
  -->
 
-<table>
+<div align="right">
+   <table>
     <tr>
       <th><strong>Dataset Name</strong></th>
       <td><strong>Total Images</strong></td>
@@ -136,23 +137,23 @@ Here are some of the datasets we currently support and the issues found using ou
       </tr>
     <tr>
         <th>ImageNet-21K</th>
-         <td><div align="right">13,153,500</div></td>
-         <td><div align="right">14.58%</div></td>
-         <td><div align="right">1,917,948</div></td>
-         <td><div align="right">10.53%</div></td>
-         <td><div align="right">1,385,074</div></td>
-         <td><div align="right">0.09%</div></td>
-         <td><div align="right">11,119</div></td>
-         <td><div align="right">0.29%</div></td>
-         <td><div align="right">38,463</div></td>
-         <td><div align="right">0.18%</div></td>
-         <td><div align="right">23,575</div></td>
-         <td><div align="right">0.43%</div></td>
-         <td><div align="right">56,754</div></td>
-         <td><div align="right">3.06%</div></td>
-         <td><div align="right">402,963</div></td>
-         <td><div align="right">-</div></td>
-         <td><div align="right">-</div></td>
+        <td>13,153,500</td>
+        <td>14.58%</td>
+        <td>1,917,948</td>
+        <td>10.53%</td>
+        <td>1,385,074</td>
+        <td>0.09%</td>
+        <td>11,119</td>
+        <td>0.29%</td>
+        <td>38,463</td>
+        <td>0.18%</td>
+        <td>23,575</td>
+        <td>0.43%</td>
+        <td>56,754</td>
+        <td>3.06%</td>
+        <td>402,963</td>
+        <td>-</td>
+        <td>-</td>
     </tr>
     <tr>
         <th>ImageNet-1K</th>
@@ -335,6 +336,7 @@ Here are some of the datasets we currently support and the issues found using ou
         <td>23</td>
     </tr>
 </table>
+</div>
 
 
 We will continue to support more datasets. Here are a few currently in our roadmap:
