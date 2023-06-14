@@ -40,9 +40,6 @@
 
   <p align="center">
   <br />
-    🔥 We use
-    <a href="https://github.com/visual-layer/fastdup">fastdup</a> - a free tool to clean all datasets shared in this repo.
-    <br />
     <a href="https://docs.visual-layer.com/docs/introduction-sdk" target="_blank" rel="noopener noreferrer"><strong>Explore the docs »</strong></a>
     <br />
     <a href="https://github.com/visual-layer/visuallayer/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
