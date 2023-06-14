@@ -115,25 +115,25 @@ Here are some of the datasets we currently support and the issues found using ou
 
 <table>
     <tr>
-        <th>Dataset Name</th>
-        <td>Total Images</td>
-        <td>Total Issues (%)</td>
-        <td>Total Issues (Count)</td>
-        <td>Duplicates (%)</td>
-        <td>Duplicates (Count)</td>
-        <td>Outliers (%)</td>
-        <td>Outliers (Count)</td>
-        <td>Blur (%)</td>
-        <td>Blur (Count)</td>
-        <td>Dark (%)</td>
-        <td>Dark (Count)</td>
-        <td>Bright (%)</td>
-        <td>Bright (Count)</td>
-        <td>Mislabels (%)</td>
-        <td>Mislabels (Count)</td>
-        <td>Leakage (%)</td>
-        <td>Leakage (Count)</td>
-    </tr>
+      <th><strong>Dataset Name</strong></th>
+      <td><strong>Total Images</strong></td>
+      <td><strong>Total Issues (%)</strong></td>
+      <td><strong>Total Issues (Count)</strong></td>
+      <td><strong>Duplicates (%)</strong></td>
+      <td><strong>Duplicates (Count)</strong></td>
+      <td><strong>Outliers (%)</strong></td>
+      <td><strong>Outliers (Count)</strong></td>
+      <td><strong>Blur (%)</strong></td>
+      <td><strong>Blur (Count)</strong></td>
+      <td><strong>Dark (%)</strong></td>
+      <td><strong>Dark (Count)</strong></td>
+      <td><strong>Bright (%)</strong></td>
+      <td><strong>Bright (Count)</strong></td>
+      <td><strong>Mislabels (%)</strong></td>
+      <td><strong>Mislabels (Count)</strong></td>
+      <td><strong>Leakage (%)</strong></td>
+      <td><strong>Leakage (Count)</strong></td>
+      </tr>
     <tr>
         <th>ImageNet-21K</th>
         <td>13,153,500</td>
