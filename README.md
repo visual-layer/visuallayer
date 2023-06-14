@@ -510,6 +510,19 @@ import visuallayer as vl
 vl.datasets.zoo.list_datasets()
 ```
 
+which outputs:
+
+```shell
+['vl-oxford-iiit-pets',
+ 'vl-imagenet-21k',
+ 'vl-imagenet-1k',
+ 'vl-food101',
+ 'oxford-iiit-pets',
+ 'imagenet-21k',
+ 'imagenet-1k',
+ 'food101']
+```
+
 To load a dataset from the zoo:
 ```python
 vl.datasets.zoo.load('vl-oxford-iiit-pets')
