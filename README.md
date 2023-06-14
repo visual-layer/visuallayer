@@ -142,26 +142,33 @@ Alternatively, for each dataset in this repo, we provide a `.csv` file that list
 
 You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
 
+Here is a table of datasets, link to download the `.csv` file and how to access it via `visuallayer` datasets zoo.
+
+| Dataset Name    | Issues CSV                                       | Load with SDK                                 |
+|-----------------|--------------------------------------------------|-----------------------------------------------|
+| ImageNet-21K    | [![download][download-shield]][imagenet-21k-url] | `vl.datasets.zoo.load('vl-imagenet-21k')`     |
+| ImageNet-1K     | [![download][download-shield]][imagenet-1k-url]  | `vl.datasets.zoo.load('vl-imagenet-1k')`      |
+| LAION-1B        | [![download][download-shield]][laion-1b-url]     | -                                             |
+| KITTI           | [![download][download-shield]][kitti-url]        | `vl.datasets.zoo.load('vl-kitti')`            |
+| COCO            | [![download][download-shield]][coco-url]         | WIP                                           |
+| DeepFashion     | [![download][download-shield]][deepfashion-url]  | WIP                                           |
+| CelebA-HQ       | [![download][download-shield]][celeba-hq-url]    | WIP                                           |
+| Places365       | [![download][download-shield]][places365-url]    | WIP                                           |
+| Food-101        | [![download][download-shield]][food101-url]      | `vl.datasets.zoo.load('vl-food101')`          |
+| Oxford-IIIT Pet | [![download][download-shield]][oxford-pets-url]  | `vl.datasets.zoo.load('vl-oxford-iiit-pets')` |
 
 
-Here is a table of datasets, link to download the `.csv` file and import statement to access it via `visuallayer`.
-
-| Dataset Name    | Issues CSV | Load with SDK                                 |
-|-----------------|------------|-----------------------------------------------|
-| ImageNet-21K    | Download   | `vl.datasets.zoo.load('vl-imagenet-21k')`     |
-| ImageNet-1K     | Download   | `vl.datasets.zoo.load('vl-imagenet-1k')`      |
-| LAION-1B        | Download   | -                                             |
-| KITTI           | Download   | `vl.datasets.zoo.load('vl-kitti')`            |
-| COCO            | Download   | WIP                                           |
-| DeepFashion     | Download   | WIP                                           |
-| CelebA-HQ       | Download   | WIP                                           |
-| Places365       | Download   | WIP                                           |
-| Food-101        | Download   | `vl.datasets.zoo.load('vl-food101')`          |
-| Oxford-IIIT Pet | Download   | `vl.datasets.zoo.load('vl-oxford-iiit-pets')` |
-
-
-
-
+[download-shield]: https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge
+[imagenet-21k-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-21K_images_issue_file_list.csv
+[imagenet-1k-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-1K_images_issue_file_list.csv
+[laion-1b-url]: https://google.com
+[kitti-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Kitti_images_issue_file_list.csv
+[coco-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Coco_images_issue_file_list.csv
+[deepfashion-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/DeepFashion_images_issue_file_list.csv
+[celeba-hq-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/CelebA_images_issue_file_list.csv
+[places365-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Places365_images_issue_file_list.csv
+[food101-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/food101_images_issue_file_list.csv
+[oxford-pets-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv
 
 
 <!-- 
