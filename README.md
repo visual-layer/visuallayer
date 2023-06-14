@@ -71,7 +71,7 @@
 
 ## Description
 
-The `visuallayer` SDK is a pure Python and open-source package that offers access and extensibility to the cloud version of the [Visual Layer platform](https://app.visual-layer.com/) from your code. 
+The `visuallayer` SDK is a pure Python and open-source package that offers access and extensibility to the cloud version of the [Visual Layer platform](https://visual-layer.link/) from your code. 
 
 While the cloud version offers a high-level overview and visualization of your data, the SDK affords you the flexibility to integrate into your favorite machine learning frameworks and environments (e.g. Jupyter Notebook) using Python.
 
@@ -124,26 +124,6 @@ We will continue to support more datasets. Here are a few currently in our roadm
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- ## Why?
 
 Computer vision is an exciting and rapidly advancing field, with new techniques and models emerging now and then. 
@@ -162,17 +142,29 @@ Alternatively, for each dataset in this repo, we provide a `.csv` file that list
 
 You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
 
-We're a startup and we'd like to offer free access to the datasets as much as we can afford to. But in doing so, we'd also need your support.
-
-We're offering select `.csv` files completely free with no strings attached. 
-For access to our complete dataset and exclusive beta features, all we ask is that you [sign up](https://forms.gle/8jxPkyzeKj82kPed8) to be a beta tester – it's completely free and your feedback will help shape the future of our platform. 
-
-Here is a table of widely used computer vision datasets, issues we found and a link to access the `.csv` file.
 
 
+Here is a table of datasets, link to download the `.csv` file and import statement to access it via `visuallayer`.
+
+| Dataset Name    | Issues CSV | Load with SDK                                 |
+|-----------------|------------|-----------------------------------------------|
+| ImageNet-21K    | Download   | `vl.datasets.zoo.load('vl-imagenet-21k')`     |
+| ImageNet-1K     | Download   | `vl.datasets.zoo.load('vl-imagenet-1k')`      |
+| LAION-1B        | Download   | -                                             |
+| KITTI           | Download   | `vl.datasets.zoo.load('vl-kitti')`            |
+| COCO            | Download   | WIP                                           |
+| DeepFashion     | Download   | WIP                                           |
+| CelebA-HQ       | Download   | WIP                                           |
+| Places365       | Download   | WIP                                           |
+| Food-101        | Download   | `vl.datasets.zoo.load('vl-food101')`          |
+| Oxford-IIIT Pet | Download   | `vl.datasets.zoo.load('vl-oxford-iiit-pets')` |
 
 
 
+
+
+
+<!-- 
 <table>
    <tr>
       <th>Dataset</th>
@@ -480,12 +472,12 @@ Here is a table of widely used computer vision datasets, issues we found and a l
       </td>
       <td>WIP</td>
    </tr>
-</table>
+</table> -->
 
 
-Learn more on how we clean the datasets using our profilling tool [here](https://visual-layer.link).
+Sign up to access our cloud platform [here](https://visual-layer.link).
 
-> **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo. 
+<!-- > **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo.  -->
 
 
 ## Installation
