@@ -756,12 +756,15 @@ export SENTRY_OPT_OUT=True
 
 Read more on Sentry's official [webpage](https://sentry.io/welcome/).
 
+## Visual Layer Cloud Platform
+TODO
 
 ## Getting Help
 Get help from the Visual Layer team or community members via the following channels -
 + [Slack](https://visualdatabase.slack.com/join/shared_invite/zt-19jaydbjn-lNDEDkgvSI1QwbTXSY6dlA#/shared-invite/email).
 + GitHub [issues](https://github.com/visual-layer/visuallayer/issues).
 + Discussion [forum](https://visual-layer.readme.io/discuss).
+
 
 ## About Visual-Layer
 
