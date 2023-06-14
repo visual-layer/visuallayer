@@ -43,7 +43,7 @@
     🔥 We use
     <a href="https://github.com/visual-layer/fastdup">fastdup</a> - a free tool to clean all datasets shared in this repo.
     <br />
-    <a href="https://visual-layer.readme.io/" target="_blank" rel="noopener noreferrer"><strong>Explore the docs »</strong></a>
+    <a href="https://docs.visual-layer.com/docs/introduction-sdk" target="_blank" rel="noopener noreferrer"><strong>Explore the docs »</strong></a>
     <br />
     <a href="https://github.com/visual-layer/visuallayer/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
     ·
@@ -74,13 +74,18 @@
 
 ## Description
 
-`visuallayer` is a Python package that provides access to clean computer vision datasets with only 3 lines of code.
+The `visuallayer` SDK is a pure Python and open-source package that offers access and extensibility to the cloud version of the [Visual Layer platform](https://app.visual-layer.com/) from your code. 
 
-For example, to get access to the clean version of the [Oxford IIIT Pets Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
+While the cloud version offers a high-level overview and visualization of your data, the SDK affords you the flexibility to integrate into your favorite machine learning frameworks and environments (e.g. Jupyter Notebook) using Python.
+
+Using `visuallayer` you can access sanitized computer vision datasets with only 3 lines of code.
+
+For example, to get access to the clean version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
 
 ![image](./imgs/usage.png)
 
-The datasets loaded are free from for issues such as: 
+## Dataset
+When we say "sanitized", we mean that the datasets loaded by `visuallayer` are free from common issues such as:
 
 + Duplicates.
 + Near Duplicates.
@@ -93,7 +98,50 @@ The datasets loaded are free from for issues such as:
 ![image](./imgs/issues.png)
 
 We support some of the most widely used computer vision datasets.
-[Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a new dataset.
+Here are some of the datasets we currently support and the issues found using our cloud platform.
+
+| Dataset Name    | Total Images | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
+| --------------- | ------------ | --------- | ------------- | -------------- | ------------------ | ------------ | ---------------- | -------- | ------------ | -------- | ------------ | ----------- | -------------- | ------------- | ----------------- | ----------- | --------------- |
+| ImageNet-21K    | 13,153,500   | 14.581%   | 1,917,948     | 10.53%         | 1,385,074          | 0.085%       | 11,119           | 0.292%   | 38,463       | 0.179%   | 23,575       | 0.431%      | 56,754         | 3.064%        | 402,963           | -           | -               |
+| ImageNet-1K     | 1,431,167    | 1.313%    | (17,492)      | 0.57%          | (7,522)            | 0.09%        | (1,199)          | 0.19%    | (2,478)      | 0.24%    | (3,174)      | 0.06%       | (770)          | 0.11%         | (1,480)           | 0.065%      | (869)           |
+| KITTI           | 12,919       | 18.32%    | (2,748)       | 15.29%         | (2,294)            | 0.01%        | (2)              | -        | -            | -        | -            | -           | -              | -             | -                 | 3.01%       | (452)           |
+| DeepFashion     | 800,000      | 7.89%     | (22,824)      | 5.11%          | (14,773)           | 0.04%        | (108)            | -        | -            | -        | -            | -           | -              | -             | -                 | 2.75%       | (7,943)         |
+| CelebA-HQ       | 30,000       | 2.362%    | (4,786)       | 1.67%          | (3,389)            | 0.08%        | (157)            | 0.51%    | (1,037)      | 0.001%   | (2)          | 0.01%       | (13)           | -             | -                 | 0.09%       | (188)           |
+| Food-101        | 101,000      | 0.62%     | (627)         | 0.23%          | (235)              | 0.08%        | (77)             | 0.18%    | (185)        | 0.04%    | (43)         | -           | -              | -             | -                 |
+| Oxford-IIIT Pet | 7,349        | 1.48%     | (132)         | 1.016%         | (75)               | 0.1%         | (7)              | -        | -            | 0.05%    | (4)          | -           | -              | -             | -                 | 0.31%       | (23)            |
+
+
+We will continue to support more datasets. Here are a few currently in our roadmap:
++ EuroSAT
++ Flickr30k
++ INaturalist
++ SVHN
++ Cityscapes
+
+[Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a specific dataset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Why?
 
@@ -121,15 +169,6 @@ For access to our complete dataset and exclusive beta features, all we ask is th
 
 Here is a table of widely used computer vision datasets, issues we found and a link to access the `.csv` file.
 
-| Dataset Name    | Total Images | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
-| --------------- | ------------ | --------- | ------------- | -------------- | ------------------ | ------------ | ---------------- | -------- | ------------ | -------- | ------------ | ----------- | -------------- | ------------- | ----------------- | ----------- | --------------- |
-| ImageNet-21K    | 13,153,500   | 14.581%   | 1,917,948     | 10.53%         | 1,385,074          | 0.085%       | 11,119           | 0.292%   | 38,463       | 0.179%   | 23,575       | 0.431%      | 56,754         | 3.064%        | 402,963           | -           | -               |
-| ImageNet-1K     | 1,431,167    | 1.313%    | (17,492)      | 0.57%          | (7,522)            | 0.09%        | (1,199)          | 0.19%    | (2,478)      | 0.24%    | (3,174)      | 0.06%       | (770)          | 0.11%         | (1,480)           | 0.065%      | (869)           |
-| KITTI           | 12,919       | 18.32%    | (2,748)       | 15.29%         | (2,294)            | 0.01%        | (2)              | -        | -            | -        | -            | -           | -              | -             | -                 | 3.01%       | (452)           |
-| DeepFashion     | 800,000      | 7.89%     | (22,824)      | 5.11%          | (14,773)           | 0.04%        | (108)            | -        | -            | -        | -            | -           | -              | -             | -                 | 2.75%       | (7,943)         |
-| CelebA-HQ       | 30,000       | 2.362%    | (4,786)       | 1.67%          | (3,389)            | 0.08%        | (157)            | 0.51%    | (1,037)      | 0.001%   | (2)          | 0.01%       | (13)           | -             | -                 | 0.09%       | (188)           |
-| Food-101        | 101,000      | 0.62%     | (627)         | 0.23%          | (235)              | 0.08%        | (77)             | 0.18%    | (185)        | 0.04%    | (43)         | -           | -              | -             | -                 |
-| Oxford-IIIT Pet | 7,349        | 1.48%     | (132)         | 1.016%         | (75)               | 0.1%         | (7)              | -        | -            | 0.05%    | (4)          | -           | -              | -             | -                 | 0.31%       | (23)            |
 
  ## Access
 
