@@ -77,7 +77,7 @@ While the cloud version offers a high-level overview and visualization of your d
 
 Using `visuallayer` you can access sanitized computer vision datasets with only 3 lines of code.
 
-For example, to get access to the clean version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
+For example, to get access to the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
 
 ![image](./imgs/usage.png)
 
@@ -93,6 +93,8 @@ When we say "sanitized", we mean that the datasets loaded by `visuallayer` are f
 + Data Leakage.
 
 ![image](./imgs/issues.png)
+
+The sanitized version of a dataset is prefixed with `vl-` to differentiate it from the original dataset.
 
 ## Datasets Zoo
 
