@@ -14,7 +14,7 @@ jobs:
         SENTRY_OPT_OUT: True
       strategy:
         matrix:
-            os: [ubuntu-latest]
+            os: [ubuntu-22.04, macos-13, windows-2022]
             python: ['3.9']
       steps:
         - name: Checkout code
@@ -44,7 +44,7 @@ jobs:
         SENTRY_OPT_OUT: True
       strategy:
         matrix:
-            os: [ubuntu-latest]
+            os: [ubuntu-22.04]
             python: ['3.7', '3.11']
       steps:
         - name: Checkout code
