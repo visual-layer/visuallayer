@@ -106,8 +106,6 @@ class Dataset:
         import pandas as pd
         pd.options.mode.chained_assignment = None # default='warn'
 
-
-
         print("For a more extensive visual exploration of the dataset visit https://app.visual-layer.com/")
 
         # Interactive table in jupyter notebook
