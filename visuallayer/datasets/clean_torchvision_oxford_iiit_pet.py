@@ -67,24 +67,6 @@ class CleanTorchvisionOxfordIIITPet(OxfordIIITPet):
             self.exclude_df = pd.read_csv(exclude_csv, header=0)
             self.exclude_set = set(self.exclude_df["filename"].tolist())
 
-        elif exclude_csv is None:
-            print("Downloading CSV file")
-            url = "https://drive.google.com/uc?export=download&id=1OLa8k4NITnmCHjeByzvGaWt3W7k6R1QL"
-            filename = "oxford-pets.csv"
-
-            try:
-                response = requests.get(url, stream=True)
-                with open(filename, "wb") as f:
-                    for chunk in response.iter_content(chunk_size=1024):
-                        f.write(chunk)
-
-                self.exclude_df = pd.read_csv(filename, header=0)
-                self.exclude_set = set(self.exclude_df["filename"].tolist())
-
-            except Exception as e:
-                print("Error parsing CSV file")
-                print(e)
-
         image_ids = []
         self._labels = []
         self.excluded_files = []
@@ -95,7 +77,7 @@ class CleanTorchvisionOxfordIIITPet(OxfordIIITPet):
             filename.split("/")[-1].split(".")[0] for filename in self.exclude_set
         }
 
-        with open(self._anns_folder / f"{self._split}.txt") as file:
+        with open(self._anns_folder / f"{split}.txt") as file:
             for line in file:
                 image_id, label, *_ = line.strip().split()
 
@@ -124,3 +106,5 @@ class CleanTorchvisionOxfordIIITPet(OxfordIIITPet):
             self._images_folder / f"{image_id}.jpg" for image_id in image_ids
         ]
         self._segs = [self._segs_folder / f"{image_id}.png" for image_id in image_ids]
+
+    
