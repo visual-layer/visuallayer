@@ -177,8 +177,8 @@ Here are some of the datasets we currently support and the issues found using ou
         <td><div align="right">869</td>
     </tr>
     <tr>
-        <th>LAION-2B</th>
-        <td><div align="right">2,000,000,000</td>
+        <th>LAION-1B</th>
+        <td><div align="right">1,000,000,000</td>
         <td><div align="right">10.40%</td>
         <td><div align="right">104,942,474</td>
         <td><div align="right">8.89%</td>
