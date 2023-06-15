@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 with open('README.md', 'r') as fh:
-    long_description = "Coming soon."#fh.read()
+    long_description = fh.read()
 
 with open('requirements.txt', 'r') as fh:
     requirements = fh.read().splitlines()
