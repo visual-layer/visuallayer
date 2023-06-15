@@ -15,11 +15,11 @@ print("Running dataset explore")
 my_pets.explore()
 
 print("Exporting to pytorch")
-train_dataset = my_pets.export(output_format="pytorch", split="train")
+train_dataset = my_pets.export(output_format="pytorch", split="trainval")
 test_dataset = my_pets.export(output_format="pytorch", split="test")
 
 print("Exporting to csv")
-train_dataset = my_pets.export(output_format="csv", split="train")
+train_dataset = my_pets.export(output_format="csv", split="trainval")
 test_dataset = my_pets.export(output_format="csv", split="test")
 
 print("Exporting issues")
