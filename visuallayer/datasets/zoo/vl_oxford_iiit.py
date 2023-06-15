@@ -43,7 +43,7 @@ class VLOxfordIIITPet(Dataset):
                 print(
                     f"Exporting {variation.upper()} dataset into {output_format} dataset."
                 )
-                dataset = CleanTorchvisionOxfordIIITPet(root=self.root, split=split)
+                dataset = CleanTorchvisionOxfordIIITPet(root=self.root, split=split, exclude_csv=self.filelist_csv_url)
                 samples = {"Image": dataset._images, "Label": dataset._labels}
                 df = pd.DataFrame(samples)
                 return df
