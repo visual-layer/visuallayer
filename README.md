@@ -75,7 +75,7 @@ The `visuallayer` SDK is a pure Python and open-source package that offers acces
 
 While the cloud version offers a high-level overview and visualization of your data, the SDK affords you the flexibility to integrate into your favorite machine learning frameworks and environments (e.g. Jupyter Notebook) using Python.
 
-Using `visuallayer` you can access sanitized computer vision datasets with only 3 lines of code.
+Using `visuallayer` you can access sanitized computer vision datasets with only 2 lines of code.
 
 For example, to get access to the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
 
@@ -358,7 +358,7 @@ However, to develop and evaluate these models, it's essential to have reliable a
 Even with the recent success of generative models, data quality remains an issue that's [mainly overlooked](https://medium.com/@amiralush/large-image-datasets-today-are-a-mess-e3ea4c9e8d22).
 Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
 
-We believe that access to clean and high-quality computer vision datasets leads to accurate, non-biased, and efficient model.
+We believe that access to clean and high-quality computer vision datasets leads to accurate, non-biased, and efficient models.
 By providing public access to `visuallayer` we hope it helps advance the field of computer vision. -->
 
 
@@ -366,9 +366,9 @@ By providing public access to `visuallayer` we hope it helps advance the field o
 The `visuallayer` SDK provides a convenient way to access the sanitized version of the datasets in Python.
 Alternatively, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
 
-You can use the listed images in the `.csv` to improve the model by re-labeling the them or just simply remove it from the dataset.
+You can use the listed images in the `.csv` to improve the model by re-labeling them or just simply removing it from the dataset.
 
-Here is a table of datasets, link to download the `.csv` file and how to access it via `visuallayer` datasets zoo.
+Here is a table of datasets, link to download the `.csv` file, and how to access it via `visuallayer` datasets zoo.
 
 | Dataset Name    | Issues CSV                                       | Load with SDK                                 |
 |-----------------|--------------------------------------------------|-----------------------------------------------|
@@ -397,10 +397,8 @@ Here is a table of datasets, link to download the `.csv` file and how to access 
 [oxford-pets-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv
 
 
-
-Sign up to access our cloud platform [here](https://app.visual-layer.com).
-
-<!-- > **NOTE**: Sign up [here](https://forms.gle/8jxPkyzeKj82kPed8) for free to be our beta testers and get full access to the all the `.csv` files for the dataset listed in this repo.  -->
+We offer extensive visualizations of the dataset issues in our cloud platform.
+[Sign up]((https://app.visual-layer.com)) for free.
 
 
 ## Installation
@@ -418,8 +416,10 @@ pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 
 ## Usage
 
-### Loading
-To list all datasets supported by `visuallayer` from the datasets zoo, run:
+### Loading a dataset
+We offer handy functions to load datasets from the Dataset zoo.
+First, let's list the datasets in the zoo with:
+
 
 ```python
 import visuallayer as vl
@@ -455,14 +455,14 @@ original_pets_dataset = vl.datasets.zoo.load('oxford-iiit-pets')
 
 This loads the original dataset with no modifications.
 
-### Inspecting
-You can view the information about the dataset by calling 
+### Inspecting a dataset
+Now that you have a dataset loaded, you can view information pertaining to that dataset with:
 
 ```python
 my_pets.info
 ```
 
-which outputs the metadata of the dataset:
+This prints out high-level information about the original Dataset. In this example, we used the Pets Dataset from Oxford.
 
 ```shell
 Metadata:
@@ -474,11 +474,13 @@ Metadata:
 --> Number of Images with Issues - 109
 ```
 
-To view the issues summary.
+If you'd like to view the issues related to the dataset, run:
 
 ```python
 my_pets.report
 ```
+
+which outputs:
 
 ```shell
 | Reason    | Count | Pct   |
@@ -491,158 +493,179 @@ my_pets.report
 
 ```
 
-To explore and visualize the issues, run:
+Now that you've seen the issues with the dataset, you can visualize them on screen. There are two options to visualize the dataset issues.
 
+> **Option 1** - Using the Visual Layer Cloud Platform - Provides an extensive capability to view, group, sort, and filter the dataset issues. Sign up for free.
+
+> **Option 2** - In Jupyter notebook - Provides a limited but convenient way to view the dataset without leaving your notebook.
+
+In this example, let's see how you can visualize the issues using **Option 2** in your notebook.
+
+To do so, run:
 ```python
 my_pets.explore()
 ```
+
+This should output an interactive table in your Jupyter notebook like the following.
+
 ![explore](./imgs/explore.gif)
 
-### Exporting
-Export the dataset into PyTorch `Dataset` object with 
+In the interactive table, you can view the issues, sort, filter, search, and compare the images side by side.
+
+By default the .explore() load the top 50 issues from the dataset covering all issue types. If you'd like a more granular control, you can change the `num_images` and `issue` argument.
+
+For example:
+
+```python
+pets_dataset.explore(num_images=100, issue='Duplicate')
+```
+
+The interactive table provides a convenient but limited way to visualize dataset issues.
+For a more extensive visualization, view the issues using the Visual Layer Cloud Platform. Sign up for free.
+
+
+### Exporting a dataset
+If you'd like to use a loaded dataset to train a model, you can conveniently export the dataset with:
 
 ```python
 test_dataset = my_pets.export(output_format="pytorch", split="test")
 ```
+This exports the Dataset into a Pytorch `Dataset` object that can be used readily with a PyTorch training loop.
 
-Now you can load the train and validation datasets in a PyTorch training loop. See the [Learn from Examples](#learn-from-examples) section to learn more.
-
-Similarly you can also export the image and label into a `DataFrame`:
+Alternatively, you can export the Dataset to a DataFrame with:
 
 ```python
-test_dataframe = my_pets.export(output_format="csv", split="test")
+test_dataset = pets_dataset.export(output_format="csv", split="test")
 ```
 
 
-
-
-
 ## Learn from Examples
+In this section, we show an end-to-end example of how to load, inspect and export a dataset and then train using PyTorch and fastai framework.
 
 <table>
-	<tr>
-		<td rowspan="4" width="160">
-			<a href="https://visual-layer.readme.io/docs/getting-started">
-				<img src="./imgs/food.jpg" width="256" />
-			</a>
-		</td>
-		<td rowspan="4">
-			<ul>
-				<li><b>Dataset:</b> <code>VLFood101</code></li>
-				<li><b>Framework:</b> PyTorch.</li>
-				<li><b>Description:</b> Load a dataset and train a PyTorch model.</li>
-			</ul>
-		</td>
-		<td align="center" width="80">
-			<a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
-				<img src="./imgs/nbviewer_logo.svg" height="34" />
-			</a>
-		</td>
-	</tr>
-	<tr>
-		<td align="center">
-			<a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
-				<img src="./imgs/github_logo.png" height="32" />
-			</a>
-		</td>
-	</tr>
-	<tr>
-		<td align="center">
-			<a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
-				<img src="./imgs/colab_logo.png" height="28" />
-			</a>
-		</td>
-	</tr>
+  <tr>
+    <td rowspan="4" width="160">
+      <a href="https://visual-layer.readme.io/docs/getting-started">
+        <img src="./imgs/food.jpg" width="256" />
+      </a>
+    </td>
+    <td rowspan="4">
+      <ul>
+        <li><b>Dataset:</b> <code>VLFood101</code></li>
+        <li><b>Framework:</b> PyTorch.</li>
+        <li><b>Description:</b> Load a dataset and train a PyTorch model.</li>
+      </ul>
+    </td>
+    <td align="center" width="80">
+      <a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
+        <img src="./imgs/nbviewer_logo.svg" height="34" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
+        <img src="./imgs/github_logo.png" height="32" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
+        <img src="./imgs/colab_logo.png" height="28" />
+      </a>
+    </td>
+  </tr>
     <tr>
-		<td align="center">
-			<a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
-				<img src="./imgs/kaggle_logo.png" height="28" />
-			</a>
-		</td>
-	</tr>
-	<!-- ------------------------------------------------------------------- -->
-	<tr>
-		<td rowspan="4" width="160">
-			<a href="https://visual-layer.readme.io/docs/objects-and-bounding-boxes">
-				<img src="./imgs/pet.jpg" width="256" />
-			</a>
-		</td>
-		<td rowspan="4">
-			<ul>
-				<li><b>Dataset:</b> <code>VLOxfordIIITPet</code></li>
-				<li><b>Framework:</b> fast.ai.</li>
-				<li><b>Description:</b> Finetune a pretrained TIMM model using fastai.</li>
-			</ul>
-		</td>
-		<td align="center" width="80">
-			<a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
-				<img src="./imgs/nbviewer_logo.svg" height="34" />
-			</a>
-		</td>
-	</tr>
-	<tr>
-		<td align="center">
-			<a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
-				<img src="./imgs/github_logo.png" height="32" />
-			</a>
-		</td>
-	</tr>
-	<tr>
-		<td align="center">
-			<a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
-				<img src="./imgs/colab_logo.png" height="28" />
-			</a>
-		</td>
-	</tr>
+    <td align="center">
+      <a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
+        <img src="./imgs/kaggle_logo.png" height="28" />
+      </a>
+    </td>
+  </tr>
+  <!-- ------------------------------------------------------------------- -->
+  <tr>
+    <td rowspan="4" width="160">
+      <a href="https://visual-layer.readme.io/docs/objects-and-bounding-boxes">
+        <img src="./imgs/pet.jpg" width="256" />
+      </a>
+    </td>
+    <td rowspan="4">
+      <ul>
+        <li><b>Dataset:</b> <code>VLOxfordIIITPet</code></li>
+        <li><b>Framework:</b> fast.ai.</li>
+        <li><b>Description:</b> Finetune a pretrained TIMM model using fastai.</li>
+      </ul>
+    </td>
+    <td align="center" width="80">
+      <a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
+        <img src="./imgs/nbviewer_logo.svg" height="34" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
+        <img src="./imgs/github_logo.png" height="32" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
+        <img src="./imgs/colab_logo.png" height="28" />
+      </a>
+    </td>
+  </tr>
     <tr>
-		<td align="center">
-			<a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
-				<img src="./imgs/kaggle_logo.png" height="28" />
-			</a>
-		</td>
-	</tr>
-	<!-- ------------------------------------------------------------------- -->
-	<tr>
-		<td rowspan="4" width="160">
-			<a href="https://visual-layer.readme.io/docs/getting-started">
-				<img src="./imgs/imagenet.jpg" width="256" />
-			</a>
-		</td>
-		<td rowspan="4">
-			<ul>
-				<li><b>Dataset:</b> <code>VLImageNet</code></li>
-				<li><b>Framework:</b> PyTorch.</li>
-				<li><b>Description:</b> Load cleaned ImageNet dataset and train a PyTorch model.</li>
-			</ul>
-		</td>
-		<td align="center" width="80">
-			<a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
-				<img src="./imgs/nbviewer_logo.svg" height="34" />
-			</a>
-		</td>
-	</tr>
-	<tr>
-		<td align="center">
-			<a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
-				<img src="./imgs/github_logo.png" height="32" />
-			</a>
-		</td>
-	</tr>
-	<tr>
-		<td align="center">
-			<a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
-				<img src="./imgs/colab_logo.png" height="28" />
-			</a>
-		</td>
-	</tr>
+    <td align="center">
+      <a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-fastai.ipynb">
+        <img src="./imgs/kaggle_logo.png" height="28" />
+      </a>
+    </td>
+  </tr>
+  <!-- ------------------------------------------------------------------- -->
+  <tr>
+    <td rowspan="4" width="160">
+      <a href="https://visual-layer.readme.io/docs/getting-started">
+        <img src="./imgs/imagenet.jpg" width="256" />
+      </a>
+    </td>
+    <td rowspan="4">
+      <ul>
+        <li><b>Dataset:</b> <code>VLImageNet</code></li>
+        <li><b>Framework:</b> PyTorch.</li>
+        <li><b>Description:</b> Load cleaned ImageNet dataset and train a PyTorch model.</li>
+      </ul>
+    </td>
+    <td align="center" width="80">
+      <a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
+        <img src="./imgs/nbviewer_logo.svg" height="34" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
+        <img src="./imgs/github_logo.png" height="32" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/imagenet-1k-pytorch.ipynb">
+        <img src="./imgs/colab_logo.png" height="28" />
+      </a>
+    </td>
+  </tr>
     <tr>
-		<td align="center">
-			<a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
-				<img src="./imgs/kaggle_logo.png" height="28" />
-			</a>
-		</td>
-	</tr>
-	
+    <td align="center">
+      <a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
+        <img src="./imgs/kaggle_logo.png" height="28" />
+      </a>
+    </td>
+  </tr>
+  
 </table>
 
 
@@ -657,13 +680,13 @@ This repository incorporates usage tracking using [Sentry.io](https://sentry.io/
 
 Usage tracking allows us to gain insights into how the application is being used in real-world scenarios. It provides us with valuable information that helps in understanding user behavior, identifying potential issues, and making informed decisions to improve the application.
 
-We DO NOT collect folder names, user names, image names, image content and other personaly identifiable information.
+We DO NOT collect folder names, user names, image names, image content, and other personally identifiable information.
 
 What data is tracked?
 + **Errors and Exceptions**: Sentry captures errors and exceptions that occur in the application, providing detailed stack traces and relevant information to help diagnose and fix issues.
 + **Performance Metrics**: Sentry collects performance metrics, such as response times, latency, and resource usage, enabling us to monitor and optimize the application's performance.
 
-To opt out, define an environment variable named `SENTRY_OPT_OUT`. 
+To opt-out, define an environment variable named `SENTRY_OPT_OUT`. 
 
 On Linux run the following:
 ```bash
@@ -672,8 +695,6 @@ export SENTRY_OPT_OUT=True
 
 Read more on Sentry's official [webpage](https://sentry.io/welcome/).
 
-## Visual Layer Cloud Platform
-TODO
 
 ## Getting Help
 Get help from the Visual Layer team or community members via the following channels -
