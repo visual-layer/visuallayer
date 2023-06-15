@@ -102,6 +102,11 @@ class Dataset:
             pd.DataFrame: The exploration DataFrame.
         """
 
+        # Suppress pandas warning
+        import pandas as pd
+        pd.options.mode.chained_assignment = None # default='warn'
+
+
         # TODO: Explory by issue type and value
 
         print("For a more extensive visual exploration of the dataset visit https://app.visual-layer.com/")
