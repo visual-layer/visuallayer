@@ -70,14 +70,32 @@
 </div>
 
 ## Description
-
-The `visuallayer` SDK is a pure Python and open-source package that offers access and extensibility to the cloud version of the [Visual Layer platform](https://app.visual-layer.com/) from your code. 
+`visuallayer` is a pure Python and open-source package that offers access and extensibility to the [cloud version](https://app.visual-layer.com) of the Visual Layer platform capabilities from your code. 
 
 While the cloud version offers a high-level overview and visualization of your data, the SDK affords you the flexibility to integrate into your favorite machine learning frameworks and environments (e.g. Jupyter Notebook) using Python.
 
-Using `visuallayer` you can access sanitized computer vision datasets with only 2 lines of code.
+## Installation
 
-For example, to get access to the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
+The easiest way to use the `visuallayer` SDK is to install it from PyPI. On your machine, run:
+
+```shell
+pip install visuallayer
+```
+
+Optionally, you can also install the bleeding edge version on [GitHub](https://github.com/visual-layer/visuallayer) by running:
+
+```shell
+pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
+```
+
+## VL-Datasets
+The `visuallayer` package lets you access [VL-Datasets](https://docs.visual-layer.com/docs/what-are-vl-datasets) - a collection of open, clean, and curated image datasets for computer vision.
+
+
+
+With `visuallayer` access sanitized computer vision datasets with only 2 lines of code.
+
+For example, to load the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
 
 ![image](./imgs/usage.png)
 
@@ -399,20 +417,6 @@ Here is a table of datasets, link to download the `.csv` file, and how to access
 
 We offer extensive visualizations of the dataset issues in our cloud platform.
 [Sign up]((https://app.visual-layer.com)) for free.
-
-
-## Installation
-
-**Option 1** - Install `visuallayer` package from [PyPI](https://pypi.org/project/visuallayer/):
-
-```shell
-pip install visuallayer
-```
-
-**Option 2** - Install the bleeding edge version on GitHub:
-```
-pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
-```
 
 ## Usage
 
