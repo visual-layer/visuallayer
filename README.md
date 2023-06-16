@@ -95,7 +95,7 @@ With `visuallayer` access sanitized computer vision datasets with only 2 lines o
 
 ![image](./imgs/usage.png)
 
-> **Note**: `visuallayer` does not download the ImageNet dataset, you should make sure to obtain usage rights to the dataset and download it into your current working directory.
+> **Note**: `visuallayer` does not automatically download the ImageNet dataset, you should make sure to obtain usage rights to the dataset and download it into your current working directory first.
 
 
 When we say "sanitized", we mean that the datasets loaded by `visuallayer` are free from common issues such as:
