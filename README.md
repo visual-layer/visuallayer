@@ -465,7 +465,7 @@ We will continue to support more datasets. Here are a few currently in our roadm
 
 [Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a specific dataset.
 
-> **Note**: If you'd like to use our cloud tool on your own dataset and discover issues with it, [sign up](https://app.visual-layer.com/) to use our cloud platform for free. 
+> **Note**: If you'd like to use our cloud tool and discover issues with your own dataset, [sign up](https://app.visual-layer.com/) to use our cloud platform for free. 
 
 
 
