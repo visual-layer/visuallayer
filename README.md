@@ -91,7 +91,7 @@ pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 The `visuallayer` package also lets you access [VL-Datasets](https://docs.visual-layer.com/docs/what-are-vl-datasets) - a collection of sanitized version of widely used computer vision datasets.
 
 
-For example, with only 2 lines of code, load the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset with:
+For example with only 2 lines of code, load the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset with:
 
 ![image](./imgs/usage.png)
 
@@ -108,9 +108,6 @@ When we say "sanitized", we mean that the datasets loaded by `visuallayer` are f
 + Data Leakage.
 
 ![image](./imgs/issues.png)
-
-
-
 
 
 
@@ -597,7 +594,7 @@ which outputs:
 
 Now that you've seen the issues with the dataset, you can visualize them on screen. There are two options to visualize the dataset issues.
 
-> **Option 1** - Using the Visual Layer Cloud Platform - Provides an extensive capability to view, group, sort, and filter the dataset issues. Sign up for free.
+> **Option 1** - Using the Visual Layer Cloud Platform - Provides an extensive capability to view, group, sort, and filter the dataset issues. [Sign-up](https://app.visual-layer.com) for free.
 
 > **Option 2** - In Jupyter notebook - Provides a limited but convenient way to view the dataset without leaving your notebook.
 
@@ -614,7 +611,7 @@ This should output an interactive table in your Jupyter notebook like the follow
 
 In the interactive table, you can view the issues, sort, filter, search, and compare the images side by side.
 
-By default the .explore() load the top 50 issues from the dataset covering all issue types. If you'd like a more granular control, you can change the `num_images` and `issue` argument.
+By default the `.explore()` load the top 50 issues from the dataset covering all issue types. If you'd like a more granular control, you can change the `num_images` and `issue` argument.
 
 For example:
 
@@ -623,7 +620,9 @@ pets_dataset.explore(num_images=100, issue='Duplicate')
 ```
 
 The interactive table provides a convenient but limited way to visualize dataset issues.
-For a more extensive visualization, view the issues using the Visual Layer Cloud Platform. Sign up for free.
+For a more extensive visualization, view the issues using the Visual Layer Cloud Platform.
+
+Check out the [documentation](https://docs.visual-layer.com/docs/introduction) and blog page for the Visual Layer Cloud Platform for more info.
 
 
 ### Exporting a dataset
