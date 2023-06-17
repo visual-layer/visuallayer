@@ -112,14 +112,14 @@ With `visuallayer` access sanitized computer vision datasets with only 2 lines o
 ## Dataset Zoo
 We provide a [Dataset Zoo](https://docs.visual-layer.com/docs/available-datasets) where you can find all information for each VL-Dataset.
 
-For each dataset in the zoo, ran an analyis using our cloud platform and highlight issues pertaining to the dataset. You can download the issues found for free.
+For each dataset in the zoo, we ran an analyis using our cloud platform and found issues pertaining to the dataset. They are all summarized in the tables below. You can also download the issues found for free.
 
 
 <table>
     <thead>
         <tr>
-            <th align="left">Dataset Name</th>
-            <th align="left">Original</th>
+            <th align="left">VL Dataset</th>
+            <th align="left">Original Dataset</th>
             <th align="left">Total Images</th>
             <th align="left">Total Issues (%)</th>
             <th align="left">Total Issues (Count)</th>
@@ -213,7 +213,7 @@ For each dataset in the zoo, ran an analyis using our cloud platform and highlig
 
 The sanitized version of a dataset is prefixed with `vl-` to differentiate it from the original dataset.
 
-> **Note**: If you'd like to use our cloud tool on your own dataset and discover issues with it, [sign up](https://app.visual-layer.com/) to use our cloud platform for free. 
+
 
 
 <!-- | Dataset Name    | Total Images  | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
@@ -229,6 +229,8 @@ The sanitized version of a dataset is prefixed with `vl-` to differentiate it fr
 | Food-101        | 101,000       | 0.62%            | 627                  | 0.23%          | 235                | 0.08%        | 77               | 0.18%    | 185          | 0.04%    | 43           | -          | -              | -             | -                 | -           | -               |
 | Oxford-IIIT Pet | 7,349         | 1.48%            | 132                  | 1.01%          | 75                 | 0.10%        | 7                | -        | -            | 0.05%    | 4            | -          | -              | -             | -                 | 0.31%       | 23              |
  -->
+
+The following table is a detailed breakdown on the issues for each dataset.
 
 <table>
     <tr>
@@ -463,20 +465,13 @@ We will continue to support more datasets. Here are a few currently in our roadm
 
 [Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a specific dataset.
 
+> **Note**: If you'd like to use our cloud tool on your own dataset and discover issues with it, [sign up](https://app.visual-layer.com/) to use our cloud platform for free. 
 
 
-<!-- ## Why?
-
-Computer vision is an exciting and rapidly advancing field, with new techniques and models emerging now and then. 
-However, to develop and evaluate these models, it's essential to have reliable and standardized datasets to work with.
-
-Even with the recent success of generative models, data quality remains an issue that's [mainly overlooked](https://medium.com/@amiralush/large-image-datasets-today-are-a-mess-e3ea4c9e8d22).
-Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
-
-We believe that access to clean and high-quality computer vision datasets leads to accurate, non-biased, and efficient models.
-By providing public access to `visuallayer` we hope it helps advance the field of computer vision. -->
 
 
+
+<!-- 
 ## Access
 The `visuallayer` SDK provides a convenient way to access the sanitized version of the datasets in Python.
 Alternatively, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
@@ -513,9 +508,10 @@ Here is a table of datasets, link to download the `.csv` file, and how to access
 
 
 We offer extensive visualizations of the dataset issues in our cloud platform.
-[Sign up]((https://app.visual-layer.com)) for free.
+[Sign up]((https://app.visual-layer.com)) for free. -->
 
 ## Usage
+The following sections show how to use the `visuallayer` SDK to load, inspect and export a VL-Dataset.
 
 ### Loading a dataset
 We offer handy functions to load datasets from the Dataset zoo.
