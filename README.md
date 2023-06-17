@@ -36,8 +36,7 @@
 <a href="https://www.visual-layer.com">
   <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="350">
 </a>
-<h4 align="center">Open, Clean, Curated Datasets for Computer Vision</h4>
-
+<h3 align="center">Simplify Your Visual Data Ops</h3>
   <p align="center">
   <br />
     <a href="https://docs.visual-layer.com/docs/getting-started" target="_blank" rel="noopener noreferrer"><strong>Explore the docs »</strong></a>
@@ -70,17 +69,33 @@
 </div>
 
 ## Description
-
-The `visuallayer` SDK is a pure Python and open-source package that offers access and extensibility to the cloud version of the [Visual Layer platform](https://app.visual-layer.com/) from your code. 
+`visuallayer` is a pure Python and open-source package that offers access and extensibility to the [cloud version](https://app.visual-layer.com) of the Visual Layer platform capabilities from your code. 
 
 While the cloud version offers a high-level overview and visualization of your data, the SDK affords you the flexibility to integrate into your favorite machine learning frameworks and environments (e.g. Jupyter Notebook) using Python.
 
-Using `visuallayer` you can access sanitized computer vision datasets with only 2 lines of code.
+## Installation
 
-For example, to get access to the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset, simply run:
+The easiest way to use the `visuallayer` SDK is to install it from PyPI. On your machine, run:
+
+```shell
+pip install visuallayer
+```
+
+Optionally, you can also install the bleeding edge version on [GitHub](https://github.com/visual-layer/visuallayer) by running:
+
+```shell
+pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
+```
+
+## VL-Datasets
+The `visuallayer` package also lets you access [VL-Datasets](https://docs.visual-layer.com/docs/what-are-vl-datasets) - a collection of sanitized version of widely used computer vision datasets.
+
+
+For example with only 2 lines of code, load the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset with:
 
 ![image](./imgs/usage.png)
 
+> **Note**: `visuallayer` does not automatically download the ImageNet dataset, you should make sure to obtain usage rights to the dataset and download it into your current working directory first.
 
 When we say "sanitized", we mean that the datasets loaded by `visuallayer` are free from common issues such as:
 
@@ -94,12 +109,114 @@ When we say "sanitized", we mean that the datasets loaded by `visuallayer` are f
 
 ![image](./imgs/issues.png)
 
+
+
+## Dataset Zoo
+We provide a [Dataset Zoo](https://docs.visual-layer.com/docs/available-datasets) where you can find all information for each VL-Dataset.
+
+For each dataset in the zoo, we ran an analyis using our cloud platform and found issues pertaining to the dataset. They are all summarized in the tables below. You can also download the issues found for free.
+
+
+<table>
+    <thead>
+        <tr>
+            <th align="left">VL Dataset</th>
+            <th align="left">Original Dataset</th>
+            <th align="left">Total Images</th>
+            <th align="left">Total Issues (%)</th>
+            <th align="left">Total Issues (Count)</th>
+            <th align="left">Issues CSV</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="left"><a href="#vl-imagenet-21k">vl-imagenet-21k</a></td>
+            <td align="left">ImageNet-21K</td>
+            <td align="left"><div align="left">13,153,500</td>
+            <td align="left"><div align="left">14.58%</td>
+            <td aalign="left"><div align="left">1,917,948</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-21K_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#vl-imagenet-1k">vl-imagenet-1k</a></td>
+            <td align="left">ImageNet-1K</td>
+            <td align="left"><div align="left">1,431,167</td>
+            <td aalign="left"><div align="left">1.31%</td>
+            <td align="left"><div align="left">17,492</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-1K_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#laion-2b">vl-laion-1b</a></td>
+            <td align="left">LAION-1B</td>
+            <td align="left"><div align="left">1,000,000,000</td>
+            <td align="left"><div align="left">10.40%</td>
+            <td align="left"><div align="left">104,942,474</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Laion1B_issues.parquet"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#kitti">vl-kitti</a></td>
+            <td align="left">KITTI</td>
+            <td align="left"><div align="left">12,919</td>
+            <td align="left"><div align="left">18.32%</td>
+            <td align="left"><div align="left">2,748</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Kitti_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#coco">vl-coco</a></td>
+            <td align="left">COCO</td>
+            <td align="left"><div align="left">330,000</td>
+            <td align="left"><div align="left">0.31%</td>
+            <td align="left"><div align="left">508</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Coco_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#deepfashion">vl-deepfashion</a></td>
+            <td align="left">DeepFashion</td>
+            <td align="left"><div align="left">800,000</td>
+            <td align="left"><div align="left">7.89%</td>
+            <td align="left"><div align="left">22,824</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/DeepFashion_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#celeba-hq">vl-celeba-hq</a></td>
+            <td align="left">CelebA-HQ</td>
+            <td align="left"><div align="left">30,000</td>
+            <td align="left"><div align="left">2.36%</td>
+            <td align="left"><div align="left">4,786</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/CelebA_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#places365">vl-places365</a></td>
+            <td align="left">Places365</td>
+            <td align="left"><div align="left">1,800,000</td>
+            <td align="left"><div align="left">2.09%</td>
+            <td align="left"><div align="left">37,644</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Places365_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#food-101">vl-food-101</a></td>
+            <td align="left">Food-101</td>
+            <td align="left"><div align="left">101,000</td>
+            <td align="left"><div align="left">0.62%</td>
+            <td align="left"><div align="left">627</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/food101_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#oxford-iiit-pet">vl-oxford-iiit-pet</a></td>
+            <td align="left">Oxford-IIIT Pet</td>
+            <td align="left"><div align="left">7,349</td>
+            <td align="left"><div align="left">1.48%</td>
+            <td align="left"><div align="left">132</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+    </tbody>
+</table>
+
+
 The sanitized version of a dataset is prefixed with `vl-` to differentiate it from the original dataset.
 
-## Datasets Zoo
 
-We support some of the most widely used computer vision datasets in our datasets zoo.
-Here are some of the datasets we currently support and the issues found using our [cloud platform](https://app.visual-layer.com/) (Sign up for free.).
+
 
 <!-- | Dataset Name    | Total Images  | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
 |-----------------|---------------|------------------|----------------------|----------------|--------------------|--------------|------------------|----------|--------------|----------|--------------|------------|----------------|---------------|-------------------|-------------|-----------------|
@@ -114,6 +231,8 @@ Here are some of the datasets we currently support and the issues found using ou
 | Food-101        | 101,000       | 0.62%            | 627                  | 0.23%          | 235                | 0.08%        | 77               | 0.18%    | 185          | 0.04%    | 43           | -          | -              | -             | -                 | -           | -               |
 | Oxford-IIIT Pet | 7,349         | 1.48%            | 132                  | 1.01%          | 75                 | 0.10%        | 7                | -        | -            | 0.05%    | 4            | -          | -              | -             | -                 | 0.31%       | 23              |
  -->
+
+The following table is a detailed breakdown on the issues for each dataset.
 
 <table>
     <tr>
@@ -348,20 +467,13 @@ We will continue to support more datasets. Here are a few currently in our roadm
 
 [Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a specific dataset.
 
+> **Note**: If you'd like to use our cloud tool and discover issues with your own dataset, [sign up](https://app.visual-layer.com/) to use our cloud platform for free. 
 
 
-<!-- ## Why?
-
-Computer vision is an exciting and rapidly advancing field, with new techniques and models emerging now and then. 
-However, to develop and evaluate these models, it's essential to have reliable and standardized datasets to work with.
-
-Even with the recent success of generative models, data quality remains an issue that's [mainly overlooked](https://medium.com/@amiralush/large-image-datasets-today-are-a-mess-e3ea4c9e8d22).
-Training models will erroneours data impacts model accuracy, incurs costs in time, storage and computational resources.
-
-We believe that access to clean and high-quality computer vision datasets leads to accurate, non-biased, and efficient models.
-By providing public access to `visuallayer` we hope it helps advance the field of computer vision. -->
 
 
+
+<!-- 
 ## Access
 The `visuallayer` SDK provides a convenient way to access the sanitized version of the datasets in Python.
 Alternatively, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
@@ -398,23 +510,10 @@ Here is a table of datasets, link to download the `.csv` file, and how to access
 
 
 We offer extensive visualizations of the dataset issues in our cloud platform.
-[Sign up]((https://app.visual-layer.com)) for free.
-
-
-## Installation
-
-**Option 1** - Install `visuallayer` package from [PyPI](https://pypi.org/project/visuallayer/):
-
-```shell
-pip install visuallayer
-```
-
-**Option 2** - Install the bleeding edge version on GitHub:
-```
-pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
-```
+[Sign up]((https://app.visual-layer.com)) for free. -->
 
 ## Usage
+The following sections show how to use the `visuallayer` SDK to load, inspect and export a VL-Dataset.
 
 ### Loading a dataset
 We offer handy functions to load datasets from the Dataset zoo.
@@ -495,7 +594,7 @@ which outputs:
 
 Now that you've seen the issues with the dataset, you can visualize them on screen. There are two options to visualize the dataset issues.
 
-> **Option 1** - Using the Visual Layer Cloud Platform - Provides an extensive capability to view, group, sort, and filter the dataset issues. Sign up for free.
+> **Option 1** - Using the Visual Layer Cloud Platform - Provides an extensive capability to view, group, sort, and filter the dataset issues. [Sign-up](https://app.visual-layer.com) for free.
 
 > **Option 2** - In Jupyter notebook - Provides a limited but convenient way to view the dataset without leaving your notebook.
 
@@ -512,7 +611,7 @@ This should output an interactive table in your Jupyter notebook like the follow
 
 In the interactive table, you can view the issues, sort, filter, search, and compare the images side by side.
 
-By default the .explore() load the top 50 issues from the dataset covering all issue types. If you'd like a more granular control, you can change the `num_images` and `issue` argument.
+By default the `.explore()` load the top 50 issues from the dataset covering all issue types. If you'd like a more granular control, you can change the `num_images` and `issue` argument.
 
 For example:
 
@@ -521,7 +620,9 @@ pets_dataset.explore(num_images=100, issue='Duplicate')
 ```
 
 The interactive table provides a convenient but limited way to visualize dataset issues.
-For a more extensive visualization, view the issues using the Visual Layer Cloud Platform. Sign up for free.
+For a more extensive visualization, view the issues using the Visual Layer Cloud Platform.
+
+Check out the [documentation](https://docs.visual-layer.com/docs/introduction) and blog page for the Visual Layer Cloud Platform for more info.
 
 
 ### Exporting a dataset
@@ -676,7 +777,32 @@ However, you are bound to the usage license of the original dataset. It is your 
 
 ## Telemetry
 
-This repository incorporates usage tracking using [Sentry.io](https://sentry.io/) to monitor and collect valuable information about the usage of the application.
+<details>
+<summary>Usage Tracking</summary>
+
+This repository incorporates usage tracking using [Sentry.io](https://sentry.io) to monitor and collect valuable information about the usage of the application.
+
+Usage tracking allows us to gain insights into how the application is being used in real-world scenarios. It provides us with valuable information that helps in understanding user behavior, identifying potential issues, and making informed decisions to improve the application.
+
+We DO NOT collect folder names, user names, image names, image content, and other personally identifiable information.
+
+**What data is tracked?**
+
+- Errors and Exceptions: Sentry captures errors and exceptions that occur in the application, providing detailed stack traces and relevant information to help diagnose and fix issues.
+- Performance Metrics: Sentry collects performance metrics, such as response times, latency, and resource usage, enabling us to monitor and optimize the application's performance.
+
+To opt-out, define an environment variable named `SENTRY_OPT_OUT`.
+
+On Linux/macOS, run the following:
+```shell
+export SENTRY_OPT_OUT=True
+```
+
+Read more on [Sentry's official webpage](https://sentry.io).
+
+</details>
+
+<!-- This repository incorporates usage tracking using [Sentry.io](https://sentry.io/) to monitor and collect valuable information about the usage of the application.
 
 Usage tracking allows us to gain insights into how the application is being used in real-world scenarios. It provides us with valuable information that helps in understanding user behavior, identifying potential issues, and making informed decisions to improve the application.
 
@@ -693,7 +819,7 @@ On Linux run the following:
 export SENTRY_OPT_OUT=True
 ```
 
-Read more on Sentry's official [webpage](https://sentry.io/welcome/).
+Read more on Sentry's official [webpage](https://sentry.io/welcome/). -->
 
 
 ## Getting Help
