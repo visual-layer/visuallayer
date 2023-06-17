@@ -773,7 +773,32 @@ However, you are bound to the usage license of the original dataset. It is your 
 
 ## Telemetry
 
-This repository incorporates usage tracking using [Sentry.io](https://sentry.io/) to monitor and collect valuable information about the usage of the application.
+<details>
+<summary>Usage Tracking</summary>
+
+This repository incorporates usage tracking using Sentry.io to monitor and collect valuable information about the usage of the application.
+
+Usage tracking allows us to gain insights into how the application is being used in real-world scenarios. It provides us with valuable information that helps in understanding user behavior, identifying potential issues, and making informed decisions to improve the application.
+
+We DO NOT collect folder names, user names, image names, image content, and other personally identifiable information.
+
+**What data is tracked?**
+
+- Errors and Exceptions: Sentry captures errors and exceptions that occur in the application, providing detailed stack traces and relevant information to help diagnose and fix issues.
+- Performance Metrics: Sentry collects performance metrics, such as response times, latency, and resource usage, enabling us to monitor and optimize the application's performance.
+
+To opt-out, define an environment variable named `SENTRY_OPT_OUT`.
+
+On Linux/macOS, run the following:
+```shell
+export SENTRY_OPT_OUT=True
+```
+
+Read more on [Sentry's official webpage](https://sentry.io).
+
+</details>
+
+<!-- This repository incorporates usage tracking using [Sentry.io](https://sentry.io/) to monitor and collect valuable information about the usage of the application.
 
 Usage tracking allows us to gain insights into how the application is being used in real-world scenarios. It provides us with valuable information that helps in understanding user behavior, identifying potential issues, and making informed decisions to improve the application.
 
@@ -790,7 +815,7 @@ On Linux run the following:
 export SENTRY_OPT_OUT=True
 ```
 
-Read more on Sentry's official [webpage](https://sentry.io/welcome/).
+Read more on Sentry's official [webpage](https://sentry.io/welcome/). -->
 
 
 ## Getting Help
