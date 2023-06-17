@@ -109,14 +109,112 @@ With `visuallayer` access sanitized computer vision datasets with only 2 lines o
 > **Note**: `visuallayer` does not automatically download the ImageNet dataset, you should make sure to obtain usage rights to the dataset and download it into your current working directory first.
 
 
+## Dataset Zoo
+We provide a [Dataset Zoo](https://docs.visual-layer.com/docs/available-datasets) where you can find all information for each VL-Dataset.
+
+For each dataset in the zoo, ran an analyis using our cloud platform and highlight issues pertaining to the dataset. You can download the issues found for free.
+
+
+<table>
+    <thead>
+        <tr>
+            <th align="left">Dataset Name</th>
+            <th align="left">Original</th>
+            <th align="left">Total Images</th>
+            <th align="left">Total Issues (%)</th>
+            <th align="left">Total Issues (Count)</th>
+            <th align="left">Issues CSV</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="left"><a href="#vl-imagenet-21k">vl-imagenet-21k</a></td>
+            <td align="left">ImageNet-21K</td>
+            <td align="left"><div align="left">13,153,500</td>
+            <td align="left"><div align="left">14.58%</td>
+            <td aalign="left"><div align="left">1,917,948</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-21K_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#vl-imagenet-1k">vl-imagenet-1k</a></td>
+            <td align="left">ImageNet-1K</td>
+            <td align="left"><div align="left">1,431,167</td>
+            <td aalign="left"><div align="left">1.31%</td>
+            <td align="left"><div align="left">17,492</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-1K_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#laion-2b">vl-laion-1b</a></td>
+            <td align="left">LAION-1B</td>
+            <td align="left"><div align="left">1,000,000,000</td>
+            <td align="left"><div align="left">10.40%</td>
+            <td align="left"><div align="left">104,942,474</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Laion1B_issues.parquet"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#kitti">vl-kitti</a></td>
+            <td align="left">KITTI</td>
+            <td align="left"><div align="left">12,919</td>
+            <td align="left"><div align="left">18.32%</td>
+            <td align="left"><div align="left">2,748</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Kitti_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#coco">vl-coco</a></td>
+            <td align="left">COCO</td>
+            <td align="left"><div align="left">330,000</td>
+            <td align="left"><div align="left">0.31%</td>
+            <td align="left"><div align="left">508</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Coco_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#deepfashion">vl-deepfashion</a></td>
+            <td align="left">DeepFashion</td>
+            <td align="left"><div align="left">800,000</td>
+            <td align="left"><div align="left">7.89%</td>
+            <td align="left"><div align="left">22,824</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/DeepFashion_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#celeba-hq">vl-celeba-hq</a></td>
+            <td align="left">CelebA-HQ</td>
+            <td align="left"><div align="left">30,000</td>
+            <td align="left"><div align="left">2.36%</td>
+            <td align="left"><div align="left">4,786</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/CelebA_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#places365">vl-places365</a></td>
+            <td align="left">Places365</td>
+            <td align="left"><div align="left">1,800,000</td>
+            <td align="left"><div align="left">2.09%</td>
+            <td align="left"><div align="left">37,644</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Places365_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#food-101">vl-food-101</a></td>
+            <td align="left">Food-101</td>
+            <td align="left"><div align="left">101,000</td>
+            <td align="left"><div align="left">0.62%</td>
+            <td align="left"><div align="left">627</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/food101_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+        <tr>
+            <td align="left"><a href="#oxford-iiit-pet">vl-oxford-iiit-pet</a></td>
+            <td align="left">Oxford-IIIT Pet</td>
+            <td align="left"><div align="left">7,349</td>
+            <td align="left"><div align="left">1.48%</td>
+            <td align="left"><div align="left">132</td>
+            <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
+        </tr>
+    </tbody>
+</table>
 
 
 The sanitized version of a dataset is prefixed with `vl-` to differentiate it from the original dataset.
 
-## Datasets Zoo
+> **Note**: If you'd like to use our cloud tool on your own dataset and discover issues with it, [sign up](https://app.visual-layer.com/) to use our cloud platform for free. 
 
-We support some of the most widely used computer vision datasets in our datasets zoo.
-Here are some of the datasets we currently support and the issues found using our [cloud platform](https://app.visual-layer.com/) (Sign up for free.).
 
 <!-- | Dataset Name    | Total Images  | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
 |-----------------|---------------|------------------|----------------------|----------------|--------------------|--------------|------------------|----------|--------------|----------|--------------|------------|----------------|---------------|-------------------|-------------|-----------------|
