@@ -90,6 +90,13 @@ pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 ## VL-Datasets
 The `visuallayer` package also lets you access [VL-Datasets](https://docs.visual-layer.com/docs/what-are-vl-datasets) - a collection of sanitized version of widely used computer vision datasets.
 
+
+For example, with only 2 lines of code, load the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset with:
+
+![image](./imgs/usage.png)
+
+> **Note**: `visuallayer` does not automatically download the ImageNet dataset, you should make sure to obtain usage rights to the dataset and download it into your current working directory first.
+
 When we say "sanitized", we mean that the datasets loaded by `visuallayer` are free from common issues such as:
 
 + Duplicates.
@@ -102,11 +109,9 @@ When we say "sanitized", we mean that the datasets loaded by `visuallayer` are f
 
 ![image](./imgs/issues.png)
 
-With `visuallayer` access sanitized computer vision datasets with only 2 lines of code. For example, load the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset with:
 
-![image](./imgs/usage.png)
 
-> **Note**: `visuallayer` does not automatically download the ImageNet dataset, you should make sure to obtain usage rights to the dataset and download it into your current working directory first.
+
 
 
 ## Dataset Zoo
