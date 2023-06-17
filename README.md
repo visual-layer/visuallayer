@@ -36,8 +36,7 @@
 <a href="https://www.visual-layer.com">
   <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="350">
 </a>
-<h2 align="center">Simplify Your Visual Data Ops</h2>
-
+<h3 align="center">Simplify Your Visual Data Ops</h3>
   <p align="center">
   <br />
     <a href="https://docs.visual-layer.com/docs/getting-started" target="_blank" rel="noopener noreferrer"><strong>Explore the docs »</strong></a>
