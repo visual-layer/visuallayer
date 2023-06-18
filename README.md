@@ -237,7 +237,7 @@ The following table is a detailed breakdown on the issues for each dataset.
 
 <table>
     <tr>
-      <th style="text-align:left;"><strong>Dataset Name</strong></th>
+      <th align="left"><strong>Dataset Name</strong></th>
       <td style="text-align:left;"><strong>Total Images</strong></td>
       <td style="text-align:left;">Total Issues (%)</strong></td>
       <td style="text-align:left;"><strong>Total Issues (Count)</strong></td>
@@ -257,7 +257,7 @@ The following table is a detailed breakdown on the issues for each dataset.
       <td style="text-align:left;"><strong>Leakage (Count)</strong></td>
       </tr>
     <tr>
-        <th style="text-align:left;">ImageNet-21K</th>
+        <th align="left">ImageNet-21K</th>
          <td style="text-align:left;"><div align="left">13,153,500</div></td>
          <td style="text-align:left;"><div align="left">14.58%</div></td>
          <td style="text-align:left;"><div align="left">1,917,948</div></td>
@@ -277,7 +277,7 @@ The following table is a detailed breakdown on the issues for each dataset.
          <td style="text-align:left;"><div align="left">-</div></td>
     </tr>
     <tr>
-        <th style="text-align:left;"t>ImageNet-1K</th>
+        <th align="left">ImageNet-1K</th>
         <td style="text-align:left;"><div align="left">1,431,167</td>
         <td style="text-align:left;"><div align="left">1.31%</td>
         <td style="text-align:left;"><div align="left">17,492</td>
@@ -297,7 +297,7 @@ The following table is a detailed breakdown on the issues for each dataset.
         <td style="text-align:left;"><div align="left">869</td>
     </tr>
     <tr>
-        <th style="text-align:left;">LAION-1B</th>
+        <th align="left">LAION-1B</th>
         <td style="text-align:left;"><div align="left">1,000,000,000</td>
         <td style="text-align:left;"><div align="left">10.40%</td>
         <td style="text-align:left;"><div align="left">104,942,474</td>
@@ -317,7 +317,7 @@ The following table is a detailed breakdown on the issues for each dataset.
         <td style="text-align:left;"><div align="left">-</td>
     </tr>
     <tr>
-        <th style="text-align:left;">KITTI</th>
+        <th align="left">KITTI</th>
         <td style="text-align:left;"><div align="left">12,919</td>
         <td style="text-align:left;"><div align="left">18.32%</td>
         <td style="text-align:left;"><div align="left">2,748</td>
@@ -337,7 +337,7 @@ The following table is a detailed breakdown on the issues for each dataset.
         <td style="text-align:left;"><div align="left">452</td>
     </tr>
     <tr>
-        <th style="text-align:left;">COCO</th>
+        <th align="left">COCO</th>
         <td style="text-align:left;"><div align="left">330,000</td>
         <td style="text-align:left;"><div align="left">0.31%</td>
         <td style="text-align:left;"><div align="left">508</td>
@@ -357,7 +357,7 @@ The following table is a detailed breakdown on the issues for each dataset.
         <td style="text-align:left;"><div align="left">20</td>
     </tr>
     <tr>
-        <th style="text-align:left;">DeepFashion</th>
+        <th align="left">DeepFashion</th>
         <td style="text-align:left;"><div align="left">800,000</td>
         <td style="text-align:left;"><div align="left">7.89%</td>
         <td style="text-align:left;" style="text-align:left;"><div align="left">22,824</td>
@@ -377,7 +377,7 @@ The following table is a detailed breakdown on the issues for each dataset.
         <td style="text-align:left;"><div align="left">7,943</td>
     </tr>
     <tr>
-        <th style="text-align:left;">CelebA-HQ</th>
+        <th align="left">CelebA-HQ</th>
         <td style="text-align:left;"><div align="left">30,000</td>
         <td style="text-align:left;"><div align="left">2.36%</td>
         <td style="text-align:left;"><div align="left">4,786</td>
@@ -397,7 +397,7 @@ The following table is a detailed breakdown on the issues for each dataset.
         <td style="text-align:left;"><div align="left">188</td>
     </tr>
     <tr>
-        <th style="text-align:left;">Places365</th>
+        <th align="left">Places365</th>
         <td style="text-align:left;"><div align="left">1,800,000</td>
         <td style="text-align:left;"><div align="left">2.09%</td>
         <td style="text-align:left;"><div align="left">37,644</td>
@@ -417,7 +417,7 @@ The following table is a detailed breakdown on the issues for each dataset.
         <td style="text-align:left;"><div align="left">-</td>
     </tr>
     <tr>
-        <th style="text-align:left;">Food-101</th>
+        <th align="left">Food-101</th>
         <td style="text-align:left;"><div align="left">101,000</td>
         <td style="text-align:left;"><div align="left">0.62%</td>
         <td style="text-align:left;"><div align="left">627</td>
@@ -437,7 +437,7 @@ The following table is a detailed breakdown on the issues for each dataset.
         <td style="text-align:left;"><div align="left">-</td>
     </tr>
     <tr>
-        <th style="text-align:left;">Oxford-IIIT Pet</th>
+        <th align="left">Oxford-IIIT Pet</th>
         <td style="text-align:left;"><div align="left">7,349</td>
         <td style="text-align:left;"><div align="left">1.48%</td>
         <td style="text-align:left;"><div align="left">132</td>
