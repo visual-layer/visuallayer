@@ -356,7 +356,8 @@ The following table is a detailed breakdown on the issues for each dataset.
     </tr>
 </table>
 
-We provide here full details on each issues removed from a VL Dataset (a vl dataset card). 
+We provide here full details on each issues removed from a VL Dataset (a vl dataset card).
+The clean version of a dataset is prefixed with `vl-` to differentiate it from the original dataset.
 You can also freely download all found issues CSV.
 
 <table>
@@ -420,9 +421,6 @@ You can also freely download all found issues CSV.
         </tr>
     </tbody>
 </table>
-
-
-The clean version of a dataset is prefixed with `vl-` to differentiate it from the original dataset.
 
 We will continue to support more datasets. Here are a few currently in our roadmap:
 + EuroSAT
