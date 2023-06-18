@@ -91,7 +91,7 @@ pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 The `visuallayer` package also lets you access [VL Datasets](https://docs.visual-layer.com/docs/what-are-vl-datasets) - a collection of clean versions of widely used computer vision datasets.
 
 
-For example with only 2 lines of code, load the clean vl-datasets version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset with:
+For example with only 2 lines of code, load the clean vl datasets version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset with:
 ```shell
 import visuallayer as vl
 dataset = vl.datasets.zoo.load('vl-imagenet-1k')
@@ -479,7 +479,7 @@ We offer extensive visualizations of the dataset issues in our cloud platform.
 [Sign up]((https://app.visual-layer.com)) for free. -->
 
 ## Usage
-The following sections show how to use the `visuallayer` SDK to load, inspect and export a VL-Dataset.
+The following sections show how to use the `visuallayer` SDK to load, inspect and export a VL Dataset.
 
 ### Loading a dataset
 We offer handy functions to load datasets from the Dataset zoo.
