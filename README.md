@@ -87,7 +87,7 @@ Optionally, you can also install the bleeding edge version on [GitHub](https://g
 pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 ```
 
-## VL-Datasets
+## VL Datasets
 The `visuallayer` package also lets you access [VL Datasets](https://docs.visual-layer.com/docs/what-are-vl-datasets) - a collection of clean versions of widely used computer vision datasets.
 
 
@@ -356,7 +356,8 @@ The following table is a detailed breakdown on the issues for each dataset.
     </tr>
 </table>
 
-We provide here full details about each Dataset (Dataset card). You can also freely download all issues CSV.
+We provide here full details on each issues removed from a VL Dataset (a vl dataset card). 
+You can also freely download all found issues CSV.
 
 <table>
     <thead>
