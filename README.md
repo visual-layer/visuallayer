@@ -88,11 +88,11 @@ pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 ```
 
 ## VL Datasets
-The `visuallayer` package also lets you access [VL Datasets](https://docs.visual-layer.com/docs/what-are-vl-datasets) - a collection of clean versions of widely used computer vision datasets.
+The `visuallayer SDK` also lets you access [VL Datasets](https://docs.visual-layer.com/docs/what-are-vl-datasets) - a collection of clean versions of widely used computer vision datasets.
 
 
 For example with only 2 lines of code, load the clean vl datasets version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset with:
-```shell
+```python
 import visuallayer as vl
 dataset = vl.datasets.zoo.load('vl-imagenet-1k')
 
@@ -104,7 +104,7 @@ train_dataset = dataset.export(output_format='pytorch', split='train')
 
 > **Note**: `visuallayer` does not automatically download the ImageNet dataset, you should make sure to obtain usage rights to the dataset and download it into your current working directory first.
 
-When we say "clean", we mean that the datasets loaded by `visuallayer` were flagged form common issues such as: [duplicates](https://docs.visual-layer.com/docs/duplicate-imagesobjects), 
+When we say "clean" we mean that the datasets loaded by `visuallayer SDK` were flagged form common issues such as: [duplicates](https://docs.visual-layer.com/docs/duplicate-imagesobjects), 
 , [mislabels](https://docs.visual-layer.com/docs/mislabeled-imagesobjects), [outliers](https://docs.visual-layer.com/docs/outlier-imagesobjects), 
 [dark](https://docs.visual-layer.com/docs/blurry-imagesobjects-copy)/[bright](https://docs.visual-layer.com/docs/dark-imagesobjects-copy)/
 [blurry](https://docs.visual-layer.com/docs/outlier-imagesobjects-copy) & data leakage.
