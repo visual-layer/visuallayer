@@ -34,7 +34,7 @@
 <br />
 <div align="center">
 <a href="https://www.visual-layer.com">
-  <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="350">
+  <img alt="Visual Layer Logo" src="https://github.com/visual-layer/visuallayer/blob/main/imgs/vl_horizontal_logo.png" alt="Logo" width="450">
 </a>
 <h3 align="center">Simplify Your Visual Data Ops</h3>
   <p align="center">
@@ -88,26 +88,27 @@ pip install git+https://github.com/visual-layer/visuallayer.git@main --upgrade
 ```
 
 ## VL-Datasets
-The `visuallayer` package also lets you access [VL-Datasets](https://docs.visual-layer.com/docs/what-are-vl-datasets) - a collection of sanitized version of widely used computer vision datasets.
+The `visuallayer` package also lets you access [VL Datasets](https://docs.visual-layer.com/docs/what-are-vl-datasets) - a collection of clean versions of widely used computer vision datasets.
 
 
-For example with only 2 lines of code, load the sanitized version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset with:
+For example with only 2 lines of code, load the clean vl-datasets version of the [ImageNet-1k](https://www.robots.ox.ac.uk/~vgg/data/pets/) dataset with:
+```shell
+import visuallayer as vl
+dataset = vl.datasets.zoo.load('vl-imagenet-1k')
 
-![image](./imgs/usage.png)
+#Export to PyTorch
+train_dataset = dataset.export(output_format='pytorch', split='train')
+
+#PyTorch training loop
+```
 
 > **Note**: `visuallayer` does not automatically download the ImageNet dataset, you should make sure to obtain usage rights to the dataset and download it into your current working directory first.
 
-When we say "sanitized", we mean that the datasets loaded by `visuallayer` are free from common issues such as:
-
-+ Duplicates.
-+ Near Duplicates.
-+ Broken images.
-+ Outliers.
-+ Dark/Bright/Blurry images.
-+ Mislabels.
-+ Data Leakage.
-
-![image](./imgs/issues.png)
+When we say "clean", we mean that the datasets loaded by `visuallayer` were flagged form common issues such as: [duplicates](https://docs.visual-layer.com/docs/duplicate-imagesobjects), 
+, [mislabels](https://docs.visual-layer.com/docs/mislabeled-imagesobjects), [outliers](https://docs.visual-layer.com/docs/outlier-imagesobjects), 
+[dark](https://docs.visual-layer.com/docs/blurry-imagesobjects-copy)/[bright](https://docs.visual-layer.com/docs/dark-imagesobjects-copy)/
+[blurry](https://docs.visual-layer.com/docs/outlier-imagesobjects-copy) & data leakage.
+See full description for issues support in our [documentation](https://docs.visual-layer.com/docs/mislabeled-imagesobjects).
 
 
 
@@ -213,7 +214,7 @@ For each dataset in the zoo, we ran an analyis using our cloud platform and foun
 </table>
 
 
-The sanitized version of a dataset is prefixed with `vl-` to differentiate it from the original dataset.
+The clean version of a dataset is prefixed with `vl-` to differentiate it from the original dataset.
 
 
 
@@ -236,224 +237,224 @@ The following table is a detailed breakdown on the issues for each dataset.
 
 <table>
     <tr>
-      <th><strong>Dataset Name</strong></th>
-      <td><strong>Total Images</strong></td>
-      <td><strong>Total Issues (%)</strong></td>
-      <td><strong>Total Issues (Count)</strong></td>
-      <td><strong>Duplicates (%)</strong></td>
-      <td><strong>Duplicates (Count)</strong></td>
-      <td><strong>Outliers (%)</strong></td>
-      <td><strong>Outliers (Count)</strong></td>
-      <td><strong>Blur (%)</strong></td>
-      <td><strong>Blur (Count)</strong></td>
-      <td><strong>Dark (%)</strong></td>
-      <td><strong>Dark (Count)</strong></td>
-      <td><strong>Bright (%)</strong></td>
-      <td><strong>Bright (Count)</strong></td>
-      <td><strong>Mislabels (%)</strong></td>
-      <td><strong>Mislabels (Count)</strong></td>
-      <td><strong>Leakage (%)</strong></td>
-      <td><strong>Leakage (Count)</strong></td>
+      <th style="text-align:left;"><strong>Dataset Name</strong></th>
+      <td style="text-align:left;"><strong>Total Images</strong></td>
+      <td style="text-align:left;">Total Issues (%)</strong></td>
+      <td style="text-align:left;"><strong>Total Issues (Count)</strong></td>
+      <td style="text-align:left;"><strong>Duplicates (%)</strong></td>
+      <td style="text-align:left;"><strong>Duplicates (Count)</strong></td>
+      <td style="text-align:left;"><strong>Outliers (%)</strong></td>
+      <td style="text-align:left;"><strong>Outliers (Count)</strong></td>
+      <td style="text-align:left;"><strong>Blur (%)</strong></td>
+      <td style="text-align:left;"><strong>Blur (Count)</strong></td>
+      <td style="text-align:left;"><strong>Dark (%)</strong></td>
+      <td style="text-align:left;"><strong>Dark (Count)</strong></td>
+      <td style="text-align:left;"><strong>Bright (%)</strong></td>
+      <td style="text-align:left;"><strong>Bright (Count)</strong></td>
+      <td style="text-align:left;"><strong>Mislabels (%)</strong></td>
+      <td style="text-align:left;"><strong>Mislabels (Count)</strong></td>
+      <td style="text-align:left;"><strong>Leakage (%)</strong></td>
+      <td style="text-align:left;"><strong>Leakage (Count)</strong></td>
       </tr>
     <tr>
-        <th>ImageNet-21K</th>
-         <td><div align="right">13,153,500</div></td>
-         <td><div align="right">14.58%</div></td>
-         <td><div align="right">1,917,948</div></td>
-         <td><div align="right">10.53%</div></td>
-         <td><div align="right">1,385,074</div></td>
-         <td><div align="right">0.09%</div></td>
-         <td><div align="right">11,119</div></td>
-         <td><div align="right">0.29%</div></td>
-         <td><div align="right">38,463</div></td>
-         <td><div align="right">0.18%</div></td>
-         <td><div align="right">23,575</div></td>
-         <td><div align="right">0.43%</div></td>
-         <td><div align="right">56,754</div></td>
-         <td><div align="right">3.06%</div></td>
-         <td><div align="right">402,963</div></td>
-         <td><div align="right">-</div></td>
-         <td><div align="right">-</div></td>
+        <th style="text-align:left;">ImageNet-21K</th>
+         <td><div align="left">13,153,500</div></td>
+         <td><div align="left">14.58%</div></td>
+         <td><div align="left">1,917,948</div></td>
+         <td><div align="left">10.53%</div></td>
+         <td><div align="left">1,385,074</div></td>
+         <td><div align="left">0.09%</div></td>
+         <td><div align="left">11,119</div></td>
+         <td><div align="left">0.29%</div></td>
+         <td><div align="left">38,463</div></td>
+         <td><div align="left">0.18%</div></td>
+         <td><div align="left">23,575</div></td>
+         <td><div align="left">0.43%</div></td>
+         <td><div align="left">56,754</div></td>
+         <td><div align="left">3.06%</div></td>
+         <td><div align="left">402,963</div></td>
+         <td><div align="left">-</div></td>
+         <td><div align="left">-</div></td>
     </tr>
     <tr>
-        <th>ImageNet-1K</th>
-        <td><div align="right">1,431,167</td>
-        <td><div align="right">1.31%</td>
-        <td><div align="right">17,492</td>
-        <td><div align="right">0.57%</td>
-        <td><div align="right">7,522</td>
-        <td><div align="right">0.09%</td>
-        <td><div align="right">1,199</td>
-        <td><div align="right">0.19%</td>
-        <td><div align="right">2,478</td>
-        <td><div align="right">0.24%</td>
-        <td><div align="right">3,174</td>
-        <td><div align="right">0.06%</td>
-        <td><div align="right">770</td>
-        <td><div align="right">0.11%</td>
-        <td><div align="right">1,480</td>
-        <td><div align="right">0.07%</td>
-        <td><div align="right">869</td>
+        <th style="text-align:left;"t>ImageNet-1K</th>
+        <td><div align="left">1,431,167</td>
+        <td><div align="left">1.31%</td>
+        <td><div align="left">17,492</td>
+        <td><div align="left">0.57%</td>
+        <td><div align="left">7,522</td>
+        <td><div align="left">0.09%</td>
+        <td><div align="left">1,199</td>
+        <td><div align="left">0.19%</td>
+        <td><div align="left">2,478</td>
+        <td><div align="left">0.24%</td>
+        <td><div align="left">3,174</td>
+        <td><div align="left">0.06%</td>
+        <td><div align="left">770</td>
+        <td><div align="left">0.11%</td>
+        <td><div align="left">1,480</td>
+        <td><div align="left">0.07%</td>
+        <td><div align="left">869</td>
     </tr>
     <tr>
-        <th>LAION-1B</th>
-        <td><div align="right">1,000,000,000</td>
-        <td><div align="right">10.40%</td>
-        <td><div align="right">104,942,474</td>
-        <td><div align="right">8.89%</td>
-        <td><div align="right">89,349,899</td>
-        <td><div align="right">0.63%</td>
-        <td><div align="right">6,350,368</td>
-        <td><div align="right">0.77%</td>
-        <td><div align="right">7,763,266</td>
-        <td><div align="right">0.02%</td>
-        <td><div align="right">242,333</td>
-        <td><div align="right">0.12%</td>
-        <td><div align="right">1,236,608</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
+        <th style="text-align:left;">LAION-1B</th>
+        <td><div align="left">1,000,000,000</td>
+        <td><div align="left">10.40%</td>
+        <td><div align="left">104,942,474</td>
+        <td><div align="left">8.89%</td>
+        <td><div align="left">89,349,899</td>
+        <td><div align="left">0.63%</td>
+        <td><div align="left">6,350,368</td>
+        <td><div align="left">0.77%</td>
+        <td><div align="left">7,763,266</td>
+        <td><div align="left">0.02%</td>
+        <td><div align="left">242,333</td>
+        <td><div align="left">0.12%</td>
+        <td><div align="left">1,236,608</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
     </tr>
     <tr>
-        <th>KITTI</th>
-        <td><div align="right">12,919</td>
-        <td><div align="right">18.32%</td>
-        <td><div align="right">2,748</td>
-        <td><div align="right">15.29%</td>
-        <td><div align="right">2,294</td>
-        <td><div align="right">0.01%</td>
-        <td><div align="right">2</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">3.01%</td>
-        <td><div align="right">452</td>
+        <th style="text-align:left;">KITTI</th>
+        <td><div align="left">12,919</td>
+        <td><div align="left">18.32%</td>
+        <td><div align="left">2,748</td>
+        <td><div align="left">15.29%</td>
+        <td><div align="left">2,294</td>
+        <td><div align="left">0.01%</td>
+        <td><div align="left">2</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">3.01%</td>
+        <td><div align="left">452</td>
     </tr>
     <tr>
-        <th>COCO</th>
-        <td><div align="right">330,000</td>
-        <td><div align="right">0.31%</td>
-        <td><div align="right">508</td>
-        <td><div align="right">0.12%</td>
-        <td><div align="right">201</td>
-        <td><div align="right">0.09%</td>
-        <td><div align="right">143</td>
-        <td><div align="right">0.03%</td>
-        <td><div align="right">47</td>
-        <td><div align="right">0.05%</td>
-        <td><div align="right">76</td>
-        <td><div align="right">0.01%</td>
-        <td><div align="right">21</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">0.01%</td>
-        <td><div align="right">20</td>
+        <th style="text-align:left;">COCO</th>
+        <td><div align="left">330,000</td>
+        <td><div align="left">0.31%</td>
+        <td><div align="left">508</td>
+        <td><div align="left">0.12%</td>
+        <td><div align="left">201</td>
+        <td><div align="left">0.09%</td>
+        <td><div align="left">143</td>
+        <td><div align="left">0.03%</td>
+        <td><div align="left">47</td>
+        <td><div align="left">0.05%</td>
+        <td><div align="left">76</td>
+        <td><div align="left">0.01%</td>
+        <td><div align="left">21</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">0.01%</td>
+        <td><div align="left">20</td>
     </tr>
     <tr>
-        <th>DeepFashion</th>
-        <td><div align="right">800,000</td>
-        <td><div align="right">7.89%</td>
-        <td><div align="right">22,824</td>
-        <td><div align="right">5.11%</td>
-        <td><div align="right">14,773</td>
-        <td><div align="right">0.04%</td>
-        <td><div align="right">108</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">2.75%</td>
-        <td><div align="right">7,943</td>
+        <th style="text-align:left;">DeepFashion</th>
+        <td><div align="left">800,000</td>
+        <td><div align="left">7.89%</td>
+        <td><div align="left">22,824</td>
+        <td><div align="left">5.11%</td>
+        <td><div align="left">14,773</td>
+        <td><div align="left">0.04%</td>
+        <td><div align="left">108</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">2.75%</td>
+        <td><div align="left">7,943</td>
     </tr>
     <tr>
-        <th>CelebA-HQ</th>
-        <td><div align="right">30,000</td>
-        <td><div align="right">2.36%</td>
-        <td><div align="right">4,786</td>
-        <td><div align="right">1.67%</td>
-        <td><div align="right">3,389</td>
-        <td><div align="right">0.08%</td>
-        <td><div align="right">157</td>
-        <td><div align="right">0.51%</td>
-        <td><div align="right">1,037</td>
-        <td><div align="right">0.00%</td>
-        <td><div align="right">2</td>
-        <td><div align="right">0.01%</td>
-        <td><div align="right">13</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">0.09%</td>
-        <td><div align="right">188</td>
+        <th style="text-align:left;">CelebA-HQ</th>
+        <td><div align="left">30,000</td>
+        <td><div align="left">2.36%</td>
+        <td><div align="left">4,786</td>
+        <td><div align="left">1.67%</td>
+        <td><div align="left">3,389</td>
+        <td><div align="left">0.08%</td>
+        <td><div align="left">157</td>
+        <td><div align="left">0.51%</td>
+        <td><div align="left">1,037</td>
+        <td><div align="left">0.00%</td>
+        <td><div align="left">2</td>
+        <td><div align="left">0.01%</td>
+        <td><div align="left">13</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">0.09%</td>
+        <td><div align="left">188</td>
     </tr>
     <tr>
-        <th>Places365</th>
-        <td><div align="right">1,800,000</td>
-        <td><div align="right">2.09%</td>
-        <td><div align="right">37,644</td>
-        <td><div align="right">1.53%</td>
-        <td><div align="right">27,520</td>
-        <td><div align="right">0.40%</td>
-        <td><div align="right">7,168</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">0.16%</td>
-        <td><div align="right">2,956</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
+        <th style="text-align:left;">Places365</th>
+        <td><div align="left">1,800,000</td>
+        <td><div align="left">2.09%</td>
+        <td><div align="left">37,644</td>
+        <td><div align="left">1.53%</td>
+        <td><div align="left">27,520</td>
+        <td><div align="left">0.40%</td>
+        <td><div align="left">7,168</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">0.16%</td>
+        <td><div align="left">2,956</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
     </tr>
     <tr>
-        <th>Food-101</th>
-        <td><div align="right">101,000</td>
-        <td><div align="right">0.62%</td>
-        <td><div align="right">627</td>
-        <td><div align="right">0.23%</td>
-        <td><div align="right">235</td>
-        <td><div align="right">0.08%</td>
-        <td><div align="right">77</td>
-        <td><div align="right">0.18%</td>
-        <td><div align="right">185</td>
-        <td><div align="right">0.04%</td>
-        <td><div align="right">43</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
+        <th style="text-align:left;">Food-101</th>
+        <td><div align="left">101,000</td>
+        <td><div align="left">0.62%</td>
+        <td><div align="left">627</td>
+        <td><div align="left">0.23%</td>
+        <td><div align="left">235</td>
+        <td><div align="left">0.08%</td>
+        <td><div align="left">77</td>
+        <td><div align="left">0.18%</td>
+        <td><div align="left">185</td>
+        <td><div align="left">0.04%</td>
+        <td><div align="left">43</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
     </tr>
     <tr>
-        <th>Oxford-IIIT Pet</th>
-        <td><div align="right">7,349</td>
-        <td><div align="right">1.48%</td>
-        <td><div align="right">132</td>
-        <td><div align="right">1.01%</td>
-        <td><div align="right">75</td>
-        <td><div align="right">0.10%</td>
-        <td><div align="right">7</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">0.05%</td>
-        <td><div align="right">4</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">-</td>
-        <td><div align="right">0.31%</td>
-        <td><div align="right">23</td>
+        <th style="text-align:left;">Oxford-IIIT Pet</th>
+        <td><div align="left">7,349</td>
+        <td><div align="left">1.48%</td>
+        <td><div align="left">132</td>
+        <td><div align="left">1.01%</td>
+        <td><div align="left">75</td>
+        <td><div align="left">0.10%</td>
+        <td><div align="left">7</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">0.05%</td>
+        <td><div align="left">4</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">-</td>
+        <td><div align="left">0.31%</td>
+        <td><div align="left">23</td>
     </tr>
 </table>
 
@@ -475,7 +476,7 @@ We will continue to support more datasets. Here are a few currently in our roadm
 
 <!-- 
 ## Access
-The `visuallayer` SDK provides a convenient way to access the sanitized version of the datasets in Python.
+The `visuallayer` SDK provides a convenient way to access the clean version of the datasets in Python.
 Alternatively, for each dataset in this repo, we provide a `.csv` file that lists the problematic images from the dataset.
 
 You can use the listed images in the `.csv` to improve the model by re-labeling them or just simply removing it from the dataset.
@@ -544,7 +545,7 @@ To load the dataset:
 vl.datasets.zoo.load('vl-oxford-iiit-pets')
 ```
 
-This loads the sanitized version of the Oxford IIIT Pets dataset where all of the problematic images are excluded from the dataset.
+This loads the clean version of the Oxford IIIT Pets dataset where all of the problematic images are excluded from the dataset.
 
 To load the original Oxford IIIT Pets dataset, simply drop the `vl-` prefix:
 
@@ -833,7 +834,7 @@ Get help from the Visual Layer team or community members via the following chann
 
 <div align="center">
 <a href="https://www.visual-layer.com">
-  <img alt="Visual Layer Logo" src="https://raw.githubusercontent.com/visual-layer/fastdup/main/gallery/visual_layer_logo.png" alt="Logo" width="250">
+  <img alt="Visual Layer Logo" src="https://github.com/visual-layer/visuallayer/blob/main/imgs/vl_horizontal_logo.png" alt="Logo" width="250">
 </a>
 </div>
 
