@@ -258,203 +258,203 @@ The following table is a detailed breakdown on the issues for each dataset.
       </tr>
     <tr>
         <th style="text-align:left;">ImageNet-21K</th>
-         <td><div align="left">13,153,500</div></td>
-         <td><div align="left">14.58%</div></td>
-         <td><div align="left">1,917,948</div></td>
-         <td><div align="left">10.53%</div></td>
-         <td><div align="left">1,385,074</div></td>
-         <td><div align="left">0.09%</div></td>
-         <td><div align="left">11,119</div></td>
-         <td><div align="left">0.29%</div></td>
-         <td><div align="left">38,463</div></td>
-         <td><div align="left">0.18%</div></td>
-         <td><div align="left">23,575</div></td>
-         <td><div align="left">0.43%</div></td>
-         <td><div align="left">56,754</div></td>
-         <td><div align="left">3.06%</div></td>
-         <td><div align="left">402,963</div></td>
-         <td><div align="left">-</div></td>
-         <td><div align="left">-</div></td>
+         <td style="text-align:left;"><div align="left">13,153,500</div></td>
+         <td style="text-align:left;"><div align="left">14.58%</div></td>
+         <td style="text-align:left;"><div align="left">1,917,948</div></td>
+         <td style="text-align:left;"><div align="left">10.53%</div></td>
+         <td style="text-align:left;"><div align="left">1,385,074</div></td>
+         <td style="text-align:left;"><div align="left">0.09%</div></td>
+         <td style="text-align:left;"><div align="left">11,119</div></td>
+         <td style="text-align:left;"><div align="left">0.29%</div></td>
+         <td style="text-align:left;"><div align="left">38,463</div></td>
+         <td style="text-align:left;"><div align="left">0.18%</div></td>
+         <td style="text-align:left;"><div align="left">23,575</div></td>
+         <td style="text-align:left;"><div align="left">0.43%</div></td>
+         <td style="text-align:left;"><div align="left">56,754</div></td>
+         <td style="text-align:left;"><div align="left">3.06%</div></td>
+         <td style="text-align:left;"><div align="left">402,963</div></td>
+         <td style="text-align:left;"><div align="left">-</div></td>
+         <td style="text-align:left;"><div align="left">-</div></td>
     </tr>
     <tr>
         <th style="text-align:left;"t>ImageNet-1K</th>
-        <td><div align="left">1,431,167</td>
-        <td><div align="left">1.31%</td>
-        <td><div align="left">17,492</td>
-        <td><div align="left">0.57%</td>
-        <td><div align="left">7,522</td>
-        <td><div align="left">0.09%</td>
-        <td><div align="left">1,199</td>
-        <td><div align="left">0.19%</td>
-        <td><div align="left">2,478</td>
-        <td><div align="left">0.24%</td>
-        <td><div align="left">3,174</td>
-        <td><div align="left">0.06%</td>
-        <td><div align="left">770</td>
-        <td><div align="left">0.11%</td>
-        <td><div align="left">1,480</td>
-        <td><div align="left">0.07%</td>
-        <td><div align="left">869</td>
+        <td style="text-align:left;"><div align="left">1,431,167</td>
+        <td style="text-align:left;"><div align="left">1.31%</td>
+        <td style="text-align:left;"><div align="left">17,492</td>
+        <td style="text-align:left;"><div align="left">0.57%</td>
+        <td style="text-align:left;"><div align="left">7,522</td>
+        <td style="text-align:left;"><div align="left">0.09%</td>
+        <td style="text-align:left;"><div align="left">1,199</td>
+        <td style="text-align:left;"><div align="left">0.19%</td>
+        <td style="text-align:left;"><div align="left">2,478</td>
+        <td style="text-align:left;"><div align="left">0.24%</td>
+        <td style="text-align:left;"><div align="left">3,174</td>
+        <td style="text-align:left;"><div align="left">0.06%</td>
+        <td style="text-align:left;"><div align="left">770</td>
+        <td style="text-align:left;"><div align="left">0.11%</td>
+        <td style="text-align:left;"><div align="left">1,480</td>
+        <td style="text-align:left;"><div align="left">0.07%</td>
+        <td style="text-align:left;"><div align="left">869</td>
     </tr>
     <tr>
         <th style="text-align:left;">LAION-1B</th>
-        <td><div align="left">1,000,000,000</td>
-        <td><div align="left">10.40%</td>
-        <td><div align="left">104,942,474</td>
-        <td><div align="left">8.89%</td>
-        <td><div align="left">89,349,899</td>
-        <td><div align="left">0.63%</td>
-        <td><div align="left">6,350,368</td>
-        <td><div align="left">0.77%</td>
-        <td><div align="left">7,763,266</td>
-        <td><div align="left">0.02%</td>
-        <td><div align="left">242,333</td>
-        <td><div align="left">0.12%</td>
-        <td><div align="left">1,236,608</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">1,000,000,000</td>
+        <td style="text-align:left;"><div align="left">10.40%</td>
+        <td style="text-align:left;"><div align="left">104,942,474</td>
+        <td style="text-align:left;"><div align="left">8.89%</td>
+        <td style="text-align:left;"><div align="left">89,349,899</td>
+        <td style="text-align:left;"><div align="left">0.63%</td>
+        <td style="text-align:left;"><div align="left">6,350,368</td>
+        <td style="text-align:left;"><div align="left">0.77%</td>
+        <td style="text-align:left;"><div align="left">7,763,266</td>
+        <td style="text-align:left;"><div align="left">0.02%</td>
+        <td style="text-align:left;"><div align="left">242,333</td>
+        <td style="text-align:left;"><div align="left">0.12%</td>
+        <td style="text-align:left;"><div align="left">1,236,608</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
     </tr>
     <tr>
         <th style="text-align:left;">KITTI</th>
-        <td><div align="left">12,919</td>
-        <td><div align="left">18.32%</td>
-        <td><div align="left">2,748</td>
-        <td><div align="left">15.29%</td>
-        <td><div align="left">2,294</td>
-        <td><div align="left">0.01%</td>
-        <td><div align="left">2</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">3.01%</td>
-        <td><div align="left">452</td>
+        <td style="text-align:left;"><div align="left">12,919</td>
+        <td style="text-align:left;"><div align="left">18.32%</td>
+        <td style="text-align:left;"><div align="left">2,748</td>
+        <td style="text-align:left;"><div align="left">15.29%</td>
+        <td style="text-align:left;"><div align="left">2,294</td>
+        <td style="text-align:left;"><div align="left">0.01%</td>
+        <td style="text-align:left;"><div align="left">2</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">3.01%</td>
+        <td style="text-align:left;"><div align="left">452</td>
     </tr>
     <tr>
         <th style="text-align:left;">COCO</th>
-        <td><div align="left">330,000</td>
-        <td><div align="left">0.31%</td>
-        <td><div align="left">508</td>
-        <td><div align="left">0.12%</td>
-        <td><div align="left">201</td>
-        <td><div align="left">0.09%</td>
-        <td><div align="left">143</td>
-        <td><div align="left">0.03%</td>
-        <td><div align="left">47</td>
-        <td><div align="left">0.05%</td>
-        <td><div align="left">76</td>
-        <td><div align="left">0.01%</td>
-        <td><div align="left">21</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">0.01%</td>
-        <td><div align="left">20</td>
+        <td style="text-align:left;"><div align="left">330,000</td>
+        <td style="text-align:left;"><div align="left">0.31%</td>
+        <td style="text-align:left;"><div align="left">508</td>
+        <td style="text-align:left;"><div align="left">0.12%</td>
+        <td style="text-align:left;"><div align="left">201</td>
+        <td style="text-align:left;"><div align="left">0.09%</td>
+        <td style="text-align:left;"><div align="left">143</td>
+        <td style="text-align:left;"><div align="left">0.03%</td>
+        <td style="text-align:left;"><div align="left">47</td>
+        <td style="text-align:left;"><div align="left">0.05%</td>
+        <td style="text-align:left;"><div align="left">76</td>
+        <td style="text-align:left;"><div align="left">0.01%</td>
+        <td style="text-align:left;"><div align="left">21</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">0.01%</td>
+        <td style="text-align:left;"><div align="left">20</td>
     </tr>
     <tr>
         <th style="text-align:left;">DeepFashion</th>
-        <td><div align="left">800,000</td>
-        <td><div align="left">7.89%</td>
-        <td><div align="left">22,824</td>
-        <td><div align="left">5.11%</td>
-        <td><div align="left">14,773</td>
-        <td><div align="left">0.04%</td>
-        <td><div align="left">108</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">2.75%</td>
-        <td><div align="left">7,943</td>
+        <td style="text-align:left;"><div align="left">800,000</td>
+        <td style="text-align:left;"><div align="left">7.89%</td>
+        <td style="text-align:left;" style="text-align:left;"><div align="left">22,824</td>
+        <td style="text-align:left;"><div align="left">5.11%</td>
+        <td style="text-align:left;"><div align="left">14,773</td>
+        <td style="text-align:left;"><div align="left">0.04%</td>
+        <td style="text-align:left;"><div align="left">108</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">2.75%</td>
+        <td style="text-align:left;"><div align="left">7,943</td>
     </tr>
     <tr>
         <th style="text-align:left;">CelebA-HQ</th>
-        <td><div align="left">30,000</td>
-        <td><div align="left">2.36%</td>
-        <td><div align="left">4,786</td>
-        <td><div align="left">1.67%</td>
-        <td><div align="left">3,389</td>
-        <td><div align="left">0.08%</td>
-        <td><div align="left">157</td>
-        <td><div align="left">0.51%</td>
-        <td><div align="left">1,037</td>
-        <td><div align="left">0.00%</td>
-        <td><div align="left">2</td>
-        <td><div align="left">0.01%</td>
-        <td><div align="left">13</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">0.09%</td>
-        <td><div align="left">188</td>
+        <td style="text-align:left;"><div align="left">30,000</td>
+        <td style="text-align:left;"><div align="left">2.36%</td>
+        <td style="text-align:left;"><div align="left">4,786</td>
+        <td style="text-align:left;"><div align="left">1.67%</td>
+        <td style="text-align:left;"><div align="left">3,389</td>
+        <td style="text-align:left;"><div align="left">0.08%</td>
+        <td style="text-align:left;"><div align="left">157</td>
+        <td style="text-align:left;"><div align="left">0.51%</td>
+        <td style="text-align:left;"><div align="left">1,037</td>
+        <td style="text-align:left;"><div align="left">0.00%</td>
+        <td style="text-align:left;"><div align="left">2</td>
+        <td style="text-align:left;"><div align="left">0.01%</td>
+        <td style="text-align:left;"><div align="left">13</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">0.09%</td>
+        <td style="text-align:left;"><div align="left">188</td>
     </tr>
     <tr>
         <th style="text-align:left;">Places365</th>
-        <td><div align="left">1,800,000</td>
-        <td><div align="left">2.09%</td>
-        <td><div align="left">37,644</td>
-        <td><div align="left">1.53%</td>
-        <td><div align="left">27,520</td>
-        <td><div align="left">0.40%</td>
-        <td><div align="left">7,168</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">0.16%</td>
-        <td><div align="left">2,956</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">1,800,000</td>
+        <td style="text-align:left;"><div align="left">2.09%</td>
+        <td style="text-align:left;"><div align="left">37,644</td>
+        <td style="text-align:left;"><div align="left">1.53%</td>
+        <td style="text-align:left;"><div align="left">27,520</td>
+        <td style="text-align:left;"><div align="left">0.40%</td>
+        <td style="text-align:left;"><div align="left">7,168</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">0.16%</td>
+        <td style="text-align:left;"><div align="left">2,956</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
     </tr>
     <tr>
         <th style="text-align:left;">Food-101</th>
-        <td><div align="left">101,000</td>
-        <td><div align="left">0.62%</td>
-        <td><div align="left">627</td>
-        <td><div align="left">0.23%</td>
-        <td><div align="left">235</td>
-        <td><div align="left">0.08%</td>
-        <td><div align="left">77</td>
-        <td><div align="left">0.18%</td>
-        <td><div align="left">185</td>
-        <td><div align="left">0.04%</td>
-        <td><div align="left">43</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">101,000</td>
+        <td style="text-align:left;"><div align="left">0.62%</td>
+        <td style="text-align:left;"><div align="left">627</td>
+        <td style="text-align:left;"><div align="left">0.23%</td>
+        <td style="text-align:left;"><div align="left">235</td>
+        <td style="text-align:left;"><div align="left">0.08%</td>
+        <td style="text-align:left;"><div align="left">77</td>
+        <td style="text-align:left;"><div align="left">0.18%</td>
+        <td style="text-align:left;"><div align="left">185</td>
+        <td style="text-align:left;"><div align="left">0.04%</td>
+        <td style="text-align:left;"><div align="left">43</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
     </tr>
     <tr>
         <th style="text-align:left;">Oxford-IIIT Pet</th>
-        <td><div align="left">7,349</td>
-        <td><div align="left">1.48%</td>
-        <td><div align="left">132</td>
-        <td><div align="left">1.01%</td>
-        <td><div align="left">75</td>
-        <td><div align="left">0.10%</td>
-        <td><div align="left">7</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">0.05%</td>
-        <td><div align="left">4</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">-</td>
-        <td><div align="left">0.31%</td>
-        <td><div align="left">23</td>
+        <td style="text-align:left;"><div align="left">7,349</td>
+        <td style="text-align:left;"><div align="left">1.48%</td>
+        <td style="text-align:left;"><div align="left">132</td>
+        <td style="text-align:left;"><div align="left">1.01%</td>
+        <td style="text-align:left;"><div align="left">75</td>
+        <td style="text-align:left;"><div align="left">0.10%</>
+        <td style="text-align:left;"><div align="left">7</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">0.05%</td>
+        <td style="text-align:left;"><div align="left">4</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">-</td>
+        <td style="text-align:left;"><div align="left">0.31%</td>
+        <td style="text-align:left;"><div align="left">23</td>
     </tr>
 </table>
 
