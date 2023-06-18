@@ -735,7 +735,7 @@ In this section, we show an end-to-end example of how to load, inspect and expor
 
 
 ## License
-`visuallayer` is licensed under the Apache 2.0 License. See [LICENSE](./LICENSE).
+`visuallayer SDK` is licensed under the Apache 2.0 License. See [LICENSE](./LICENSE).
 
 However, you are bound to the usage license of the original dataset. It is your responsibility to determine whether you have permission to use the dataset under the dataset's license. We provide no warranty or guarantee of accuracy or completeness.
 
