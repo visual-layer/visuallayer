@@ -69,13 +69,13 @@
 </div>
 
 ## Description
-`visuallayer SDK` is a pure Python and open-source python package that offers access and extensibility to the [cloud version](https://app.visual-layer.com) of the Visual Layer platform capabilities from your code. 
+`visuallayer SDK` is an open-source Python package that offers access and extensibility to the Visual Layer platform from your code. 
 
-While the cloud version offers a high-level overview and visualization of your data, the SDK affords you the flexibility to integrate into your favorite machine learning frameworks and environments (e.g. Jupyter Notebook) using Python.
+While the platform offers a high-level overview and visualization of your data, the SDK affords you the flexibility to integrate into your favorite machine learning frameworks and environments (e.g. Jupyter Notebook) using Python.
 
 ## Installation
 
-The easiest way to use the `visuallayer SDK` is to install it from PyPI. On your machine, run:
+The easiest way to use the `visuallayer SDK` is to install it from [PyPI](https://pypi.org/project/visuallayer/). On your machine, run:
 
 ```shell
 pip install visuallayer
