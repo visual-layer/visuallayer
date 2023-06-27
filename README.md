@@ -118,20 +118,6 @@ We provide a [Dataset Zoo](https://docs.visual-layer.com/docs/available-datasets
 For each dataset in the zoo, we ran an analysis using [VL Profiler](https://app.visual-layer.com) and found issues pertaining to the orignal dataset. 
 The following table is a detailed breakdown on the issues for each dataset.
 
-<!-- | Dataset Name    | Total Images  | Total Issues (%) | Total Issues (Count) | Duplicates (%) | Duplicates (Count) | Outliers (%) | Outliers (Count) | Blur (%) | Blur (Count) | Dark (%) | Dark (Count) | Bright (%) | Bright (Count) | Mislabels (%) | Mislabels (Count) | Leakage (%) | Leakage (Count) |
-|-----------------|---------------|------------------|----------------------|----------------|--------------------|--------------|------------------|----------|--------------|----------|--------------|------------|----------------|---------------|-------------------|-------------|-----------------|
-| ImageNet-21K    | 13,153,500    | 14.58%           | 1,917,948            | 10.53%         | 1,385,074          | 0.09%        | 11,119           | 0.29%    | 38,463       | 0.18%    | 23,575       | 0.43%      | 56,754         | 3.06%         | 402,963           | -           | -               |
-| ImageNet-1K     | 1,431,167     | 1.31%            | 17,492               | 0.57%          | 7,522              | 0.09%        | 1,199            | 0.19%    | 2,478        | 0.24%    | 3,174        | 0.06%      | 770            | 0.11%         | 1,480             | 0.07%       | 869             |
-| LAION-1B        | 2,000,000,000 | 10.40%           | 104,942,474          | 8.89%          | 89,349,899         | 0.63%        | 6,350,368        | 0.77%    | 7,763,266    | 0.02%    | 242,333      | 0.12%      | 1,236,608      | -             | -                 | -           | -               |
-| KITTI           | 12,919        | 18.32%           | 2,748                | 15.29%         | 2,294              | 0.01%        | 2                | -        | -            | -        | -            | -          | -              | -             | -                 | 3.01%       | 452             |
-| COCO            | 330,000       | 0.31%            | 508                  | 0.12%          | 201                | 0.09%        | 143              | 0.03%    | 47           | 0.05%    | 76           | 0.01%      | 21             | -             | -                 | 0.01%       | 20              |
-| DeepFashion     | 800,000       | 7.89%            | 22,824               | 5.11%          | 14,773             | 0.04%        | 108              | -        | -            | -        | -            | -          | -              | -             | -                 | 2.75%       | 7,943           |
-| CelebA-HQ       | 30,000        | 2.36%            | 4,786                | 1.67%          | 3,389              | 0.08%        | 157              | 0.51%    | 1,037        | 0.00%    | 2            | 0.01%      | 13             | -             | -                 | 0.09%       | 188             |
-| Places365       | 1,800,000     | 2.09%            | 37,644               | 1.53%          | 27,520             | 0.40%        | 7,168            | -        | -            | 0.16%    | 2,956        | -          | -              | -             | -                 | -           | -               |
-| Food-101        | 101,000       | 0.62%            | 627                  | 0.23%          | 235                | 0.08%        | 77               | 0.18%    | 185          | 0.04%    | 43           | -          | -              | -             | -                 | -           | -               |
-| Oxford-IIIT Pet | 7,349         | 1.48%            | 132                  | 1.01%          | 75                 | 0.10%        | 7                | -        | -            | 0.05%    | 4            | -          | -              | -             | -                 | 0.31%       | 23              |
- -->
-
 
 <table>
     <tr>
@@ -428,6 +414,8 @@ We will continue to support more datasets. Here are a few currently in our roadm
 + INaturalist
 + SVHN
 + Cityscapes
++ RVL-CDIP
++ DocLayNet
 
 [Let us know](https://forms.gle/8jxPkyzeKj82kPed8) if you have additional request to support a specific dataset.
 
@@ -558,13 +546,16 @@ which outputs:
 
 Now that you've seen the issues with the dataset, you can visualize them on screen. There are two options to visualize the dataset issues.
 
-> **Option 1** - Using the Visual Layer Cloud Platform - Provides an extensive capability to view, group, sort, and filter the dataset issues. [Sign-up](https://app.visual-layer.com) for free.
+> **Option 1** - Using the Visual Layer Profiler (VL Profiler) - Provides an extensive capability to view, group, sort, and filter the dataset issues. [Sign-up](https://app.visual-layer.com) for free.
+
+Here's the visualization using the VL Profiler:
+
+![profiler](./imgs/vl_profiler.gif)
 
 > **Option 2** - In Jupyter notebook - Provides a limited but convenient way to view the dataset without leaving your notebook.
 
-In this example, let's see how you can visualize the issues using **Option 2** in your notebook.
+To visualize the issues using **Option 2** in your notebook, run:
 
-To do so, run:
 ```python
 my_pets.explore()
 ```
@@ -584,9 +575,9 @@ pets_dataset.explore(num_images=100, issue='Duplicate')
 ```
 
 The interactive table provides a convenient but limited way to visualize dataset issues.
-For a more extensive visualization, view the issues using the Visual Layer Cloud Platform.
+For a more extensive visualization, view the issues using the Visual Layer Profiler.
 
-Check out the [documentation](https://docs.visual-layer.com/docs/introduction) and blog page for the Visual Layer Cloud Platform for more info.
+Check out the [documentation](https://docs.visual-layer.com/docs/introduction) and blog page for the Visual Layer Profiler for more info.
 
 
 ### Exporting a dataset
