@@ -104,10 +104,9 @@ train_dataset = dataset.export(output_format='pytorch', split='train')
 
 > **Note**: `visuallayer` does not automatically download the ImageNet dataset, you should make sure to obtain usage rights to the dataset and download it into your current working directory first.
 
-When we say "clean" we mean that the datasets loaded by `visuallayer SDK` were flagged form common issues such as: [duplicates](https://docs.visual-layer.com/docs/duplicate-imagesobjects), 
-, [mislabels](https://docs.visual-layer.com/docs/mislabeled-imagesobjects), [outliers](https://docs.visual-layer.com/docs/outlier-imagesobjects), 
+When we say "clean" we mean that the datasets loaded by `visuallayer SDK` were flagged from common issues such as [duplicates](https://docs.visual-layer.com/docs/duplicate-imagesobjects), [mislabels](https://docs.visual-layer.com/docs/mislabeled-imagesobjects), [outliers](https://docs.visual-layer.com/docs/outlier-imagesobjects), 
 [dark](https://docs.visual-layer.com/docs/blurry-imagesobjects-copy)/[bright](https://docs.visual-layer.com/docs/dark-imagesobjects-copy)/
-[blurry](https://docs.visual-layer.com/docs/outlier-imagesobjects-copy) & data leakage.
+[blurry](https://docs.visual-layer.com/docs/outlier-imagesobjects-copy) and data leakage.
 See full description for issues support in our [documentation](https://docs.visual-layer.com/docs/mislabeled-imagesobjects).
 
 
@@ -115,15 +114,15 @@ See full description for issues support in our [documentation](https://docs.visu
 ## Dataset Zoo
 We provide a [Dataset Zoo](https://docs.visual-layer.com/docs/available-datasets) where you can find all information for each VL Dataset.
 
-For each dataset in the zoo, we ran an analysis using [VL Profiler](https://app.visual-layer.com) and found issues pertaining to the orignal dataset. 
-The following table is a detailed breakdown on the issues for each dataset.
+For each dataset in the zoo, we ran an analysis using [VL Profiler](https://app.visual-layer.com) and found issues pertaining to the original dataset. 
+The following table is a detailed breakdown of the issues for each dataset.
 
 
 <table>
     <tr>
       <th align="left"><strong>Dataset Name</strong></th>
       <td style="text-align:left;"><strong>Total Images</strong></td>
-      <td style="text-align:left;">Total Issues (%)</strong></td>
+      <td style="text-align:left;"><strong>Total Issues (%)</strong></td>
       <td style="text-align:left;"><strong>Total Issues (Count)</strong></td>
       <td style="text-align:left;"><strong>Duplicates (%)</strong></td>
       <td style="text-align:left;"><strong>Duplicates (Count)</strong></td>
@@ -480,7 +479,7 @@ We offer extensive visualizations of the dataset issues in our cloud platform.
 The following sections show how to use the `visuallayer` SDK to load, inspect and export a VL Dataset.
 
 ### Loading a dataset
-We offer handy functions to load datasets from the Dataset zoo.
+We offer handy functions to load datasets from the Dataset Zoo.
 First, let's list the datasets in the zoo with:
 
 
@@ -564,7 +563,7 @@ Here's the visualization using the VL Profiler:
 
 ![profiler](./imgs/vl_profiler.gif)
 
-> **Option 2** - In Jupyter notebook - Provides a limited but convenient way to view the dataset without leaving your notebook.
+> **Option 2** - In Jupyter Notebook - Provides a limited but convenient way to view the dataset without leaving your notebook.
 
 To visualize the issues using **Option 2** in your notebook, run:
 
@@ -572,13 +571,13 @@ To visualize the issues using **Option 2** in your notebook, run:
 my_pets.explore()
 ```
 
-This should output an interactive table in your Jupyter notebook like the following.
+This should output an interactive table in your Jupyter Notebook like the following.
 
 ![explore](./imgs/explore.gif)
 
 In the interactive table, you can view the issues, sort, filter, search, and compare the images side by side.
 
-By default the `.explore()` load the top 50 issues from the dataset covering all issue types. If you'd like a more granular control, you can change the `num_images` and `issue` argument.
+By default, the `.explore()` load the top 50 issues from the dataset covering all issue types. If you'd like a more granular control, you can change the `num_images` and `issue` arguments.
 
 For example:
 
