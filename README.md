@@ -50,6 +50,9 @@
     <a href="https://visual-layer.com/" target="_blank" rel="noopener noreferrer">About Us</a>
     <br />
     <br /> 
+    💫 Check out <a href="https://medium.com/visual-layer/introducing-vl-datasets-d85adfa93f0f" target="_blank" rel="noopener noreferrer">VL Datasets release blog post</a>
+    <br /> 
+    <br /> 
     <a href="https://visualdatabase.slack.com/join/shared_invite/zt-19jaydbjn-lNDEDkgvSI1QwbTXSY6dlA#/shared-invite/email" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/JOIN US ON SLACK-4A154B?style=for-the-badge&logo=slack&logoColor=white" alt="Logo">
     </a>
