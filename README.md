@@ -368,7 +368,7 @@ You can also freely download all found issues CSV.
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-imagenet-1k">vl-imagenet-1k</a></td>
       <td align="left">ImageNet-1K</td>
       <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-1K_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="#"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://huggingface.co/datasets/visual-layer/vl-imagenet-1k"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-Click%20Here-blue.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-laion-1b">vl-laion-1b</a></td>
