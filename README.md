@@ -668,28 +668,28 @@ In this section, we show an end-to-end example of how to load, inspect and expor
       </ul>
     </td>
     <td align="center" width="80">
-      <a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
+      <a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/hf-vl-datasets-pytorch.ipynb">
         <img src="./imgs/nbviewer_logo.svg" height="34" />
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
+      <a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/hf-vl-datasets-pytorch.ipynb">
         <img src="./imgs/github_logo.png" height="32" />
       </a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
+      <a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/hf-vl-datasets-pytorch.ipynb">
         <img src="./imgs/colab_logo.png" height="28" />
       </a>
     </td>
   </tr>
     <tr>
     <td align="center">
-      <a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/train-pytorch.ipynb">
+      <a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/hf-vl-datasets-pytorch.ipynb">
         <img src="./imgs/kaggle_logo.png" height="28" />
       </a>
     </td>
