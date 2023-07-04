@@ -398,7 +398,7 @@ You can also freely download all found issues CSV.
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-celeba-hq">vl-celeba-hq</a></td>
       <td align="left">CelebA-HQ</td>
       <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/CelebA_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="https://huggingface.co/datasets/vl-celeba-hq"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://huggingface.co/datasets/visual-layer/vl-celeba-hq"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-Click%20Here-blue.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-places365">vl-places365</a></td>
@@ -621,7 +621,7 @@ In this section, we show an end-to-end example of how to load, inspect and expor
     </td>
     <td rowspan="4">
       <ul>
-        <li><b>Dataset:</b> <code>VLFood101</code></li>
+        <li><b>Dataset:</b> <code>vl-food101</code></li>
         <li><b>Framework:</b> PyTorch.</li>
         <li><b>Description:</b> Load a dataset and train a PyTorch model.</li>
       </ul>
@@ -703,7 +703,7 @@ In this section, we show an end-to-end example of how to load, inspect and expor
     </td>
     <td rowspan="4">
       <ul>
-        <li><b>Dataset:</b> <code>VLOxfordIIITPet</code></li>
+        <li><b>Dataset:</b> <code>vl-oxford-iiit-pet</code></li>
         <li><b>Framework:</b> fast.ai.</li>
         <li><b>Description:</b> Finetune a pretrained TIMM model using fastai.</li>
       </ul>
@@ -744,7 +744,7 @@ In this section, we show an end-to-end example of how to load, inspect and expor
     </td>
     <td rowspan="4">
       <ul>
-        <li><b>Dataset:</b> <code>VLImageNet</code></li>
+        <li><b>Dataset:</b> <code>vl-imagenet-1k</code></li>
         <li><b>Framework:</b> PyTorch.</li>
         <li><b>Description:</b> Load cleaned ImageNet dataset and train a PyTorch model.</li>
       </ul>
