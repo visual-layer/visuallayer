@@ -656,6 +656,47 @@ In this section, we show an end-to-end example of how to load, inspect and expor
   <!-- ------------------------------------------------------------------- -->
   <tr>
     <td rowspan="4" width="160">
+      <a href="https://visual-layer.readme.io/docs/getting-started">
+        <img src="./imgs/hf-food101.jpg" width="256" />
+      </a>
+    </td>
+    <td rowspan="4">
+      <ul>
+        <li><b>Dataset:</b> <code>vl-food101</code></li>
+        <li><b>Frameworks:</b> PyTorch + Hugging Face Dataset</li>
+        <li><b>Description:</b> Load VL Datasets using Hugging Face Datasets and train a PyTorch model.</li>
+      </ul>
+    </td>
+    <td align="center" width="80">
+      <a href="https://nbviewer.org/github/visual-layer/visuallayer/blob/main/notebooks/hf-vl-datasets-pytorch.ipynb">
+        <img src="./imgs/nbviewer_logo.svg" height="34" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/visual-layer/visuallayer/blob/main/notebooks/hf-vl-datasets-pytorch.ipynb">
+        <img src="./imgs/github_logo.png" height="32" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://colab.research.google.com/github/visual-layer/visuallayer/blob/main/notebooks/hf-vl-datasets-pytorch.ipynb">
+        <img src="./imgs/colab_logo.png" height="28" />
+      </a>
+    </td>
+  </tr>
+    <tr>
+    <td align="center">
+      <a href="https://kaggle.com/kernels/welcome?src=https://github.com/visual-layer/visuallayer/blob/main/notebooks/hf-vl-datasets-pytorch.ipynb">
+        <img src="./imgs/kaggle_logo.png" height="28" />
+      </a>
+    </td>
+  </tr>
+  <!-- ------------------------------------------------------------------- -->
+  <tr>
+    <td rowspan="4" width="160">
       <a href="https://visual-layer.readme.io/docs/objects-and-bounding-boxes">
         <img src="./imgs/pet.jpg" width="256" />
       </a>
