@@ -353,7 +353,7 @@ You can also freely download all found issues CSV.
     <tr>
       <th align="left">VL Dataset Card</th>
       <th align="left">Original Dataset</th>
-      <th align="left">Download Issues CSV</th>
+      <th align="left">Issues CSV</th>
       <th align="left">Hugging Face Dataset</th>
     </tr>
   </thead>
@@ -361,62 +361,62 @@ You can also freely download all found issues CSV.
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-imagenet-21k">vl-imagenet-21k</a></td>
       <td align="left">ImageNet-21K</td>
-      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-21K_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="#"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-21K_images_issue_file_list.csv"><img src="https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge" alt="download"></a></td>
+      <td align="left"><a href="#"><img src="https://img.shields.io/badge/🤗%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-imagenet-1k">vl-imagenet-1k</a></td>
       <td align="left">ImageNet-1K</td>
-      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-1K_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="https://huggingface.co/datasets/visual-layer/vl-imagenet-1k"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-Click%20Here-blue.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-1K_images_issue_file_list.csv"><img src="https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge" alt="download"></a></td>
+      <td align="left"><a href="https://huggingface.co/datasets/visual-layer/vl-imagenet-1k"><img src="https://img.shields.io/badge/🤗%20Dataset-Click%20Here-blue.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-laion-1b">vl-laion-1b</a></td>
       <td align="left">LAION-1B</td>
-      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Laion1B_issues.parquet"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="#"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Laion1B_issues.parquet"><img src="https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge" alt="download"></a></td>
+      <td align="left"><a href="#"><img src="https://img.shields.io/badge/🤗%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-kitti">vl-kitti</a></td>
       <td align="left">KITTI</td>
-      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Kitti_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="#"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Kitti_images_issue_file_list.csv"><img src="https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge" alt="download"></a></td>
+      <td align="left"><a href="#"><img src="https://img.shields.io/badge/🤗%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-coco">vl-coco</a></td>
       <td align="left">COCO</td>
-      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Coco_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="#"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Coco_images_issue_file_list.csv"><img src="https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge" alt="download"></a></td>
+      <td align="left"><a href="#"><img src="https://img.shields.io/badge/🤗%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-deepfashion">vl-deepfashion</a></td>
       <td align="left">DeepFashion</td>
-      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/DeepFashion_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="https://huggingface.co/datasets/vl-deepfashion"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/DeepFashion_images_issue_file_list.csv"><img src="https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge" alt="download"></a></td>
+      <td align="left"><a href="https://huggingface.co/datasets/vl-deepfashion"><img src="https://img.shields.io/badge/🤗%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-celeba-hq">vl-celeba-hq</a></td>
       <td align="left">CelebA-HQ</td>
-      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/CelebA_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="https://huggingface.co/datasets/visual-layer/vl-celeba-hq"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-Click%20Here-blue.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/CelebA_images_issue_file_list.csv"><img src="https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge" alt="download"></a></td>
+      <td align="left"><a href="https://huggingface.co/datasets/visual-layer/vl-celeba-hq"><img src="https://img.shields.io/badge/🤗%20Dataset-Click%20Here-blue.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-places365">vl-places365</a></td>
       <td align="left">Places365</td>
-      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Places365_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="https://huggingface.co/datasets/vl-places365"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Places365_images_issue_file_list.csv"><img src="https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge" alt="download"></a></td>
+      <td align="left"><a href="https://huggingface.co/datasets/vl-places365"><img src="https://img.shields.io/badge/🤗%20Dataset-WIP-red.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-food101">vl-food-101</a></td>
       <td align="left">Food-101</td>
-      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/food101_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="https://huggingface.co/datasets/visual-layer/vl-food101"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-Click%20Here-blue.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/food101_images_issue_file_list.csv"><img src="https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge" alt="download"></a></td>
+      <td align="left"><a href="https://huggingface.co/datasets/visual-layer/vl-food101"><img src="https://img.shields.io/badge/🤗%20Dataset-Click%20Here-blue.svg?style=for-the-badge"></a></td>
     </tr>
     <tr>
       <td align="left"><a href="https://docs.visual-layer.com/docs/available-datasets#vl-oxford-iiit-pets">vl-oxford-iiit-pet</a></td>
       <td align="left">Oxford-IIIT Pet</td>
-      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv"><img src="https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge" alt="download"></a></td>
-      <td align="left"><a href="https://huggingface.co/datasets/visual-layer/vl-oxford-iiit-pets"><img src="https://img.shields.io/badge/Hugging%20Face%20Dataset-Click%20Here-blue.svg?style=for-the-badge"></a></td>
+      <td align="left"><a href="https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/oxford-iiit-pet_images_issue_file_list.csv"><img src="https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge" alt="download"></a></td>
+      <td align="left"><a href="https://huggingface.co/datasets/visual-layer/vl-oxford-iiit-pets"><img src="https://img.shields.io/badge/🤗%20Dataset-Click%20Here-blue.svg?style=for-the-badge"></a></td>
     </tr>
   </tbody>
 </table>
@@ -462,7 +462,7 @@ Here is a table of datasets, link to download the `.csv` file, and how to access
 | Oxford-IIIT Pet | [![download][download-shield]][oxford-pets-url]  | `vl.datasets.zoo.load('vl-oxford-iiit-pets')` |
 
 
-[download-shield]: https://img.shields.io/badge/Download-Click%20Here-brightgreen.svg?style=for-the-badge
+[download-shield]: https://img.shields.io/badge/DOWNLOAD-brightgreen?style=for-the-badge
 [imagenet-21k-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-21K_images_issue_file_list.csv
 [imagenet-1k-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/ImageNet-1K_images_issue_file_list.csv
 [laion-1b-url]: https://sharedvisuallayer.s3.us-east-2.amazonaws.com/visual-layer-sdk/Laion1B_issues.parquet
